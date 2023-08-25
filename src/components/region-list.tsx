@@ -25,9 +25,9 @@ const RegionList = () => {
       return (
          <>
             {regionsData.map((region) => (
-               <div className={styles.region}>
-                  <span>{region.nr_okregu}</span>
-                  <span>{region.siedziba_okregu}</span>
+               <div key={region.nr_okregu + region.siedziba_okregu} className={styles.region}>
+                  <span className={styles.regionNumber}>{region.nr_okregu}</span>
+                  <span className={styles.regionCity}>{region.siedziba_okregu}</span>
                </div>
             ))}
          </>

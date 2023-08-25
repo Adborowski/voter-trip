@@ -1,0 +1,12 @@
+.region {
+   display: inline-block;
+   padding: 12px;
+   background-color: white;
+   margin: 3px;
+   border-radius: 60px;
+}
+
+.regionNumber {
+   margin-right: 6px;
+   opacity: 0.25;
+}

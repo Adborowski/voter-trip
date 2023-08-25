@@ -1,7 +1,11 @@
-*{
-  border: 0;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "helvetica"
+* {
+   border: 0;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-family: 'helvetica';
+}
+
+body {
+   background-color: #f3f3f3;
 }
