@@ -3,6 +3,7 @@ import styles from './regions-map.module.css'
 import { useEffect, useState, useRef } from 'react'
 import MapNode from './map-node'
 import GoogleMap from 'google-maps-react-markers'
+
 const RegionsMap = () => {
    const lat = 51.9194
    const lng = 19.1451
@@ -15,7 +16,7 @@ const RegionsMap = () => {
       },
       zoom: 6,
    }
-   //new
+
    const onGoogleApiLoaded = ({ map, maps }: any) => {
       mapRef.current = map
       setMapReady(true)
@@ -34,7 +35,9 @@ const RegionsMap = () => {
             onGoogleApiLoaded={onGoogleApiLoaded}
             onChange={(map: any) => console.log('Map moved', map)}
          >
-            <MapNode lat={lat} lng={lng} label={'hello'} />
+            <MapNode lat={51.2047689} lng={16.17467503} label={'1'} />
+            <MapNode lat={50.785221} lng={16.28464034} label={'2'} />
+            <MapNode lat={51.1263106} lng={16.97819633} label={'3'} />
          </GoogleMap>
       </div>
    )

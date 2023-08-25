@@ -1,3 +1,5 @@
+import styles from './map-node.module.css'
+
 interface MapNodeProps {
    lat: number
    lng: number
@@ -5,9 +7,13 @@ interface MapNodeProps {
 }
 
 const MapNode = (props: MapNodeProps) => {
-   console.log(props)
+   const { lat, lng, label } = props
 
-   return <div> Hello </div>
+   return (
+      <div className={styles.mapNode}>
+         <span className={styles.number}>{label}</span>
+      </div>
+   )
 }
 
 export default MapNode
