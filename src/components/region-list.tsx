@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import styles from './regions.module.css'
 
 const RegionList = () => {
-   console.log('%cGetting region list...', 'color: yellow')
-
    interface Region {
       nr_okregu: number
       siedziba_okregu: string
