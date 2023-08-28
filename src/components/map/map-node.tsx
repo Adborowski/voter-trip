@@ -3,7 +3,7 @@ import styles from './map-node.module.css'
 interface MapNodeProps {
    lat: number
    lng: number
-   label: string
+   label: string | number
 }
 
 const MapNode = (props: MapNodeProps) => {

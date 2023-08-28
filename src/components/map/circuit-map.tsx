@@ -5,7 +5,7 @@ import MapNode from './map-node'
 import GoogleMap from 'google-maps-react-markers'
 
 interface MapProps {
-   circuitList: {}[] | undefined
+   circuitList: Circuit[] | undefined
 }
 
 interface Circuit {
@@ -21,7 +21,7 @@ interface Circuit {
    votes_pis_2019: number
 }
 
-const RegionsMap = (props: MapProps) => {
+const RegionsMap = ({ circuitList }: MapProps) => {
    const lat = 51.9194
    const lng = 19.1451
    const mapRef: any = useRef(null)
@@ -52,9 +52,13 @@ const RegionsMap = (props: MapProps) => {
             onGoogleApiLoaded={onGoogleApiLoaded}
             onChange={(map: any) => console.log('Map moved', map)}
          >
-            <MapNode lat={51.2047689} lng={16.17467503} label={'1'} />
-            <MapNode lat={50.785221} lng={16.28464034} label={'2'} />
-            <MapNode lat={51.1263106} lng={16.97819633} label={'3'} />
+            {circuitList?.map((circuit) => (
+               <MapNode
+                  lat={circuit.latitude}
+                  lng={circuit.longitude}
+                  label={circuit.circuit_number}
+               />
+            ))}
          </GoogleMap>
       </div>
    )
