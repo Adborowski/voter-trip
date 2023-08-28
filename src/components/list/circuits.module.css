@@ -1,13 +1,23 @@
+.circuitList {
+   border: 3px solid red;
+   background-color: red;
+   height: 100px;
+}
+
 .circuitCard {
    display: inline-block;
    padding: 12px;
    background-color: white;
-   margin: 12px;
    border-radius: 3px;
+   margin-left: 12px;
+}
+
+.circuitCard:first-of-type {
 }
 
 .circuitCity {
    font-weight: 600;
+   font-size: 1.5em;
 }
 
 .circuitNumber {
@@ -33,5 +43,5 @@
 }
 
 .swingFactor {
-   color: red;
+   font-weight: 800;
 }

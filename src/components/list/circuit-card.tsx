@@ -1,9 +1,6 @@
 import styles from './circuits.module.css'
-import { useEffect } from 'react'
 
 const CircuitCard = (circuit: any) => {
-   console.log('card received', circuit)
-
    const {
       circuit_number,
       city_name,
@@ -18,7 +15,7 @@ const CircuitCard = (circuit: any) => {
    return (
       <div key={circuit_number + city_name} className={styles.circuitCard}>
          <section className={styles.circuitBasics}>
-            <span className={styles.circuitNumber}>{circuit_number}</span>
+            <span className={styles.circuitNumber}>Okręg nr {circuit_number}</span>
             <span className={styles.circuitCity}>{city_name}</span>
          </section>
          <section className={styles.circuitStats}>
@@ -31,7 +28,7 @@ const CircuitCard = (circuit: any) => {
          <section className={styles.circuitVoteHistory}>
             <span className={styles.historicVotes}>[2019] głosy KO {votes_ko_2019}</span>
             <span className={styles.population}>[2019] głosy PIS {votes_pis_2019}</span>
-            {/* <span className={styles.swingFactor}>Swing Factor: {swing_factor.toFixed(3)}</span> */}
+            <span className={styles.swingFactor}>Swing Factor: {swing_factor.toFixed(3)}</span>
          </section>
       </div>
    )
