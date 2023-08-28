@@ -5,6 +5,7 @@
    grid-template-columns: 2em 1fr;
    background-color: white;
    border-radius: 60px;
+   transition: 0.3s all ease;
 }
 
 .numberWrapper {
@@ -38,4 +39,8 @@
 
 .mapNode span {
    display: block;
+}
+
+.selectedNode {
+   background-color: yellow;
 }

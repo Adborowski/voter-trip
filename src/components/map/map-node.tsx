@@ -4,17 +4,27 @@ interface MapNodeProps {
    lat: number
    lng: number
    circuit: Circuit
-   selectCircuit: (circuit: Circuit) => {}
+   selectCircuit: (circuit: Circuit) => void
+   selectedCircuit: Circuit | undefined
 }
 
 const MapNode = (props: MapNodeProps) => {
-   const onClick = (e: any) => {
-      props.selectCircuit(props.circuit)
-   }
+   const { selectedCircuit, selectCircuit, circuit } = props
    const { city_name, circuit_number } = props.circuit
+   let selectedClass
+
+   // selectedCircuit comes back from above
+   if (selectedCircuit === circuit) {
+      selectedClass = styles.selectedNode
+   }
 
    return (
-      <div onClick={onClick} className={styles.mapNode}>
+      <div
+         onClick={() => {
+            selectCircuit(circuit)
+         }}
+         className={`${styles.mapNode} ${selectedClass}`}
+      >
          <div className={styles.numberWrapper}>
             <span className={styles.number}>{circuit_number}</span>
          </div>

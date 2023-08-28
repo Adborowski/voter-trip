@@ -6,10 +6,11 @@ import GoogleMap from 'google-maps-react-markers'
 
 interface MapProps {
    circuitList: Circuit[] | undefined
-   selectCircuit: (circuit: Circuit) => {}
+   selectCircuit: (circuit: Circuit) => void
+   selectedCircuit: Circuit | undefined
 }
 
-const RegionsMap = ({ circuitList, selectCircuit }: MapProps) => {
+const RegionsMap = ({ circuitList, selectCircuit, selectedCircuit }: MapProps) => {
    const lat = 51.9194
    const lng = 19.1451
    const mapRef: any = useRef(null)
@@ -47,6 +48,7 @@ const RegionsMap = ({ circuitList, selectCircuit }: MapProps) => {
                   lng={circuit.longitude}
                   circuit={circuit}
                   selectCircuit={selectCircuit}
+                  selectedCircuit={selectedCircuit}
                />
             ))}
          </GoogleMap>

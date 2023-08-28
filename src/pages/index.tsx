@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 export default function Home() {
    const [circuits, setCircuits] = useState<Circuit[]>()
+   const [selectedCircuit, setSelectedCircuit] = useState<Circuit | undefined>()
 
    useEffect(() => {
       fetch('/api/get-circuits')
@@ -17,8 +18,7 @@ export default function Home() {
    }, [])
 
    const selectCircuit = (circuit: Circuit) => {
-      console.log(circuit)
-      return 5
+      setSelectedCircuit(circuit)
    }
 
    return (
@@ -30,7 +30,12 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <CircuitMap selectCircuit={selectCircuit} circuitList={circuits} />
+         <CircuitMap
+            selectedCircuit={selectedCircuit}
+            selectCircuit={selectCircuit}
+            circuitList={circuits}
+         />
+         {selectedCircuit && <div>{selectedCircuit.city_name}</div>}
       </>
    )
 }
