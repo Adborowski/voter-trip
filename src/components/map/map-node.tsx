@@ -4,11 +4,12 @@ interface MapNodeProps {
    lat: number
    lng: number
    circuit: Circuit
+   selectCircuit: (circuit: Circuit) => {}
 }
 
 const MapNode = (props: MapNodeProps) => {
    const onClick = (e: any) => {
-      console.log(props.circuit)
+      props.selectCircuit(props.circuit)
    }
    const { city_name, circuit_number } = props.circuit
 

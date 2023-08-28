@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
-
 import CircuitMap from '@/components/map/circuit-map'
-import CircuitList from '@/components/circuit-list'
 import Head from 'next/head'
 
 export default function Home() {
@@ -18,6 +16,11 @@ export default function Home() {
          })
    }, [])
 
+   const selectCircuit = (circuit: Circuit) => {
+      console.log(circuit)
+      return 5
+   }
+
    return (
       <>
          <Head>
@@ -27,7 +30,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <CircuitMap circuitList={circuits} />
+         <CircuitMap selectCircuit={selectCircuit} circuitList={circuits} />
       </>
    )
 }
