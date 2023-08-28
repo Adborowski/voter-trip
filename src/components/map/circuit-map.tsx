@@ -40,7 +40,12 @@ const RegionsMap = ({ circuitList }: MapProps) => {
             onChange={(map: any) => console.log('Map changed')}
          >
             {circuitList?.map((circuit) => (
-               <MapNode lat={circuit.latitude} lng={circuit.longitude} circuit={circuit} />
+               <MapNode
+                  key={circuit.circuit_number + circuit.city_name}
+                  lat={circuit.latitude}
+                  lng={circuit.longitude}
+                  circuit={circuit}
+               />
             ))}
          </GoogleMap>
       </div>

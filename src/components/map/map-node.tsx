@@ -7,7 +7,6 @@ interface MapNodeProps {
 }
 
 const MapNode = (props: MapNodeProps) => {
-   console.log(props)
    const onClick = (e: any) => {
       console.log(props.circuit)
    }
