@@ -4,19 +4,6 @@ import CircuitMap from '@/components/map/circuit-map'
 import CircuitList from '@/components/circuit-list'
 import Head from 'next/head'
 
-interface Circuit {
-   circuit_number: number
-   city_name: string
-   mandates: number
-   latitude: number
-   longitude: number
-   residents: number
-   residentsPerMandate: number
-   swing_factor: number
-   votes_ko_2019: number
-   votes_pis_2019: number
-}
-
 export default function Home() {
    const [circuits, setCircuits] = useState<Circuit[]>()
 

@@ -8,19 +8,6 @@ interface MapProps {
    circuitList: Circuit[] | undefined
 }
 
-interface Circuit {
-   circuit_number: number
-   city_name: string
-   mandates: number
-   latitude: number
-   longitude: number
-   residents: number
-   residentsPerMandate: number
-   swing_factor: number
-   votes_ko_2019: number
-   votes_pis_2019: number
-}
-
 const RegionsMap = ({ circuitList }: MapProps) => {
    const lat = 51.9194
    const lng = 19.1451
@@ -50,7 +37,7 @@ const RegionsMap = ({ circuitList }: MapProps) => {
             defaultZoom={5}
             options={mapOptions}
             onGoogleApiLoaded={onGoogleApiLoaded}
-            onChange={(map: any) => console.log('Map moved', map)}
+            onChange={(map: any) => console.log('Map changed')}
          >
             {circuitList?.map((circuit) => (
                <MapNode lat={circuit.latitude} lng={circuit.longitude} circuit={circuit} />
