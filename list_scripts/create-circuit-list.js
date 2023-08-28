@@ -19,13 +19,18 @@ const cleanString = (dirtyString) => {
       ń: 'n',
    }
 
-   let cleanString
+   let cleanString = dirtyString
    Object.keys(substitutions).forEach((key) => {
-      cleanString = dirtyString.replace(key, substitutions[key])
+      cleanString = cleanString.replace(key, substitutions[key])
       cleanString = cleanString.replace(' ', '_')
    })
 
-   return cleanString
+   return cleanString.toLowerCase()
 }
 
-console.log(circuits)
+const newCircuits = circuits.map((circuit) => {
+   return { ...circuit, city_id: cleanString(circuit.city_name) }
+})
+
+console.log(newCircuits)
+fs.writeFileSync('circuit-list.json', JSON.stringify(newCircuits))
