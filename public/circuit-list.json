@@ -11,7 +11,7 @@
       "votes_ko_2019": 108191,
       "votes_pis_2019": 183364,
       "swing_factor": 1.694817498682885,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "legnica"
    },
    {
@@ -26,7 +26,7 @@
       "votes_ko_2019": 90812,
       "votes_pis_2019": 114728,
       "swing_factor": 1.2633572655596177,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "walbrzych"
    },
    {
@@ -41,7 +41,7 @@
       "votes_ko_2019": 214629,
       "votes_pis_2019": 226915,
       "swing_factor": 1.057242963439237,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "wroclaw"
    },
    {
@@ -56,7 +56,7 @@
       "votes_ko_2019": 142844,
       "votes_pis_2019": 167550,
       "swing_factor": 1.1729579121279157,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "bydgoszcz"
    },
    {
@@ -71,7 +71,7 @@
       "votes_ko_2019": 119526,
       "votes_pis_2019": 182648,
       "swing_factor": 1.5281026722219433,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "torun"
    },
    {
@@ -86,7 +86,7 @@
       "votes_ko_2019": 109185,
       "votes_pis_2019": 313284,
       "swing_factor": 2.8692952328616568,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "lublin"
    },
    {
@@ -101,7 +101,7 @@
       "votes_ko_2019": 59401,
       "votes_pis_2019": 238802,
       "swing_factor": 4.020168010639551,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "chelm"
    },
    {
@@ -116,7 +116,7 @@
       "votes_ko_2019": 136955,
       "votes_pis_2019": 150188,
       "swing_factor": 1.096622978350553,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "zielona_gora"
    },
    {
@@ -131,7 +131,7 @@
       "votes_ko_2019": 148830,
       "votes_pis_2019": 136731,
       "swing_factor": 1.0884876143668956,
-      "2019_winner": "party_ko",
+      "winner_2019": "party_ko",
       "city_id": "łodz"
    },
    {
@@ -146,7 +146,7 @@
       "votes_ko_2019": 54160,
       "votes_pis_2019": 194658,
       "swing_factor": 3.594128508124077,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "piotrkow_trybunalski"
    },
    {
@@ -161,7 +161,7 @@
       "votes_ko_2019": 94268,
       "votes_pis_2019": 229245,
       "swing_factor": 2.431843255399499,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "sieradz"
    },
    {
@@ -176,7 +176,7 @@
       "votes_ko_2019": 72869,
       "votes_pis_2019": 169106,
       "swing_factor": 2.320685064979621,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "chrzanow"
    },
    {
@@ -191,7 +191,7 @@
       "votes_ko_2019": 197930,
       "votes_pis_2019": 256847,
       "swing_factor": 1.2976658414591018,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "krakow"
    },
    {
@@ -206,7 +206,7 @@
       "votes_ko_2019": 51183,
       "votes_pis_2019": 243583,
       "swing_factor": 4.759060625598344,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "nowy_sacz"
    },
    {
@@ -221,7 +221,7 @@
       "votes_ko_2019": 48597,
       "votes_pis_2019": 206845,
       "swing_factor": 4.2563326954338745,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "tarnow"
    },
    {
@@ -236,7 +236,7 @@
       "votes_ko_2019": 62429,
       "votes_pis_2019": 194371,
       "swing_factor": 3.1134729052203305,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "plock"
    },
    {
@@ -251,7 +251,7 @@
       "votes_ko_2019": 57449,
       "votes_pis_2019": 193709,
       "swing_factor": 3.3718428519208343,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "radom"
    },
    {
@@ -266,7 +266,7 @@
       "votes_ko_2019": 63124,
       "votes_pis_2019": 270641,
       "swing_factor": 4.287450098219378,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "siedlce"
    },
    {
@@ -276,12 +276,12 @@
       "residents": 1603233,
       "mandates": 20,
       "residentsPerMandate": 80055,
-      "latitude": 52.3,
-      "longitude": 21,
+      "latitude": 52.15,
+      "longitude": 21.1,
       "votes_ko_2019": 581077,
       "votes_pis_2019": 379880,
       "swing_factor": 1.5296330420132673,
-      "2019_winner": "party_ko",
+      "winner_2019": "party_ko",
       "city_id": "warszawa"
    },
    {
@@ -296,7 +296,7 @@
       "votes_ko_2019": 171286,
       "votes_pis_2019": 244823,
       "swing_factor": 1.4293228868675782,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "warszawa"
    },
    {
@@ -311,7 +311,7 @@
       "votes_ko_2019": 108570,
       "votes_pis_2019": 152999,
       "swing_factor": 1.4092198581560285,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "opole"
    },
    {
@@ -326,7 +326,7 @@
       "votes_ko_2019": 62246,
       "votes_pis_2019": 247488,
       "swing_factor": 3.975966327153552,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "krosno"
    },
    {
@@ -341,7 +341,7 @@
       "votes_ko_2019": 84703,
       "votes_pis_2019": 367268,
       "swing_factor": 4.33595032053174,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "rzeszow"
    },
    {
@@ -356,7 +356,7 @@
       "votes_ko_2019": 109527,
       "votes_pis_2019": 270888,
       "swing_factor": 2.473253170451122,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "bialystok"
    },
    {
@@ -371,7 +371,7 @@
       "votes_ko_2019": 218484,
       "votes_pis_2019": 169753,
       "swing_factor": 1.287070037053837,
-      "2019_winner": "party_ko",
+      "winner_2019": "party_ko",
       "city_id": "gdansk"
    },
    {
@@ -386,7 +386,7 @@
       "votes_ko_2019": 208208,
       "votes_pis_2019": 211582,
       "swing_factor": 1.0162049488972567,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "gdynia"
    },
    {
@@ -401,7 +401,7 @@
       "votes_ko_2019": 105876,
       "votes_pis_2019": 182027,
       "swing_factor": 1.7192470437115115,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "bielsko-biala"
    },
    {
@@ -416,7 +416,7 @@
       "votes_ko_2019": 64374,
       "votes_pis_2019": 125990,
       "swing_factor": 1.9571566160251033,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "czestochowa"
    },
    {
@@ -431,7 +431,7 @@
       "votes_ko_2019": 111078,
       "votes_pis_2019": 128579,
       "swing_factor": 1.1575559516735987,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "gliwice"
    },
    {
@@ -446,7 +446,7 @@
       "votes_ko_2019": 92493,
       "votes_pis_2019": 161160,
       "swing_factor": 1.7424021277285848,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "rybnik"
    },
    {
@@ -461,7 +461,7 @@
       "votes_ko_2019": 174683,
       "votes_pis_2019": 184030,
       "swing_factor": 1.0535083551347297,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "katowice"
    },
    {
@@ -476,7 +476,7 @@
       "votes_ko_2019": 99499,
       "votes_pis_2019": 124553,
       "swing_factor": 1.2518015256434738,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "sosnowiec"
    },
    {
@@ -491,7 +491,7 @@
       "votes_ko_2019": 94880,
       "votes_pis_2019": 314455,
       "swing_factor": 3.3142390387858347,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "kielce"
    },
    {
@@ -506,7 +506,7 @@
       "votes_ko_2019": 71320,
       "votes_pis_2019": 102478,
       "swing_factor": 1.4368760515984296,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "elblag"
    },
    {
@@ -521,7 +521,7 @@
       "votes_ko_2019": 87780,
       "votes_pis_2019": 128760,
       "swing_factor": 1.466848940533151,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "olsztyn"
    },
    {
@@ -536,7 +536,7 @@
       "votes_ko_2019": 113489,
       "votes_pis_2019": 195053,
       "swing_factor": 1.71869520394047,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "kalisz"
    },
    {
@@ -551,7 +551,7 @@
       "votes_ko_2019": 72295,
       "votes_pis_2019": 166965,
       "swing_factor": 2.309495815754893,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "konin"
    },
    {
@@ -566,7 +566,7 @@
       "votes_ko_2019": 106810,
       "votes_pis_2019": 124392,
       "swing_factor": 1.1646100552382737,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "pila"
    },
    {
@@ -581,7 +581,7 @@
       "votes_ko_2019": 233474,
       "votes_pis_2019": 130319,
       "swing_factor": 1.7915576393311796,
-      "2019_winner": "party_ko",
+      "winner_2019": "party_ko",
       "city_id": "poznan"
    },
    {
@@ -596,7 +596,7 @@
       "votes_ko_2019": 87799,
       "votes_pis_2019": 100078,
       "swing_factor": 1.1398535290834748,
-      "2019_winner": "party_pis",
+      "winner_2019": "party_pis",
       "city_id": "koszalin"
    },
    {
@@ -611,7 +611,7 @@
       "votes_ko_2019": 168022,
       "votes_pis_2019": 165200,
       "swing_factor": 1.0170823244552059,
-      "2019_winner": "party_ko",
+      "winner_2019": "party_ko",
       "city_id": "szczecin"
    }
 ]

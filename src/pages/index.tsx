@@ -39,8 +39,9 @@ export default function Home() {
             selectCircuit={selectCircuit} // handler
             circuitList={circuits}
          />
-         <button className={'btnPlanTrip'}>PLANUJ PODRÓŻ</button>
+
          {selectedCircuit && <CircuitCard circuit={selectedCircuit} />}
+         {selectedCircuit && <button className={'btnPlanTrip'}>Zaplanuj wycieczkę</button>}
       </>
    )
 }

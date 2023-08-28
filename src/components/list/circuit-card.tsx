@@ -1,4 +1,5 @@
 import styles from './circuits.module.css'
+import SwingInfo from './swing-info'
 
 const CircuitCard = (circuit: any) => {
    const {
@@ -18,6 +19,8 @@ const CircuitCard = (circuit: any) => {
             <span className={styles.circuitNumber}>Okręg nr {circuit_number}</span>
             <span className={styles.circuitCity}>{city_name}</span>
          </section>
+
+         <SwingInfo circuit={circuit} />
          <section className={styles.circuitStats}>
             <span className={styles.mandates}>Mandatów: {mandates}</span>
             <span className={styles.population}>Mieszkańców: {residents}</span>

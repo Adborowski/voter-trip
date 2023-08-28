@@ -12,5 +12,6 @@ declare global {
       swing_factor: number
       votes_ko_2019: number
       votes_pis_2019: number
+      winner_2019: string
    }
 }
