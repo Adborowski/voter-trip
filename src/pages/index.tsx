@@ -1,8 +1,36 @@
-import RegionsMap from '@/components/map/regions-map'
-import RegionList from '@/components/region-list'
+import { useEffect, useState } from 'react'
+
+import CircuitMap from '@/components/map/circuit-map'
+import CircuitList from '@/components/circuit-list'
 import Head from 'next/head'
 
+interface Circuit {
+   circuit_number: number
+   city_name: string
+   mandates: number
+   latitude: number
+   longitude: number
+   residents: number
+   residentsPerMandate: number
+   swing_factor: number
+   votes_ko_2019: number
+   votes_pis_2019: number
+}
+
 export default function Home() {
+   const [circuits, setCircuits] = useState<Circuit[]>()
+
+   useEffect(() => {
+      fetch('/api/get-circuits')
+         .then((res) => res.json())
+         .then((circuits) => {
+            if (circuits) {
+               console.log(circuits)
+               setCircuits(circuits)
+            }
+         })
+   }, [])
+
    return (
       <>
          <Head>
@@ -11,8 +39,9 @@ export default function Home() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
          </Head>
-         <RegionsMap />
-         <RegionList />
+
+         <CircuitMap circuitList={circuits} />
+         <CircuitList circuitList={circuits} />
       </>
    )
 }

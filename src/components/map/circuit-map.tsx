@@ -1,10 +1,27 @@
 import GoogleMapReact from 'google-map-react'
-import styles from './regions-map.module.css'
+import styles from './circuit-map.module.css'
 import { useEffect, useState, useRef } from 'react'
 import MapNode from './map-node'
 import GoogleMap from 'google-maps-react-markers'
 
-const RegionsMap = () => {
+interface MapProps {
+   circuitList: {}[] | undefined
+}
+
+interface Circuit {
+   circuit_number: number
+   city_name: string
+   mandates: number
+   latitude: number
+   longitude: number
+   residents: number
+   residentsPerMandate: number
+   swing_factor: number
+   votes_ko_2019: number
+   votes_pis_2019: number
+}
+
+const RegionsMap = (props: MapProps) => {
    const lat = 51.9194
    const lng = 19.1451
    const mapRef: any = useRef(null)

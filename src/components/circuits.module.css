@@ -1,0 +1,35 @@
+.listedCircuit {
+   display: inline-block;
+   padding: 12px;
+   background-color: white;
+   margin: 3px;
+   border-radius: 3px;
+}
+
+.circuitCity {
+   font-weight: 600;
+}
+
+.circuitNumber {
+   margin-right: 6px;
+   opacity: 0.25;
+}
+
+.circuitStats {
+   margin-top: 12px;
+}
+
+.circuitStats span,
+.circuitVoteHistory span {
+   display: block;
+   font-size: 0.8rem;
+   margin-bottom: 3px;
+}
+
+.circuitVoteHistory {
+   margin-top: 12px;
+}
+
+.swingFactor {
+   color: red;
+}
