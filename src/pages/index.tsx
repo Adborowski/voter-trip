@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import CircuitMap from '@/components/map/circuit-map'
 import Head from 'next/head'
+import Navbar from '@/components/navbar/navbar'
+import CircuitCard from '@/components/list/circuit-card'
 
 export default function Home() {
    const [circuits, setCircuits] = useState<Circuit[]>()
@@ -30,12 +32,14 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
+         <Navbar />
+
          <CircuitMap
             selectedCircuit={selectedCircuit}
-            selectCircuit={selectCircuit}
+            selectCircuit={selectCircuit} // handler
             circuitList={circuits}
          />
-         {selectedCircuit && <div>{selectedCircuit.city_name}</div>}
+         {selectedCircuit && <CircuitCard circuit={selectedCircuit} />}
       </>
    )
 }

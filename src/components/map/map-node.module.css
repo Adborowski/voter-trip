@@ -6,6 +6,11 @@
    background-color: white;
    border-radius: 60px;
    transition: 0.3s all ease;
+   opacity: 0.9;
+}
+
+.mapNode:hover {
+   cursor: pointer;
 }
 
 .numberWrapper {
@@ -22,6 +27,7 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+   transition: 0.3s all ease;
 }
 
 .textWrapper {
@@ -41,6 +47,16 @@
    display: block;
 }
 
+/* put node on top when clicked */
+div:has(.selectedNode) {
+   z-index: 1 !important;
+}
+
 .selectedNode {
    background-color: yellow;
+   opacity: 1;
+}
+
+.selectedNode .numberWrapper {
+   background-color: rgb(172, 126, 0);
 }

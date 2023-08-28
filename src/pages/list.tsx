@@ -1,4 +1,5 @@
-import CircuitList from '@/components/circuit-list'
+import CircuitCard from '@/components/list/circuit-card'
+import CircuitList from '@/components/list/circuit-list'
 import { useEffect, useState } from 'react'
 
 const ListaOkregow = (props: any) => {
@@ -15,7 +16,7 @@ const ListaOkregow = (props: any) => {
          })
    }, [])
 
-   return <CircuitList circuitList={circuits} />
+   return <>{circuits && circuits.map((circuit) => <CircuitCard circuit={circuit} />)}</>
 }
 
 export default ListaOkregow
