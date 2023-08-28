@@ -10,12 +10,11 @@ const RegionList = () => {
    const [regionsData, setRegionsData] = useState<Region[]>()
 
    useEffect(() => {
-      fetch('/api/get-regions')
+      fetch('/api/get-circuits')
          .then((res) => res.json())
-         .then((regionsData) => {
-            if (regionsData) {
-               console.log(regionsData.regions)
-               setRegionsData(regionsData.regions)
+         .then((circuits) => {
+            if (circuits) {
+               console.log(circuits)
             }
          })
    }, [])
