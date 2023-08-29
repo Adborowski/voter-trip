@@ -7,10 +7,16 @@ interface TripPlannerProps {
 
 const TripPlanner = (props: TripPlannerProps) => {
    const { startCircuit } = props
+   const { city_name } = startCircuit
    return (
-      <section>
+      <section className={styles.tripPlanner}>
          <CircuitCard circuit={startCircuit} />
-         <button className={'btnPlanTrip'}>Zaplanuj wycieczkę</button>
+         <button className={styles.btnPlanTrip}>Zaplanuj wycieczkę do innego okręgu</button>
+         <article className={styles.tripDestinationCircuits}>
+            <CircuitCard circuit={startCircuit} />
+            <CircuitCard circuit={startCircuit} />
+            <CircuitCard circuit={startCircuit} />
+         </article>
       </section>
    )
 }
