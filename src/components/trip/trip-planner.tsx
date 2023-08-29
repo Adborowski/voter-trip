@@ -15,27 +15,9 @@ const TripPlanner = (props: TripPlannerProps) => {
       destinationCityName: 'Kraków',
    }
 
-   useEffect(() => {
-      fetch('/api/get-route', {
-         method: 'POST',
-         body: JSON.stringify(routePayload),
-         headers: {
-            'Content-Type': 'application/json',
-         },
-      })
-         .then((res) => res.json())
-         .then((data) => {
-            if (data) {
-               console.log('[get-route]', data)
-            }
-         })
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-   }, [])
-
    return (
       <section className={styles.tripPlanner}>
          <CircuitCard circuit={startCircuit} />
-         <button className={styles.btnPlanTrip}>Zaplanuj wycieczkę</button>
          <article className={styles.tripDestinationCircuits}>
             <CircuitCard circuit={startCircuit} />
             <CircuitCard circuit={startCircuit} />

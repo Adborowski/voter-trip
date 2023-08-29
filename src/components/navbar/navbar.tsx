@@ -3,10 +3,11 @@ import { useRouter } from 'next/router'
 
 interface NavbarProps {
    selectedCircuit: Circuit | undefined
+   planTrip: any
 }
 
 const Navbar = (props: NavbarProps) => {
-   const { selectedCircuit } = props
+   const { selectedCircuit, planTrip } = props
    const router = useRouter()
    return (
       <div className={styles.navbar}>
@@ -14,7 +15,7 @@ const Navbar = (props: NavbarProps) => {
             <span>
                {!selectedCircuit
                   ? '1. Kliknij na mapie swój lokalny okręg wyborczy'
-                  : '2. Kliknij "Zaplanuj wycieczkę" poniżej'}
+                  : '2. Kliknij "Zaplanuj wycieczkę"'}
             </span>
          </section>
          <section className={styles.controls}>
@@ -25,6 +26,16 @@ const Navbar = (props: NavbarProps) => {
             >
                <span>Lista okręgów</span>
             </button>
+            {selectedCircuit && (
+               <button
+                  onClick={() => {
+                     planTrip(selectedCircuit)
+                  }}
+                  className={styles.btnPlanTrip}
+               >
+                  <span>Zaplanuj wycieczkę</span>
+               </button>
+            )}
          </section>
       </div>
    )

@@ -13,5 +13,8 @@ declare global {
       votes_ko_2019: number
       votes_pis_2019: number
       winner_2019: string
+      city_id: string
+      distance_from_origin?: string
+      score?: number
    }
 }

@@ -25,6 +25,30 @@ export default function Home() {
       setSelectedCircuit(circuit)
    }
 
+   const planTrip = (circuit: Circuit) => {
+      const { city_name } = circuit
+      console.log('Planning a trip from', city_name)
+
+      const payload = {
+         selectedCircuit: selectedCircuit,
+         circuits: circuits,
+      }
+
+      fetch('/api/get-scored-circuits', {
+         method: 'POST',
+         body: JSON.stringify(payload),
+         headers: {
+            'Content-Type': 'application/json',
+         },
+      })
+         .then((res) => res.json())
+         .then((data) => {
+            if (data) {
+               console.log('[get-scored-circuits]', data)
+            }
+         })
+   }
+
    return (
       <>
          <Head>
@@ -34,7 +58,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <Navbar selectedCircuit={selectedCircuit} />
+         <Navbar selectedCircuit={selectedCircuit} planTrip={planTrip} />
 
          <CircuitMap
             selectedCircuit={selectedCircuit}

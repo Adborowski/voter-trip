@@ -26,7 +26,7 @@ body * {
    --shadow-1: rgb(0, 75, 126);
    --highlight-1: rgb(255, 208, 0);
    --highlight-2: rgb(255, 228, 106);
-   --shadow-1: #125a85;
+   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 body::-webkit-scrollbar {
