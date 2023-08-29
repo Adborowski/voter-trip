@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import CircuitMap from '@/components/map/circuit-map'
 import Head from 'next/head'
 import Navbar from '@/components/navbar/navbar'
-import CircuitCard from '@/components/list/circuit-card'
+import CircuitCard from '@/components/circuit/circuit-card'
+import TripPlanner from '@/components/trip/trip-planner'
 
 export default function Home() {
    const [circuits, setCircuits] = useState<Circuit[]>()
@@ -39,9 +40,7 @@ export default function Home() {
             selectCircuit={selectCircuit} // handler
             circuitList={circuits}
          />
-
-         {selectedCircuit && <CircuitCard circuit={selectedCircuit} />}
-         {selectedCircuit && <button className={'btnPlanTrip'}>Zaplanuj wycieczkę</button>}
+         {selectedCircuit && <TripPlanner startCircuit={selectedCircuit} />}
       </>
    )
 }

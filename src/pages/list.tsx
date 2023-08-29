@@ -1,4 +1,4 @@
-import CircuitCard from '@/components/list/circuit-card'
+import CircuitCard from '@/components/circuit/circuit-card'
 import HomeButton from '@/components/navbar/home-button'
 import { useEffect, useState } from 'react'
 
