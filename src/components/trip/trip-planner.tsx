@@ -25,7 +25,12 @@ const TripPlanner = (props: TripPlannerProps) => {
             {scoredCircuits &&
                scoredCircuits.map((scoredCircuit, index) => {
                   if (index < 5) {
-                     return <CircuitCard circuit={scoredCircuit} />
+                     return (
+                        <CircuitCard
+                           key={scoredCircuit.circuit_number + scoredCircuit.city_name}
+                           circuit={scoredCircuit}
+                        />
+                     )
                   }
                })}
             {/* <CircuitCard circuit={startCircuit} />
