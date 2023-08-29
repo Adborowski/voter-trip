@@ -1,5 +1,5 @@
 import CircuitCard from '@/components/list/circuit-card'
-import CircuitList from '@/components/list/circuit-list'
+import HomeButton from '@/components/navbar/home-button'
 import { useEffect, useState } from 'react'
 
 const ListaOkregow = (props: any) => {
@@ -16,7 +16,12 @@ const ListaOkregow = (props: any) => {
          })
    }, [])
 
-   return <>{circuits && circuits.map((circuit) => <CircuitCard circuit={circuit} />)}</>
+   return (
+      <>
+         <HomeButton />
+         {circuits && circuits.map((circuit) => <CircuitCard circuit={circuit} />)}
+      </>
+   )
 }
 
 export default ListaOkregow

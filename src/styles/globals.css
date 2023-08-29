@@ -18,7 +18,8 @@ body {
 
 :root {
    --shadow-1: rgb(0, 75, 126);
-   --highlight-1: rgb(98, 255, 93);
+   --highlight-1: rgb(255, 208, 0);
+   --highlight-2: rgb(255, 228, 106);
    --shadow-1: #125a85;
 }
 
@@ -30,11 +31,11 @@ body {
    padding: 12px 18px;
    display: block;
    margin: 12px;
-   font-size: 1.25em;
-   font-weight: 600;
+   font-size: 1rem;
+   font-weight: 800;
    border-radius: 100px;
-   background-color: var(--shadow-1);
-   color: white;
+   background-color: var(--highlight-1);
+   color: black;
    cursor: pointer;
 }
 

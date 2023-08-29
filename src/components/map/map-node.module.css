@@ -53,10 +53,11 @@ div:has(.selectedNode) {
 }
 
 .selectedNode {
-   background-color: yellow;
+   background-color: var(--highlight-1);
    opacity: 1;
 }
 
 .selectedNode .numberWrapper {
-   background-color: rgb(172, 126, 0);
+   background-color: var(--highlight-2);
+   color: black;
 }
