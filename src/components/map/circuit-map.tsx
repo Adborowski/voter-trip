@@ -1,4 +1,3 @@
-import GoogleMapReact from 'google-map-react'
 import styles from './circuit-map.module.css'
 import { useEffect, useState, useRef } from 'react'
 import MapNode from './map-node'
