@@ -39,6 +39,12 @@
 }
 
 .swingInfo {
+   margin-top: 6px;
+}
+
+.swingFactor {
+   display: block;
+   font-size: 0.8rem;
    margin-top: 3px;
 }
 
@@ -52,9 +58,9 @@
 }
 
 .swingInfo.supportStrong span {
-   color: rgb(201, 154, 0);
+   color: rgb(209, 160, 0);
 }
 
 .swingInfo.supportVeryStrong span {
-   color: rgb(206, 14, 0);
+   color: rgb(216, 0, 0);
 }

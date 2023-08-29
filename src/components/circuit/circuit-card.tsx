@@ -31,7 +31,6 @@ const CircuitCard = (circuit: any) => {
          <section className={styles.circuitVoteHistory}>
             <span className={styles.historicVotes}>[2019] głosy KO {votes_ko_2019}</span>
             <span className={styles.population}>[2019] głosy PIS {votes_pis_2019}</span>
-            <span className={styles.swingFactor}>Swing Factor: {swing_factor.toFixed(3)}</span>
          </section>
       </div>
    )

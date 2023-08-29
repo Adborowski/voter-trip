@@ -32,6 +32,9 @@ const SwingInfo = (props: SwingInfoProps) => {
          <span>
             {supportScale} przewaga {winnerDisplayName}
          </span>
+         <span className={styles.swingFactor}>
+            Różnica głosów {Math.round((swing_factor - 1) * 100) + '%'}
+         </span>
       </section>
    )
 }

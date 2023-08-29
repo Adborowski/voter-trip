@@ -33,7 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const swingDifference = tripOrigin.swing_factor - circuit.swing_factor
       // negative swingDifference means you gain SF by voting at the circuit
 
-      const distanceWeight = 2 // math weight of distance - we
+      const distanceWeight = 1.5 // math weight of distance ie how much should distance impact the score
       const score =
          Math.floor(swingDifference * 1000) - getDistanceFromOrigin(circuit) * distanceWeight
 

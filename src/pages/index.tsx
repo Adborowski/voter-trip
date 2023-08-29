@@ -8,6 +8,7 @@ import TripPlanner from '@/components/trip/trip-planner'
 export default function Home() {
    const [circuits, setCircuits] = useState<Circuit[]>()
    const [selectedCircuit, setSelectedCircuit] = useState<Circuit | undefined>()
+   const [scoredCircuits, setScoredCircuits] = useState<Circuit[] | undefined>()
 
    useEffect(() => {
       fetch('/api/get-circuits')
@@ -42,9 +43,10 @@ export default function Home() {
          },
       })
          .then((res) => res.json())
-         .then((data) => {
-            if (data) {
-               console.log('[get-scored-circuits]', data)
+         .then((scoredCircuits) => {
+            if (scoredCircuits) {
+               console.log('[get-scored-circuits]', scoredCircuits)
+               setScoredCircuits(scoredCircuits)
             }
          })
    }
@@ -65,7 +67,9 @@ export default function Home() {
             selectCircuit={selectCircuit} // handler
             circuitList={circuits}
          />
-         {selectedCircuit && <TripPlanner startCircuit={selectedCircuit} />}
+         {selectedCircuit && scoredCircuits && (
+            <TripPlanner scoredCircuits={scoredCircuits} startCircuit={selectedCircuit} />
+         )}
       </>
    )
 }
