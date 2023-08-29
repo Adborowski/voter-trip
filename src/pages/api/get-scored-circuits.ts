@@ -14,6 +14,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    console.log('SWING FACTOR', tripOrigin.swing_factor.toFixed(3))
 
    const getDistanceFromOrigin = (circuit: Circuit) => {
+      if (tripOrigin.city_id === 'łodz') {
+         tripOrigin.city_id = 'lodz'
+      }
+
+      if (circuit.city_id === 'łodz') {
+         circuit.city_id = 'lodz'
+      }
+      console.log(`[${tripOrigin.city_id}][${circuit.city_id}]`)
       const route = routes[tripOrigin.city_id][circuit.city_id]
       return Math.round(route.distance.value / 1000) // return distance in km
    }
