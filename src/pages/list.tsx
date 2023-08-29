@@ -14,12 +14,16 @@ const ListaOkregow = (props: any) => {
                setCircuits(circuits)
             }
          })
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 
    return (
       <>
          <HomeButton />
-         {circuits && circuits.map((circuit) => <CircuitCard circuit={circuit} />)}
+         {circuits &&
+            circuits.map((circuit) => (
+               <CircuitCard key={circuit.circuit_number + circuit.city_name} circuit={circuit} />
+            ))}
       </>
    )
 }

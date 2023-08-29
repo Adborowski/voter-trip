@@ -18,6 +18,7 @@ export default function Home() {
                setCircuits(circuits)
             }
          })
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 
    const selectCircuit = (circuit: Circuit) => {
@@ -33,7 +34,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <Navbar />
+         <Navbar selectedCircuit={selectedCircuit} />
 
          <CircuitMap
             selectedCircuit={selectedCircuit}

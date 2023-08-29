@@ -16,9 +16,19 @@ body {
    background-color: #f3f3f3;
 }
 
+body,
+body * {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+
 :root {
    --shadow-1: rgb(0, 75, 126);
    --highlight-1: rgb(255, 208, 0);
    --highlight-2: rgb(255, 228, 106);
    --shadow-1: #125a85;
+}
+
+body::-webkit-scrollbar {
+   display: none;
 }
