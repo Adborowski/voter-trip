@@ -15,7 +15,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
    const getDistanceFromOrigin = (circuit: Circuit) => {
       const route = routes[tripOrigin.city_id][circuit.city_id]
-      return route.distance.value / 1000 // return distance in km
+      return Math.round(route.distance.value / 1000) // return distance in km
    }
 
    let swingDifference
@@ -31,8 +31,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       const swingDifference = tripOrigin.swing_factor - circuit.swing_factor
+      // negative swingDifference means you gain SF by voting at the circuit
 
-      const score = swingDifference
+      const distanceWeight = 2 // math weight of distance - we
+      const score =
+         Math.floor(swingDifference * 1000) - getDistanceFromOrigin(circuit) * distanceWeight
+
       return score
    }
 
@@ -50,11 +54,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
    })
 
-   sortedCircuits.forEach((circuit: Circuit) => {
-      console.log(
-         `${circuit.city_name}: score ${circuit.score} / distance: ${circuit.distance_from_origin}`,
-         `/ swing difference: ${getSwingDifference(tripOrigin, circuit)}`
-      )
+   sortedCircuits.forEach((circuit: Circuit, index: number) => {
+      if (index < 5) {
+         console.log(
+            `${circuit.city_name}: score: ${circuit.score} / distance: ${circuit.distance_from_origin} km`,
+            `/ swing difference: ${getSwingDifference(tripOrigin, circuit)}`
+         )
+      }
    })
    res.status(200).json(sortedCircuits)
 }
