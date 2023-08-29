@@ -10,12 +10,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    const routes = JSON.parse(fs.readFileSync(dir))
 
    const tripOrigin: Circuit = selectedCircuit
-   console.log(tripOrigin.city_id)
-   console.log(tripOrigin.swing_factor.toFixed(3))
+   console.log('FROM', tripOrigin.city_id)
+   console.log('SWING FACTOR', tripOrigin.swing_factor.toFixed(3))
 
    const getDistanceFromOrigin = (circuit: Circuit) => {
       const route = routes[tripOrigin.city_id][circuit.city_id]
-      return route.distance.value / 1000
+      return route.distance.value / 1000 // return distance in km
+   }
+
+   let swingDifference
+   const getSwingDifference = (circuitA: Circuit, circuitB: Circuit) => {
+      swingDifference = circuitA.swing_factor - circuitB.swing_factor
+      return swingDifference
    }
 
    const getCircuitScore = (circuitToScoreAgainst: Circuit) => {
@@ -25,25 +31,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       const swingDifference = tripOrigin.swing_factor - circuit.swing_factor
-      let swingScore = Math.floor((10 - Math.abs(swingDifference)) * 100)
-      // we want swingScore that can be divided by distance in meters (50-100k)
-      // lower difference should mean higher score, so we subtract from 10
-      // the remainder is multiplied to become similar size number to distance in meters
-      // the whole is rounded down for simplicity
 
-      if (circuit.city_id === tripOrigin.city_id) {
-         swingScore = 0
-      }
-
-      const distanceFromOrigin = getDistanceFromOrigin(circuit)
-
-      const score = swingScore
-
-      console.log('----------------------------------------------------------')
-      console.log(`${tripOrigin.city_name} -> ${circuit.city_name}:`)
-      console.log(`swingScore ${swingScore}`)
-      console.log(`distance ${distanceFromOrigin}`)
-      console.log(`score ${score}`)
+      const score = swingDifference
       return score
    }
 
@@ -59,6 +48,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (a.score && b.score) {
          return b.score - a.score
       }
+   })
+
+   sortedCircuits.forEach((circuit: Circuit) => {
+      console.log(
+         `${circuit.city_name}: score ${circuit.score} / distance: ${circuit.distance_from_origin}`,
+         `/ swing difference: ${getSwingDifference(tripOrigin, circuit)}`
+      )
    })
    res.status(200).json(sortedCircuits)
 }
