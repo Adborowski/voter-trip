@@ -1,10 +1,22 @@
+.circuitList {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 3px;
+   flex-wrap: wrap;
+}
+
+.circuitList .circuitCard {
+}
+
 .circuitCard {
    display: inline-block;
    padding: 12px;
    background-color: white;
    border-radius: 3px;
    max-width: 240px;
-   margin: auto;
+   /* margin: auto; */
 }
 
 .circuitCity {

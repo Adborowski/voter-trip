@@ -80,6 +80,14 @@
    height: 100%;
 }
 
+.navbar section.controls button.btnShowCircuitList {
+   background-color: white;
+}
+
+.navbar section.controls button.btnShowCircuitList span {
+   color: black;
+}
+
 .navbar section.controls button.btnPlanTrip span {
    color: black;
    display: block;

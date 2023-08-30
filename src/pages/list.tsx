@@ -1,10 +1,9 @@
-import CircuitCard from '@/components/circuit/circuit-card'
+import CircuitList from '@/components/circuit/circuit-list'
 import HomeButton from '@/components/navbar/home-button'
 import { useEffect, useState } from 'react'
 
 const ListaOkregow = (props: any) => {
    const [circuits, setCircuits] = useState<Circuit[]>()
-
    useEffect(() => {
       fetch('/api/get-circuits')
          .then((res) => res.json())
@@ -17,15 +16,14 @@ const ListaOkregow = (props: any) => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 
-   return (
-      <>
-         <HomeButton />
-         {circuits &&
-            circuits.map((circuit) => (
-               <CircuitCard key={circuit.circuit_number + circuit.city_name} circuit={circuit} />
-            ))}
-      </>
-   )
+   if (circuits) {
+      return (
+         <>
+            <HomeButton />
+            <CircuitList circuits={circuits} length={41} />
+         </>
+      )
+   }
 }
 
 export default ListaOkregow

@@ -16,5 +16,12 @@ declare global {
       city_id: string
       distance_from_origin?: string
       score?: number
+      route?: Route
+   }
+
+   interface ScoredCircuit extends Circuit {
+      distance_from_origin: string
+      score: number
+      route: Route
    }
 }

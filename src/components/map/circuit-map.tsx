@@ -4,15 +4,17 @@ import MapNode from './map-node'
 import GoogleMap from 'google-maps-react-markers'
 
 interface MapProps {
-   circuitList: Circuit[] | undefined
+   circuitList?: Circuit[]
    selectCircuit: (circuit: Circuit) => void
-   selectedCircuit: Circuit | undefined
+   selectedCircuit?: Circuit
+   scoredCircuits?: ScoredCircuit[] // each scoredCircuit has a route property
 }
 
-const RegionsMap = ({ circuitList, selectCircuit, selectedCircuit }: MapProps) => {
+const CircuitMap = ({ circuitList, selectCircuit, selectedCircuit, scoredCircuits }: MapProps) => {
    const lat = 51.9194
    const lng = 19.1451
    const mapRef: any = useRef(null)
+   const mapsRef: any = useRef(null)
    const [mapReady, setMapReady] = useState(false)
    const mapOptions = {
       center: {
@@ -22,10 +24,38 @@ const RegionsMap = ({ circuitList, selectCircuit, selectedCircuit }: MapProps) =
       zoom: 6,
    }
 
-   const onGoogleApiLoaded = ({ map, maps }: any) => {
+   //  console.log('mapRef', mapRef.current)
+   //  console.log('mapsRef', mapsRef.current)
+
+   useEffect(() => {
+      console.log('scoredCircuits change', scoredCircuits)
+      scoredCircuits?.forEach((circ) => {
+         const maps = mapsRef.current
+         const map = mapRef.current
+         const encodedPath = circ.route.polyline.points
+         const decodedPath = mapsRef.current.geometry.encoding.decodePath(encodedPath)
+
+         const polylineObject = {
+            path: decodedPath,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2,
+         }
+         const newPolyline = new maps.Polyline(polylineObject)
+         newPolyline.setMap(map)
+      })
+   }, [scoredCircuits])
+
+   const onChange = ({ map, maps }: any) => {}
+
+   const onGoogleApiLoaded = ({ map, maps, scoredCircuits }: any) => {
       mapRef.current = map
+      mapsRef.current = maps
       setMapReady(true)
    }
+
+   //  console.log(window.google.maps)
 
    const key: any = process.env.NEXT_PUBLIC_MAP_KEY
 
@@ -38,7 +68,8 @@ const RegionsMap = ({ circuitList, selectCircuit, selectedCircuit }: MapProps) =
             defaultZoom={5}
             options={mapOptions}
             onGoogleApiLoaded={onGoogleApiLoaded}
-            onChange={(map: any) => console.log('Map changed')}
+            onChange={onChange}
+            scoredCircuits={scoredCircuits}
          >
             {circuitList?.map((circuit) => (
                <MapNode
@@ -55,4 +86,4 @@ const RegionsMap = ({ circuitList, selectCircuit, selectedCircuit }: MapProps) =
    )
 }
 
-export default RegionsMap
+export default CircuitMap

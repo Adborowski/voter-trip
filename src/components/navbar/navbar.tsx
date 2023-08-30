@@ -20,6 +20,7 @@ const Navbar = (props: NavbarProps) => {
          </section>
          <section className={styles.controls}>
             <button
+               className={styles.btnShowCircuitList}
                onClick={() => {
                   router.push('/list')
                }}

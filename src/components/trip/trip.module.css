@@ -12,11 +12,3 @@
    margin-top: 6px;
    font-weight: 800;
 }
-
-.tripDestinationCircuits {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   gap: 12px;
-   margin: auto;
-}

@@ -26,6 +26,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return Math.round(route.distance.value / 1000) // return distance in km
    }
 
+   // parameter is the TARGET circuit while the ORIGIN comes from the API request
+   const getRouteFromOrigin = (circuit: Circuit) => {
+      const route = routes[tripOrigin.city_id][circuit.city_id]
+      return route
+   }
+
    let swingDifference
    const getSwingDifference = (circuitA: Circuit, circuitB: Circuit) => {
       swingDifference = circuitA.swing_factor - circuitB.swing_factor
@@ -53,6 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
          ...circuit,
          score: getCircuitScore(circuit),
          distance_from_origin: getDistanceFromOrigin(circuit),
+         route: getRouteFromOrigin(circuit),
       }
    })
 

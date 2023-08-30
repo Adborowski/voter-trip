@@ -66,6 +66,7 @@ export default function Home() {
             selectedCircuit={selectedCircuit}
             selectCircuit={selectCircuit} // handler
             circuitList={circuits}
+            scoredCircuits={scoredCircuits}
          />
          {selectedCircuit && scoredCircuits && (
             <TripPlanner scoredCircuits={scoredCircuits} startCircuit={selectedCircuit} />
