@@ -5,10 +5,11 @@ import CircuitList from '../circuit/circuit-list'
 interface TripPlannerProps {
    startCircuit: Circuit
    scoredCircuits: Circuit[]
+   tripCount: number
 }
 
 const TripPlanner = (props: TripPlannerProps) => {
-   const { startCircuit, scoredCircuits } = props
+   const { startCircuit, scoredCircuits, tripCount } = props
    const { city_name } = startCircuit
 
    return (
@@ -17,7 +18,7 @@ const TripPlanner = (props: TripPlannerProps) => {
          <CircuitList circuits={[startCircuit]} length={1} />
          <h2>Twoje wycieczki</h2>
          <article className={styles.tripDestinationCircuits}>
-            <CircuitList circuits={scoredCircuits} length={3} />
+            <CircuitList circuits={scoredCircuits} length={tripCount} />
          </article>
       </section>
    )

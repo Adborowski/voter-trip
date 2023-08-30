@@ -8,9 +8,16 @@ interface MapProps {
    selectCircuit: (circuit: Circuit) => void
    selectedCircuit?: Circuit
    scoredCircuits?: ScoredCircuit[] // each scoredCircuit has a route property
+   tripCount: number
 }
 
-const CircuitMap = ({ circuitList, selectCircuit, selectedCircuit, scoredCircuits }: MapProps) => {
+const CircuitMap = ({
+   circuitList,
+   selectCircuit,
+   selectedCircuit,
+   scoredCircuits,
+   tripCount,
+}: MapProps) => {
    const lat = 51.9194
    const lng = 19.1451
    const mapRef: any = useRef(null)
@@ -26,7 +33,6 @@ const CircuitMap = ({ circuitList, selectCircuit, selectedCircuit, scoredCircuit
    }
 
    useEffect(() => {
-      console.log('scoredCircuits change', scoredCircuits)
       const polylines: any = []
       const maps = mapsRef.current
       const map = mapRef.current
@@ -39,19 +45,21 @@ const CircuitMap = ({ circuitList, selectCircuit, selectedCircuit, scoredCircuit
       }
 
       // create Polyline objects from encoded path from Google Directions API
-      scoredCircuits?.forEach((circ) => {
-         const encodedPath = circ.route.polyline.points
-         const decodedPath = mapsRef.current.geometry.encoding.decodePath(encodedPath)
-         const polylineSettings = {
-            path: decodedPath,
-            geodesic: true,
-            strokeColor: 'green',
-            strokeOpacity: 0.5,
-            strokeWeight: 3,
+      scoredCircuits?.forEach((circuit, index) => {
+         if (index < tripCount) {
+            const encodedPath = circuit.route.polyline.points
+            const decodedPath = mapsRef.current.geometry.encoding.decodePath(encodedPath)
+            const polylineSettings = {
+               path: decodedPath,
+               geodesic: true,
+               strokeColor: 'green',
+               strokeOpacity: 1,
+               strokeWeight: 3,
+            }
+            const newPolyline = new maps.Polyline(polylineSettings)
+            polylines.push(newPolyline)
+            newPolyline.setMap(map) // draw the new Polyline
          }
-         const newPolyline = new maps.Polyline(polylineSettings)
-         polylines.push(newPolyline)
-         newPolyline.setMap(map) // draw the new Polyline
       })
 
       setActivePolylines(polylines)
@@ -63,15 +71,11 @@ const CircuitMap = ({ circuitList, selectCircuit, selectedCircuit, scoredCircuit
       const map = mapRef.current
    }, [activePolylines])
 
-   const onChange = ({ map, maps }: any) => {}
-
    const onGoogleApiLoaded = ({ map, maps, scoredCircuits }: any) => {
       mapRef.current = map
       mapsRef.current = maps
       setMapReady(true)
    }
-
-   //  console.log(window.google.maps)
 
    const key: any = process.env.NEXT_PUBLIC_MAP_KEY
 
@@ -84,8 +88,6 @@ const CircuitMap = ({ circuitList, selectCircuit, selectedCircuit, scoredCircuit
             defaultZoom={5}
             options={mapOptions}
             onGoogleApiLoaded={onGoogleApiLoaded}
-            onChange={onChange}
-            scoredCircuits={scoredCircuits}
          >
             {circuitList?.map((circuit) => (
                <MapNode

@@ -9,6 +9,7 @@ export default function Home() {
    const [circuits, setCircuits] = useState<Circuit[]>()
    const [selectedCircuit, setSelectedCircuit] = useState<Circuit | undefined>()
    const [scoredCircuits, setScoredCircuits] = useState<ScoredCircuit[] | undefined>()
+   const tripCount = 3 // how many top trips to show on List and Map
 
    useEffect(() => {
       fetch('/api/get-circuits')
@@ -67,9 +68,14 @@ export default function Home() {
             selectCircuit={selectCircuit} // handler
             circuitList={circuits}
             scoredCircuits={scoredCircuits}
+            tripCount={tripCount}
          />
          {selectedCircuit && scoredCircuits && (
-            <TripPlanner scoredCircuits={scoredCircuits} startCircuit={selectedCircuit} />
+            <TripPlanner
+               tripCount={tripCount}
+               scoredCircuits={scoredCircuits}
+               startCircuit={selectedCircuit}
+            />
          )}
       </>
    )
