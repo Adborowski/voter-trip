@@ -8,7 +8,7 @@ import TripPlanner from '@/components/trip/trip-planner'
 export default function Home() {
    const [circuits, setCircuits] = useState<Circuit[]>()
    const [selectedCircuit, setSelectedCircuit] = useState<Circuit | undefined>()
-   const [scoredCircuits, setScoredCircuits] = useState<Circuit[] | undefined>()
+   const [scoredCircuits, setScoredCircuits] = useState<ScoredCircuit[] | undefined>()
 
    useEffect(() => {
       fetch('/api/get-circuits')

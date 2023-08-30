@@ -16,6 +16,7 @@ const CircuitMap = ({ circuitList, selectCircuit, selectedCircuit, scoredCircuit
    const mapRef: any = useRef(null)
    const mapsRef: any = useRef(null)
    const [mapReady, setMapReady] = useState(false)
+   const [activePolylines, setActivePolylines] = useState<[]>()
    const mapOptions = {
       center: {
          lat: 51.9194,
@@ -24,28 +25,43 @@ const CircuitMap = ({ circuitList, selectCircuit, selectedCircuit, scoredCircuit
       zoom: 6,
    }
 
-   //  console.log('mapRef', mapRef.current)
-   //  console.log('mapsRef', mapsRef.current)
-
    useEffect(() => {
       console.log('scoredCircuits change', scoredCircuits)
+      const polylines: any = []
+      const maps = mapsRef.current
+      const map = mapRef.current
+
+      // clear previous polylines
+      if (activePolylines) {
+         activePolylines.forEach((polyline: any) => {
+            polyline.setMap(null)
+         })
+      }
+
+      // create Polyline objects from encoded path from Google Directions API
       scoredCircuits?.forEach((circ) => {
-         const maps = mapsRef.current
-         const map = mapRef.current
          const encodedPath = circ.route.polyline.points
          const decodedPath = mapsRef.current.geometry.encoding.decodePath(encodedPath)
-
-         const polylineObject = {
+         const polylineSettings = {
             path: decodedPath,
             geodesic: true,
-            strokeColor: '#FF0000',
-            strokeOpacity: 1.0,
-            strokeWeight: 2,
+            strokeColor: 'green',
+            strokeOpacity: 0.5,
+            strokeWeight: 3,
          }
-         const newPolyline = new maps.Polyline(polylineObject)
-         newPolyline.setMap(map)
+         const newPolyline = new maps.Polyline(polylineSettings)
+         polylines.push(newPolyline)
+         newPolyline.setMap(map) // draw the new Polyline
       })
+
+      setActivePolylines(polylines)
    }, [scoredCircuits])
+
+   useEffect(() => {
+      console.log('New polylines', activePolylines)
+      const maps = mapsRef.current
+      const map = mapRef.current
+   }, [activePolylines])
 
    const onChange = ({ map, maps }: any) => {}
 
