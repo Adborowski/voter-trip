@@ -23,6 +23,7 @@ body * {
 }
 
 :root {
+   --light-1: rgb(221, 221, 221);
    --shadow-1: rgb(0, 75, 126);
    --highlight-1: rgb(255, 208, 0);
    --highlight-2: rgb(255, 228, 106);

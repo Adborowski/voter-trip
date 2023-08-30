@@ -1,20 +1,23 @@
 .navbar {
    background-color: white;
    position: absolute;
-   top: 10px;
-   left: 10px;
+   bottom: 6px;
+   left: 6px;
    z-index: 5;
-   border-radius: 3px;
+   border-radius: 6px;
    box-shadow: var(--box-shadow);
    display: grid;
    position: fixed;
+   padding: 18px 12px;
 }
 
 .navbar .instructionWrapper {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   margin: 12px;
+   padding-left: 8px;
+   margin-bottom: 12px;
+   /* border: 1px solid red; */
    font-size: 1.4em;
    font-weight: 600;
 }
@@ -24,9 +27,6 @@
 }
 
 .navbar section.controls {
-   position: absolute;
-   top: 54px;
-   left: 0;
    height: 100%;
    width: auto;
    display: flex;
@@ -81,7 +81,7 @@
 }
 
 .navbar section.controls button.btnShowCircuitList {
-   background-color: white;
+   background-color: var(--light-1);
 }
 
 .navbar section.controls button.btnShowCircuitList span {
@@ -96,4 +96,10 @@
 .btnPlanTrip:active {
    background-color: black;
    color: white;
+}
+
+@media screen and (max-width: 500px) {
+   .instructionWrapper span {
+      font-size: 1rem;
+   }
 }

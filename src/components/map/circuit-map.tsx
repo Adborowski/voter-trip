@@ -18,21 +18,227 @@ const CircuitMap = ({
    scoredCircuits,
    tripCount,
 }: MapProps) => {
-   const lat = 51.9194
-   const lng = 19.1451
    const mapRef: any = useRef(null)
    const mapsRef: any = useRef(null)
    const [mapReady, setMapReady] = useState(false)
    const [activePolylines, setActivePolylines] = useState<[]>()
+   const polandCenter = { lat: 51.9194, lng: 19.1451 }
+
    const mapOptions = {
       center: {
-         lat: 51.9194,
-         lng: 19.1451,
+         lat: polandCenter.lat,
+         lng: polandCenter.lng,
       },
       zoom: 6,
+      styles: [
+         {
+            elementType: 'geometry',
+            stylers: [
+               {
+                  color: '#212121',
+               },
+            ],
+         },
+         {
+            elementType: 'labels.icon',
+            stylers: [
+               {
+                  visibility: 'off',
+               },
+            ],
+         },
+         {
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#757575',
+               },
+            ],
+         },
+         {
+            elementType: 'labels.text.stroke',
+            stylers: [
+               {
+                  color: '#212121',
+               },
+            ],
+         },
+         {
+            featureType: 'administrative',
+            elementType: 'geometry',
+            stylers: [
+               {
+                  color: '#757575',
+               },
+            ],
+         },
+         {
+            featureType: 'administrative.country',
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#dadada',
+               },
+            ],
+         },
+         {
+            featureType: 'administrative.country',
+            elementType: 'geometry',
+            stylers: [
+               {
+                  color: '#ffffff',
+               },
+            ],
+         },
+         {
+            featureType: 'administrative.land_parcel',
+            stylers: [
+               {
+                  visibility: 'off',
+               },
+            ],
+         },
+         {
+            featureType: 'administrative.locality',
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#bdbdbd',
+               },
+            ],
+         },
+         {
+            featureType: 'poi',
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#757575',
+               },
+            ],
+         },
+         {
+            featureType: 'poi.park',
+            elementType: 'geometry',
+            stylers: [
+               {
+                  color: '#181818',
+               },
+            ],
+         },
+         {
+            featureType: 'poi.park',
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#616161',
+               },
+            ],
+         },
+         {
+            featureType: 'poi.park',
+            elementType: 'labels.text.stroke',
+            stylers: [
+               {
+                  color: '#1b1b1b',
+               },
+            ],
+         },
+         {
+            featureType: 'road',
+            elementType: 'geometry.fill',
+            stylers: [
+               {
+                  color: '#2c2c2c',
+               },
+            ],
+         },
+         {
+            featureType: 'road',
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#8a8a8a',
+               },
+            ],
+         },
+         {
+            featureType: 'road.arterial',
+            elementType: 'geometry',
+            stylers: [
+               {
+                  color: '#373737',
+               },
+            ],
+         },
+         {
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [
+               {
+                  color: '#3c3c3c',
+               },
+            ],
+         },
+         {
+            featureType: 'road.highway.controlled_access',
+            elementType: 'geometry',
+            stylers: [
+               {
+                  color: '#4e4e4e',
+               },
+            ],
+         },
+         {
+            featureType: 'road.local',
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#616161',
+               },
+            ],
+         },
+         {
+            featureType: 'transit',
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#757575',
+               },
+            ],
+         },
+         {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [
+               {
+                  color: '#000000',
+               },
+            ],
+         },
+         {
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [
+               {
+                  color: '#3d3d3d',
+               },
+            ],
+         },
+      ],
    }
 
    useEffect(() => {
+      if (activePolylines) {
+         console.log(activePolylines)
+      }
+   }, [activePolylines])
+
+   useEffect(() => {
+      drawPolylines()
+   }, [scoredCircuits])
+
+   const drawPolylines = () => {
+      //
       const polylines: any = []
       const maps = mapsRef.current
       const map = mapRef.current
@@ -44,17 +250,17 @@ const CircuitMap = ({
          })
       }
 
-      // create Polyline objects from encoded path from Google Directions API
       scoredCircuits?.forEach((circuit, index) => {
+         // create Polyline object from encoded path from Google Directions API
          if (index < tripCount) {
             const encodedPath = circuit.route.polyline.points
             const decodedPath = mapsRef.current.geometry.encoding.decodePath(encodedPath)
             const polylineSettings = {
                path: decodedPath,
                geodesic: true,
-               strokeColor: 'green',
+               strokeColor: 'red',
                strokeOpacity: 1,
-               strokeWeight: 3,
+               strokeWeight: 2,
             }
             const newPolyline = new maps.Polyline(polylineSettings)
             polylines.push(newPolyline)
@@ -63,15 +269,9 @@ const CircuitMap = ({
       })
 
       setActivePolylines(polylines)
-   }, [scoredCircuits])
+   }
 
-   useEffect(() => {
-      console.log('New polylines', activePolylines)
-      const maps = mapsRef.current
-      const map = mapRef.current
-   }, [activePolylines])
-
-   const onGoogleApiLoaded = ({ map, maps, scoredCircuits }: any) => {
+   const onGoogleApiLoaded = ({ map, maps }: any) => {
       mapRef.current = map
       mapsRef.current = maps
       setMapReady(true)
