@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import CircuitMap from '@/components/map/circuit-map'
 import Head from 'next/head'
 import Navbar from '@/components/navbar/navbar'
@@ -48,24 +48,8 @@ export default function Home() {
             if (scoredCircuits) {
                console.log('[get-scored-circuits]', scoredCircuits)
                setScoredCircuits(scoredCircuits)
-               getTripBounds(scoredCircuits, tripCount)
             }
          })
-   }
-
-   const getTripBounds = (circuits: ScoredCircuit[], tripCount: number) => {
-      console.log('Getting trip bounds.', circuits)
-
-      let se = { lat: 0, lng: 0 }
-      let nw = { lat: 0, lng: 0 }
-      // var bounds = new maps.LatLngBounds(myPlace, Item_1);
-      circuits.forEach((circuit, index) => {
-         if (index < tripCount) {
-            console.log(circuit)
-            const lat = circuit.latitude
-            const lng = circuit.longitude
-         }
-      })
    }
 
    return (

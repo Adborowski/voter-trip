@@ -234,8 +234,25 @@ const CircuitMap = ({
    }, [activePolylines])
 
    useEffect(() => {
-      drawPolylines()
+      if (scoredCircuits) {
+         drawPolylines()
+         zoomToCircuits(scoredCircuits, tripCount)
+      }
    }, [scoredCircuits])
+
+   const zoomToCircuits = (circuits: Circuit[], tripCount: number) => {
+      console.log('%cGetting trip bounds.', 'color: lightblue', circuits)
+      let randomPoint = { lat: 53, lng: 22 }
+      const points = [polandCenter, randomPoint]
+      const bounds = new mapsRef.current.LatLngBounds()
+      circuits.forEach((circuit, index) => {
+         if (index < 3) {
+            bounds.extend({ lat: circuit.latitude, lng: circuit.longitude })
+         }
+      })
+
+      mapRef.current.fitBounds(bounds)
+   }
 
    const drawPolylines = () => {
       //

@@ -14,11 +14,14 @@ const Navbar = (props: NavbarProps) => {
          <section className={styles.instructionWrapper}>
             <span>
                {!selectedCircuit
-                  ? '1. Kliknij na mapie swój lokalny okręg wyborczy'
-                  : '2. Kliknij "Zaplanuj wycieczkę"'}
+                  ? 'Kliknij na mapie swój lokalny okręg wyborczy'
+                  : 'Kliknij "Zaplanuj wycieczkę"'}
             </span>
          </section>
          <section className={styles.controls}>
+            <button>
+               <span>Reset</span>
+            </button>
             <button
                className={styles.btnShowCircuitList}
                onClick={() => {
@@ -27,6 +30,7 @@ const Navbar = (props: NavbarProps) => {
             >
                <span>Lista okręgów</span>
             </button>
+
             {selectedCircuit && (
                <button
                   onClick={() => {
