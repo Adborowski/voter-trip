@@ -7,7 +7,7 @@
    border-radius: 3px;
    box-shadow: var(--box-shadow);
    display: grid;
-   /* grid-template-columns: 3fr 1fr; */
+   position: fixed;
 }
 
 .navbar .instructionWrapper {
