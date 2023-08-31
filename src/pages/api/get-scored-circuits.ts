@@ -21,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (circuit.city_id === 'łodz') {
          circuit.city_id = 'lodz'
       }
-      console.log(`[${tripOrigin.city_id}][${circuit.city_id}]`)
+      // console.log(`[${tripOrigin.city_id}][${circuit.city_id}]`)
       const route = routes[tripOrigin.city_id][circuit.city_id]
       return Math.round(route.distance.value / 1000) // return distance in km
    }
@@ -60,6 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
          score: getCircuitScore(circuit),
          distance_from_origin: getDistanceFromOrigin(circuit),
          route: getRouteFromOrigin(circuit),
+         isTripOrigin: true,
       }
    })
 
@@ -70,11 +71,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    })
 
    sortedCircuits.forEach((circuit: Circuit, index: number) => {
-      if (index < 5) {
+      if (index < 3) {
          console.log(
             `${circuit.city_name}: score: ${circuit.score} / distance: ${circuit.distance_from_origin} km`,
             `/ swing difference: ${getSwingDifference(tripOrigin, circuit)}`
          )
+         circuit.top = true
       }
    })
    res.status(200).json(sortedCircuits)

@@ -50,6 +50,10 @@ div:has(.selectedNode) {
    z-index: 1 !important;
 }
 
+.mapNode.highlighted {
+   background-color: lightgreen;
+}
+
 .selectedNode {
    background-color: var(--highlight-1);
    opacity: 1;

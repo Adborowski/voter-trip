@@ -22,6 +22,7 @@ const CircuitMap = ({
    const mapsRef: any = useRef(null)
    const [mapReady, setMapReady] = useState(false)
    const [activePolylines, setActivePolylines] = useState<[]>()
+   const [mapCircuits, setMapCircuits] = useState<any>(circuitList)
    const polandCenter = { lat: 51.9194, lng: 19.1451 }
 
    const mapOptions = {
@@ -228,6 +229,11 @@ const CircuitMap = ({
    }
 
    useEffect(() => {
+      setMapCircuits(circuitList)
+      console.log('ok')
+   }, [])
+
+   useEffect(() => {
       if (activePolylines) {
          console.log(activePolylines)
       }
@@ -235,18 +241,17 @@ const CircuitMap = ({
 
    useEffect(() => {
       if (scoredCircuits) {
+         circuitList = scoredCircuits
          drawPolylines()
          zoomToCircuits(scoredCircuits, tripCount)
+         setMapCircuits(scoredCircuits)
       }
    }, [scoredCircuits])
 
    const zoomToCircuits = (circuits: Circuit[], tripCount: number) => {
-      console.log('%cGetting trip bounds.', 'color: lightblue', circuits)
-      let randomPoint = { lat: 53, lng: 22 }
-      const points = [polandCenter, randomPoint]
       const bounds = new mapsRef.current.LatLngBounds()
       circuits.forEach((circuit, index) => {
-         if (index < 3) {
+         if (index < tripCount) {
             bounds.extend({ lat: circuit.latitude, lng: circuit.longitude })
          }
       })
@@ -275,7 +280,7 @@ const CircuitMap = ({
             const polylineSettings = {
                path: decodedPath,
                geodesic: true,
-               strokeColor: 'red',
+               strokeColor: 'rgb(255, 208, 0)',
                strokeOpacity: 1,
                strokeWeight: 2,
             }
@@ -314,6 +319,7 @@ const CircuitMap = ({
                   circuit={circuit}
                   selectCircuit={selectCircuit}
                   selectedCircuit={selectedCircuit}
+                  isHighlighted={false}
                />
             ))}
          </GoogleMap>

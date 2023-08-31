@@ -1,5 +1,4 @@
 import styles from './trip.module.css'
-import CircuitCard from '../circuit/circuit-card'
 import CircuitList from '../circuit/circuit-list'
 
 interface TripPlannerProps {

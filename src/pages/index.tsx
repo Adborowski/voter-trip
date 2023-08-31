@@ -23,6 +23,12 @@ export default function Home() {
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 
+   useEffect(() => {
+      if (selectedCircuit) {
+         planTrip(selectedCircuit)
+      }
+   }, [selectedCircuit])
+
    const selectCircuit = (circuit: Circuit) => {
       setSelectedCircuit(circuit)
    }

@@ -17,6 +17,8 @@ declare global {
       distance_from_origin?: string
       score?: number
       route?: Route
+      top?: boolean
+      isTripOrigin?: boolean
    }
 
    interface ScoredCircuit extends Circuit {
