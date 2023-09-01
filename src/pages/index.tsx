@@ -11,6 +11,7 @@ export default function Home() {
    const [scoredCircuits, setScoredCircuits] = useState<ScoredCircuit[] | undefined>()
    const [mapResetId, setMapResetId] = useState<any>()
    const [mapRef, setMapRef] = useState<any>()
+   const [mapsRef, setMapsRef] = useState<any>()
    const tripCount = 3 // how many top trips to show on List and Map
 
    useEffect(() => {
@@ -33,13 +34,14 @@ export default function Home() {
       planTrip(circuit)
    }
 
-   const resetMap = () => {
-      setMapResetId(Math.floor(Math.random() * 1000))
-   }
-
    const getMapRef = (mapRef: any) => {
       console.log('Got a mapRef', mapRef)
       setMapRef(mapRef)
+   }
+
+   const getMapsRef = (mapsRef: any) => {
+      console.log('Got a mapsRef', mapRef)
+      setMapsRef(mapsRef)
    }
 
    const planTrip = (circuit: Circuit) => {
@@ -83,7 +85,12 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <Navbar selectedCircuit={selectedCircuit} planTrip={planTrip} resetMap={resetMap} />
+         <Navbar
+            mapsRef={mapsRef}
+            mapRef={mapRef}
+            selectedCircuit={selectedCircuit}
+            planTrip={planTrip}
+         />
 
          <CircuitMap
             selectedCircuit={selectedCircuit}
@@ -93,6 +100,7 @@ export default function Home() {
             tripCount={tripCount}
             mapResetId={mapResetId}
             getMapRef={getMapRef}
+            getMapsRef={getMapsRef}
          />
          {selectedCircuit && scoredCircuits && (
             <TripPlanner

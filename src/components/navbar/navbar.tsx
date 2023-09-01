@@ -5,11 +5,30 @@ import { useState, useEffect } from 'react'
 interface NavbarProps {
    selectedCircuit: Circuit | undefined
    planTrip: any
-   resetMap: any
+   mapRef: any
+   mapsRef: any
 }
 
 const Navbar = (props: NavbarProps) => {
-   const { selectedCircuit, planTrip, resetMap } = props
+   const { selectedCircuit, planTrip, mapRef, mapsRef } = props
+   const polandCenter = { lat: 51.9194, lng: 19.1451 }
+
+   const resetMap = () => {
+      const extremePoints = [
+         { lat: 53.13, lng: 23.16 },
+         { lat: 54.5188898, lng: 18.5 },
+         { lat: 53.42, lng: 14.5 },
+         { lat: 49.62, lng: 20.7 },
+      ]
+
+      const bounds = new mapsRef.current.LatLngBounds()
+      bounds.extend({ lat: selectedCircuit?.latitude, lng: selectedCircuit?.longitude }) // add starter town
+      extremePoints.forEach((point, index) => {
+         bounds.extend({ lat: point.lat, lng: point.lng })
+      })
+
+      mapRef.current.fitBounds(bounds)
+   }
 
    const scrollToTrips = () => {
       if (selectedCircuit) {
@@ -29,10 +48,8 @@ const Navbar = (props: NavbarProps) => {
       }
    }
 
-   const router = useRouter()
-   const highlightClass = selectedCircuit ? styles.highlight : '0'
    return (
-      <div className={`${styles.navbar} ${highlightClass}`}>
+      <div className={styles.navbar}>
          {/* prettier-ignore */}
          {!selectedCircuit && (
             <section className={styles.instructionWrapper}>

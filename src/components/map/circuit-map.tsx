@@ -11,6 +11,7 @@ interface MapProps {
    tripCount: number
    mapResetId: number | undefined
    getMapRef: any
+   getMapsRef: any
 }
 
 const CircuitMap = ({
@@ -21,6 +22,7 @@ const CircuitMap = ({
    tripCount,
    mapResetId,
    getMapRef,
+   getMapsRef,
 }: MapProps) => {
    const mapRef: any = useRef(null)
    const mapsRef: any = useRef(null)
@@ -244,6 +246,7 @@ const CircuitMap = ({
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
          getMapRef(mapRef)
+         getMapsRef(mapsRef)
       }
    }, [scoredCircuits])
 
