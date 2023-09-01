@@ -51,11 +51,11 @@ div:has(.selectedNode) {
 }
 
 .destination {
-   background-color: lime;
+   background-color: lightgreen;
 }
 
 .origin {
-   background-color: orange;
+   background-color: var(--highlight-1);
 }
 
 .irrelevant {
@@ -64,5 +64,16 @@ div:has(.selectedNode) {
 
 .selectedNode .numberWrapper {
    background-color: var(--highlight-2);
+   color: black;
+}
+
+.btnViewTrips {
+   width: 100%;
+   margin-top: 3px;
+   display: block;
+   text-align: center;
+   border-radius: 60px;
+   background-color: var(--highlight-1);
+   padding: 6px;
    color: black;
 }

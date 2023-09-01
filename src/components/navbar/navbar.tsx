@@ -14,7 +14,7 @@ const Navbar = (props: NavbarProps) => {
    const onInstructionClick = () => {
       if (selectedCircuit) {
          window.scrollTo({
-            top: 600,
+            top: 650,
             behavior: 'smooth',
          })
       }

@@ -13,8 +13,7 @@ interface MapNodeProps {
 
 const MapNode = (props: MapNodeProps) => {
    const { selectedCircuit, selectCircuit, circuit, circuits } = props
-   const { city_name, circuit_number, isDestination, isTripOrigin } = circuit
-   console.log('%cMapNode render - ' + circuit.city_name, 'color: yellow')
+   const { city_name, circuit_number } = circuit
 
    const [specialClass, setSpecialClass] = useState<any>('')
 
@@ -39,19 +38,36 @@ const MapNode = (props: MapNodeProps) => {
    }, [selectedCircuit, circuits])
 
    return (
-      <div
-         onClick={() => {
-            selectCircuit(circuit)
-         }}
-         className={`${styles.mapNode} ${specialClass}`}
-      >
-         <div className={styles.numberWrapper}>
-            <span className={styles.number}>{circuit_number}</span>
-         </div>
-         <div className={styles.textWrapper}>
-            <span className={styles.cityLabel}>{city_name}</span>
-         </div>
-      </div>
+      <section>
+         <article
+            onClick={() => {
+               selectCircuit(circuit)
+            }}
+            className={`${styles.mapNode} ${specialClass}`}
+         >
+            <div className={styles.numberWrapper}>
+               <span className={styles.number}>{circuit_number}</span>
+            </div>
+            <div className={styles.textWrapper}>
+               <span className={styles.cityLabel}>{city_name}</span>
+            </div>
+         </article>
+         <article>
+            {specialClass == styles.origin && (
+               <div
+                  onClick={() => {
+                     window.scrollBy({
+                        top: 650,
+                        behavior: 'smooth',
+                     })
+                  }}
+                  className={styles.btnViewTrips}
+               >
+                  <span>Zobacz wycieczki</span>
+               </div>
+            )}
+         </article>
+      </section>
    )
 }
 
