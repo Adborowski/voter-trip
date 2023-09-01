@@ -5,10 +5,11 @@ import { useState, useEffect } from 'react'
 interface NavbarProps {
    selectedCircuit: Circuit | undefined
    planTrip: any
+   resetMap: any
 }
 
 const Navbar = (props: NavbarProps) => {
-   const { selectedCircuit, planTrip } = props
+   const { selectedCircuit, planTrip, resetMap } = props
 
    const scrollToTrips = () => {
       if (selectedCircuit) {
@@ -42,7 +43,7 @@ const Navbar = (props: NavbarProps) => {
          {selectedCircuit && (
             <section className={styles.controls}>
                <button className={styles.btnUp} onClick={scrollToMap}></button>
-               <button className={styles.btnReset}></button>
+               <button className={styles.btnReset} onClick={resetMap}></button>
 
                {selectedCircuit && (
                   <button onClick={scrollToTrips}>

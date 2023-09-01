@@ -9,6 +9,8 @@ interface MapProps {
    selectedCircuit?: Circuit
    scoredCircuits?: ScoredCircuit[] // each scoredCircuit has a route property
    tripCount: number
+   mapResetId: number | undefined
+   getMapRef: any
 }
 
 const CircuitMap = ({
@@ -17,6 +19,8 @@ const CircuitMap = ({
    selectedCircuit,
    scoredCircuits,
    tripCount,
+   mapResetId,
+   getMapRef,
 }: MapProps) => {
    const mapRef: any = useRef(null)
    const mapsRef: any = useRef(null)
@@ -230,13 +234,8 @@ const CircuitMap = ({
 
    useEffect(() => {
       setMapCircuits(circuitList)
+      console.log('map render', mapResetId)
    }, [])
-
-   useEffect(() => {
-      if (activePolylines) {
-         console.log(activePolylines)
-      }
-   }, [activePolylines])
 
    useEffect(() => {
       console.log('Change in scoredCircuits.', scoredCircuits)
@@ -244,6 +243,7 @@ const CircuitMap = ({
          drawPolylines()
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
+         getMapRef(mapRef)
       }
    }, [scoredCircuits])
 
