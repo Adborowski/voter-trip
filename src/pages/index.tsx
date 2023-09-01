@@ -28,7 +28,6 @@ export default function Home() {
    }, [selectedCircuit])
 
    const selectCircuit = (circuit: Circuit) => {
-      // setSelectedCircuit(circuit)
       planTrip(circuit)
    }
 

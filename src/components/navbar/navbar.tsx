@@ -5,16 +5,24 @@ import { useState, useEffect } from 'react'
 interface NavbarProps {
    selectedCircuit: Circuit | undefined
    planTrip: any
-   innerRef?: any
 }
 
 const Navbar = (props: NavbarProps) => {
    const { selectedCircuit, planTrip } = props
 
-   const onInstructionClick = () => {
+   const scrollToTrips = () => {
       if (selectedCircuit) {
          window.scrollTo({
             top: 650,
+            behavior: 'smooth',
+         })
+      }
+   }
+
+   const scrollToMap = () => {
+      if (selectedCircuit) {
+         window.scrollTo({
+            top: 0,
             behavior: 'smooth',
          })
       }
@@ -25,37 +33,24 @@ const Navbar = (props: NavbarProps) => {
    return (
       <div className={`${styles.navbar} ${highlightClass}`}>
          {/* prettier-ignore */}
-         <section onClick={onInstructionClick} className={`${styles.instructionWrapper}}`}>
-            <span>
-               {!selectedCircuit
-                  ? 'Kliknij na mapie swój lokalny okręg wyborczy'
-                  : 'Zobacz wycieczki'}
-            </span>
-         </section>
-         <section className={styles.controls}>
-            <button>
-               <span>Reset</span>
-            </button>
-            <button
-               className={styles.btnShowCircuitList}
-               onClick={() => {
-                  router.push('/list')
-               }}
-            >
-               <span>Lista okręgów</span>
-            </button>
+         {!selectedCircuit && (
+            <section className={styles.instructionWrapper}>
+               <span>Kliknij na mapie swój lokalny okręg wyborczy</span>
+            </section>
+         )}
 
-            {selectedCircuit && (
-               <button
-                  onClick={() => {
-                     planTrip(selectedCircuit)
-                  }}
-                  className={styles.btnPlanTrip}
-               >
-                  <span>Zaplanuj wycieczkę</span>
-               </button>
-            )}
-         </section>
+         {selectedCircuit && (
+            <section className={styles.controls}>
+               <button className={styles.btnUp} onClick={scrollToMap}></button>
+               <button className={styles.btnReset}></button>
+
+               {selectedCircuit && (
+                  <button onClick={scrollToTrips}>
+                     <span>Zobacz wycieczki</span>
+                  </button>
+               )}
+            </section>
+         )}
       </div>
    )
 }

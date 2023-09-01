@@ -270,6 +270,7 @@ const CircuitMap = ({
       const polylines: any = []
       const maps = mapsRef.current
       const map = mapRef.current
+      const polylineColors = ['#ffbb00', '#ffcf4a', '#d1b66b']
 
       // clear previous polylines
       if (activePolylines) {
@@ -286,7 +287,7 @@ const CircuitMap = ({
             const polylineSettings = {
                path: decodedPath,
                geodesic: true,
-               strokeColor: 'rgb(255, 208, 0)',
+               strokeColor: polylineColors[index],
                strokeOpacity: 1,
                strokeWeight: 2,
             }

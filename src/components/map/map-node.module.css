@@ -1,3 +1,7 @@
+article:has(.mapNode) {
+   transform: translate(-10px, -10px);
+}
+
 .mapNode {
    display: block;
    position: relative;
@@ -46,12 +50,12 @@
 }
 
 /* put node on top when clicked */
-div:has(.selectedNode) {
+div:has(.origin) {
    z-index: 1 !important;
 }
 
 .destination {
-   background-color: lightgreen;
+   background-color: var(--highlight-2);
 }
 
 .origin {
@@ -60,11 +64,11 @@ div:has(.selectedNode) {
 
 .irrelevant {
    opacity: 0.25;
+   background-color: black;
 }
 
-.selectedNode .numberWrapper {
-   background-color: var(--highlight-2);
-   color: black;
+.irrelevant .numberWrapper {
+   background-color: grey;
 }
 
 .btnViewTrips {
@@ -73,7 +77,7 @@ div:has(.selectedNode) {
    display: block;
    text-align: center;
    border-radius: 60px;
-   background-color: var(--highlight-1);
+   background-color: var(--highlight-3);
    padding: 6px;
    color: black;
 }
