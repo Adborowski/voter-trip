@@ -9,7 +9,7 @@
    box-shadow: var(--box-shadow);
    display: grid;
    position: fixed;
-   padding: 3px 6px;
+   padding: 6px 12px;
 }
 
 .navbar .instructionWrapper {
@@ -61,6 +61,12 @@
    top: 12px;
    padding: 6px 24px;
    display: block;
+}
+
+.navbar.highlight {
+   background-color: lightgreen;
+   font-weight: 600;
+   cursor: pointer;
 }
 
 .homeButtonBar button {

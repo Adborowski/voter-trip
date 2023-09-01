@@ -1,5 +1,6 @@
 import styles from './navbar.module.css'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 interface NavbarProps {
    selectedCircuit: Circuit | undefined
@@ -7,15 +8,23 @@ interface NavbarProps {
 }
 
 const Navbar = (props: NavbarProps) => {
+   const onInstructionClick = () => {
+      if (selectedCircuit) {
+      }
+   }
+
+   console.log('navbar')
    const { selectedCircuit, planTrip } = props
    const router = useRouter()
+   const highlightClass = selectedCircuit ? styles.highlight : '0'
    return (
-      <div className={styles.navbar}>
-         <section className={styles.instructionWrapper}>
+      <div className={`${styles.navbar} ${highlightClass}`}>
+         {/* prettier-ignore */}
+         <section onClick={onInstructionClick} className={`${styles.instructionWrapper}}`}>
             <span>
                {!selectedCircuit
                   ? 'Kliknij na mapie swój lokalny okręg wyborczy'
-                  : 'Kliknij "Zaplanuj wycieczkę"'}
+                  : 'Zobacz wycieczki'}
             </span>
          </section>
          <section className={styles.controls}>

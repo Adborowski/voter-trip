@@ -76,7 +76,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             `${circuit.city_name}: score: ${circuit.score} / distance: ${circuit.distance_from_origin} km`,
             `/ swing difference: ${getSwingDifference(tripOrigin, circuit)}`
          )
-         circuit.top = true
+         circuit.isDestination = true
       }
    })
    res.status(200).json(sortedCircuits)

@@ -22,7 +22,7 @@ const CircuitMap = ({
    const mapsRef: any = useRef(null)
    const [mapReady, setMapReady] = useState(false)
    const [activePolylines, setActivePolylines] = useState<[]>()
-   const [mapCircuits, setMapCircuits] = useState<any>(circuitList)
+   const [mapCircuits, setMapCircuits] = useState<Circuit[] | undefined>(circuitList)
    const polandCenter = { lat: 51.9194, lng: 19.1451 }
 
    const mapOptions = {
@@ -230,7 +230,6 @@ const CircuitMap = ({
 
    useEffect(() => {
       setMapCircuits(circuitList)
-      console.log('ok')
    }, [])
 
    useEffect(() => {
@@ -244,6 +243,19 @@ const CircuitMap = ({
          circuitList = scoredCircuits
          drawPolylines()
          zoomToCircuits(scoredCircuits, tripCount)
+
+         const markedCircuits = scoredCircuits.map((scoredCircuit, index) => {
+            if (index < tripCount) {
+               console.log('marking', scoredCircuit)
+               scoredCircuit.isDestination = true
+            }
+            return scoredCircuit
+         })
+
+         console.log('markedCircuits', markedCircuits)
+
+         setMapCircuits(markedCircuits)
+
          setMapCircuits(scoredCircuits)
       }
    }, [scoredCircuits])
