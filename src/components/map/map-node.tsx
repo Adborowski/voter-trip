@@ -8,7 +8,6 @@ interface MapNodeProps {
    circuits: Circuit[] | undefined
    selectCircuit: (circuit: Circuit) => void
    selectedCircuit: Circuit | undefined
-   isHighlighted: boolean
 }
 
 const MapNode = (props: MapNodeProps) => {
@@ -18,7 +17,10 @@ const MapNode = (props: MapNodeProps) => {
    const [specialClass, setSpecialClass] = useState<any>('')
 
    useEffect(() => {
-      if (circuits) {
+      if (!selectedCircuit) {
+         setSpecialClass(undefined) // redraw nodes into normal nodes to prevent residual highlighting
+      }
+      if (circuits && selectedCircuit) {
          circuits.forEach((listCircuit) => {
             if (listCircuit.city_id == circuit.city_id) {
                if (listCircuit.isDestination) {
@@ -30,6 +32,7 @@ const MapNode = (props: MapNodeProps) => {
                }
 
                if (!listCircuit.isDestination && !listCircuit.isTripOrigin) {
+                  console.log('IRRELEVANT!')
                   setSpecialClass(styles.irrelevant)
                }
             }

@@ -240,13 +240,24 @@ const CircuitMap = ({
    }, [])
 
    useEffect(() => {
+      if (selectedCircuit) {
+         console.log('New selected circuit', selectedCircuit.city_name)
+      } else {
+         console.log('No selectedCircuit')
+      }
+   }, [selectedCircuit])
+
+   useEffect(() => {
       console.log('Change in scoredCircuits.', scoredCircuits)
+      getMapRef(mapRef)
+      getMapsRef(mapsRef)
       if (scoredCircuits) {
          drawPolylines()
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
-         getMapRef(mapRef)
-         getMapsRef(mapsRef)
+      } else {
+         clearPolylines()
+         setMapCircuits(circuitList)
       }
    }, [scoredCircuits])
 
@@ -268,19 +279,21 @@ const CircuitMap = ({
       })
    }
 
+   const clearPolylines = () => {
+      if (activePolylines) {
+         activePolylines.forEach((polyline: any) => {
+            polyline.setMap(null)
+         })
+      }
+   }
+
    const drawPolylines = () => {
       //
       const polylines: any = []
       const maps = mapsRef.current
       const map = mapRef.current
       const polylineColors = ['#ffbb00', '#ffcf4a', '#d1b66b']
-
-      // clear previous polylines
-      if (activePolylines) {
-         activePolylines.forEach((polyline: any) => {
-            polyline.setMap(null)
-         })
-      }
+      clearPolylines()
 
       scoredCircuits?.forEach((circuit, index) => {
          // create Polyline object from encoded path from Google Directions API
@@ -330,7 +343,6 @@ const CircuitMap = ({
                   circuits={mapCircuits}
                   selectCircuit={selectCircuit}
                   selectedCircuit={selectedCircuit}
-                  isHighlighted={false}
                />
             ))}
          </GoogleMap>

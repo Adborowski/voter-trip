@@ -26,21 +26,38 @@ export default function Home() {
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 
-   useEffect(() => {
-      console.log(selectedCircuit)
-   }, [selectedCircuit])
-
    const selectCircuit = (circuit: Circuit) => {
+      console.log('selectCircuit()')
       planTrip(circuit)
    }
 
+   const unselectCircuit = () => {
+      setSelectedCircuit(undefined)
+      setScoredCircuits(undefined)
+   }
+
+   const resetMap = () => {
+      const extremePoints = [
+         { lat: 53.13, lng: 23.16 },
+         { lat: 54.5188898, lng: 18.5 },
+         { lat: 53.42, lng: 14.5 },
+         { lat: 49.62, lng: 20.7 },
+      ]
+      const bounds = new mapsRef.current.LatLngBounds()
+      bounds.extend({ lat: selectedCircuit?.latitude, lng: selectedCircuit?.longitude }) // add starter town
+      extremePoints.forEach((point, index) => {
+         bounds.extend({ lat: point.lat, lng: point.lng })
+      })
+
+      unselectCircuit()
+      mapRef.current.fitBounds(bounds)
+   }
+
    const getMapRef = (mapRef: any) => {
-      console.log('Got a mapRef', mapRef)
       setMapRef(mapRef)
    }
 
    const getMapsRef = (mapsRef: any) => {
-      console.log('Got a mapsRef', mapRef)
       setMapsRef(mapsRef)
    }
 
@@ -90,6 +107,7 @@ export default function Home() {
             mapRef={mapRef}
             selectedCircuit={selectedCircuit}
             planTrip={planTrip}
+            resetMap={resetMap}
          />
 
          <CircuitMap
