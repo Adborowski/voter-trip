@@ -50,13 +50,16 @@ div:has(.selectedNode) {
    z-index: 1 !important;
 }
 
-.mapNode.highlighted {
-   background-color: lightgreen;
+.destination {
+   background-color: lime;
 }
 
-.selectedNode {
-   background-color: var(--highlight-1);
-   opacity: 1;
+.origin {
+   background-color: orange;
+}
+
+.irrelevant {
+   opacity: 0.25;
 }
 
 .selectedNode .numberWrapper {

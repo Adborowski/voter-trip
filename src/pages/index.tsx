@@ -24,13 +24,12 @@ export default function Home() {
    }, [])
 
    useEffect(() => {
-      if (selectedCircuit) {
-         planTrip(selectedCircuit)
-      }
+      console.log(selectedCircuit)
    }, [selectedCircuit])
 
    const selectCircuit = (circuit: Circuit) => {
-      setSelectedCircuit(circuit)
+      // setSelectedCircuit(circuit)
+      planTrip(circuit)
    }
 
    const planTrip = (circuit: Circuit) => {
@@ -38,7 +37,7 @@ export default function Home() {
       console.log('Planning a trip from', city_name)
 
       const payload = {
-         selectedCircuit: selectedCircuit,
+         selectedCircuit: circuit,
          circuits: circuits,
       }
 
@@ -54,6 +53,13 @@ export default function Home() {
             if (scoredCircuits) {
                console.log('[get-scored-circuits]', scoredCircuits)
                setScoredCircuits(scoredCircuits)
+               setSelectedCircuit(
+                  scoredCircuits.find((scoredCircuit: ScoredCircuit) => {
+                     if (scoredCircuit.city_id == circuit.city_id) {
+                        return circuit
+                     }
+                  })
+               )
             }
          })
    }

@@ -239,23 +239,10 @@ const CircuitMap = ({
    }, [activePolylines])
 
    useEffect(() => {
+      console.log('Change in scoredCircuits.', scoredCircuits)
       if (scoredCircuits) {
-         circuitList = scoredCircuits
          drawPolylines()
          zoomToCircuits(scoredCircuits, tripCount)
-
-         const markedCircuits = scoredCircuits.map((scoredCircuit, index) => {
-            if (index < tripCount) {
-               console.log('marking', scoredCircuit)
-               scoredCircuit.isDestination = true
-            }
-            return scoredCircuit
-         })
-
-         console.log('markedCircuits', markedCircuits)
-
-         setMapCircuits(markedCircuits)
-
          setMapCircuits(scoredCircuits)
       }
    }, [scoredCircuits])
@@ -269,7 +256,13 @@ const CircuitMap = ({
          }
       })
 
-      mapRef.current.fitBounds(bounds)
+      const zoomPad = 50
+      mapRef.current.fitBounds(bounds, {
+         top: zoomPad,
+         right: zoomPad,
+         left: zoomPad,
+         bottom: zoomPad,
+      })
    }
 
    const drawPolylines = () => {
@@ -330,6 +323,7 @@ const CircuitMap = ({
                   lat={circuit.latitude}
                   lng={circuit.longitude}
                   circuit={circuit}
+                  circuits={mapCircuits}
                   selectCircuit={selectCircuit}
                   selectedCircuit={selectedCircuit}
                   isHighlighted={false}

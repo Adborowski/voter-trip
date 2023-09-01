@@ -1,20 +1,25 @@
 import styles from './navbar.module.css'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface NavbarProps {
    selectedCircuit: Circuit | undefined
    planTrip: any
+   innerRef?: any
 }
 
 const Navbar = (props: NavbarProps) => {
+   const { selectedCircuit, planTrip } = props
+
    const onInstructionClick = () => {
       if (selectedCircuit) {
+         window.scrollTo({
+            top: 600,
+            behavior: 'smooth',
+         })
       }
    }
 
-   console.log('navbar')
-   const { selectedCircuit, planTrip } = props
    const router = useRouter()
    const highlightClass = selectedCircuit ? styles.highlight : '0'
    return (

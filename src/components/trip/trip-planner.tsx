@@ -5,6 +5,7 @@ interface TripPlannerProps {
    startCircuit: Circuit
    scoredCircuits: Circuit[]
    tripCount: number
+   ref?: any
 }
 
 const TripPlanner = (props: TripPlannerProps) => {

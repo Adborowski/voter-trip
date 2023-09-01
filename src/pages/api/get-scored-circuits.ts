@@ -8,6 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    const dirRelativeToPublicFolder = 'route-list.json'
    const dir = path.resolve('./public', dirRelativeToPublicFolder)
    const routes = JSON.parse(fs.readFileSync(dir))
+   const tripCount = 3 // gotta mirror the tripCount in the frontend; used for marking map
 
    const tripOrigin: Circuit = selectedCircuit
    console.log('FROM', tripOrigin.city_id)
@@ -60,14 +61,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
          score: getCircuitScore(circuit),
          distance_from_origin: getDistanceFromOrigin(circuit),
          route: getRouteFromOrigin(circuit),
-         isTripOrigin: true,
       }
    })
 
-   const sortedCircuits = scoredCircuits.sort((a: Circuit, b: Circuit) => {
+   let sortedCircuits = scoredCircuits.sort((a: Circuit, b: Circuit) => {
       if (a.score && b.score) {
          return b.score - a.score
       }
+   })
+
+   // mark the objects as isTripOrigin or isDestination, for use in map nodes
+   sortedCircuits = sortedCircuits.map((sortedCircuit: ScoredCircuit, index: number) => {
+      if (sortedCircuit.city_id == selectedCircuit.city_id) {
+         sortedCircuit.isTripOrigin = true
+      }
+      if (index < tripCount) {
+         sortedCircuit.isDestination = true
+      }
+
+      return sortedCircuit
    })
 
    sortedCircuits.forEach((circuit: Circuit, index: number) => {
@@ -76,7 +88,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             `${circuit.city_name}: score: ${circuit.score} / distance: ${circuit.distance_from_origin} km`,
             `/ swing difference: ${getSwingDifference(tripOrigin, circuit)}`
          )
-         circuit.isDestination = true
       }
    })
    res.status(200).json(sortedCircuits)
