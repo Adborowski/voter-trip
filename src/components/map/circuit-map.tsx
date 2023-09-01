@@ -250,6 +250,7 @@ const CircuitMap = ({
 
    const zoomToCircuits = (circuits: Circuit[], tripCount: number) => {
       const bounds = new mapsRef.current.LatLngBounds()
+      bounds.extend({ lat: selectedCircuit?.latitude, lng: selectedCircuit?.longitude }) // add starter town
       circuits.forEach((circuit, index) => {
          if (index < tripCount) {
             bounds.extend({ lat: circuit.latitude, lng: circuit.longitude })
