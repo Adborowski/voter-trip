@@ -43,7 +43,12 @@ const Navbar = (props: NavbarProps) => {
          {selectedCircuit && (
             <section className={styles.controls}>
                <button className={styles.btnUp} onClick={scrollToMap}></button>
-               <button className={styles.btnReset} onClick={resetMap}></button>
+               <button
+                  className={styles.btnReset}
+                  onClick={() => {
+                     resetMap(mapsRef, mapRef)
+                  }}
+               ></button>
 
                {selectedCircuit && (
                   <button onClick={scrollToTrips}>

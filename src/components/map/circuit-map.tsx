@@ -12,6 +12,7 @@ interface MapProps {
    mapResetId: number | undefined
    getMapRef: any
    getMapsRef: any
+   resetMap: any
 }
 
 const CircuitMap = ({
@@ -23,6 +24,7 @@ const CircuitMap = ({
    mapResetId,
    getMapRef,
    getMapsRef,
+   resetMap,
 }: MapProps) => {
    const mapRef: any = useRef(null)
    const mapsRef: any = useRef(null)
@@ -319,6 +321,7 @@ const CircuitMap = ({
    const onGoogleApiLoaded = ({ map, maps }: any) => {
       mapRef.current = map
       mapsRef.current = maps
+      resetMap(mapsRef, mapRef)
       setMapReady(true)
    }
 

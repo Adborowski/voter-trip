@@ -36,7 +36,7 @@ export default function Home() {
       setScoredCircuits(undefined)
    }
 
-   const resetMap = () => {
+   const resetMap = (mapsRef: any, mapRef: any) => {
       const extremePoints = [
          { lat: 53.13, lng: 23.16 },
          { lat: 54.5188898, lng: 18.5 },
@@ -44,7 +44,9 @@ export default function Home() {
          { lat: 49.62, lng: 20.7 },
       ]
       const bounds = new mapsRef.current.LatLngBounds()
-      bounds.extend({ lat: selectedCircuit?.latitude, lng: selectedCircuit?.longitude }) // add starter town
+      if (selectedCircuit) {
+         bounds.extend({ lat: selectedCircuit?.latitude, lng: selectedCircuit?.longitude }) // add starter town
+      }
       extremePoints.forEach((point, index) => {
          bounds.extend({ lat: point.lat, lng: point.lng })
       })
@@ -119,6 +121,7 @@ export default function Home() {
             mapResetId={mapResetId}
             getMapRef={getMapRef}
             getMapsRef={getMapsRef}
+            resetMap={resetMap}
          />
          {selectedCircuit && scoredCircuits && (
             <TripPlanner
