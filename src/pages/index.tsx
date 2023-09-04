@@ -72,6 +72,8 @@ export default function Home() {
          circuits: circuits,
       }
 
+      console.log(payload)
+
       fetch('/api/get-scored-circuits', {
          method: 'POST',
          body: JSON.stringify(payload),

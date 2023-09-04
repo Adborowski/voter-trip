@@ -19,11 +19,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
          tripOrigin.city_id = 'lodz'
       }
 
+      if (circuit.city_id === 'pila') {
+         circuit.city_id = 'piła'
+      }
+
       if (circuit.city_id === 'łodz') {
          circuit.city_id = 'lodz'
       }
       // console.log(`[${tripOrigin.city_id}][${circuit.city_id}]`)
       const route = routes[tripOrigin.city_id][circuit.city_id]
+      if (!route) {
+         console.log('No route from', tripOrigin.city_id, 'to', circuit.city_id)
+      }
       return Math.round(route.distance.value / 1000) // return distance in km
    }
 
