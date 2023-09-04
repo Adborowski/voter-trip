@@ -1,4 +1,4 @@
-const districtMap = {
+let districtMap = {
    1: [
       'bolesławiecki',
       'głogowski',
@@ -335,3 +335,10 @@ const districtMap = {
       'Świnoujście',
    ],
 }
+
+var fs = require('fs')
+var path = require('path')
+
+districtMap = JSON.stringify(districtMap)
+console.log(typeof districtMap)
+fs.writeFileSync('district-map-new.json', districtMap)
