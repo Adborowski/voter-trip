@@ -23,6 +23,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
          circuit.city_id = 'piła'
       }
 
+      if (tripOrigin.city_id === 'pila') {
+         tripOrigin.city_id = 'piła'
+      }
+
       if (circuit.city_id === 'łodz') {
          circuit.city_id = 'lodz'
       }
