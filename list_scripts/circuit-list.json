@@ -1056,7 +1056,18 @@
       "swing_factor": 1.096622978350553,
       "winner_2019": "party_pis",
       "city_id": "zielona_gora",
-      "districts": []
+      "districts": {
+         "geometry": {
+            "location": { "lat": 51.9062861, "lng": 15.5474593 },
+            "viewport": {
+               "northeast": { "lat": 52.0351034, "lng": 15.6524238 },
+               "southwest": { "lat": 51.82014299999999, "lng": 15.4059482 }
+            }
+         },
+         "name": "Zielona Góra",
+         "place_id": "ChIJySR0XNkTBkcRFXatTtJv85A",
+         "district_id": "Zielona Góra"
+      }
    },
    {
       "circuit_number": 9,
@@ -2332,7 +2343,18 @@
       "swing_factor": 1.4092198581560285,
       "winner_2019": "party_pis",
       "city_id": "opole",
-      "districts": []
+      "districts": {
+         "geometry": {
+            "location": { "lat": 51.1669425, "lng": 21.9855229 },
+            "viewport": {
+               "northeast": { "lat": 51.3087323, "lng": 22.2356323 },
+               "southwest": { "lat": 50.9493428, "lng": 21.7832262 }
+            }
+         },
+         "name": "Powiat opolski",
+         "place_id": "ChIJP-T_vwWOIkcRIMXkxa18AQM",
+         "district_id": "Opole"
+      }
    },
    {
       "circuit_number": 22,
@@ -2682,7 +2704,18 @@
       "swing_factor": 2.473253170451122,
       "winner_2019": "party_pis",
       "city_id": "bialystok",
-      "districts": []
+      "districts": {
+         "geometry": {
+            "location": { "lat": 53.0438238, "lng": 23.3148969 },
+            "viewport": {
+               "northeast": { "lat": 53.3847458, "lng": 23.9462697 },
+               "southwest": { "lat": 52.8498964, "lng": 22.4690743 }
+            }
+         },
+         "name": "Powiat białostocki",
+         "place_id": "ChIJd6fqz8j-H0cRgM44lLefAgM",
+         "district_id": "Białystok"
+      }
    },
    {
       "circuit_number": 25,
@@ -3386,7 +3419,7 @@
                }
             },
             "name": "Siemianowice Śląskie",
-            "place_id": "ChIJN3Fua4XRFkcR-LARUOwTLvI",
+            "place_id": "ChIJN3Fua4XRFkcRLPx0DTB_E9I",
             "district_id": "Siemianowice Śląskie"
          },
          {
@@ -3506,7 +3539,18 @@
       "swing_factor": 3.3142390387858347,
       "winner_2019": "party_pis",
       "city_id": "kielce",
-      "districts": []
+      "districts": {
+         "geometry": {
+            "location": { "lat": 50.84020940000001, "lng": 20.6058867 },
+            "viewport": {
+               "northeast": { "lat": 50.9150824, "lng": 20.7206263 },
+               "southwest": { "lat": 50.7932982, "lng": 20.5105224 }
+            }
+         },
+         "name": "Kielce",
+         "place_id": "ChIJBRGJrxiIF0cR1GPFcDN6h24",
+         "district_id": "Kielce"
+      }
    },
    {
       "circuit_number": 34,
@@ -4544,14 +4588,14 @@
          },
          {
             "geometry": {
-               "location": { "lat": 53.7263402, "lng": 16.5362135 },
+               "location": { "lat": 53.4285139, "lng": 14.6067448 },
                "viewport": {
-                  "northeast": { "lat": 54.0050398, "lng": 16.9820535 },
-                  "southwest": { "lat": 53.4703041, "lng": 16.1970701 }
+                  "northeast": { "lat": 53.53768170000001, "lng": 14.8054166 },
+                  "southwest": { "lat": 53.3217096, "lng": 14.4438188 }
                }
             },
-            "name": "Powiat szczecinecki",
-            "place_id": "ChIJeRevUJabAUcRANgOrTIOAgM",
+            "name": "Szczecin",
+            "place_id": "ChIJWafTADgJqkcRSDV4o3R2QCw",
             "district_id": "Szczecin"
          },
          {
