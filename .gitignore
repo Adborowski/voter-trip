@@ -37,3 +37,4 @@ next-env.d.ts
 # list_scripts can contain raw key
 create-route-list.js
 create-district-list.js
+/list_scripts
