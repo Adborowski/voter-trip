@@ -83,12 +83,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
    // mark the objects as isTripOrigin or isDestination, for use in map nodes
    sortedCircuits = sortedCircuits.map((sortedCircuit: ScoredCircuit, index: number) => {
-      if (selectedCircuit.city_id === 'lodz') {
-         selectedCircuit.city_id = 'łodz'
+      if (selectedCircuit.city_id === 'łodz') {
+         selectedCircuit.city_id = 'lodz'
+      }
+
+      if (selectedCircuit.city_id === 'piła') {
+         selectedCircuit.city_id = 'pila'
       }
 
       if (sortedCircuit.city_id == selectedCircuit.city_id) {
+         console.log(sortedCircuit.city_id, selectedCircuit.city_id, 'OK')
          sortedCircuit.isTripOrigin = true
+      } else {
+         console.log('FAIL', sortedCircuit.city_id, selectedCircuit.city_id)
       }
       if (index < tripCount) {
          sortedCircuit.isDestination = true

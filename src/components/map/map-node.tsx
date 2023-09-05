@@ -32,7 +32,6 @@ const MapNode = (props: MapNodeProps) => {
                }
 
                if (!listCircuit.isDestination && !listCircuit.isTripOrigin) {
-                  console.log('IRRELEVANT!')
                   setSpecialClass(styles.irrelevant)
                }
             }
