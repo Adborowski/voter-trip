@@ -29,8 +29,17 @@ const cleanString = (dirtyString) => {
 }
 
 const newCircuits = circuits.map((circuit) => {
+   if (circuit.circuit_number == 19) {
+      return { ...circuit, city_id: 'warszawa_central' }
+   }
+
+   if (circuit.circuit_number == 20) {
+      return { ...circuit, city_id: 'warszawa_suburb' }
+   }
+
    return { ...circuit, city_id: cleanString(circuit.city_name) }
 })
 
 console.log(newCircuits)
-fs.writeFileSync('circuit-list.json', JSON.stringify(newCircuits))
+const fileId = Math.floor(Math.random() * 10000)
+fs.writeFileSync(`circuit-list-${fileId}.json`, JSON.stringify(newCircuits))

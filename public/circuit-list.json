@@ -2202,7 +2202,7 @@
       "votes_pis_2019": 379880,
       "swing_factor": 1.5296330420132673,
       "winner_2019": "party_ko",
-      "city_id": "warszawa",
+      "city_id": "warszawa_central",
       "districts": [
          {
             "geometry": {
@@ -2231,7 +2231,7 @@
       "votes_pis_2019": 244823,
       "swing_factor": 1.4293228868675782,
       "winner_2019": "party_pis",
-      "city_id": "warszawa",
+      "city_id": "warszawa_suburb",
       "districts": [
          {
             "geometry": {

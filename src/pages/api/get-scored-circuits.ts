@@ -15,21 +15,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    console.log('SWING FACTOR', tripOrigin.swing_factor.toFixed(3))
 
    const getDistanceFromOrigin = (circuit: Circuit) => {
-      if (tripOrigin.city_id === 'łodz') {
-         tripOrigin.city_id = 'lodz'
+      if (tripOrigin.city_id === 'lodz') {
+         tripOrigin.city_id = 'łodz'
       }
 
-      if (circuit.city_id === 'pila') {
-         circuit.city_id = 'piła'
+      if (circuit.city_id === 'lodz') {
+         circuit.city_id = 'łodz'
       }
 
-      if (tripOrigin.city_id === 'pila') {
-         tripOrigin.city_id = 'piła'
-      }
-
-      if (circuit.city_id === 'łodz') {
-         circuit.city_id = 'lodz'
-      }
       // console.log(`[${tripOrigin.city_id}][${circuit.city_id}]`)
       const route = routes[tripOrigin.city_id][circuit.city_id]
       if (!route) {
@@ -94,9 +87,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (sortedCircuit.city_id == selectedCircuit.city_id) {
          console.log(sortedCircuit.city_id, selectedCircuit.city_id, 'OK')
          sortedCircuit.isTripOrigin = true
-      } else {
-         console.log('FAIL', sortedCircuit.city_id, selectedCircuit.city_id)
       }
+
       if (index < tripCount) {
          sortedCircuit.isDestination = true
       }
