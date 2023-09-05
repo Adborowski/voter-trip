@@ -12,7 +12,7 @@
    border-radius: 6px;
    font-size: 10px;
    border: 1px solid white;
-   width: 100px;
+   /* width: 100px; */
 }
 
 .markerLabel::before {
@@ -23,7 +23,7 @@
    background-color: white;
    position: absolute;
    bottom: -5px;
-   left: 45px;
+   left: 45%;
    z-index: -1;
 }
 
@@ -38,6 +38,7 @@
    /* margin: auto; */
    background-color: var(--highlight-1);
    color: black;
-   content: 'Najbliżej';
+   content: 'najbliżej';
+   font-size: 0.7rem;
    font-weight: 800;
 }

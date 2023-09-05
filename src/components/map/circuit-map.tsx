@@ -389,16 +389,21 @@ const CircuitMap = ({
                      position: district.geometry.location,
                      label: markerLabel,
                      icon: markerIcon,
+                     clickable: true,
                      map,
                   })
 
+                  // TODO - fix this
                   newMarker.addListener('click', (e: Event) => {
+                     console.log('x')
                      const lat = district.geometry.location.lat
                      const lng = district.geometry.location.lng
                      const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
                      console.log(url)
                      window.open(url, '_blank')
                   })
+
+                  console.log(newMarker)
 
                   const newCircle = new maps.Circle({
                      center: district.geometry.location,
