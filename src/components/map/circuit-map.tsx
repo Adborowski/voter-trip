@@ -262,6 +262,7 @@ const CircuitMap = ({
          setMapCircuits(scoredCircuits)
       } else {
          clearPolylines()
+         clearDistrictPoints()
          setMapCircuits(circuitList)
       }
    }, [scoredCircuits])
@@ -331,22 +332,40 @@ const CircuitMap = ({
                console.log(district.geometry.location)
 
                const markerIcon = {
-                  scaledSize: new maps.Size(20, 20),
-                  url: '/map-marker.png',
+                  // scaledSize: new maps.Size(20, 20),
+                  // url: '/map-marker.png',
+                  path: maps.SymbolPath.CIRCLE,
+                  scale: 0,
                }
 
                const markerLabel = {
                   text: district.name,
+                  className: styles.markerLabel,
+                  fontSize: '11px',
                   color: 'white',
                }
 
-               const newDrawnMarker = new maps.Marker({
+               const newMarker = new maps.Marker({
                   position: district.geometry.location,
+                  label: markerLabel,
                   icon: markerIcon,
+                  map,
+               })
+
+               const newCircle = new maps.Circle({
+                  center: district.geometry.location,
+                  strokeColor: 'lime',
+                  strokeOpacity: 0,
+                  strokeWeight: 2,
+                  fillColor: 'darkgreen',
+                  fillOpacity: 0.5,
+                  radius: 8000,
+                  // icon: markerIcon,
                   label: markerLabel,
                   map,
                })
-               drawnMarkers.push(newDrawnMarker)
+               drawnMarkers.push(newCircle)
+               drawnMarkers.push(newMarker)
             }) // end of foreach district
             setActivePoints(drawnMarkers)
          } // end of if index
