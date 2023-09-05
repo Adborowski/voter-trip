@@ -238,7 +238,7 @@ const CircuitMap = ({
       ],
    }
 
-   const districtCount = 3
+   const districtCount = 1
 
    useEffect(() => {
       setMapCircuits(circuitList)
@@ -366,52 +366,55 @@ const CircuitMap = ({
             }
          })
 
+         // only draw district points for tripCount of circuits
          if (index < tripCount && circuit.districts) {
-            console.log('Drawing circuit points for', circuit.city_id)
+            console.log('Drawing district points for', circuit.city_id)
             console.log('Districts sorted by distance', circuit.districts)
 
             circuit.districts.forEach((district: District, index) => {
-               const markerIcon = {
-                  path: maps.SymbolPath.CIRCLE,
-                  scale: 0,
+               if (index < districtCount) {
+                  const markerIcon = {
+                     path: maps.SymbolPath.CIRCLE,
+                     scale: 0,
+                  }
+
+                  const markerLabel = {
+                     text: district.name,
+                     className: styles.markerLabel,
+                     fontSize: '11px',
+                     color: 'white',
+                  }
+
+                  const newMarker = new maps.Marker({
+                     position: district.geometry.location,
+                     label: markerLabel,
+                     icon: markerIcon,
+                     map,
+                  })
+
+                  newMarker.addListener('click', (e: Event) => {
+                     const lat = district.geometry.location.lat
+                     const lng = district.geometry.location.lng
+                     const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
+                     console.log(url)
+                     window.open(url, '_blank')
+                  })
+
+                  const newCircle = new maps.Circle({
+                     center: district.geometry.location,
+                     strokeColor: 'lime',
+                     strokeOpacity: 0,
+                     strokeWeight: 2,
+                     fillColor: 'lime',
+                     fillOpacity: 0,
+                     radius: 8000,
+                     // icon: markerIcon,
+                     label: markerLabel,
+                     map,
+                  })
+                  drawnMarkers.push(newCircle)
+                  drawnMarkers.push(newMarker)
                }
-
-               const markerLabel = {
-                  text: district.name,
-                  className: styles.markerLabel,
-                  fontSize: '11px',
-                  color: 'white',
-               }
-
-               const newMarker = new maps.Marker({
-                  position: district.geometry.location,
-                  label: markerLabel,
-                  icon: markerIcon,
-                  map,
-               })
-
-               newMarker.addListener('click', (e: Event) => {
-                  const lat = district.geometry.location.lat
-                  const lng = district.geometry.location.lng
-                  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
-                  console.log(url)
-                  window.open(url, '_blank')
-               })
-
-               const newCircle = new maps.Circle({
-                  center: district.geometry.location,
-                  strokeColor: 'lime',
-                  strokeOpacity: 0,
-                  strokeWeight: 2,
-                  fillColor: 'lime',
-                  fillOpacity: 0,
-                  radius: 8000,
-                  // icon: markerIcon,
-                  label: markerLabel,
-                  map,
-               })
-               drawnMarkers.push(newCircle)
-               drawnMarkers.push(newMarker)
             }) // end of foreach district
             setActivePoints(drawnMarkers)
          } // end of if index
