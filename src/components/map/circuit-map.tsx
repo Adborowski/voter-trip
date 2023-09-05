@@ -246,7 +246,8 @@ const CircuitMap = ({
 
    useEffect(() => {
       if (selectedCircuit) {
-         console.log('New selected circuit', selectedCircuit.city_name)
+         console.log('%cNew selected circuit', 'color: lightgreen', selectedCircuit.city_name)
+         mapRef.current.panBy(100000, 0)
       } else {
          console.log('No selectedCircuit')
       }
