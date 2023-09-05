@@ -52,12 +52,6 @@ const Navbar = (props: NavbarProps) => {
                   <aside className={styles.buttonIcon}></aside>
                   <span> Zacznij od nowa</span>
                </button>
-
-               {selectedCircuit && (
-                  <button className={styles.btnViewTrips} onClick={scrollToTrips}>
-                     <span>Dalej</span>
-                  </button>
-               )}
             </section>
          )}
       </div>

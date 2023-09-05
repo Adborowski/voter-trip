@@ -50,7 +50,8 @@ section:has(.mapNode) {
 }
 
 /* put node on top when clicked */
-div:has(.origin) {
+div:has(.origin),
+div:has(.destination) {
    z-index: 1 !important;
 }
 

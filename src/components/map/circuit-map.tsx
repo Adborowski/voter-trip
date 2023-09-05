@@ -2,7 +2,6 @@ import styles from './circuit-map.module.css'
 import { useEffect, useState, useRef } from 'react'
 import MapNode from './map-node'
 import GoogleMap from 'google-maps-react-markers'
-import { clear } from 'console'
 
 interface MapProps {
    circuitList?: Circuit[]
@@ -304,6 +303,7 @@ const CircuitMap = ({
       return d
    }
 
+   // helper for getDistance
    function deg2rad(deg: any) {
       return deg * (Math.PI / 180)
    }
@@ -424,7 +424,7 @@ const CircuitMap = ({
             setActivePoints(drawnMarkers)
          } // end of if index
       }) // end of foreach circuit
-   } // end of function
+   }
 
    const clearDistrictPoints = () => {
       console.log('Clearing districts...')
@@ -445,9 +445,8 @@ const CircuitMap = ({
    const key: any = process.env.NEXT_PUBLIC_MAP_KEY
 
    return (
-      <div className={styles.mapWrapper}>
+      <div className={`${styles.mapWrapper} ${selectedCircuit ? styles.trip : ''}`}>
          <GoogleMap
-            className={styles.map}
             apiKey={key}
             defaultCenter={{ lat: 45.4046987, lng: 12.2472504 }}
             defaultZoom={5}
