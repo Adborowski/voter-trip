@@ -238,6 +238,8 @@ const CircuitMap = ({
       ],
    }
 
+   const districtCount = 3
+
    useEffect(() => {
       setMapCircuits(circuitList)
       console.log('map render', mapResetId)
@@ -257,7 +259,6 @@ const CircuitMap = ({
       getMapsRef(mapsRef)
       if (scoredCircuits) {
          drawPolylines()
-         addDistrictDistances()
          drawDistrictPoints()
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
@@ -303,11 +304,6 @@ const CircuitMap = ({
       return d
    }
 
-   const addDistrictDistances = () => {
-      console.log('Adding district distances to top circuits')
-      const districts = selectedCircuit?.districts
-   }
-
    function deg2rad(deg: any) {
       return deg * (Math.PI / 180)
    }
@@ -344,20 +340,38 @@ const CircuitMap = ({
    const drawDistrictPoints = () => {
       clearDistrictPoints()
       console.log('Drawing districts...')
-      const districtPoints: any = []
       const maps = mapsRef.current
       const map = mapRef.current
-      const pointColors = ['#ffbb00', '#ffcf4a', '#d1b66b']
       let drawnMarkers: any = []
 
       scoredCircuits?.forEach((circuit, index) => {
-         if (index < tripCount && circuit.districts) {
-            circuit.districts.forEach((district: District) => {
-               console.log(district.geometry.location)
+         //@ts-ignore
+         //add distance from origin to each district so they can be sorted
+         circuit.districts = circuit.districts.map((district: District) => {
+            const distance = getDistance(
+               //@ts-ignore
+               selectedCircuit?.latitude,
+               selectedCircuit?.longitude,
+               district.geometry.location.lat,
+               district.geometry.location.lng
+            )
+            return { ...district, distanceFromOrigin: distance }
+         })
 
+         //@ts-ignore
+         // sort the districts array
+         circuit.districts = circuit.districts.sort((a: any, b: any) => {
+            if (a.distanceFromOrigin && b.distanceFromOrigin) {
+               return a.distanceFromOrigin - b.distanceFromOrigin
+            }
+         })
+
+         if (index < tripCount && circuit.districts) {
+            console.log('Drawing circuit points for', circuit.city_id)
+            console.log('Districts sorted by distance', circuit.districts)
+
+            circuit.districts.forEach((district: District, index) => {
                const markerIcon = {
-                  // scaledSize: new maps.Size(20, 20),
-                  // url: '/map-marker.png',
                   path: maps.SymbolPath.CIRCLE,
                   scale: 0,
                }

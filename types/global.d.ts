@@ -39,5 +39,6 @@ declare global {
       }
       name: string
       place_id: string
+      distanceFromOrigin?: number
    }
 }

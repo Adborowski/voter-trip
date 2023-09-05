@@ -55,7 +55,7 @@ const MapNode = (props: MapNodeProps) => {
             </div>
          </article>
          <article>
-            {specialClass == styles.destination && (
+            {false && (
                <div
                   onClick={() => {
                      window.scrollBy({
