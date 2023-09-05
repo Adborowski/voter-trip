@@ -255,6 +255,7 @@ const CircuitMap = ({
       getMapsRef(mapsRef)
       if (scoredCircuits) {
          drawPolylines()
+         drawDistrictPoints()
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
       } else {
@@ -311,6 +312,24 @@ const CircuitMap = ({
       })
 
       setActivePolylines(polylines)
+   }
+
+   const drawDistrictPoints = () => {
+      console.log('Drawing districts...')
+      const districtPoints: any = []
+      const maps = mapsRef.current
+      const map = mapRef.current
+      const pointColors = ['#ffbb00', '#ffcf4a', '#d1b66b']
+
+      scoredCircuits?.forEach((circuit, index) => {
+         if (index < tripCount) {
+            console.log('Drawing points for', circuit.city_id)
+         }
+      })
+   }
+
+   const clearDistrictPoints = () => {
+      console.log('Clearing districts...')
    }
 
    const onGoogleApiLoaded = ({ map, maps }: any) => {

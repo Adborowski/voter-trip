@@ -55,7 +55,7 @@ const MapNode = (props: MapNodeProps) => {
             </div>
          </article>
          <article>
-            {specialClass == styles.origin && (
+            {specialClass == styles.destination && (
                <div
                   onClick={() => {
                      window.scrollBy({
@@ -65,7 +65,7 @@ const MapNode = (props: MapNodeProps) => {
                   }}
                   className={styles.btnViewTrips}
                >
-                  <span>Zobacz wycieczki</span>
+                  <span>Zobacz wycieczkę</span>
                </div>
             )}
          </article>

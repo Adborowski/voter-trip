@@ -52,7 +52,7 @@ const Navbar = (props: NavbarProps) => {
 
                {selectedCircuit && (
                   <button onClick={scrollToTrips}>
-                     <span>Zobacz wycieczki</span>
+                     <span>Zobacz wycieczkę</span>
                   </button>
                )}
             </section>

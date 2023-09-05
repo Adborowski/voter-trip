@@ -1,4 +1,4 @@
-article:has(.mapNode) {
+section:has(.mapNode) {
    transform: translate(-10px, -10px);
 }
 
@@ -55,7 +55,7 @@ div:has(.origin) {
 }
 
 .destination {
-   background-color: var(--highlight-2);
+   background-color: var(--highlight-3);
 }
 
 .origin {
