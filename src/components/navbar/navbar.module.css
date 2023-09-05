@@ -41,7 +41,7 @@
    gap: 6px;
 }
 
-.navbar section.controls button {
+.controls button {
    background-color: var(--light-1);
    display: flex;
    padding: 6px 18px;
@@ -53,7 +53,7 @@
    box-shadow: var(--box-shadow);
 }
 
-.navbar section.controls button span {
+.controls button span {
    font-size: 1rem;
    display: block;
    border: 1px;
@@ -90,11 +90,6 @@
    background-color: var(--light-1);
 }
 
-.navbar section.controls button.btnPlanTrip span {
-   color: black;
-   display: block;
-}
-
 .btnPlanTrip:active {
    background-color: black;
    color: white;
@@ -109,11 +104,19 @@
    height: 30px;
 }
 
-.btnReset {
+.buttonIcon {
+   height: 100%;
+   margin-right: 6px;
+   display: inline-block;
    background-image: url('/arrow-around.svg');
    background-position: center;
    background-repeat: no-repeat;
    background-size: 15px;
+}
+
+.controls .btnReset {
+   display: grid;
+   grid-template-columns: 20px 1fr;
 }
 
 @media screen and (max-width: 500px) {
@@ -122,6 +125,7 @@
    }
 }
 
-.navbar section.controls button.btnViewTrips {
-   background-color: var(--highlight-3);
+.controls .btnViewTrips {
+   background-color: red;
+   color: white;
 }

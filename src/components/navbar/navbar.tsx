@@ -48,11 +48,14 @@ const Navbar = (props: NavbarProps) => {
                   onClick={() => {
                      resetMap(mapsRef, mapRef)
                   }}
-               ></button>
+               >
+                  <aside className={styles.buttonIcon}></aside>
+                  <span> Zacznij od nowa</span>
+               </button>
 
                {selectedCircuit && (
                   <button className={styles.btnViewTrips} onClick={scrollToTrips}>
-                     <span>Zobacz wycieczkę</span>
+                     <span>Dalej</span>
                   </button>
                )}
             </section>

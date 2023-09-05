@@ -55,15 +55,25 @@ div:has(.origin) {
 }
 
 .destination {
-   background-color: var(--highlight-3);
+   background-color: rgb(21, 124, 0);
+   color: white;
+}
+
+.destination .numberWrapper {
+   background-color: rgb(18, 185, 54);
 }
 
 .origin {
-   background-color: var(--highlight-1);
+   background-color: rgb(146, 78, 1);
+   color: white;
+}
+
+.origin .numberWrapper {
+   background-color: rgb(202, 113, 11);
 }
 
 .irrelevant {
-   opacity: 0.25;
+   opacity: 0.75;
    background-color: black;
 }
 
