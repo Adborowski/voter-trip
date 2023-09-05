@@ -2,6 +2,7 @@ import styles from './circuit-map.module.css'
 import { useEffect, useState, useRef } from 'react'
 import MapNode from './map-node'
 import GoogleMap from 'google-maps-react-markers'
+import { clear } from 'console'
 
 interface MapProps {
    circuitList?: Circuit[]
@@ -30,6 +31,7 @@ const CircuitMap = ({
    const mapsRef: any = useRef(null)
    const [mapReady, setMapReady] = useState(false)
    const [activePolylines, setActivePolylines] = useState<[]>()
+   const [activePoints, setActivePoints] = useState<[]>()
    const [mapCircuits, setMapCircuits] = useState<Circuit[] | undefined>(circuitList)
    const polandCenter = { lat: 51.9194, lng: 19.1451 }
 
@@ -315,21 +317,38 @@ const CircuitMap = ({
    }
 
    const drawDistrictPoints = () => {
+      clearDistrictPoints()
       console.log('Drawing districts...')
       const districtPoints: any = []
       const maps = mapsRef.current
       const map = mapRef.current
       const pointColors = ['#ffbb00', '#ffcf4a', '#d1b66b']
+      let drawnMarkers: any = []
 
       scoredCircuits?.forEach((circuit, index) => {
-         if (index < tripCount) {
-            console.log('Drawing points for', circuit.city_id)
-         }
-      })
-   }
+         if (index < tripCount && circuit.districts) {
+            circuit.districts.forEach((district: District) => {
+               console.log(district.geometry.location)
+
+               const newDrawnMarker = new maps.Marker({
+                  position: district.geometry.location,
+                  map,
+                  title: 'Hello World!',
+               })
+               drawnMarkers.push(newDrawnMarker)
+            }) // end of foreach district
+            setActivePoints(drawnMarkers)
+         } // end of if index
+      }) // end of foreach circuit
+   } // end of function
 
    const clearDistrictPoints = () => {
       console.log('Clearing districts...')
+      if (activePoints) {
+         activePoints.forEach((point: any) => {
+            point.setMap(null)
+         })
+      }
    }
 
    const onGoogleApiLoaded = ({ map, maps }: any) => {

@@ -19,11 +19,22 @@ declare global {
       route?: Route
       isDestination?: boolean
       isTripOrigin?: boolean
+      districts: []
    }
 
    interface ScoredCircuit extends Circuit {
       distance_from_origin: string
       score: number
       route: Route
+   }
+
+   interface District {
+      district_id: string
+      geometry: {
+         location: {}
+         viewport: {}
+      }
+      name: string
+      place_id: string
    }
 }
