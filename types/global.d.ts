@@ -41,4 +41,12 @@ declare global {
       place_id: string
       distanceFromOrigin?: number
    }
+
+   interface TripStats {
+      origin: string
+      destination: string
+      swingDifference: number
+      score: number
+      districts: District[]
+   }
 }

@@ -7,19 +7,22 @@ section:has(.mapNode) {
    position: relative;
    display: grid;
    grid-template-columns: 2em 1fr;
-   background-color: white;
+   background-color: rgb(32 43 47);
    border-radius: 60px;
    transition: 0.3s all ease;
    opacity: 0.9;
+}
+
+.mapNode span {
+   color: white;
 }
 
 .mapNode:hover {
    cursor: pointer;
 }
 
-.numberWrapper {
-   color: rgb(255, 255, 255);
-   background-color: rgb(0, 75, 126);
+.mapNode .numberWrapper {
+   background-color: rgb(44 59 65);
    text-align: center;
    width: 2em;
    height: 2em;

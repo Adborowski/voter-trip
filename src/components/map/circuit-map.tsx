@@ -375,8 +375,8 @@ const CircuitMap = ({
             circuit.districts.forEach((district: District, index) => {
                if (index < districtCount) {
                   const markerIcon = {
-                     path: maps.SymbolPath.CIRCLE,
-                     scale: 0,
+                     url: '/arrow-up.svg',
+                     scaledSize: new maps.Size(0, 0),
                   }
 
                   const markerLabel = {
