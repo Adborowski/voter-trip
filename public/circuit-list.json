@@ -24,7 +24,7 @@
             },
             "name": "Powiat bolesławiecki",
             "place_id": "ChIJ_VKo4F01D0cRIMEOrTIOAgM",
-            "district_id": "bolesławiecki"
+            "district_id": "powiat bolesławiecki"
          },
          {
             "geometry": {
@@ -36,7 +36,7 @@
             },
             "name": "Powiat głogowski",
             "place_id": "ChIJh0cLjg30BUcRQMEOrTIOAgM",
-            "district_id": "głogowski"
+            "district_id": "powiat głogowski"
          },
          {
             "geometry": {
@@ -48,7 +48,7 @@
             },
             "name": "Powiat jaworski",
             "place_id": "ChIJVcEvj5QGD0cROLCOdGlKbEk",
-            "district_id": "jaworski"
+            "district_id": "powiat jaworski"
          },
          {
             "geometry": {
@@ -60,7 +60,7 @@
             },
             "name": "Powiat kamiennogórski",
             "place_id": "ChIJl4KLBw36DkcRgMEOrTIOAgM",
-            "district_id": "kamiennogórski"
+            "district_id": "powiat kamiennogórski"
          },
          {
             "geometry": {
@@ -72,7 +72,7 @@
             },
             "name": "Jelenia Góra",
             "place_id": "ChIJp6vrUavgDkcRwMIOrTIOAgM",
-            "district_id": "karkonoski"
+            "district_id": "powiat karkonoski"
          },
          {
             "geometry": {
@@ -84,7 +84,7 @@
             },
             "name": "Legnica",
             "place_id": "ChIJwTdAEoUSD0cRhIiwijh6l1M",
-            "district_id": "legnicki"
+            "district_id": "powiat legnicki"
          },
          {
             "geometry": {
@@ -96,7 +96,7 @@
             },
             "name": "Powiat lubański",
             "place_id": "ChIJHQxKGQrVCEcRhMFdQ-UOdRo",
-            "district_id": "lubański"
+            "district_id": "powiat lubański"
          },
          {
             "geometry": {
@@ -108,7 +108,7 @@
             },
             "name": "Powiat lubiński",
             "place_id": "ChIJ5ftaG6xlD0cRwMEOrTIOAgM",
-            "district_id": "lubiński"
+            "district_id": "powiat lubiński"
          },
          {
             "geometry": {
@@ -120,7 +120,7 @@
             },
             "name": "Powiat lwówecki",
             "place_id": "ChIJo8P_X0UoD0cRB76u9IdJNJg",
-            "district_id": "lwówecki"
+            "district_id": "powiat lwówecki"
          },
          {
             "geometry": {
@@ -132,7 +132,7 @@
             },
             "name": "Powiat polkowicki",
             "place_id": "ChIJmyrCpjlcD0cRe1GlGEPdz3c",
-            "district_id": "polkowicki"
+            "district_id": "powiat polkowicki"
          },
          {
             "geometry": {
@@ -144,7 +144,7 @@
             },
             "name": "Powiat zgorzelecki",
             "place_id": "ChIJZZwdSaPbCEcRoMIOrTIOAgM",
-            "district_id": "zgorzelecki"
+            "district_id": "powiat zgorzelecki"
          },
          {
             "geometry": {
@@ -156,7 +156,7 @@
             },
             "name": "Powiat złotoryjski",
             "place_id": "ChIJSRg9XhEYD0cR_-3YqYWgl0c",
-            "district_id": "złotoryjski"
+            "district_id": "powiat złotoryjski"
          },
          {
             "geometry": {
@@ -168,7 +168,7 @@
             },
             "name": "Jelenia Góra",
             "place_id": "ChIJp6vrUavgDkcRwMIOrTIOAgM",
-            "district_id": "Jelenia Góra"
+            "district_id": "powiat Jelenia Góra"
          },
          {
             "geometry": {
@@ -180,7 +180,7 @@
             },
             "name": "Legnica",
             "place_id": "ChIJwTdAEoUSD0cRhIiwijh6l1M",
-            "district_id": "Legnica"
+            "district_id": "powiat Legnica"
          }
       ]
    },
@@ -209,7 +209,7 @@
             },
             "name": "Powiat dzierżoniowski",
             "place_id": "ChIJH0PhZNY1DkcRMMEOrTIOAgM",
-            "district_id": "dzierżoniowski"
+            "district_id": "powiat dzierżoniowski"
          },
          {
             "geometry": {
@@ -221,7 +221,7 @@
             },
             "name": "Powiat kłodzki",
             "place_id": "ChIJDZs3syARDkcR2lC3s5ptSZg",
-            "district_id": "kłodzki"
+            "district_id": "powiat kłodzki"
          },
          {
             "geometry": {
@@ -233,7 +233,7 @@
             },
             "name": "Powiat świdnicki",
             "place_id": "ChIJdSizQ_6pI0cR8-cY1fftSVY",
-            "district_id": "świdnicki"
+            "district_id": "powiat świdnicki"
          },
          {
             "geometry": {
@@ -245,7 +245,7 @@
             },
             "name": "Powiat wałbrzyski",
             "place_id": "ChIJFa7hrSxRDkcRA1Flx4ActOM",
-            "district_id": "wałbrzyski"
+            "district_id": "powiat wałbrzyski"
          },
          {
             "geometry": {
@@ -257,7 +257,7 @@
             },
             "name": "Powiat ząbkowicki",
             "place_id": "ChIJr9y_SxUkDkcRbwy5-S4WKkk",
-            "district_id": "ząbkowicki"
+            "district_id": "powiat ząbkowicki"
          },
          {
             "geometry": {
@@ -269,7 +269,7 @@
             },
             "name": "Powiat wałbrzyski",
             "place_id": "ChIJFa7hrSxRDkcRA1Flx4ActOM",
-            "district_id": "Wałbrzych"
+            "district_id": "powiat Wałbrzych"
          }
       ]
    },
@@ -298,7 +298,7 @@
             },
             "name": "Powiat górowski",
             "place_id": "ChIJjxRDKQ2EBUcRUMEOrTIOAgM",
-            "district_id": "górowski"
+            "district_id": "powiat górowski"
          },
          {
             "geometry": {
@@ -310,7 +310,7 @@
             },
             "name": "Powiat milicki",
             "place_id": "ChIJn53YzdhbBUcR4MEOrTIOAgM",
-            "district_id": "milicki"
+            "district_id": "powiat milicki"
          },
          {
             "geometry": {
@@ -322,7 +322,7 @@
             },
             "name": "Powiat oleśnicki",
             "place_id": "ChIJibwI3VcCEEcRu6HC5n0N3qA",
-            "district_id": "oleśnicki"
+            "district_id": "powiat oleśnicki"
          },
          {
             "geometry": {
@@ -334,7 +334,7 @@
             },
             "name": "Powiat oławski",
             "place_id": "ChIJAcz7NGonEEcRFtBzAAnBK6A",
-            "district_id": "oławski"
+            "district_id": "powiat oławski"
          },
          {
             "geometry": {
@@ -346,7 +346,7 @@
             },
             "name": "Powiat strzeliński",
             "place_id": "ChIJvT935i3VD0cRIMIOrTIOAgM",
-            "district_id": "strzeliński"
+            "district_id": "powiat strzeliński"
          },
          {
             "geometry": {
@@ -358,7 +358,7 @@
             },
             "name": "Powiat średzki",
             "place_id": "ChIJiUFxVz_jBEcRcNYOrTIOAgM",
-            "district_id": "średzki"
+            "district_id": "powiat średzki"
          },
          {
             "geometry": {
@@ -370,7 +370,7 @@
             },
             "name": "Powiat trzebnicki",
             "place_id": "ChIJrWI9Pab0D0cRjsaJupsWMI4",
-            "district_id": "trzebnicki"
+            "district_id": "powiat trzebnicki"
          },
          {
             "geometry": {
@@ -382,7 +382,7 @@
             },
             "name": "Powiat wołowski",
             "place_id": "ChIJMZEmEhSDD0cRTKaWBGX0Xzo",
-            "district_id": "wołowski"
+            "district_id": "powiat wołowski"
          },
          {
             "geometry": {
@@ -394,7 +394,7 @@
             },
             "name": "Wrocław",
             "place_id": "ChIJv4q11MLpD0cRwFAALURV1YE",
-            "district_id": "wrocławski"
+            "district_id": "powiat wrocławski"
          },
          {
             "geometry": {
@@ -406,7 +406,7 @@
             },
             "name": "Wrocław",
             "place_id": "ChIJv4q11MLpD0cRwFAALURV1YE",
-            "district_id": "Wrocław"
+            "district_id": "powiat Wrocław"
          }
       ]
    },
@@ -427,15 +427,15 @@
       "districts": [
          {
             "geometry": {
-               "location": { "lat": 53.2928936, "lng": 17.9545093 },
+               "location": { "lat": 53.118252, "lng": 18.0749923 },
                "viewport": {
-                  "northeast": { "lat": 53.4440732, "lng": 18.4074117 },
-                  "southwest": { "lat": 52.9401982, "lng": 17.6689966 }
+                  "northeast": { "lat": 53.2093439, "lng": 18.2025981 },
+                  "southwest": { "lat": 53.0501095, "lng": 17.8741663 }
                }
             },
-            "name": "Powiat bydgoski",
-            "place_id": "ChIJt0q5N_0QA0cRycf2G8xwcLA",
-            "district_id": "bydgoski"
+            "name": "Bydgoszcz",
+            "place_id": "ChIJcQ9umfQTA0cRY_KuYalqEz4",
+            "district_id": "powiat bydgoski"
          },
          {
             "geometry": {
@@ -447,7 +447,7 @@
             },
             "name": "Powiat inowrocławski",
             "place_id": "ChIJBSD6VjpRA0cRYMMOrTIOAgM",
-            "district_id": "inowrocławski"
+            "district_id": "powiat inowrocławski"
          },
          {
             "geometry": {
@@ -459,7 +459,7 @@
             },
             "name": "Powiat mogileński",
             "place_id": "ChIJYyVD-KinBEcRywkOX5oMhIg",
-            "district_id": "mogileński"
+            "district_id": "powiat mogileński"
          },
          {
             "geometry": {
@@ -471,7 +471,7 @@
             },
             "name": "Powiat nakielski",
             "place_id": "ChIJ27rWysCfA0cRkMMOrTIOAgM",
-            "district_id": "nakielski"
+            "district_id": "powiat nakielski"
          },
          {
             "geometry": {
@@ -483,7 +483,7 @@
             },
             "name": "Powiat sępoleński",
             "place_id": "ChIJ9cUVM1OyA0cR1lKOS5i0O5c",
-            "district_id": "sępoleński"
+            "district_id": "powiat sępoleński"
          },
          {
             "geometry": {
@@ -495,7 +495,7 @@
             },
             "name": "Powiat świecki",
             "place_id": "ChIJdf-OZnDnAkcRrLs9Q36x6hk",
-            "district_id": "świecki"
+            "district_id": "powiat świecki"
          },
          {
             "geometry": {
@@ -507,7 +507,7 @@
             },
             "name": "Powiat tucholski",
             "place_id": "ChIJfd0H5d5XAkcRfnE5cJ09Uko",
-            "district_id": "tucholski"
+            "district_id": "powiat tucholski"
          },
          {
             "geometry": {
@@ -519,7 +519,7 @@
             },
             "name": "Powiat żniński",
             "place_id": "ChIJmW1PNkJjA0cR0dtmh97CoEE",
-            "district_id": "żniński"
+            "district_id": "powiat żniński"
          },
          {
             "geometry": {
@@ -531,7 +531,7 @@
             },
             "name": "Bydgoszcz",
             "place_id": "ChIJcQ9umfQTA0cRY_KuYalqEz4",
-            "district_id": "Bydgoszcz"
+            "district_id": "powiat Bydgoszcz"
          }
       ]
    },
@@ -560,7 +560,7 @@
             },
             "name": "Powiat aleksandrowski",
             "place_id": "ChIJe8r5BTuwHEcRmoreqFuTBXc",
-            "district_id": "aleksandrowski"
+            "district_id": "powiat aleksandrowski"
          },
          {
             "geometry": {
@@ -572,7 +572,7 @@
             },
             "name": "Powiat brodnicki",
             "place_id": "ChIJpXfn_DgfHUcREMMOrTIOAgM",
-            "district_id": "brodnicki"
+            "district_id": "powiat brodnicki"
          },
          {
             "geometry": {
@@ -584,7 +584,7 @@
             },
             "name": "Powiat chełmiński",
             "place_id": "ChIJQ5CJsQAnA0cRXf-VN-7K_Vg",
-            "district_id": "chełmiński"
+            "district_id": "powiat chełmiński"
          },
          {
             "geometry": {
@@ -596,7 +596,7 @@
             },
             "name": "Powiat golubsko-dobrzyński",
             "place_id": "ChIJg68tzqDaHEcRnY97BjQRJ5c",
-            "district_id": "golubsko-dobrzyński"
+            "district_id": "powiat golubsko-dobrzyński"
          },
          {
             "geometry": {
@@ -608,7 +608,7 @@
             },
             "name": "Grudziądz",
             "place_id": "ChIJa9IFy9fRAkcRRtXf7Ssw7J4",
-            "district_id": "grudziądzki"
+            "district_id": "powiat grudziądzki"
          },
          {
             "geometry": {
@@ -620,7 +620,7 @@
             },
             "name": "Powiat lipnowski",
             "place_id": "ChIJJXyKSoOTHEcRiWBrXizMBu8",
-            "district_id": "lipnowski"
+            "district_id": "powiat lipnowski"
          },
          {
             "geometry": {
@@ -632,7 +632,7 @@
             },
             "name": "Powiat radziejowski",
             "place_id": "ChIJ2cwkJ4NXG0cRoMMOrTIOAgM",
-            "district_id": "radziejowski"
+            "district_id": "powiat radziejowski"
          },
          {
             "geometry": {
@@ -644,7 +644,7 @@
             },
             "name": "Powiat rypiński",
             "place_id": "ChIJr5By3ULkHEcRoAp1dI0zNps",
-            "district_id": "rypiński"
+            "district_id": "powiat rypiński"
          },
          {
             "geometry": {
@@ -656,7 +656,7 @@
             },
             "name": "Toruń",
             "place_id": "ChIJGeyU2eE0A0cRBJxqU2UjoJg",
-            "district_id": "toruński"
+            "district_id": "powiat toruński"
          },
          {
             "geometry": {
@@ -668,7 +668,7 @@
             },
             "name": "Powiat wąbrzeski",
             "place_id": "ChIJm8eDyXoqHUcRMn3BDJRdiug",
-            "district_id": "wąbrzeski"
+            "district_id": "powiat wąbrzeski"
          },
          {
             "geometry": {
@@ -680,7 +680,7 @@
             },
             "name": "Włocławek",
             "place_id": "ChIJW6B5kHSZHEcRDfgYbMXlYIc",
-            "district_id": "włocławski"
+            "district_id": "powiat włocławski"
          },
          {
             "geometry": {
@@ -692,7 +692,7 @@
             },
             "name": "Grudziądz",
             "place_id": "ChIJa9IFy9fRAkcRRtXf7Ssw7J4",
-            "district_id": "Grudziądz"
+            "district_id": "powiat Grudziądz"
          },
          {
             "geometry": {
@@ -704,7 +704,7 @@
             },
             "name": "Toruń",
             "place_id": "ChIJGeyU2eE0A0cRBJxqU2UjoJg",
-            "district_id": "Toruń"
+            "district_id": "powiat Toruń"
          },
          {
             "geometry": {
@@ -716,7 +716,7 @@
             },
             "name": "Włocławek",
             "place_id": "ChIJW6B5kHSZHEcRDfgYbMXlYIc",
-            "district_id": "Włocławek"
+            "district_id": "powiat Włocławek"
          }
       ]
    },
@@ -745,7 +745,7 @@
             },
             "name": "Powiat janowski",
             "place_id": "ChIJPz29nG0nI0cRsMTkxa18AQM",
-            "district_id": "janowski"
+            "district_id": "powiat janowski"
          },
          {
             "geometry": {
@@ -757,7 +757,7 @@
             },
             "name": "Powiat kraśnicki",
             "place_id": "ChIJk1eUXQnCIkcR0MTkxa18AQM",
-            "district_id": "kraśnicki"
+            "district_id": "powiat kraśnicki"
          },
          {
             "geometry": {
@@ -769,7 +769,7 @@
             },
             "name": "Powiat lubartowski",
             "place_id": "ChIJ_awW2GY_IkcRAEK-LZHlpag",
-            "district_id": "lubartowski"
+            "district_id": "powiat lubartowski"
          },
          {
             "geometry": {
@@ -781,7 +781,7 @@
             },
             "name": "Lublin",
             "place_id": "ChIJYUAVHhRXIkcRGkDypBLLaIA",
-            "district_id": "lubelski"
+            "district_id": "powiat lubelski"
          },
          {
             "geometry": {
@@ -793,7 +793,7 @@
             },
             "name": "Powiat łęczyński",
             "place_id": "ChIJX3Th_UCyI0cRxIcymVXFXKg",
-            "district_id": "łęczyński"
+            "district_id": "powiat łęczyński"
          },
          {
             "geometry": {
@@ -805,19 +805,19 @@
             },
             "name": "Powiat łukowski",
             "place_id": "ChIJmTBdAEcHIkcRi5QIGCZUdXE",
-            "district_id": "łukowski"
+            "district_id": "powiat łukowski"
          },
          {
             "geometry": {
-               "location": { "lat": 50.6867077, "lng": 17.9106101 },
+               "location": { "lat": 51.1669425, "lng": 21.9855229 },
                "viewport": {
-                  "northeast": { "lat": 50.7699743, "lng": 18.032696 },
-                  "southwest": { "lat": 50.5876478, "lng": 17.7795907 }
+                  "northeast": { "lat": 51.3087323, "lng": 22.2356323 },
+                  "southwest": { "lat": 50.9493428, "lng": 21.7832262 }
                }
             },
-            "name": "Opole",
-            "place_id": "ChIJS7NtRQZTEEcRv7ruHDTvJv4",
-            "district_id": "opolski"
+            "name": "Powiat opolski",
+            "place_id": "ChIJP-T_vwWOIkcRIMXkxa18AQM",
+            "district_id": "powiat opolski"
          },
          {
             "geometry": {
@@ -829,7 +829,7 @@
             },
             "name": "Powiat puławski",
             "place_id": "ChIJKWDfgLJ7IkcRXEgOIvwVGXc",
-            "district_id": "puławski"
+            "district_id": "powiat puławski"
          },
          {
             "geometry": {
@@ -841,7 +841,7 @@
             },
             "name": "Powiat rycki",
             "place_id": "ChIJDSJlYFifGEcRqXvor7SDkmQ",
-            "district_id": "rycki"
+            "district_id": "powiat rycki"
          },
          {
             "geometry": {
@@ -853,7 +853,7 @@
             },
             "name": "Powiat świdnicki",
             "place_id": "ChIJdSizQ_6pI0cR8-cY1fftSVY",
-            "district_id": "świdnicki"
+            "district_id": "powiat świdnicki"
          },
          {
             "geometry": {
@@ -865,7 +865,7 @@
             },
             "name": "Lublin",
             "place_id": "ChIJYUAVHhRXIkcRGkDypBLLaIA",
-            "district_id": "Lublin"
+            "district_id": "powiat Lublin"
          }
       ]
    },
@@ -894,7 +894,7 @@
             },
             "name": "Powiat bialski",
             "place_id": "ChIJ3z8k0AyQIUcRAaTgN2NSpPM",
-            "district_id": "bialski"
+            "district_id": "powiat bialski"
          },
          {
             "geometry": {
@@ -906,7 +906,7 @@
             },
             "name": "Powiat biłgorajski",
             "place_id": "ChIJ5XX1A9w3I0cRgMTkxa18AQM",
-            "district_id": "biłgorajski"
+            "district_id": "powiat biłgorajski"
          },
          {
             "geometry": {
@@ -918,7 +918,7 @@
             },
             "name": "Chełm",
             "place_id": "ChIJ36UeUliaI0cRsAY9hD4esdA",
-            "district_id": "chełmski"
+            "district_id": "powiat chełmski"
          },
          {
             "geometry": {
@@ -930,7 +930,7 @@
             },
             "name": "Powiat hrubieszowski",
             "place_id": "ChIJzei0VZKRJEcRoMTkxa18AQM",
-            "district_id": "hrubieszowski"
+            "district_id": "powiat hrubieszowski"
          },
          {
             "geometry": {
@@ -942,7 +942,7 @@
             },
             "name": "Powiat krasnostawski",
             "place_id": "ChIJsQthHrcMI0cRxN5i0Zc41qk",
-            "district_id": "krasnostawski"
+            "district_id": "powiat krasnostawski"
          },
          {
             "geometry": {
@@ -954,7 +954,7 @@
             },
             "name": "Powiat parczewski",
             "place_id": "ChIJR69b-BcyIkcRMMXkxa18AQM",
-            "district_id": "parczewski"
+            "district_id": "powiat parczewski"
          },
          {
             "geometry": {
@@ -966,19 +966,19 @@
             },
             "name": "Powiat radzyński",
             "place_id": "ChIJNdApJ1cfIkcRCLnCOZHjsE4",
-            "district_id": "radzyński"
+            "district_id": "powiat radzyński"
          },
          {
             "geometry": {
-               "location": { "lat": 51.62198189999999, "lng": 20.0241625 },
+               "location": { "lat": 50.4807956, "lng": 23.6139646 },
                "viewport": {
-                  "northeast": { "lat": 51.7734681, "lng": 20.4252576 },
-                  "southwest": { "lat": 51.4198762, "lng": 19.70803 }
+                  "northeast": { "lat": 50.7044892, "lng": 23.993637 },
+                  "southwest": { "lat": 50.25177619999999, "lng": 23.0480261 }
                }
             },
             "name": "Powiat tomaszowski",
-            "place_id": "ChIJTdtibjSDGUcRTVWbG_q1h_c",
-            "district_id": "tomaszowski"
+            "place_id": "ChIJwde7CkelJEcRRS-xwCO_0Sc",
+            "district_id": "powiat tomaszowski"
          },
          {
             "geometry": {
@@ -990,7 +990,7 @@
             },
             "name": "Powiat włodawski",
             "place_id": "ChIJhchTiBXFI0cR5zdYkaZRw1w",
-            "district_id": "włodawski"
+            "district_id": "powiat włodawski"
          },
          {
             "geometry": {
@@ -1002,7 +1002,7 @@
             },
             "name": "Zamość",
             "place_id": "ChIJoWE05LpnI0cR4MXkxa18AQM",
-            "district_id": "zamojski"
+            "district_id": "powiat zamojski"
          },
          {
             "geometry": {
@@ -1014,7 +1014,7 @@
             },
             "name": "Powiat bialski",
             "place_id": "ChIJ3z8k0AyQIUcRAaTgN2NSpPM",
-            "district_id": "Biała Podlaska"
+            "district_id": "powiat Biała Podlaska"
          },
          {
             "geometry": {
@@ -1026,7 +1026,7 @@
             },
             "name": "Chełm",
             "place_id": "ChIJ36UeUliaI0cRsAY9hD4esdA",
-            "district_id": "Chełm"
+            "district_id": "powiat Chełm"
          },
          {
             "geometry": {
@@ -1038,7 +1038,7 @@
             },
             "name": "Zamość",
             "place_id": "ChIJoWE05LpnI0cR4MXkxa18AQM",
-            "district_id": "Zamość"
+            "district_id": "powiat Zamość"
          }
       ]
    },
@@ -1056,7 +1056,20 @@
       "swing_factor": 1.096622978350553,
       "winner_2019": "party_pis",
       "city_id": "zielona_gora",
-      "districts": []
+      "districts": [
+         {
+            "geometry": {
+               "location": { "lat": 52.2274612, "lng": 15.2559103 },
+               "viewport": {
+                  "northeast": { "lat": 53.1239722, "lng": 16.4168399 },
+                  "southwest": { "lat": 51.36318929999999, "lng": 14.5342884 }
+               }
+            },
+            "name": "Lubuskie",
+            "place_id": "ChIJl-1h9KBdBkcRUMAOrTIOAgE",
+            "district_id": "województwo lubuskie"
+         }
+      ]
    },
    {
       "circuit_number": 9,
@@ -1083,7 +1096,7 @@
             },
             "name": "Powiat brzeziński",
             "place_id": "ChIJ7yiBjdrQG0cR3YMufRiVRZ4",
-            "district_id": "brzeziński"
+            "district_id": "powiat brzeziński"
          },
          {
             "geometry": {
@@ -1095,7 +1108,7 @@
             },
             "name": "Powiat łódzki wschodni",
             "place_id": "ChIJYQv0EIssGkcREMfkxa18AQM",
-            "district_id": "łódzki wschodni"
+            "district_id": "powiat łódzki wschodni"
          },
          {
             "geometry": {
@@ -1107,7 +1120,7 @@
             },
             "name": "Powiat łódzki wschodni",
             "place_id": "ChIJYQv0EIssGkcREMfkxa18AQM",
-            "district_id": "Łódź"
+            "district_id": "powiat Łódź"
          }
       ]
    },
@@ -1136,7 +1149,7 @@
             },
             "name": "Powiat bełchatowski",
             "place_id": "ChIJXdqWCIITGkcRwMbkxa18AQM",
-            "district_id": "bełchatowski"
+            "district_id": "powiat bełchatowski"
          },
          {
             "geometry": {
@@ -1148,7 +1161,7 @@
             },
             "name": "Powiat opoczyński",
             "place_id": "ChIJwdUey4y9GUcRIMfkxa18AQM",
-            "district_id": "opoczyński"
+            "district_id": "powiat opoczyński"
          },
          {
             "geometry": {
@@ -1160,7 +1173,7 @@
             },
             "name": "Piotrków Trybunalski",
             "place_id": "ChIJXe275feKGUcRFrbxDG2p9XM",
-            "district_id": "piotrkowski"
+            "district_id": "powiat piotrkowski"
          },
          {
             "geometry": {
@@ -1172,7 +1185,7 @@
             },
             "name": "Powiat radomszczański",
             "place_id": "ChIJR5xDjA_9GUcRcMfkxa18AQM",
-            "district_id": "radomszczański"
+            "district_id": "powiat radomszczański"
          },
          {
             "geometry": {
@@ -1184,7 +1197,7 @@
             },
             "name": "Powiat rawski",
             "place_id": "ChIJKy7B8mVyGUcRxguapTHKs94",
-            "district_id": "rawski"
+            "district_id": "powiat rawski"
          },
          {
             "geometry": {
@@ -1196,19 +1209,19 @@
             },
             "name": "Skierniewice",
             "place_id": "ChIJGQvLHOZgGUcRIMjkxa18AQM",
-            "district_id": "skierniewicki"
+            "district_id": "powiat skierniewicki"
          },
          {
             "geometry": {
-               "location": { "lat": 51.62198189999999, "lng": 20.0241625 },
+               "location": { "lat": 50.4807956, "lng": 23.6139646 },
                "viewport": {
-                  "northeast": { "lat": 51.7734681, "lng": 20.4252576 },
-                  "southwest": { "lat": 51.4198762, "lng": 19.70803 }
+                  "northeast": { "lat": 50.7044892, "lng": 23.993637 },
+                  "southwest": { "lat": 50.25177619999999, "lng": 23.0480261 }
                }
             },
             "name": "Powiat tomaszowski",
-            "place_id": "ChIJTdtibjSDGUcRTVWbG_q1h_c",
-            "district_id": "tomaszowski"
+            "place_id": "ChIJwde7CkelJEcRRS-xwCO_0Sc",
+            "district_id": "powiat tomaszowski"
          },
          {
             "geometry": {
@@ -1220,7 +1233,7 @@
             },
             "name": "Piotrków Trybunalski",
             "place_id": "ChIJXe275feKGUcRFrbxDG2p9XM",
-            "district_id": "Piotrków Trybunalski"
+            "district_id": "powiat Piotrków Trybunalski"
          },
          {
             "geometry": {
@@ -1232,7 +1245,7 @@
             },
             "name": "Skierniewice",
             "place_id": "ChIJGQvLHOZgGUcRIMjkxa18AQM",
-            "district_id": "Skierniewice"
+            "district_id": "powiat Skierniewice"
          }
       ]
    },
@@ -1261,7 +1274,7 @@
             },
             "name": "Powiat kutnowski",
             "place_id": "ChIJ7bKjMaybG0cRVgd8XcrUoD8",
-            "district_id": "kutnowski"
+            "district_id": "powiat kutnowski"
          },
          {
             "geometry": {
@@ -1273,7 +1286,7 @@
             },
             "name": "Powiat łaski",
             "place_id": "ChIJ72yIQ3ZDGkcRTlass7o67to",
-            "district_id": "łaski"
+            "district_id": "powiat łaski"
          },
          {
             "geometry": {
@@ -1285,7 +1298,7 @@
             },
             "name": "Powiat łęczycki",
             "place_id": "ChIJT_BMTguhG0cR8Mbkxa18AQM",
-            "district_id": "łęczycki"
+            "district_id": "powiat łęczycki"
          },
          {
             "geometry": {
@@ -1297,7 +1310,7 @@
             },
             "name": "Powiat łowicki",
             "place_id": "ChIJz-VBjQ3pG0cRAMfkxa18AQM",
-            "district_id": "łowicki"
+            "district_id": "powiat łowicki"
          },
          {
             "geometry": {
@@ -1309,7 +1322,7 @@
             },
             "name": "Powiat pabianicki",
             "place_id": "ChIJvaglvxhJGkcRMMfkxa18AQM",
-            "district_id": "pabianicki"
+            "district_id": "powiat pabianicki"
          },
          {
             "geometry": {
@@ -1321,7 +1334,7 @@
             },
             "name": "Powiat pajęczański",
             "place_id": "ChIJfQL8fJygEEcRdffh-xIkuq0",
-            "district_id": "pajęczański"
+            "district_id": "powiat pajęczański"
          },
          {
             "geometry": {
@@ -1333,7 +1346,7 @@
             },
             "name": "Powiat poddębicki",
             "place_id": "ChIJPyRfxmEAG0cR-eyQfkrxa6U",
-            "district_id": "poddębicki"
+            "district_id": "powiat poddębicki"
          },
          {
             "geometry": {
@@ -1345,7 +1358,7 @@
             },
             "name": "Powiat sieradzki",
             "place_id": "ChIJVRCn7oHzGkcRxWJqeKg298Y",
-            "district_id": "sieradzki"
+            "district_id": "powiat sieradzki"
          },
          {
             "geometry": {
@@ -1357,7 +1370,7 @@
             },
             "name": "Powiat wieluński",
             "place_id": "ChIJH-6Kych4GkcRMK7Dgi7pQdY",
-            "district_id": "wieluński"
+            "district_id": "powiat wieluński"
          },
          {
             "geometry": {
@@ -1369,7 +1382,7 @@
             },
             "name": "Powiat wieruszowski",
             "place_id": "ChIJ-2PWsOWCGkcR0Mfkxa18AQM",
-            "district_id": "wieruszowski"
+            "district_id": "powiat wieruszowski"
          },
          {
             "geometry": {
@@ -1381,7 +1394,7 @@
             },
             "name": "Powiat zduńskowolski",
             "place_id": "ChIJbWZlBwhbGkcR2Hdiw8x8fDY",
-            "district_id": "zduńskowolski"
+            "district_id": "powiat zduńskowolski"
          },
          {
             "geometry": {
@@ -1393,7 +1406,7 @@
             },
             "name": "Powiat zgierski",
             "place_id": "ChIJO5GtD9q3G0cR1OwdO7qSpl4",
-            "district_id": "zgierski"
+            "district_id": "powiat zgierski"
          }
       ]
    },
@@ -1422,7 +1435,7 @@
             },
             "name": "Powiat chrzanowski",
             "place_id": "ChIJe01duCvsFkcRUMjkxa18AQM",
-            "district_id": "chrzanowski"
+            "district_id": "powiat chrzanowski"
          },
          {
             "geometry": {
@@ -1434,7 +1447,7 @@
             },
             "name": "Powiat myślenicki",
             "place_id": "ChIJlbXM3GZtFkcRzHC5nhnZb6A",
-            "district_id": "myślenicki"
+            "district_id": "powiat myślenicki"
          },
          {
             "geometry": {
@@ -1446,7 +1459,7 @@
             },
             "name": "Powiat oświęcimski",
             "place_id": "ChIJa5aVafaTFkcR4lak2iQ3RKs",
-            "district_id": "oświęcimski"
+            "district_id": "powiat oświęcimski"
          },
          {
             "geometry": {
@@ -1458,7 +1471,7 @@
             },
             "name": "Powiat suski",
             "place_id": "ChIJBZnjNeN4FkcRGpTDXZswsGA",
-            "district_id": "suski"
+            "district_id": "powiat suski"
          },
          {
             "geometry": {
@@ -1470,7 +1483,7 @@
             },
             "name": "Powiat wadowicki",
             "place_id": "ChIJt933xquJFkcRDljzUIyiNSI",
-            "district_id": "wadowicki"
+            "district_id": "powiat wadowicki"
          }
       ]
    },
@@ -1499,7 +1512,7 @@
             },
             "name": "Kraków",
             "place_id": "ChIJ0RhONcBEFkcRul2gceD7E48",
-            "district_id": "krakowski"
+            "district_id": "powiat krakowski"
          },
          {
             "geometry": {
@@ -1511,7 +1524,7 @@
             },
             "name": "Powiat miechowski",
             "place_id": "ChIJnWo5IiapF0cRoMjkxa18AQM",
-            "district_id": "miechowski"
+            "district_id": "powiat miechowski"
          },
          {
             "geometry": {
@@ -1523,7 +1536,7 @@
             },
             "name": "Powiat olkuski",
             "place_id": "ChIJASwqouniFkcRYpZJYU_LLq8",
-            "district_id": "olkuski"
+            "district_id": "powiat olkuski"
          },
          {
             "geometry": {
@@ -1535,7 +1548,7 @@
             },
             "name": "Kraków",
             "place_id": "ChIJ0RhONcBEFkcRul2gceD7E48",
-            "district_id": "Kraków"
+            "district_id": "powiat Kraków"
          }
       ]
    },
@@ -1564,7 +1577,7 @@
             },
             "name": "Powiat gorlicki",
             "place_id": "ChIJ5Vm4lwzFPUcRcMjkxa18AQM",
-            "district_id": "gorlicki"
+            "district_id": "powiat gorlicki"
          },
          {
             "geometry": {
@@ -1576,7 +1589,7 @@
             },
             "name": "Powiat limanowski",
             "place_id": "ChIJm1wMUvsEFkcRkMjkxa18AQM",
-            "district_id": "limanowski"
+            "district_id": "powiat limanowski"
          },
          {
             "geometry": {
@@ -1588,7 +1601,7 @@
             },
             "name": "Nowy Sącz",
             "place_id": "ChIJz5XxszzlPUcRyGaJ_--G5Xg",
-            "district_id": "nowosądecki"
+            "district_id": "powiat nowosądecki"
          },
          {
             "geometry": {
@@ -1600,7 +1613,7 @@
             },
             "name": "Powiat nowotarski",
             "place_id": "ChIJXyhdBazkFUcR0Mjkxa18AQM",
-            "district_id": "nowotarski"
+            "district_id": "powiat nowotarski"
          },
          {
             "geometry": {
@@ -1612,7 +1625,7 @@
             },
             "name": "Powiat tatrzański",
             "place_id": "ChIJN-Ox4vTyFUcRGRkXqVsG-F4",
-            "district_id": "tatrzański"
+            "district_id": "powiat tatrzański"
          },
          {
             "geometry": {
@@ -1624,7 +1637,7 @@
             },
             "name": "Nowy Sącz",
             "place_id": "ChIJz5XxszzlPUcRyGaJ_--G5Xg",
-            "district_id": "Nowy Sącz"
+            "district_id": "powiat Nowy Sącz"
          }
       ]
    },
@@ -1653,7 +1666,7 @@
             },
             "name": "powiat bocheński",
             "place_id": "ChIJnZaUXbMkFkcRYHXxybdKmjo",
-            "district_id": "bocheński"
+            "district_id": "powiat bocheński"
          },
          {
             "geometry": {
@@ -1665,7 +1678,7 @@
             },
             "name": "Powiat brzeski",
             "place_id": "ChIJ_4zAa9EnFkcRQMjkxa18AQM",
-            "district_id": "brzeski"
+            "district_id": "powiat brzeski"
          },
          {
             "geometry": {
@@ -1677,7 +1690,7 @@
             },
             "name": "Powiat dąbrowski",
             "place_id": "ChIJY29em_h8PUcRYMjkxa18AQM",
-            "district_id": "dąbrowski"
+            "district_id": "powiat dąbrowski"
          },
          {
             "geometry": {
@@ -1689,7 +1702,7 @@
             },
             "name": "Powiat proszowicki",
             "place_id": "ChIJcZEYLs_KF0cRAMnkxa18AQM",
-            "district_id": "proszowicki"
+            "district_id": "powiat proszowicki"
          },
          {
             "geometry": {
@@ -1701,7 +1714,7 @@
             },
             "name": "Tarnów",
             "place_id": "ChIJx__DUkODPUcRWfEfPFEW95s",
-            "district_id": "tarnowski"
+            "district_id": "powiat tarnowski"
          },
          {
             "geometry": {
@@ -1713,7 +1726,7 @@
             },
             "name": "Powiat wielicki",
             "place_id": "ChIJgSo3BKZAFkcRUMnkxa18AQM",
-            "district_id": "wielicki"
+            "district_id": "powiat wielicki"
          },
          {
             "geometry": {
@@ -1725,7 +1738,7 @@
             },
             "name": "Tarnów",
             "place_id": "ChIJx__DUkODPUcRWfEfPFEW95s",
-            "district_id": "Tarnów"
+            "district_id": "powiat Tarnów"
          }
       ]
    },
@@ -1754,7 +1767,7 @@
             },
             "name": "Powiat ciechanowski",
             "place_id": "ChIJb8KT29YtHEcRZpvlJIqVAJA",
-            "district_id": "ciechanowski"
+            "district_id": "powiat ciechanowski"
          },
          {
             "geometry": {
@@ -1766,7 +1779,7 @@
             },
             "name": "Powiat gostyniński",
             "place_id": "ChIJtasx-fCIG0cRwMk4lLefAgM",
-            "district_id": "gostyniński"
+            "district_id": "powiat gostyniński"
          },
          {
             "geometry": {
@@ -1778,7 +1791,7 @@
             },
             "name": "Powiat mławski",
             "place_id": "ChIJZ2-Ot5HKHUcRUMo4lLefAgM",
-            "district_id": "mławski"
+            "district_id": "powiat mławski"
          },
          {
             "geometry": {
@@ -1790,7 +1803,7 @@
             },
             "name": "Powiat płocki",
             "place_id": "ChIJ0RXla55wHEcRbNWLuS6-c5M",
-            "district_id": "płocki"
+            "district_id": "powiat płocki"
          },
          {
             "geometry": {
@@ -1802,7 +1815,7 @@
             },
             "name": "Powiat płoński",
             "place_id": "ChIJa8t_XDgYHEcRc7558sAXpoc",
-            "district_id": "płoński"
+            "district_id": "powiat płoński"
          },
          {
             "geometry": {
@@ -1814,7 +1827,7 @@
             },
             "name": "Powiat przasnyski",
             "place_id": "ChIJgXtvHhfYHUcR4Mo4lLefAgM",
-            "district_id": "przasnyski"
+            "district_id": "powiat przasnyski"
          },
          {
             "geometry": {
@@ -1826,7 +1839,7 @@
             },
             "name": "Powiat sierpecki",
             "place_id": "ChIJh5ctDfpeHEcRDumDI3EtLWU",
-            "district_id": "sierpecki"
+            "district_id": "powiat sierpecki"
          },
          {
             "geometry": {
@@ -1838,7 +1851,7 @@
             },
             "name": "Powiat sochaczewski",
             "place_id": "ChIJn_RHKJL-G0cRQMs4lLefAgM",
-            "district_id": "sochaczewski"
+            "district_id": "powiat sochaczewski"
          },
          {
             "geometry": {
@@ -1850,7 +1863,7 @@
             },
             "name": "Powiat żuromiński",
             "place_id": "ChIJtTUhpKlWHEcRdkH98kilIQE",
-            "district_id": "żuromiński"
+            "district_id": "powiat żuromiński"
          },
          {
             "geometry": {
@@ -1862,7 +1875,7 @@
             },
             "name": "Powiat żyrardowski",
             "place_id": "ChIJ6QylQgVDGUcR4Ms4lLefAgM",
-            "district_id": "żyrardowski"
+            "district_id": "powiat żyrardowski"
          },
          {
             "geometry": {
@@ -1874,7 +1887,7 @@
             },
             "name": "Powiat płocki",
             "place_id": "ChIJ0RXla55wHEcRbNWLuS6-c5M",
-            "district_id": "Płock"
+            "district_id": "powiat Płock"
          }
       ]
    },
@@ -1895,15 +1908,15 @@
       "districts": [
          {
             "geometry": {
-               "location": { "lat": 51.6514264, "lng": 20.9510608 },
+               "location": { "lat": 51.6240912, "lng": 20.9786982 },
                "viewport": {
-                  "northeast": { "lat": 51.65293762989272, "lng": 20.95268162989272 },
-                  "southwest": { "lat": 51.65023797010728, "lng": 20.94998197010728 }
+                  "northeast": { "lat": 51.7537971, "lng": 21.2429618 },
+                  "southwest": { "lat": 51.488157, "lng": 20.6435899 }
                }
             },
-            "name": "Starostwo Powiatowe w Białobrzegach",
-            "place_id": "ChIJNd7In0L9GEcRx4uHSKPlu-4",
-            "district_id": "białobrzeski"
+            "name": "Powiat białobrzeski",
+            "place_id": "ChIJPf22kaL9GEcRPjyCbvtZgW8",
+            "district_id": "powiat białobrzeski"
          },
          {
             "geometry": {
@@ -1915,7 +1928,7 @@
             },
             "name": "Powiat grójecki",
             "place_id": "ChIJCc0SUb4bGUcR4Mk4lLefAgM",
-            "district_id": "grójecki"
+            "district_id": "powiat grójecki"
          },
          {
             "geometry": {
@@ -1927,7 +1940,7 @@
             },
             "name": "Powiat kozienicki",
             "place_id": "ChIJWROy8EaTGEcRf3M1J3AGSfw",
-            "district_id": "kozienicki"
+            "district_id": "powiat kozienicki"
          },
          {
             "geometry": {
@@ -1939,7 +1952,7 @@
             },
             "name": "Powiat lipski",
             "place_id": "ChIJi6D3fFV2GEcREMo4lLefAgM",
-            "district_id": "lipski"
+            "district_id": "powiat lipski"
          },
          {
             "geometry": {
@@ -1951,7 +1964,7 @@
             },
             "name": "Powiat przysuski",
             "place_id": "ChIJvaA45zWsGUcRGLsajG2VKHo",
-            "district_id": "przysuski"
+            "district_id": "powiat przysuski"
          },
          {
             "geometry": {
@@ -1963,7 +1976,7 @@
             },
             "name": "Radom",
             "place_id": "ChIJx9ssoCpZGEcRY3ZB6daMoAY",
-            "district_id": "radomski"
+            "district_id": "powiat radomski"
          },
          {
             "geometry": {
@@ -1975,7 +1988,7 @@
             },
             "name": "Powiat szydłowiecki",
             "place_id": "ChIJfX9knDJPGEcR2uAwdLr78po",
-            "district_id": "szydłowiecki"
+            "district_id": "powiat szydłowiecki"
          },
          {
             "geometry": {
@@ -1987,7 +2000,7 @@
             },
             "name": "Powiat zwoleński",
             "place_id": "ChIJPbw3-HV9GEcRwMs4lLefAgM",
-            "district_id": "zwoleński"
+            "district_id": "powiat zwoleński"
          },
          {
             "geometry": {
@@ -1999,7 +2012,7 @@
             },
             "name": "Radom",
             "place_id": "ChIJx9ssoCpZGEcRY3ZB6daMoAY",
-            "district_id": "Radom"
+            "district_id": "powiat Radom"
          }
       ]
    },
@@ -2028,7 +2041,7 @@
             },
             "name": "Powiat garwoliński",
             "place_id": "ChIJHV5pcFnHGEcRsMk4lLefAgM",
-            "district_id": "garwoliński"
+            "district_id": "powiat garwoliński"
          },
          {
             "geometry": {
@@ -2040,7 +2053,7 @@
             },
             "name": "Powiat łosicki",
             "place_id": "ChIJOy-_oMLCIUcRBT_PvEHVOxc",
-            "district_id": "łosicki"
+            "district_id": "powiat łosicki"
          },
          {
             "geometry": {
@@ -2052,7 +2065,7 @@
             },
             "name": "Powiat makowski",
             "place_id": "ChIJNXCLh3JjHkcR0pmz2nGS5ck",
-            "district_id": "makowski"
+            "district_id": "powiat makowski"
          },
          {
             "geometry": {
@@ -2064,7 +2077,7 @@
             },
             "name": "Powiat miński",
             "place_id": "ChIJ7Rc_pRMuH0cRQMo4lLefAgM",
-            "district_id": "miński"
+            "district_id": "powiat miński"
          },
          {
             "geometry": {
@@ -2076,19 +2089,19 @@
             },
             "name": "Ostrołęka",
             "place_id": "ChIJoVIM8XhBHkcRq3OOaEh7ftc",
-            "district_id": "ostrołęcki"
+            "district_id": "powiat ostrołęcki"
          },
          {
             "geometry": {
-               "location": { "lat": 51.6452962, "lng": 17.7880123 },
+               "location": { "lat": 52.7570729, "lng": 22.0412064 },
                "viewport": {
-                  "northeast": { "lat": 51.8164634, "lng": 18.1884147 },
-                  "southwest": { "lat": 51.3994917, "lng": 17.51216 }
+                  "northeast": { "lat": 52.9805704, "lng": 22.47397 },
+                  "southwest": { "lat": 52.60937610000001, "lng": 21.5903967 }
                }
             },
             "name": "Powiat ostrowski",
-            "place_id": "ChIJ4Wuti7u2GkcRPFYLdZ4l4Zk",
-            "district_id": "ostrowski"
+            "place_id": "ChIJC2CsWEipH0cRgMo4lLefAgM",
+            "district_id": "powiat ostrowski"
          },
          {
             "geometry": {
@@ -2100,7 +2113,7 @@
             },
             "name": "Powiat pułtuski",
             "place_id": "ChIJ_cOKbnCRHkcRjVxH_77Zprs",
-            "district_id": "pułtuski"
+            "district_id": "powiat pułtuski"
          },
          {
             "geometry": {
@@ -2112,7 +2125,7 @@
             },
             "name": "Siedlce",
             "place_id": "ChIJTdOciU9aH0cR3UaPx7iz3jw",
-            "district_id": "siedlecki"
+            "district_id": "powiat siedlecki"
          },
          {
             "geometry": {
@@ -2124,7 +2137,7 @@
             },
             "name": "Powiat sokołowski",
             "place_id": "ChIJm-21eXpyH0cRZcf7SCKfIY8",
-            "district_id": "sokołowski"
+            "district_id": "powiat sokołowski"
          },
          {
             "geometry": {
@@ -2136,7 +2149,7 @@
             },
             "name": "Powiat węgrowski",
             "place_id": "ChIJq756SVwXH0cRkMs4lLefAgM",
-            "district_id": "węgrowski"
+            "district_id": "powiat węgrowski"
          },
          {
             "geometry": {
@@ -2148,7 +2161,7 @@
             },
             "name": "Powiat wyszkowski",
             "place_id": "ChIJT6E2wQPwHkcReHwdsw_dzMM",
-            "district_id": "wyszkowski"
+            "district_id": "powiat wyszkowski"
          },
          {
             "geometry": {
@@ -2160,7 +2173,7 @@
             },
             "name": "Ostrołęka",
             "place_id": "ChIJoVIM8XhBHkcRq3OOaEh7ftc",
-            "district_id": "Ostrołęka"
+            "district_id": "powiat Ostrołęka"
          },
          {
             "geometry": {
@@ -2172,19 +2185,19 @@
             },
             "name": "Siedlce",
             "place_id": "ChIJTdOciU9aH0cR3UaPx7iz3jw",
-            "district_id": "Siedlce"
+            "district_id": "powiat Siedlce"
          }
       ]
    },
    {
       "circuit_number": 19,
-      "city_name": "Warszawa",
+      "city_name": "Warszawa (centrum)",
       "area": "miasto na prawach powiatu: Warszawa",
       "residents": 1603233,
       "mandates": 20,
       "residentsPerMandate": 80055,
-      "latitude": 52.2296756,
-      "longitude": 21.0122287,
+      "latitude": 52.3,
+      "longitude": 21.1,
       "votes_ko_2019": 581077,
       "votes_pis_2019": 379880,
       "swing_factor": 1.5296330420132673,
@@ -2193,21 +2206,21 @@
       "districts": [
          {
             "geometry": {
-               "location": { "lat": 52.2315136, "lng": 21.04383 },
+               "location": { "lat": 52.2738835, "lng": 20.6938283 },
                "viewport": {
-                  "northeast": { "lat": 52.36815379999999, "lng": 21.2711512 },
-                  "southwest": { "lat": 52.0978496, "lng": 20.8516883 }
+                  "northeast": { "lat": 52.3793227, "lng": 20.9258316 },
+                  "southwest": { "lat": 52.1573041, "lng": 20.3123202 }
                }
             },
-            "name": "Warszawa",
-            "place_id": "ChIJAZ-GmmbMHkcRV8OJjFRnolw",
-            "district_id": "Warszawa"
+            "name": "Powiat warszawski zachodni",
+            "place_id": "ChIJ6_mMhLWyHkcRlJ2YJMZex50",
+            "district_id": "powiat Warszawa"
          }
       ]
    },
    {
       "circuit_number": 20,
-      "city_name": "Warszawa",
+      "city_name": "Warszawa (obrzeża)",
       "area": "powiaty: grodziski, legionowski, nowodworski, otwocki, piaseczyński, pruszkowski, warszawski zachodni i wołomiński",
       "residents": 986074,
       "mandates": 12,
@@ -2230,7 +2243,7 @@
             },
             "name": "Powiat grodziski",
             "place_id": "ChIJuwZ-DmlGGUcRNgbrzLt1Bdw",
-            "district_id": "grodziski"
+            "district_id": "powiat grodziski"
          },
          {
             "geometry": {
@@ -2242,7 +2255,7 @@
             },
             "name": "Powiat legionowski",
             "place_id": "ChIJy-LBQN64HkcRgxdI2zkSVIg",
-            "district_id": "legionowski"
+            "district_id": "powiat legionowski"
          },
          {
             "geometry": {
@@ -2254,7 +2267,7 @@
             },
             "name": "Powiat nowodworski",
             "place_id": "ChIJOYZYWKalHkcRnGjdmZt9C14",
-            "district_id": "nowodworski"
+            "district_id": "powiat nowodworski"
          },
          {
             "geometry": {
@@ -2266,7 +2279,7 @@
             },
             "name": "Powiat otwocki",
             "place_id": "ChIJN0IllAXUGEcRkMo4lLefAgM",
-            "district_id": "otwocki"
+            "district_id": "powiat otwocki"
          },
          {
             "geometry": {
@@ -2278,7 +2291,7 @@
             },
             "name": "Powiat piaseczyński",
             "place_id": "ChIJvSAFMWElGUcRoMo4lLefAgM",
-            "district_id": "piaseczyński"
+            "district_id": "powiat piaseczyński"
          },
          {
             "geometry": {
@@ -2290,7 +2303,7 @@
             },
             "name": "Powiat pruszkowski",
             "place_id": "ChIJsXoCIPw2GUcR0Mo4lLefAgM",
-            "district_id": "pruszkowski"
+            "district_id": "powiat pruszkowski"
          },
          {
             "geometry": {
@@ -2302,7 +2315,7 @@
             },
             "name": "Powiat warszawski zachodni",
             "place_id": "ChIJ6_mMhLWyHkcRlJ2YJMZex50",
-            "district_id": "warszawski zachodni"
+            "district_id": "powiat warszawski zachodni"
          },
          {
             "geometry": {
@@ -2314,7 +2327,7 @@
             },
             "name": "Powiat wołomiński",
             "place_id": "ChIJp6sGeaHeHkcRoMs4lLefAgM",
-            "district_id": "wołomiński"
+            "district_id": "powiat wołomiński"
          }
       ]
    },
@@ -2332,7 +2345,20 @@
       "swing_factor": 1.4092198581560285,
       "winner_2019": "party_pis",
       "city_id": "opole",
-      "districts": []
+      "districts": [
+         {
+            "geometry": {
+               "location": { "lat": 50.8003761, "lng": 17.937989 },
+               "viewport": {
+                  "northeast": { "lat": 51.1946002, "lng": 18.6954866 },
+                  "southwest": { "lat": 49.9724853, "lng": 16.9079263 }
+               }
+            },
+            "name": "Opolskie",
+            "place_id": "ChIJ8dBjhfStEUcRkMDkxa18AQE",
+            "district_id": "województwo opolskie"
+         }
+      ]
    },
    {
       "circuit_number": 22,
@@ -2359,7 +2385,7 @@
             },
             "name": "Powiat bieszczadzki",
             "place_id": "ChIJ8dIlopvuO0cRe-KV3qJDLTE",
-            "district_id": "bieszczadzki"
+            "district_id": "powiat bieszczadzki"
          },
          {
             "geometry": {
@@ -2371,7 +2397,7 @@
             },
             "name": "Powiat brzozowski",
             "place_id": "ChIJ4y4KKPdnPEcRAM3kxa18AQM",
-            "district_id": "brzozowski"
+            "district_id": "powiat brzozowski"
          },
          {
             "geometry": {
@@ -2383,7 +2409,7 @@
             },
             "name": "Powiat jarosławski",
             "place_id": "ChIJ70Pxv-yePEcRIM3kxa18AQM",
-            "district_id": "jarosławski"
+            "district_id": "powiat jarosławski"
          },
          {
             "geometry": {
@@ -2395,7 +2421,7 @@
             },
             "name": "Powiat jasielski",
             "place_id": "ChIJG79MD-zKPUcRe5StTnGsV0I",
-            "district_id": "jasielski"
+            "district_id": "powiat jasielski"
          },
          {
             "geometry": {
@@ -2407,7 +2433,7 @@
             },
             "name": "Powiat krośnieński",
             "place_id": "ChIJjy-1f3A0BkcRAMYOrTIOAgM",
-            "district_id": "krośnieński"
+            "district_id": "powiat krośnieński"
          },
          {
             "geometry": {
@@ -2419,7 +2445,7 @@
             },
             "name": "Powiat leski",
             "place_id": "ChIJY9MBOmH3O0cRoda7e1ZjJts",
-            "district_id": "leski"
+            "district_id": "powiat leski"
          },
          {
             "geometry": {
@@ -2431,7 +2457,7 @@
             },
             "name": "Powiat lubaczowski",
             "place_id": "ChIJeX_Wg7BQO0cRkd24vMi481E",
-            "district_id": "lubaczowski"
+            "district_id": "powiat lubaczowski"
          },
          {
             "geometry": {
@@ -2443,7 +2469,7 @@
             },
             "name": "Przemyśl",
             "place_id": "ChIJ0Wi2H99-O0cRvh0KQ_lXX1A",
-            "district_id": "przemyski"
+            "district_id": "powiat przemyski"
          },
          {
             "geometry": {
@@ -2455,7 +2481,7 @@
             },
             "name": "Powiat przeworski",
             "place_id": "ChIJ9WUnHo-WPEcRwM3kxa18AQM",
-            "district_id": "przeworski"
+            "district_id": "powiat przeworski"
          },
          {
             "geometry": {
@@ -2467,7 +2493,7 @@
             },
             "name": "Powiat sanocki",
             "place_id": "ChIJNag7rRQOPEcRLCvXQ0VdXQg",
-            "district_id": "sanocki"
+            "district_id": "powiat sanocki"
          },
          {
             "geometry": {
@@ -2479,7 +2505,7 @@
             },
             "name": "Krosno",
             "place_id": "ChIJDypCKspIPEcR_vqzsnMN23A",
-            "district_id": "Krosno"
+            "district_id": "powiat Krosno"
          },
          {
             "geometry": {
@@ -2491,7 +2517,7 @@
             },
             "name": "Przemyśl",
             "place_id": "ChIJ0Wi2H99-O0cRvh0KQ_lXX1A",
-            "district_id": "Przemyśl"
+            "district_id": "powiat Przemyśl"
          }
       ]
    },
@@ -2520,7 +2546,7 @@
             },
             "name": "Powiat dębicki",
             "place_id": "ChIJr5_hB8WgPUcRn-TeHXJx9Ys",
-            "district_id": "dębicki"
+            "district_id": "powiat dębicki"
          },
          {
             "geometry": {
@@ -2532,7 +2558,7 @@
             },
             "name": "Powiat kolbuszowski",
             "place_id": "ChIJNV3dPPIiPUcR2oNl2HujA98",
-            "district_id": "kolbuszowski"
+            "district_id": "powiat kolbuszowski"
          },
          {
             "geometry": {
@@ -2544,7 +2570,7 @@
             },
             "name": "Powiat leżajski",
             "place_id": "ChIJZ0Z3FsTGPEcRTseeuHrRNwE",
-            "district_id": "leżajski"
+            "district_id": "powiat leżajski"
          },
          {
             "geometry": {
@@ -2556,7 +2582,7 @@
             },
             "name": "Powiat łańcucki",
             "place_id": "ChIJMffKpxXsPEcRgM3kxa18AQM",
-            "district_id": "łańcucki"
+            "district_id": "powiat łańcucki"
          },
          {
             "geometry": {
@@ -2568,7 +2594,7 @@
             },
             "name": "Powiat mielecki",
             "place_id": "ChIJcwO93bdrPUcRkM3kxa18AQM",
-            "district_id": "mielecki"
+            "district_id": "powiat mielecki"
          },
          {
             "geometry": {
@@ -2580,7 +2606,7 @@
             },
             "name": "Powiat niżański",
             "place_id": "ChIJbc8qOg7UPEcRoM3kxa18AQM",
-            "district_id": "niżański"
+            "district_id": "powiat niżański"
          },
          {
             "geometry": {
@@ -2592,7 +2618,7 @@
             },
             "name": "Powiat ropczycko-sędziszowski",
             "place_id": "ChIJjxHHQ5cGPUcRPwWj3M3OCxU",
-            "district_id": "ropczycko-sędziszowski"
+            "district_id": "powiat ropczycko-sędziszowski"
          },
          {
             "geometry": {
@@ -2604,7 +2630,7 @@
             },
             "name": "Rzeszów",
             "place_id": "ChIJSdQUzOP6PEcRG1YJqUTwbZM",
-            "district_id": "rzeszowski"
+            "district_id": "powiat rzeszowski"
          },
          {
             "geometry": {
@@ -2616,7 +2642,7 @@
             },
             "name": "Powiat stalowowolski",
             "place_id": "ChIJ5RvyM9TSIkcRHJ3sEim89zY",
-            "district_id": "stalowowolski"
+            "district_id": "powiat stalowowolski"
          },
          {
             "geometry": {
@@ -2628,7 +2654,7 @@
             },
             "name": "Powiat strzyżowski",
             "place_id": "ChIJz-hRQWNUPEcREM7kxa18AQM",
-            "district_id": "strzyżowski"
+            "district_id": "powiat strzyżowski"
          },
          {
             "geometry": {
@@ -2640,7 +2666,7 @@
             },
             "name": "Powiat Tarnobrzeg",
             "place_id": "ChIJsU2C2A1KPUcRnpLUiLc0U4g",
-            "district_id": "tarnobrzeski"
+            "district_id": "powiat tarnobrzeski"
          },
          {
             "geometry": {
@@ -2652,7 +2678,7 @@
             },
             "name": "Rzeszów",
             "place_id": "ChIJSdQUzOP6PEcRG1YJqUTwbZM",
-            "district_id": "Rzeszów"
+            "district_id": "powiat Rzeszów"
          },
          {
             "geometry": {
@@ -2664,7 +2690,7 @@
             },
             "name": "Powiat Tarnobrzeg",
             "place_id": "ChIJsU2C2A1KPUcRnpLUiLc0U4g",
-            "district_id": "Tarnobrzeg"
+            "district_id": "powiat Tarnobrzeg"
          }
       ]
    },
@@ -2682,7 +2708,20 @@
       "swing_factor": 2.473253170451122,
       "winner_2019": "party_pis",
       "city_id": "bialystok",
-      "districts": []
+      "districts": [
+         {
+            "geometry": {
+               "location": { "lat": 53.0697159, "lng": 22.9674639 },
+               "viewport": {
+                  "northeast": { "lat": 54.4103311, "lng": 23.9462697 },
+                  "southwest": { "lat": 52.27993859999999, "lng": 21.5928371 }
+               }
+            },
+            "name": "Podlaskie",
+            "place_id": "ChIJRZjMVSwh4EYRy_GtRDS4U8g",
+            "district_id": "województwo podlaskie"
+         }
+      ]
    },
    {
       "circuit_number": 25,
@@ -2709,7 +2748,7 @@
             },
             "name": "Powiat gdański",
             "place_id": "ChIJl9oWWp1w_UYRsM8OrTIOAgM",
-            "district_id": "gdański"
+            "district_id": "powiat gdański"
          },
          {
             "geometry": {
@@ -2721,7 +2760,7 @@
             },
             "name": "Powiat kwidzyński",
             "place_id": "ChIJq796CH-xAkcRgqUoTjAQEXA",
-            "district_id": "kwidzyński"
+            "district_id": "powiat kwidzyński"
          },
          {
             "geometry": {
@@ -2733,7 +2772,7 @@
             },
             "name": "Powiat malborski",
             "place_id": "ChIJm8wN-YBZ_UYRANAOrTIOAgM",
-            "district_id": "malborski"
+            "district_id": "powiat malborski"
          },
          {
             "geometry": {
@@ -2745,7 +2784,7 @@
             },
             "name": "Powiat nowodworski",
             "place_id": "ChIJOYZYWKalHkcRnGjdmZt9C14",
-            "district_id": "nowodworski"
+            "district_id": "powiat nowodworski"
          },
          {
             "geometry": {
@@ -2757,7 +2796,7 @@
             },
             "name": "Powiat starogardzki",
             "place_id": "ChIJDT1LamGFAkcRsyuTYDETsqc",
-            "district_id": "starogardzki"
+            "district_id": "powiat starogardzki"
          },
          {
             "geometry": {
@@ -2769,7 +2808,7 @@
             },
             "name": "Powiat sztumski",
             "place_id": "ChIJeZsGyfiqAkcRIJgPrTIOAgM",
-            "district_id": "sztumski"
+            "district_id": "powiat sztumski"
          },
          {
             "geometry": {
@@ -2781,7 +2820,7 @@
             },
             "name": "Powiat tczewski",
             "place_id": "ChIJD-1LuqSYAkcRUNAOrTIOAgM",
-            "district_id": "tczewski"
+            "district_id": "powiat tczewski"
          },
          {
             "geometry": {
@@ -2793,19 +2832,19 @@
             },
             "name": "Powiat gdański",
             "place_id": "ChIJl9oWWp1w_UYRsM8OrTIOAgM",
-            "district_id": "Gdańsk"
+            "district_id": "powiat Gdańsk"
          },
          {
             "geometry": {
-               "location": { "lat": 54.4416181, "lng": 18.5491201 },
+               "location": { "lat": 54.4454394, "lng": 18.5607567 },
                "viewport": {
                   "northeast": { "lat": 54.4663523, "lng": 18.6165398 },
                   "southwest": { "lat": 54.4197328, "lng": 18.5044845 }
                }
             },
             "name": "Sopot",
-            "place_id": "ChIJTwAOHpwK_UYRKhbC_ARImpg",
-            "district_id": "Sopot"
+            "place_id": "ChIJBfwJHpwK_UYRoNAOrTIOAgM",
+            "district_id": "powiat Sopot"
          }
       ]
    },
@@ -2834,7 +2873,7 @@
             },
             "name": "Powiat bytowski",
             "place_id": "ChIJf0C5g38BAkcRXpdoBATzUn8",
-            "district_id": "bytowski"
+            "district_id": "powiat bytowski"
          },
          {
             "geometry": {
@@ -2846,7 +2885,7 @@
             },
             "name": "Powiat chojnicki",
             "place_id": "ChIJAUpkRWpCAkcRHlj3b-rREok",
-            "district_id": "chojnicki"
+            "district_id": "powiat chojnicki"
          },
          {
             "geometry": {
@@ -2858,7 +2897,7 @@
             },
             "name": "Powiat człuchowski",
             "place_id": "ChIJESAWHhElAkcRoM8OrTIOAgM",
-            "district_id": "człuchowski"
+            "district_id": "powiat człuchowski"
          },
          {
             "geometry": {
@@ -2870,7 +2909,7 @@
             },
             "name": "Powiat kartuski",
             "place_id": "ChIJ50Q75ceR_UYRh9-9fkqWizk",
-            "district_id": "kartuski"
+            "district_id": "powiat kartuski"
          },
          {
             "geometry": {
@@ -2882,19 +2921,19 @@
             },
             "name": "Powiat kościerski",
             "place_id": "ChIJh-1KLkJ6AkcRiQ8D_yoDnqw",
-            "district_id": "kościerski"
+            "district_id": "powiat kościerski"
          },
          {
             "geometry": {
-               "location": { "lat": 54.5390862, "lng": 17.7407956 },
+               "location": { "lat": 54.68895699999999, "lng": 17.6445007 },
                "viewport": {
-                  "northeast": { "lat": 54.54044492989271, "lng": 17.74216137989272 },
-                  "southwest": { "lat": 54.53774527010727, "lng": 17.73946172010728 }
+                  "northeast": { "lat": 54.7833365, "lng": 17.8868155 },
+                  "southwest": { "lat": 54.3533638, "lng": 17.416746 }
                }
             },
-            "name": "Starostwo Powiatowe w Lęborku",
-            "place_id": "ChIJLVZ141fd_UYRYsgh3D-G8m0",
-            "district_id": "lęborski"
+            "name": "Powiat lęborski",
+            "place_id": "ChIJH3RiweXd_UYR69cQlbt4CCU",
+            "district_id": "powiat lęborski"
          },
          {
             "geometry": {
@@ -2906,7 +2945,7 @@
             },
             "name": "Powiat pucki",
             "place_id": "ChIJnXfl4pux_UYRINAOrTIOAgM",
-            "district_id": "pucki"
+            "district_id": "powiat pucki"
          },
          {
             "geometry": {
@@ -2918,7 +2957,7 @@
             },
             "name": "Słupsk",
             "place_id": "ChIJSUvGhwka_kYRkNAOrTIOAgM",
-            "district_id": "słupski"
+            "district_id": "powiat słupski"
          },
          {
             "geometry": {
@@ -2930,7 +2969,7 @@
             },
             "name": "Powiat wejherowski",
             "place_id": "ChIJpVri4w3H_UYRP4Y3_uOej7k",
-            "district_id": "wejherowski"
+            "district_id": "powiat wejherowski"
          },
          {
             "geometry": {
@@ -2942,7 +2981,7 @@
             },
             "name": "Powiat Gdynia",
             "place_id": "ChIJJ9geB0Wh_UYRx1iV1U-oKpA",
-            "district_id": "Gdynia"
+            "district_id": "powiat Gdynia"
          },
          {
             "geometry": {
@@ -2954,7 +2993,7 @@
             },
             "name": "Słupsk",
             "place_id": "ChIJSUvGhwka_kYRkNAOrTIOAgM",
-            "district_id": "Słupsk"
+            "district_id": "powiat Słupsk"
          }
       ]
    },
@@ -2975,15 +3014,15 @@
       "districts": [
          {
             "geometry": {
-               "location": { "lat": 52.762826, "lng": 23.1381261 },
+               "location": { "lat": 49.9080843, "lng": 19.076211 },
                "viewport": {
-                  "northeast": { "lat": 52.9266859, "lng": 23.4024819 },
-                  "southwest": { "lat": 52.565896, "lng": 22.611432 }
+                  "northeast": { "lat": 49.9589154, "lng": 19.3167844 },
+                  "southwest": { "lat": 49.6528013, "lng": 18.8268246 }
                }
             },
             "name": "Powiat bielski",
-            "place_id": "ChIJO05RpHUnIEcRXoZg_psRMVk",
-            "district_id": "bielski"
+            "place_id": "ChIJO9FATQqfFkcRwNDkxa18AQM",
+            "district_id": "powiat bielski"
          },
          {
             "geometry": {
@@ -2995,7 +3034,7 @@
             },
             "name": "Powiat cieszyński",
             "place_id": "ChIJ5c45KH4cFEcR0NDkxa18AQM",
-            "district_id": "cieszyński"
+            "district_id": "powiat cieszyński"
          },
          {
             "geometry": {
@@ -3007,7 +3046,7 @@
             },
             "name": "Powiat pszczyński",
             "place_id": "ChIJD7kVYUKwFkcRQNHkxa18AQM",
-            "district_id": "pszczyński"
+            "district_id": "powiat pszczyński"
          },
          {
             "geometry": {
@@ -3019,7 +3058,7 @@
             },
             "name": "Powiat żywiecki",
             "place_id": "ChIJFwaILAAvFEcRsNHkxa18AQM",
-            "district_id": "żywiecki"
+            "district_id": "powiat żywiecki"
          },
          {
             "geometry": {
@@ -3031,7 +3070,7 @@
             },
             "name": "Powiat bielski",
             "place_id": "ChIJO9FATQqfFkcRwNDkxa18AQM",
-            "district_id": "Bielsko-Biała"
+            "district_id": "powiat Bielsko-Biała"
          }
       ]
    },
@@ -3060,7 +3099,7 @@
             },
             "name": "Częstochowa",
             "place_id": "ChIJr6gsTsW1EEcR6gioRhKKzAE",
-            "district_id": "częstochowski"
+            "district_id": "powiat częstochowski"
          },
          {
             "geometry": {
@@ -3072,7 +3111,7 @@
             },
             "name": "Powiat kłobucki",
             "place_id": "ChIJtw7_L0q8EEcRANHkxa18AQM",
-            "district_id": "kłobucki"
+            "district_id": "powiat kłobucki"
          },
          {
             "geometry": {
@@ -3084,7 +3123,7 @@
             },
             "name": "Powiat lubliniecki",
             "place_id": "ChIJga-sUMTEEEcRENHkxa18AQM",
-            "district_id": "lubliniecki"
+            "district_id": "powiat lubliniecki"
          },
          {
             "geometry": {
@@ -3096,7 +3135,7 @@
             },
             "name": "Powiat myszkowski",
             "place_id": "ChIJJ1MWEoE6F0cRMNHkxa18AQM",
-            "district_id": "myszkowski"
+            "district_id": "powiat myszkowski"
          },
          {
             "geometry": {
@@ -3108,7 +3147,7 @@
             },
             "name": "Częstochowa",
             "place_id": "ChIJr6gsTsW1EEcR6gioRhKKzAE",
-            "district_id": "Częstochowa"
+            "district_id": "powiat Częstochowa"
          }
       ]
    },
@@ -3137,7 +3176,7 @@
             },
             "name": "Gliwice",
             "place_id": "ChIJX7FmbGAwEUcRg8g3aLzyvwY",
-            "district_id": "gliwicki"
+            "district_id": "powiat gliwicki"
          },
          {
             "geometry": {
@@ -3149,7 +3188,7 @@
             },
             "name": "Powiat tarnogórski",
             "place_id": "ChIJl-U9_fspEUcRcNHkxa18AQM",
-            "district_id": "tarnogórski"
+            "district_id": "powiat tarnogórski"
          },
          {
             "geometry": {
@@ -3161,7 +3200,7 @@
             },
             "name": "Bytom",
             "place_id": "ChIJ66cJZuwsEUcR0NHkxa18AQM",
-            "district_id": "Bytom"
+            "district_id": "powiat Bytom"
          },
          {
             "geometry": {
@@ -3173,7 +3212,7 @@
             },
             "name": "Gliwice",
             "place_id": "ChIJX7FmbGAwEUcRg8g3aLzyvwY",
-            "district_id": "Gliwice"
+            "district_id": "powiat Gliwice"
          },
          {
             "geometry": {
@@ -3185,7 +3224,7 @@
             },
             "name": "Zabrze",
             "place_id": "ChIJ_zhgLnQyEUcR0NLkxa18AQM",
-            "district_id": "Zabrze"
+            "district_id": "powiat Zabrze"
          }
       ]
    },
@@ -3214,7 +3253,7 @@
             },
             "name": "Powiat mikołowski",
             "place_id": "ChIJnWtK0WLKFkcRINHkxa18AQM",
-            "district_id": "mikołowski"
+            "district_id": "powiat mikołowski"
          },
          {
             "geometry": {
@@ -3226,7 +3265,7 @@
             },
             "name": "Powiat raciborski",
             "place_id": "ChIJE7Gs1edCEUcRUNHkxa18AQM",
-            "district_id": "raciborski"
+            "district_id": "powiat raciborski"
          },
          {
             "geometry": {
@@ -3238,7 +3277,7 @@
             },
             "name": "Rybnik",
             "place_id": "ChIJSY6dQdZIEUcReMpfe44Pzy4",
-            "district_id": "rybnicki"
+            "district_id": "powiat rybnicki"
          },
          {
             "geometry": {
@@ -3250,7 +3289,7 @@
             },
             "name": "Powiat wodzisławski",
             "place_id": "ChIJS7qH1YdQEUcR6ELNWRzdAVM",
-            "district_id": "wodzisławski"
+            "district_id": "powiat wodzisławski"
          },
          {
             "geometry": {
@@ -3262,7 +3301,7 @@
             },
             "name": "Jastrzębie-Zdrój",
             "place_id": "ChIJ-f_mZxlTEUcRI48TdITovtA",
-            "district_id": "Jastrzębie-Zdrój"
+            "district_id": "powiat Jastrzębie-Zdrój"
          },
          {
             "geometry": {
@@ -3274,7 +3313,7 @@
             },
             "name": "Rybnik",
             "place_id": "ChIJSY6dQdZIEUcReMpfe44Pzy4",
-            "district_id": "Rybnik"
+            "district_id": "powiat Rybnik"
          },
          {
             "geometry": {
@@ -3286,7 +3325,7 @@
             },
             "name": "Żory",
             "place_id": "ChIJ-8luCNVMEUcR4NLkxa18AQM",
-            "district_id": "Żory"
+            "district_id": "powiat Żory"
          }
       ]
    },
@@ -3315,7 +3354,7 @@
             },
             "name": "Powiat bieruńsko-lędziński",
             "place_id": "ChIJ4-jC_aHAFkcRZg6kNck8uNQ",
-            "district_id": "bieruńsko-lędziński"
+            "district_id": "powiat bieruńsko-lędziński"
          },
          {
             "geometry": {
@@ -3327,7 +3366,7 @@
             },
             "name": "Chorzów",
             "place_id": "ChIJe0-VavXNFkcRbo2-977PABw",
-            "district_id": "Chorzów"
+            "district_id": "powiat Chorzów"
          },
          {
             "geometry": {
@@ -3339,7 +3378,7 @@
             },
             "name": "Katowice",
             "place_id": "ChIJv3jxxCDPFkcR9JQcYcEKgsg",
-            "district_id": "Katowice"
+            "district_id": "powiat Katowice"
          },
          {
             "geometry": {
@@ -3351,7 +3390,7 @@
             },
             "name": "Mysłowice",
             "place_id": "ChIJESpasl7EFkcRk1MQ44Zkzwc",
-            "district_id": "Mysłowice"
+            "district_id": "powiat Mysłowice"
          },
          {
             "geometry": {
@@ -3363,7 +3402,7 @@
             },
             "name": "Piekary Śląskie",
             "place_id": "ChIJkd4NBIPUFkcRYNLkxa18AQM",
-            "district_id": "Piekary Śląskie"
+            "district_id": "powiat Piekary Śląskie"
          },
          {
             "geometry": {
@@ -3375,7 +3414,7 @@
             },
             "name": "Ruda Śląska",
             "place_id": "ChIJW4jrWCTNFkcRcNLkxa18AQM",
-            "district_id": "Ruda Śląska"
+            "district_id": "powiat Ruda Śląska"
          },
          {
             "geometry": {
@@ -3386,8 +3425,8 @@
                }
             },
             "name": "Siemianowice Śląskie",
-            "place_id": "ChIJN3Fua4XRFkcR-LARUOwTLvI",
-            "district_id": "Siemianowice Śląskie"
+            "place_id": "ChIJN3Fua4XRFkcRLPx0DTB_E9I",
+            "district_id": "powiat Siemianowice Śląskie"
          },
          {
             "geometry": {
@@ -3399,7 +3438,7 @@
             },
             "name": "Świętochłowice",
             "place_id": "ChIJ38l1wmHNFkcRl97ayXYS9N4",
-            "district_id": "Świętochłowice"
+            "district_id": "powiat Świętochłowice"
          },
          {
             "geometry": {
@@ -3411,7 +3450,7 @@
             },
             "name": "Tychy",
             "place_id": "ChIJ63w_AuLHFkcRdEeHKGDwIY4",
-            "district_id": "Tychy"
+            "district_id": "powiat Tychy"
          }
       ]
    },
@@ -3440,7 +3479,7 @@
             },
             "name": "Powiat będziński",
             "place_id": "ChIJR2_8LYzXFkcR2B3Db2-c9Aw",
-            "district_id": "będziński"
+            "district_id": "powiat będziński"
          },
          {
             "geometry": {
@@ -3452,7 +3491,7 @@
             },
             "name": "Powiat zawierciański",
             "place_id": "ChIJ5ddWiHUXF0cRoNHkxa18AQM",
-            "district_id": "zawierciański"
+            "district_id": "powiat zawierciański"
          },
          {
             "geometry": {
@@ -3464,7 +3503,7 @@
             },
             "name": "Dąbrowa Górnicza",
             "place_id": "ChIJDZqmXTDfFkcRANLkxa18AQM",
-            "district_id": "Dąbrowa Górnicza"
+            "district_id": "powiat Dąbrowa Górnicza"
          },
          {
             "geometry": {
@@ -3476,7 +3515,7 @@
             },
             "name": "Jaworzno",
             "place_id": "ChIJ_9OMxYDCFkcRMNLkxa18AQM",
-            "district_id": "Jaworzno"
+            "district_id": "powiat Jaworzno"
          },
          {
             "geometry": {
@@ -3488,7 +3527,7 @@
             },
             "name": "Sosnowiec",
             "place_id": "ChIJnSxEiz3bFkcRdzdiVvFiFH0",
-            "district_id": "Sosnowiec"
+            "district_id": "powiat Sosnowiec"
          }
       ]
    },
@@ -3506,7 +3545,20 @@
       "swing_factor": 3.3142390387858347,
       "winner_2019": "party_pis",
       "city_id": "kielce",
-      "districts": []
+      "districts": [
+         {
+            "geometry": {
+               "location": { "lat": 50.6261041, "lng": 20.9406279 },
+               "viewport": {
+                  "northeast": { "lat": 51.3424682, "lng": 21.8691162 },
+                  "southwest": { "lat": 50.1854543, "lng": 19.7043037 }
+               }
+            },
+            "name": "Świętokrzyskie",
+            "place_id": "ChIJzQPI7bX0F0cR4MDkxa18AQE",
+            "district_id": "województwo świętokrzyskie"
+         }
+      ]
    },
    {
       "circuit_number": 34,
@@ -3533,7 +3585,7 @@
             },
             "name": "Powiat bartoszycki",
             "place_id": "ChIJvcTHBjBY4kYR9PYxwfe--WM",
-            "district_id": "bartoszycki"
+            "district_id": "powiat bartoszycki"
          },
          {
             "geometry": {
@@ -3545,7 +3597,7 @@
             },
             "name": "Powiat braniewski",
             "place_id": "ChIJJ9YrOPbD4kYRyvEt2yCqTOo",
-            "district_id": "braniewski"
+            "district_id": "powiat braniewski"
          },
          {
             "geometry": {
@@ -3557,7 +3609,7 @@
             },
             "name": "Powiat działdowski",
             "place_id": "ChIJL9bbXkimHUcR4NMOrTIOAgM",
-            "district_id": "działdowski"
+            "district_id": "powiat działdowski"
          },
          {
             "geometry": {
@@ -3569,7 +3621,7 @@
             },
             "name": "Powiat elbląski",
             "place_id": "ChIJdcoujdO14kYR8NMOrTIOAgM",
-            "district_id": "elbląski"
+            "district_id": "powiat elbląski"
          },
          {
             "geometry": {
@@ -3581,7 +3633,7 @@
             },
             "name": "Powiat iławski",
             "place_id": "ChIJb0OiyJBEHUcRINQOrTIOAgM",
-            "district_id": "iławski"
+            "district_id": "powiat iławski"
          },
          {
             "geometry": {
@@ -3593,7 +3645,7 @@
             },
             "name": "Powiat lidzbarski",
             "place_id": "ChIJB_rOryqN4kYRVcvNVHIFQNU",
-            "district_id": "lidzbarski"
+            "district_id": "powiat lidzbarski"
          },
          {
             "geometry": {
@@ -3605,7 +3657,7 @@
             },
             "name": "Powiat nowomiejski",
             "place_id": "ChIJA9y4rQoWHUcRcNQOrTIOAgM",
-            "district_id": "nowomiejski"
+            "district_id": "powiat nowomiejski"
          },
          {
             "geometry": {
@@ -3617,7 +3669,7 @@
             },
             "name": "Powiat ostródzki",
             "place_id": "ChIJe9h2jnRkHUcRKj-OsNzxiLM",
-            "district_id": "ostródzki"
+            "district_id": "powiat ostródzki"
          },
          {
             "geometry": {
@@ -3629,7 +3681,7 @@
             },
             "name": "Powiat elbląski",
             "place_id": "ChIJdcoujdO14kYR8NMOrTIOAgM",
-            "district_id": "Elbląg"
+            "district_id": "powiat Elbląg"
          }
       ]
    },
@@ -3658,7 +3710,7 @@
             },
             "name": "Powiat ełcki",
             "place_id": "ChIJY7_lXva54UYRANQOrTIOAgM",
-            "district_id": "ełcki"
+            "district_id": "powiat ełcki"
          },
          {
             "geometry": {
@@ -3670,7 +3722,7 @@
             },
             "name": "Powiat giżycki",
             "place_id": "ChIJg90crJiI4UYRENQOrTIOAgM",
-            "district_id": "giżycki"
+            "district_id": "powiat giżycki"
          },
          {
             "geometry": {
@@ -3682,7 +3734,7 @@
             },
             "name": "Powiat gołdapski",
             "place_id": "ChIJy1ri_hZy4UYRQJgPrTIOAgM",
-            "district_id": "gołdapski"
+            "district_id": "powiat gołdapski"
          },
          {
             "geometry": {
@@ -3694,7 +3746,7 @@
             },
             "name": "Powiat kętrzyński",
             "place_id": "ChIJdSKcRmg34kYRMNQOrTIOAgM",
-            "district_id": "kętrzyński"
+            "district_id": "powiat kętrzyński"
          },
          {
             "geometry": {
@@ -3706,7 +3758,7 @@
             },
             "name": "Powiat mrągowski",
             "place_id": "ChIJQbYFMgsc4kYRUNQOrTIOAgM",
-            "district_id": "mrągowski"
+            "district_id": "powiat mrągowski"
          },
          {
             "geometry": {
@@ -3718,7 +3770,7 @@
             },
             "name": "Powiat nidzicki",
             "place_id": "ChIJH72biZKVHUcRT-7xFGLy23o",
-            "district_id": "nidzicki"
+            "district_id": "powiat nidzicki"
          },
          {
             "geometry": {
@@ -3730,7 +3782,7 @@
             },
             "name": "Powiat olecki",
             "place_id": "ChIJW5b90-Sg4UYRgNQOrTIOAgM",
-            "district_id": "olecki"
+            "district_id": "powiat olecki"
          },
          {
             "geometry": {
@@ -3742,7 +3794,7 @@
             },
             "name": "Olsztyn",
             "place_id": "ChIJxxkUBy154kYRQQMTcPrhqUc",
-            "district_id": "olsztyński"
+            "district_id": "powiat olsztyński"
          },
          {
             "geometry": {
@@ -3754,7 +3806,7 @@
             },
             "name": "Powiat piski",
             "place_id": "ChIJgaw3mzDv4UYRsNQOrTIOAgM",
-            "district_id": "piski"
+            "district_id": "powiat piski"
          },
          {
             "geometry": {
@@ -3766,7 +3818,7 @@
             },
             "name": "Powiat szczycieński",
             "place_id": "ChIJCWBMiJH5HUcRwNQOrTIOAgM",
-            "district_id": "szczycieński"
+            "district_id": "powiat szczycieński"
          },
          {
             "geometry": {
@@ -3778,7 +3830,7 @@
             },
             "name": "Powiat węgorzewski",
             "place_id": "ChIJ678b-Sgr4kYRUJgPrTIOAgM",
-            "district_id": "węgorzewski"
+            "district_id": "powiat węgorzewski"
          },
          {
             "geometry": {
@@ -3790,7 +3842,7 @@
             },
             "name": "Olsztyn",
             "place_id": "ChIJxxkUBy154kYRQQMTcPrhqUc",
-            "district_id": "Olsztyn"
+            "district_id": "powiat Olsztyn"
          }
       ]
    },
@@ -3819,7 +3871,7 @@
             },
             "name": "Powiat gostyński",
             "place_id": "ChIJ71E7G20NBUcRINUOrTIOAgM",
-            "district_id": "gostyński"
+            "district_id": "powiat gostyński"
          },
          {
             "geometry": {
@@ -3831,7 +3883,7 @@
             },
             "name": "Powiat jarociński",
             "place_id": "ChIJazG-mvAhBUcRQNUOrTIOAgM",
-            "district_id": "jarociński"
+            "district_id": "powiat jarociński"
          },
          {
             "geometry": {
@@ -3843,7 +3895,7 @@
             },
             "name": "Kalisz",
             "place_id": "ChIJp-aTM5HFGkcRQ3uFUMrLYOI",
-            "district_id": "kaliski"
+            "district_id": "powiat kaliski"
          },
          {
             "geometry": {
@@ -3855,7 +3907,7 @@
             },
             "name": "Powiat kępiński",
             "place_id": "ChIJP42-WkcLEEcRYNUOrTIOAgM",
-            "district_id": "kępiński"
+            "district_id": "powiat kępiński"
          },
          {
             "geometry": {
@@ -3867,7 +3919,7 @@
             },
             "name": "Powiat kościański",
             "place_id": "ChIJ1a4kZ8uvBUcRkNUOrTIOAgM",
-            "district_id": "kościański"
+            "district_id": "powiat kościański"
          },
          {
             "geometry": {
@@ -3879,7 +3931,7 @@
             },
             "name": "Powiat krotoszyński",
             "place_id": "ChIJC82mLllHBUcRM6WnoXz9EiY",
-            "district_id": "krotoszyński"
+            "district_id": "powiat krotoszyński"
          },
          {
             "geometry": {
@@ -3891,19 +3943,19 @@
             },
             "name": "Leszno",
             "place_id": "ChIJd6_LqzyYBUcRpSZxXbqMdDM",
-            "district_id": "leszczyński"
+            "district_id": "powiat leszczyński"
          },
          {
             "geometry": {
-               "location": { "lat": 51.6452962, "lng": 17.7880123 },
+               "location": { "lat": 52.7570729, "lng": 22.0412064 },
                "viewport": {
-                  "northeast": { "lat": 51.8164634, "lng": 18.1884147 },
-                  "southwest": { "lat": 51.3994917, "lng": 17.51216 }
+                  "northeast": { "lat": 52.9805704, "lng": 22.47397 },
+                  "southwest": { "lat": 52.60937610000001, "lng": 21.5903967 }
                }
             },
             "name": "Powiat ostrowski",
-            "place_id": "ChIJ4Wuti7u2GkcRPFYLdZ4l4Zk",
-            "district_id": "ostrowski"
+            "place_id": "ChIJC2CsWEipH0cRgMo4lLefAgM",
+            "district_id": "powiat ostrowski"
          },
          {
             "geometry": {
@@ -3915,7 +3967,7 @@
             },
             "name": "Powiat ostrzeszowski",
             "place_id": "ChIJpwxRzP2iGkcRMgjnY72x8XE",
-            "district_id": "ostrzeszowski"
+            "district_id": "powiat ostrzeszowski"
          },
          {
             "geometry": {
@@ -3927,7 +3979,7 @@
             },
             "name": "Powiat pleszewski",
             "place_id": "ChIJdRXHwSAsBUcRINYOrTIOAgM",
-            "district_id": "pleszewski"
+            "district_id": "powiat pleszewski"
          },
          {
             "geometry": {
@@ -3939,7 +3991,7 @@
             },
             "name": "Powiat rawicki",
             "place_id": "ChIJ3XqMKf5vBUcRoXfcqk3xQz8",
-            "district_id": "rawicki"
+            "district_id": "powiat rawicki"
          },
          {
             "geometry": {
@@ -3951,7 +4003,7 @@
             },
             "name": "Kalisz",
             "place_id": "ChIJp-aTM5HFGkcRQ3uFUMrLYOI",
-            "district_id": "Kalisz"
+            "district_id": "powiat Kalisz"
          },
          {
             "geometry": {
@@ -3963,7 +4015,7 @@
             },
             "name": "Leszno",
             "place_id": "ChIJd6_LqzyYBUcRpSZxXbqMdDM",
-            "district_id": "Leszno"
+            "district_id": "powiat Leszno"
          }
       ]
    },
@@ -3992,7 +4044,7 @@
             },
             "name": "Powiat gnieźnieński",
             "place_id": "ChIJWffrIUuQBEcRENUOrTIOAgM",
-            "district_id": "gnieźnieński"
+            "district_id": "powiat gnieźnieński"
          },
          {
             "geometry": {
@@ -4004,7 +4056,7 @@
             },
             "name": "Powiat kolski",
             "place_id": "ChIJz5dQU1prG0cRcNUOrTIOAgM",
-            "district_id": "kolski"
+            "district_id": "powiat kolski"
          },
          {
             "geometry": {
@@ -4016,7 +4068,7 @@
             },
             "name": "Konin",
             "place_id": "ChIJp8McZCc0G0cRGCPxxcB6TAk",
-            "district_id": "koniński"
+            "district_id": "powiat koniński"
          },
          {
             "geometry": {
@@ -4028,7 +4080,7 @@
             },
             "name": "Powiat słupecki",
             "place_id": "ChIJMbzsxJzIBEcRcpGnpyfNfbM",
-            "district_id": "słupecki"
+            "district_id": "powiat słupecki"
          },
          {
             "geometry": {
@@ -4040,7 +4092,7 @@
             },
             "name": "Powiat średzki",
             "place_id": "ChIJiUFxVz_jBEcRcNYOrTIOAgM",
-            "district_id": "średzki"
+            "district_id": "powiat średzki"
          },
          {
             "geometry": {
@@ -4052,7 +4104,7 @@
             },
             "name": "Powiat śremski",
             "place_id": "ChIJhROmoUwBBUcR7962tnwDYKU",
-            "district_id": "śremski"
+            "district_id": "powiat śremski"
          },
          {
             "geometry": {
@@ -4064,7 +4116,7 @@
             },
             "name": "Powiat turecki",
             "place_id": "ChIJl5wgXVkfG0cRZV4q8jLiiew",
-            "district_id": "turecki"
+            "district_id": "powiat turecki"
          },
          {
             "geometry": {
@@ -4076,7 +4128,7 @@
             },
             "name": "Powiat wrzesiński",
             "place_id": "ChIJub3Lq_jnBEcRwNYOrTIOAgM",
-            "district_id": "wrzesiński"
+            "district_id": "powiat wrzesiński"
          },
          {
             "geometry": {
@@ -4088,7 +4140,7 @@
             },
             "name": "Konin",
             "place_id": "ChIJp8McZCc0G0cRGCPxxcB6TAk",
-            "district_id": "Konin"
+            "district_id": "powiat Konin"
          }
       ]
    },
@@ -4117,7 +4169,7 @@
             },
             "name": "Powiat chodzieski",
             "place_id": "ChIJgYE_8aOMA0cRjJELESIJCyM",
-            "district_id": "chodzieski"
+            "district_id": "powiat chodzieski"
          },
          {
             "geometry": {
@@ -4129,7 +4181,7 @@
             },
             "name": "Powiat czarnkowsko-trzcianecki",
             "place_id": "ChIJ9y4MvxSrBkcRN3MMifLVcQc",
-            "district_id": "czarnkowsko-trzcianecki"
+            "district_id": "powiat czarnkowsko-trzcianecki"
          },
          {
             "geometry": {
@@ -4141,7 +4193,7 @@
             },
             "name": "Powiat grodziski",
             "place_id": "ChIJuwZ-DmlGGUcRNgbrzLt1Bdw",
-            "district_id": "grodziski"
+            "district_id": "powiat grodziski"
          },
          {
             "geometry": {
@@ -4153,7 +4205,7 @@
             },
             "name": "Powiat międzychodzki",
             "place_id": "ChIJ5SK70OKYBkcRwNUOrTIOAgM",
-            "district_id": "międzychodzki"
+            "district_id": "powiat międzychodzki"
          },
          {
             "geometry": {
@@ -4165,7 +4217,7 @@
             },
             "name": "Powiat nowotomyski",
             "place_id": "ChIJJ6KD-8grBEcR0NUOrTIOAgM",
-            "district_id": "nowotomyski"
+            "district_id": "powiat nowotomyski"
          },
          {
             "geometry": {
@@ -4177,7 +4229,7 @@
             },
             "name": "Powiat obornicki",
             "place_id": "ChIJ50cBHq1yBEcR4NUOrTIOAgM",
-            "district_id": "obornicki"
+            "district_id": "powiat obornicki"
          },
          {
             "geometry": {
@@ -4189,7 +4241,7 @@
             },
             "name": "Powiat pilski",
             "place_id": "ChIJATyucNzoA0cRENYOrTIOAgM",
-            "district_id": "pilski"
+            "district_id": "powiat pilski"
          },
          {
             "geometry": {
@@ -4201,7 +4253,7 @@
             },
             "name": "Powiat szamotulski",
             "place_id": "ChIJXyRPUhoiBEcRZIUNzXrGlrA",
-            "district_id": "szamotulski"
+            "district_id": "powiat szamotulski"
          },
          {
             "geometry": {
@@ -4213,7 +4265,7 @@
             },
             "name": "Powiat wągrowiecki",
             "place_id": "ChIJ-TPBNGKHA0cRoNYOrTIOAgM",
-            "district_id": "wągrowiecki"
+            "district_id": "powiat wągrowiecki"
          },
          {
             "geometry": {
@@ -4225,7 +4277,7 @@
             },
             "name": "Powiat wolsztyński",
             "place_id": "ChIJ-Ry48pHaBUcRsNYOrTIOAgM",
-            "district_id": "wolsztyński"
+            "district_id": "powiat wolsztyński"
          },
          {
             "geometry": {
@@ -4237,7 +4289,7 @@
             },
             "name": "Powiat złotowski",
             "place_id": "ChIJFRbvjpjQA0cR_aKEO3uwbX0",
-            "district_id": "złotowski"
+            "district_id": "powiat złotowski"
          }
       ]
    },
@@ -4266,7 +4318,7 @@
             },
             "name": "Powiat poznański",
             "place_id": "ChIJOUzM6U5bBEcRi7Y72qTSObc",
-            "district_id": "poznański"
+            "district_id": "powiat poznański"
          },
          {
             "geometry": {
@@ -4278,7 +4330,7 @@
             },
             "name": "Powiat poznański",
             "place_id": "ChIJOUzM6U5bBEcRi7Y72qTSObc",
-            "district_id": "Poznań"
+            "district_id": "powiat Poznań"
          }
       ]
    },
@@ -4307,7 +4359,7 @@
             },
             "name": "Powiat białogardzki",
             "place_id": "ChIJP_WMwHy0AUcRUvkRdmPG51k",
-            "district_id": "białogardzki"
+            "district_id": "powiat białogardzki"
          },
          {
             "geometry": {
@@ -4319,7 +4371,7 @@
             },
             "name": "Powiat choszczeński",
             "place_id": "ChIJYzSj8V8pAUcRtIiMOBSMN9I",
-            "district_id": "choszczeński"
+            "district_id": "powiat choszczeński"
          },
          {
             "geometry": {
@@ -4331,7 +4383,7 @@
             },
             "name": "Powiat drawski",
             "place_id": "ChIJhQcbwdEQAUcRQNcOrTIOAgM",
-            "district_id": "drawski"
+            "district_id": "powiat drawski"
          },
          {
             "geometry": {
@@ -4343,7 +4395,7 @@
             },
             "name": "Powiat kołobrzeski",
             "place_id": "ChIJ3z0qu2tBAEcRHQ4_u0EcIdQ",
-            "district_id": "kołobrzeski"
+            "district_id": "powiat kołobrzeski"
          },
          {
             "geometry": {
@@ -4355,7 +4407,7 @@
             },
             "name": "Koszalin",
             "place_id": "ChIJ1Y1-LRrNAUcRlg0Sl7VnHyI",
-            "district_id": "koszaliński"
+            "district_id": "powiat koszaliński"
          },
          {
             "geometry": {
@@ -4367,7 +4419,7 @@
             },
             "name": "Powiat sławieński",
             "place_id": "ChIJ5yT4HcQn_kYR4NcOrTIOAgM",
-            "district_id": "sławieński"
+            "district_id": "powiat sławieński"
          },
          {
             "geometry": {
@@ -4379,7 +4431,7 @@
             },
             "name": "Powiat szczecinecki",
             "place_id": "ChIJeRevUJabAUcRANgOrTIOAgM",
-            "district_id": "szczecinecki"
+            "district_id": "powiat szczecinecki"
          },
          {
             "geometry": {
@@ -4391,7 +4443,7 @@
             },
             "name": "Powiat świdwiński",
             "place_id": "ChIJM3RtkqVUAEcRENgOrTIOAgM",
-            "district_id": "świdwiński"
+            "district_id": "powiat świdwiński"
          },
          {
             "geometry": {
@@ -4403,7 +4455,7 @@
             },
             "name": "Powiat wałecki",
             "place_id": "ChIJObkXKUJDAUcRRC-WKn4qw0I",
-            "district_id": "wałecki"
+            "district_id": "powiat wałecki"
          },
          {
             "geometry": {
@@ -4415,7 +4467,7 @@
             },
             "name": "Koszalin",
             "place_id": "ChIJ1Y1-LRrNAUcRlg0Sl7VnHyI",
-            "district_id": "Koszalin"
+            "district_id": "powiat Koszalin"
          }
       ]
    },
@@ -4444,7 +4496,7 @@
             },
             "name": "Powiat goleniowski",
             "place_id": "ChIJrV9kBAmcAEcRUNcOrTIOAgM",
-            "district_id": "goleniowski"
+            "district_id": "powiat goleniowski"
          },
          {
             "geometry": {
@@ -4456,7 +4508,7 @@
             },
             "name": "Powiat gryficki",
             "place_id": "ChIJKyj1ZM5kAEcRYNcOrTIOAgM",
-            "district_id": "gryficki"
+            "district_id": "powiat gryficki"
          },
          {
             "geometry": {
@@ -4468,7 +4520,7 @@
             },
             "name": "Powiat gryfiński",
             "place_id": "ChIJlQ4QMdZZB0cRcNcOrTIOAgM",
-            "district_id": "gryfiński"
+            "district_id": "powiat gryfiński"
          },
          {
             "geometry": {
@@ -4480,7 +4532,7 @@
             },
             "name": "Powiat kamieński",
             "place_id": "ChIJlT_KmheHqkcRgNcOrTIOAgM",
-            "district_id": "kamieński"
+            "district_id": "powiat kamieński"
          },
          {
             "geometry": {
@@ -4492,7 +4544,7 @@
             },
             "name": "Powiat łobeski",
             "place_id": "ChIJ4xbD1BXxAEcRYJgPrTIOAgM",
-            "district_id": "łobeski"
+            "district_id": "powiat łobeski"
          },
          {
             "geometry": {
@@ -4504,7 +4556,7 @@
             },
             "name": "Powiat myśliborski",
             "place_id": "ChIJgY_7Wgg_B0cRsNcOrTIOAgM",
-            "district_id": "myśliborski"
+            "district_id": "powiat myśliborski"
          },
          {
             "geometry": {
@@ -4516,7 +4568,7 @@
             },
             "name": "Powiat policki",
             "place_id": "ChIJ91nyqGgNqkcRhn4L03rnonU",
-            "district_id": "policki"
+            "district_id": "powiat policki"
          },
          {
             "geometry": {
@@ -4528,7 +4580,7 @@
             },
             "name": "Powiat pyrzycki",
             "place_id": "ChIJ-cdVXNxKB0cRblZYu-5ZOMM",
-            "district_id": "pyrzycki"
+            "district_id": "powiat pyrzycki"
          },
          {
             "geometry": {
@@ -4540,19 +4592,19 @@
             },
             "name": "Powiat stargardzki",
             "place_id": "ChIJ26AFPXbGAEcR8NcOrTIOAgM",
-            "district_id": "stargardzki"
+            "district_id": "powiat stargardzki"
          },
          {
             "geometry": {
-               "location": { "lat": 53.7263402, "lng": 16.5362135 },
+               "location": { "lat": 53.4285139, "lng": 14.6067448 },
                "viewport": {
-                  "northeast": { "lat": 54.0050398, "lng": 16.9820535 },
-                  "southwest": { "lat": 53.4703041, "lng": 16.1970701 }
+                  "northeast": { "lat": 53.53768170000001, "lng": 14.8054166 },
+                  "southwest": { "lat": 53.3217096, "lng": 14.4438188 }
                }
             },
-            "name": "Powiat szczecinecki",
-            "place_id": "ChIJeRevUJabAUcRANgOrTIOAgM",
-            "district_id": "Szczecin"
+            "name": "Szczecin",
+            "place_id": "ChIJWafTADgJqkcRSDV4o3R2QCw",
+            "district_id": "powiat Szczecin"
          },
          {
             "geometry": {
@@ -4564,7 +4616,7 @@
             },
             "name": "Świnoujście",
             "place_id": "ChIJGxQ7XAteqkcRUNgOrTIOAgM",
-            "district_id": "Świnoujście"
+            "district_id": "powiat Świnoujście"
          }
       ]
    }

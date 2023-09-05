@@ -12,7 +12,7 @@ export default function Home() {
    const [mapResetId, setMapResetId] = useState<any>()
    const [mapRef, setMapRef] = useState<any>()
    const [mapsRef, setMapsRef] = useState<any>()
-   const tripCount = 3 // how many top trips to show on List and Map
+   const tripCount = 1 // how many top trips to show on List and Map
 
    useEffect(() => {
       fetch('/api/get-circuits')

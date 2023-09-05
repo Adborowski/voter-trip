@@ -8,7 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    const dirRelativeToPublicFolder = 'route-list.json'
    const dir = path.resolve('./public', dirRelativeToPublicFolder)
    const routes = JSON.parse(fs.readFileSync(dir))
-   const tripCount = 3 // gotta mirror the tripCount in the frontend; used for marking map
+   const tripCount = 1 // gotta mirror the tripCount in the frontend; used for marking map
 
    const tripOrigin: Circuit = selectedCircuit
    console.log('FROM', tripOrigin.city_id)
