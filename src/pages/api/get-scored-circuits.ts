@@ -28,6 +28,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (!route) {
          console.log('No route from', tripOrigin.city_id, 'to', circuit.city_id)
       }
+
+      // in case of a route from X to itself, make distance massive
+      if (route.distance.value < 5) {
+         return 1000000
+      }
       return Math.round(route.distance.value / 1000) // return distance in km
    }
 
@@ -53,7 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       // negative swingDifference means you gain SF by voting at the circuit
 
       const distanceWeight = 1.5 // math weight of distance ie how much should distance impact the score
-      const score =
+      let score =
          Math.floor(swingDifference * 1000) - getDistanceFromOrigin(circuit) * distanceWeight
 
       return score

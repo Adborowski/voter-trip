@@ -330,10 +330,21 @@ const CircuitMap = ({
             circuit.districts.forEach((district: District) => {
                console.log(district.geometry.location)
 
+               const markerIcon = {
+                  scaledSize: new maps.Size(20, 20),
+                  url: '/map-marker.png',
+               }
+
+               const markerLabel = {
+                  text: district.name,
+                  color: 'white',
+               }
+
                const newDrawnMarker = new maps.Marker({
                   position: district.geometry.location,
+                  icon: markerIcon,
+                  label: markerLabel,
                   map,
-                  title: 'Hello World!',
                })
                drawnMarkers.push(newDrawnMarker)
             }) // end of foreach district
