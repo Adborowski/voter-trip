@@ -31,7 +31,10 @@ declare global {
    interface District {
       district_id: string
       geometry: {
-         location: {}
+         location: {
+            lat: number
+            lng: number
+         }
          viewport: {}
       }
       name: string

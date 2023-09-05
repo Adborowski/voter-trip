@@ -257,6 +257,7 @@ const CircuitMap = ({
       getMapsRef(mapsRef)
       if (scoredCircuits) {
          drawPolylines()
+         addDistrictDistances()
          drawDistrictPoints()
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
@@ -286,6 +287,29 @@ const CircuitMap = ({
             polyline.setMap(null)
          })
       }
+   }
+
+   //  haversine straight-line formula
+   // https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates
+   const getDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+      var R = 6371 // Radius of the earth in km
+      var dLat = deg2rad(lat2 - lat1) // deg2rad below
+      var dLon = deg2rad(lon2 - lon1)
+      var a =
+         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+         Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2)
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+      var d = R * c // Distance in km
+      return d
+   }
+
+   const addDistrictDistances = () => {
+      console.log('Adding district distances to top circuits')
+      const districts = selectedCircuit?.districts
+   }
+
+   function deg2rad(deg: any) {
+      return deg * (Math.PI / 180)
    }
 
    const drawPolylines = () => {
@@ -352,13 +376,21 @@ const CircuitMap = ({
                   map,
                })
 
+               newMarker.addListener('click', (e: Event) => {
+                  const lat = district.geometry.location.lat
+                  const lng = district.geometry.location.lng
+                  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
+                  console.log(url)
+                  window.open(url, '_blank')
+               })
+
                const newCircle = new maps.Circle({
                   center: district.geometry.location,
                   strokeColor: 'lime',
                   strokeOpacity: 0,
                   strokeWeight: 2,
-                  fillColor: 'darkgreen',
-                  fillOpacity: 0.5,
+                  fillColor: 'lime',
+                  fillOpacity: 0,
                   radius: 8000,
                   // icon: markerIcon,
                   label: markerLabel,
