@@ -121,3 +121,7 @@
       font-size: 1rem;
    }
 }
+
+.navbar section.controls button.btnViewTrips {
+   background-color: var(--highlight-3);
+}

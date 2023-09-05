@@ -51,7 +51,7 @@ const Navbar = (props: NavbarProps) => {
                ></button>
 
                {selectedCircuit && (
-                  <button onClick={scrollToTrips}>
+                  <button className={styles.btnViewTrips} onClick={scrollToTrips}>
                      <span>Zobacz wycieczkę</span>
                   </button>
                )}
