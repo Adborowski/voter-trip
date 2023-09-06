@@ -4,11 +4,12 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   background-color: var(--highlight-2);
+   background-color: #212121;
+   background: linear-gradient(180deg, rgb(11, 131, 0) 0%, rgb(7, 58, 0) 25%);
 }
 
 .tripPlanner h2 {
-   color: black;
+   color: white;
    border-radius: 60px;
    text-align: center;
    margin-bottom: 12px;
@@ -19,7 +20,8 @@
 
 .tripDetails {
    background-color: white;
-   border-radius: 3px;
+   margin: auto;
+   border-radius: 6px;
    padding: 18px;
 }
 
@@ -28,13 +30,65 @@
 }
 
 .tripDetails .locations {
-   font-weight: 600;
-   font-size: 1.25rem;
+   font-weight: 800;
+   font-size: 1.75rem;
+   margin-bottom: 12px;
 }
 
 .tripDetails .locations .arrow {
    margin: 0px 12px;
-   font-size: 1.8rem;
+   font-size: 1.5rem;
    line-height: 1rem;
+}
+
+.closestDistricts {
+   margin-top: 12px;
+   margin-bottom: 18px;
+}
+
+.score {
    font-weight: 800;
+}
+
+.score.good {
+   color: green;
+}
+
+.score.bad {
+   color: red;
+}
+
+.tripDetails h3 {
+   font-size: 1.1rem;
+   margin-bottom: 18px;
+   margin-top: 18px;
+   text-align: center;
+   font-weight: 800;
+}
+
+.closestDistricts .closestDistrict {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   text-align: left;
+   margin-bottom: 6px;
+}
+
+.closestDistrict button {
+   padding: 6px;
+   border-radius: 60px;
+   background-color: var(--highlight-1);
+}
+
+.closestDistrict .distance {
+   text-align: center;
+}
+
+.explainerWrapper {
+   margin-bottom: 12px;
+}
+
+.explainerWrapper span {
+   display: block;
+   text-align: left;
+   margin-bottom: 12px;
 }
