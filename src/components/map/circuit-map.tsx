@@ -290,7 +290,7 @@ const CircuitMap = ({
       }
    }
 
-   //  haversine straight-line formula
+   // haversine straight-line formula
    // https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates
    const getDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
       var R = 6371 // Radius of the earth in km
@@ -314,7 +314,7 @@ const CircuitMap = ({
       const polylines: any = []
       const maps = mapsRef.current
       const map = mapRef.current
-      const polylineColors = ['#ffbb00', '#ffcf4a', '#d1b66b']
+      const polylineColors = ['lime', '#ffcf4a', '#d1b66b']
       clearPolylines()
 
       scoredCircuits?.forEach((circuit, index) => {

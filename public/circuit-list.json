@@ -2973,7 +2973,7 @@
          },
          {
             "geometry": {
-               "location": { "lat": 54.5294774, "lng": 18.6743057 },
+               "location": { "lat": 54.510427, "lng": 18.473898 },
                "viewport": {
                   "northeast": { "lat": 54.62416, "lng": 18.9100516 },
                   "southwest": { "lat": 54.4227503, "lng": 18.3579807 }

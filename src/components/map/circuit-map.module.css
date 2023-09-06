@@ -44,7 +44,8 @@ div:has(.markerLabel) {
    padding: 3px 0px;
    border-radius: 6px;
    /* margin: auto; */
-   background-color: var(--highlight-1);
+   background-color: rgb(18, 185, 54);
+   color: white;
    color: black;
    content: 'najbliżej';
    font-size: 0.7rem;

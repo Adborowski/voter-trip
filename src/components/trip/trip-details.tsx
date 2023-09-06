@@ -19,7 +19,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
       <article className={styles.tripDetails}>
          <section className={styles.locations}>
             <span>{originCity}</span>
-            <span className={styles.arrow}>🡆</span>
+            <div className={styles.arrow}></div>
             <span>{destinationCity}</span>
          </section>
          <section className={`${styles.score} ${score > 0 ? styles.good : styles.bad}`}>
@@ -27,12 +27,13 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
          </section>
          {score < 0 && (
             <section className={styles.scoreNote}>
-               <span> Mieszkasz w najlepszym okręgu w okolicy</span>
-               <span> Głosuj u siebie!</span>
+               <span>Brak korzystnych wycieczek wyborczych.</span>
+               <span>Głosuj u siebie.</span>
             </section>
          )}
-         <h3>Najbliższe powiaty</h3>
          <section className={styles.closestDistricts}>
+            <h3>Najbliższe powiaty</h3>
+
             {closestDistricts &&
                closestDistricts.map((district: District, index) => {
                   district.district_id = district.district_id.replace('powiat', '')
@@ -66,10 +67,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                })}
          </section>
          <div className={styles.explainerWrapper}>
-            <span>
-               Odległości podane są w linii prostej od lokalnego miasta okręgowego do środka
-               powiatu. Trasa realna może być nieco dłuższa.
-            </span>
+            <span>Odległości w linii prostej od miasta okręgowego do środka powiatu.</span>
             <span>Kliknij PLANUJ TRASĘ aby wyznaczyć drogę ze swojej dokładnej lokalizacji.</span>
             <span>Kliknij ZNAJDŹ LOKALE aby wyszukać lokale wyborcze w danym powiacie.</span>
             <span>Oba przyciski otwierają nową kartę.</span>
