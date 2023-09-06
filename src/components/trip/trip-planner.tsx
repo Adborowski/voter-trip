@@ -19,9 +19,18 @@ const TripPlanner = (props: TripPlannerProps) => {
 
    return (
       <section className={styles.tripPlanner}>
-         <h2>Twoja wycieczka</h2>
+         <h2
+            onClick={() => {
+               window.scrollBy({
+                  top: 650,
+                  behavior: 'smooth',
+               })
+            }}
+         >
+            Twoja wycieczka
+         </h2>
          <TripDetails scoredCircuits={scoredCircuits} />
-         <CircuitList circuits={scoredCircuits} length={tripCount} />
+         {/* <CircuitList circuits={scoredCircuits} length={tripCount} /> */}
       </section>
    )
 }

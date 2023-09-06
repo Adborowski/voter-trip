@@ -12,16 +12,8 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
       setClosestDistricts(scoredCircuits[0].districts)
    }, [scoredCircuits])
 
-   const { score, districts, city_name: destinationCity } = scoredCircuits[0]
+   const { score, city_name: destinationCity } = scoredCircuits[0]
    const originCity = scoredCircuits[scoredCircuits.length - 1].city_name
-
-   const redirectToGoogleMaps = (url) => {}
-
-   //    newMarker.addListener('click', (e: Event) => {
-   //     console.log('x')
-   //     console.log(url)
-   //     window.open(url, '_blank')
-   //  })
 
    return (
       <article className={styles.tripDetails}>
@@ -35,9 +27,10 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
          </section>
          {score < 0 && (
             <section className={styles.scoreNote}>
-               Nie zyskasz dużo robiąc wycieczkę wyborczą. Głosuj u siebie!
+               <span> Mieszkasz w najlepszym okręgu w okolicy</span>
+               <span> Głosuj u siebie!</span>
             </section>
-         )}{' '}
+         )}
          <h3>Najbliższe powiaty</h3>
          <section className={styles.closestDistricts}>
             {closestDistricts &&
@@ -49,11 +42,16 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
 
                   if (index < 3) {
                      return (
-                        <section className={styles.closestDistrict} key={district.district_id}>
-                           <span>{district.district_id}</span>
-                           <span className={styles.distance}>
-                              {district.distanceFromOrigin?.toFixed(1)} km
-                           </span>
+                        <article className={styles.closestDistrict} key={district.district_id}>
+                           <section className={styles.name}>
+                              <span>{district.district_id}</span>
+                           </section>
+
+                           <section>
+                              <span className={styles.distance}>
+                                 {district.distanceFromOrigin?.toFixed(1)} km
+                              </span>
+                           </section>
                            <button
                               onClick={() => {
                                  window.open(url, '_blank')
@@ -61,7 +59,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                            >
                               Planuj trasę
                            </button>
-                        </section>
+                        </article>
                      )
                   }
                })}
