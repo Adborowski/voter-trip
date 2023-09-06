@@ -60,7 +60,15 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                            >
                               Planuj trasę
                            </button>
-                           <button>Znajdź lokale</button>
+                           <button
+                              onClick={() => {
+                                 window.open(
+                                    `https://www.google.com/search?q=wykaz lokali wyborczych 2023 powiat${district.district_id}`
+                                 )
+                              }}
+                           >
+                              Znajdź lokale
+                           </button>
                         </article>
                      )
                   }
