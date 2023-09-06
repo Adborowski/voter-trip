@@ -241,20 +241,24 @@ const CircuitMap = ({
 
    useEffect(() => {
       setMapCircuits(circuitList)
-      console.log('map render', mapResetId)
    }, [])
 
    useEffect(() => {
       if (selectedCircuit) {
-         console.log('%cNew selected circuit', 'color: lightgreen', selectedCircuit.city_name)
-         mapRef.current.panBy(100000, 0)
+         console.log('%cNew circuit:', 'color: yellow;', selectedCircuit.city_name)
+         window.setTimeout(() => {
+            window.scrollBy({
+               top: 650,
+               behavior: 'smooth',
+            })
+         }, 2000)
       } else {
          console.log('No selectedCircuit')
       }
    }, [selectedCircuit])
 
    useEffect(() => {
-      console.log('Change in scoredCircuits.', scoredCircuits)
+      console.log('%cScored circuits', 'color: lightgreen', scoredCircuits)
       getMapRef(mapRef)
       getMapsRef(mapsRef)
       if (scoredCircuits) {
@@ -340,7 +344,7 @@ const CircuitMap = ({
 
    const drawDistrictPoints = () => {
       clearDistrictPoints()
-      console.log('Drawing districts...')
+      console.log('%cDrawing closest district.', 'color: lightblue')
       const maps = mapsRef.current
       const map = mapRef.current
       let drawnMarkers: any = []
@@ -369,8 +373,7 @@ const CircuitMap = ({
 
          // only draw district points for tripCount of circuits
          if (index < tripCount && circuit.districts) {
-            console.log('Drawing district points for', circuit.city_id)
-            console.log('Districts sorted by distance', circuit.districts)
+            console.log('%cSorted districts', 'color: pink', circuit.districts)
 
             circuit.districts.forEach((district: District, index) => {
                if (index < districtCount) {
@@ -394,21 +397,6 @@ const CircuitMap = ({
                      map,
                   })
 
-                  console.log(newMarker)
-
-                  const newCircle = new maps.Circle({
-                     center: district.geometry.location,
-                     strokeColor: 'lime',
-                     strokeOpacity: 0,
-                     strokeWeight: 2,
-                     fillColor: 'lime',
-                     fillOpacity: 0,
-                     radius: 8000,
-                     // icon: markerIcon,
-                     label: markerLabel,
-                     map,
-                  })
-                  drawnMarkers.push(newCircle)
                   drawnMarkers.push(newMarker)
                }
             }) // end of foreach district
@@ -418,7 +406,6 @@ const CircuitMap = ({
    }
 
    const clearDistrictPoints = () => {
-      console.log('Clearing districts...')
       if (activePoints) {
          activePoints.forEach((point: any) => {
             point.setMap(null)
