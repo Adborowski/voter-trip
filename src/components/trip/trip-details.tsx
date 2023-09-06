@@ -70,8 +70,8 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                Odległości podane są w linii prostej od lokalnego miasta okręgowego do środka
                powiatu. Trasa realna może być nieco dłuższa.
             </span>
-            <span>Kliknij "Planuj trasę" aby wyznaczyć drogę ze swojej dokładnej lokalizacji.</span>
-            <span>Kliknij "Znajdź lokale" aby wyszukać lokale wyborcze w danym powiacie.</span>
+            <span>Kliknij PLANUJ TRASĘ aby wyznaczyć drogę ze swojej dokładnej lokalizacji.</span>
+            <span>Kliknij ZNAJDŹ LOKALE aby wyszukać lokale wyborcze w danym powiacie.</span>
             <span>Oba przyciski otwierają nową kartę.</span>
          </div>
       </article>
