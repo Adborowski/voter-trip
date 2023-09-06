@@ -49,7 +49,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
 
                            <section>
                               <span className={styles.distance}>
-                                 {district.distanceFromOrigin?.toFixed(1)} km
+                                 {district.distanceFromOrigin?.toFixed(0)} km
                               </span>
                            </section>
                            <button
@@ -59,6 +59,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                            >
                               Planuj trasę
                            </button>
+                           <button>Znajdź lokale</button>
                         </article>
                      )
                   }
@@ -67,9 +68,11 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
          <div className={styles.explainerWrapper}>
             <span>
                Odległości podane są w linii prostej od lokalnego miasta okręgowego do środka
-               powiatu.
+               powiatu. Trasa realna może być nieco dłuższa.
             </span>
             <span>Kliknij "Planuj trasę" aby wyznaczyć drogę ze swojej dokładnej lokalizacji.</span>
+            <span>Kliknij "Znajdź lokale" aby wyszukać lokale wyborcze w danym powiacie.</span>
+            <span>Oba przyciski otwierają nową kartę.</span>
          </div>
       </article>
    )
