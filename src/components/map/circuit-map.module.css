@@ -37,17 +37,14 @@ div:has(.markerLabel) {
 
 .markerLabel::after {
    width: 100%;
-   /* display: block; */
    position: absolute;
-   top: -24px;
+   top: -18px;
    left: 0;
    padding: 3px 0px;
    border-radius: 6px;
-   /* margin: auto; */
-   background-color: rgb(18, 185, 54);
-   color: white;
+   background-color: rgb(27, 214, 67);
    color: black;
-   content: 'najbliżej';
+   content: 'najbliższy';
    font-size: 0.7rem;
    font-weight: 800;
 }
