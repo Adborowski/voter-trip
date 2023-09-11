@@ -52,8 +52,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
          circuit.city_id = 'lodz'
       }
 
-      const swingDifference = tripOrigin.swing_factor - circuit.swing_factor
       // negative swingDifference means you gain SF by voting at the circuit
+      const swingDifference = tripOrigin.swing_factor - circuit.swing_factor
+
+      // user's goal is to maximize SF decrease, while staying within reasonable distance
 
       const distanceWeight = 1.5 // math weight of distance ie how much should distance impact the score
       let score =

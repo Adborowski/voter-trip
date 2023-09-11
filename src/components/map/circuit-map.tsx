@@ -264,6 +264,7 @@ const CircuitMap = ({
       if (scoredCircuits) {
          drawPolylines()
          drawDistrictPoints()
+         drawDistricts()
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
       } else {
@@ -313,6 +314,7 @@ const CircuitMap = ({
       return deg * (Math.PI / 180)
    }
 
+   //  polyline routes
    const drawPolylines = () => {
       //
       const polylines: any = []
@@ -412,6 +414,8 @@ const CircuitMap = ({
          })
       }
    }
+
+   const drawDistricts = () => {}
 
    const onGoogleApiLoaded = ({ map, maps }: any) => {
       mapRef.current = map

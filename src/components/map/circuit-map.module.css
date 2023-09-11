@@ -6,10 +6,6 @@
    transition: 1s ease all;
 }
 
-.mapWrapper.trip {
-   /* height: 80vh; */
-}
-
 div:has(.markerLabel) {
    z-index: 50;
 }
@@ -20,7 +16,6 @@ div:has(.markerLabel) {
    padding: 6px;
    border-radius: 6px;
    font-size: 10px;
-   /* width: 100px; */
 }
 
 .markerLabel::before {
