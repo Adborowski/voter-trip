@@ -42,3 +42,12 @@ body * {
 body::-webkit-scrollbar {
    display: none;
 }
+
+button {
+   span,
+   a,
+   span a {
+      color: black;
+      text-decoration: none;
+   }
+}

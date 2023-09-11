@@ -5,7 +5,7 @@
    flex-direction: column;
    justify-content: center;
    background-color: #212121;
-   background: linear-gradient(180deg, rgb(37, 170, 25) 0%, rgb(25, 97, 16) 70%);
+   background: linear-gradient(180deg, rgb(78 161 71) 0%, rgb(55 103 49) 70%);
 }
 
 .tripPlanner h2 {
@@ -141,7 +141,7 @@
 .score.bad {
    background-color: rgb(153, 0, 0);
    color: white;
-   border-radius: 60px 60px 0px 0px;
+   margin-bottom: 12px;
 }
 
 .scoreNote {
