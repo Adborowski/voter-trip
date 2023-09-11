@@ -12,11 +12,13 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
       setClosestDistricts(scoredCircuits[0].districts)
    }, [scoredCircuits])
 
-   const { score, city_name: destinationCity } = scoredCircuits[0]
+   const { score, city_name: destinationCity, isFavorite } = scoredCircuits[0]
    const originCity = scoredCircuits[scoredCircuits.length - 1].city_name
 
    return (
       <article className={styles.tripDetails}>
+         {isFavorite && <div className={styles.favoriteMarker} />}
+
          <section className={styles.locations}>
             <span>{originCity}</span>
             <div className={styles.arrow}></div>
@@ -33,7 +35,6 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
          )}
          <section className={styles.closestDistricts}>
             <h3>Najbliższe powiaty</h3>
-            <div className={styles.favoriteMarker} />
 
             {closestDistricts &&
                closestDistricts.map((district: District, index) => {

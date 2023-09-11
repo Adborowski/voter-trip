@@ -68,12 +68,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const scoreMap = createScoreMap()
       const originNum = tripOrigin.circuit_number
       const targetNumString = circuit.circuit_number.toString()
-
-      const favoriteTargets = scoreMap.get(originNum).favorite_targets.split(',')
+      const originExtraScore = scoreMap.get(originNum)
+      let favoriteTargets = originExtraScore.favorite_targets
 
       if (favoriteTargets) {
+         // multiple favorite targets
+         if (typeof favoriteTargets == 'string') {
+            favoriteTargets = favoriteTargets.replace(/\s/g, '') // remove whitespace
+            favoriteTargets = favoriteTargets.split(',')
+         }
+
+         // single favorite target
+         if (typeof favoriteTargets == 'number') {
+            favoriteTargets = [favoriteTargets.toString()]
+         }
+
          if (favoriteTargets.includes(targetNumString)) {
-            console.log(circuit.city_name, 'is a favorite.')
+            // console.log`🎔  ${originNum} ${tripOrigin.city_name} -> ${circuit.circuit_number} ${circuit.city_name} `()
             return true
          } else {
             return false

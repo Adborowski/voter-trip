@@ -19,7 +19,7 @@
 }
 
 .tripDetails {
-   /* background-color: #ebebeb; */
+   position: relative;
    margin: auto;
    border-radius: 6px;
    box-shadow: var(--box-shadow-1);
