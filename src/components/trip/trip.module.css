@@ -72,20 +72,29 @@
 .tripDetails h3 {
    font-size: 1.2rem;
    margin-bottom: 18px;
-   text-align: left;
+   text-align: center;
    font-weight: 800;
 }
 
 .closestDistricts .closestDistrict {
    display: grid;
-   grid-template-columns: 1fr 50px 1fr 1fr;
+   grid-template-columns: 2fr 1fr 2fr;
    grid-gap: 3px;
    text-align: left;
    margin-bottom: 6px;
    border-radius: 60px;
+   /* max-width: 340px; */
+   margin: auto;
+   margin-bottom: 6px;
+   padding: 8px 0px;
+   padding-left: 18px;
+   padding-right: 8px;
+   background-color: #f4f4f4;
 }
 
 .closestDistrict button {
+   margin: auto;
+   width: 100%;
    padding: 6px;
    border-radius: 60px;
    background-color: var(--highlight-1);
@@ -93,7 +102,7 @@
 }
 
 .closestDistrict .name {
-   text-align: left;
+   font-weight: 600;
 }
 
 .closestDistrict section {

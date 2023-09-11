@@ -63,7 +63,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                            >
                               Zobacz powiat
                            </button>
-                           <button
+                           {/* <button
                               onClick={() => {
                                  window.open(
                                     `https://www.google.com/search?q=wykaz lokali wyborczych 2023 powiat${district.district_id}`
@@ -71,7 +71,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                               }}
                            >
                               Znajdź lokale
-                           </button>
+                           </button> */}
                         </article>
                      )
                   }
