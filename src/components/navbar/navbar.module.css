@@ -56,6 +56,8 @@
    display: block;
    border: 1px;
    font-weight: 700;
+   color: black;
+   text-decoration: none;
 }
 
 .homeButtonBar {

@@ -41,7 +41,8 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                   district.district_id = district.district_id.replace('powiat', '')
                   const lat = district.geometry.location.lat
                   const lng = district.geometry.location.lng
-                  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
+                  // const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
+                  const url = `https://www.google.com/maps/search/powiat+${district.district_id}/`
 
                   if (index < 3) {
                      return (
@@ -60,7 +61,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
                                  window.open(url, '_blank')
                               }}
                            >
-                              Planuj trasę
+                              Zobacz powiat
                            </button>
                            <button
                               onClick={() => {
