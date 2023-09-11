@@ -61,6 +61,7 @@
 }
 
 .closestDistricts {
+   position: relative;
    background-color: white;
    border-radius: 12px;
    margin-top: 12px;
@@ -155,4 +156,18 @@
 .scoreNote span {
    display: block;
    color: white;
+}
+
+.favoriteMarker {
+   /* border: 1px solid red; */
+   width: 18px;
+   height: 18px;
+   position: absolute;
+   top: 12px;
+   right: 12px;
+   background-image: url('/star.svg');
+   background-size: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   shape-rendering: auto;
 }

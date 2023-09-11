@@ -12,10 +12,6 @@ interface TripPlannerProps {
 
 const TripPlanner = (props: TripPlannerProps) => {
    const { startCircuit, scoredCircuits, tripCount } = props
-   const { city_name } = startCircuit
-
-   const finish: Circuit = scoredCircuits[0]
-   const start: Circuit = startCircuit
 
    return (
       <section className={styles.tripPlanner}>

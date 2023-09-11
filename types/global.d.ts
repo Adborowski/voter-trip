@@ -26,6 +26,7 @@ declare global {
       distance_from_origin: string
       score: number
       route: Route
+      isFavorite?: boolean
    }
 
    interface District {
@@ -48,5 +49,11 @@ declare global {
       swingDifference: number
       score: number
       districts: District[]
+   }
+
+   interface ExtraScore {
+      circuit_number: number
+      city_name: string
+      favorite_targets: string
    }
 }

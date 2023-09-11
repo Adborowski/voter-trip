@@ -5,9 +5,27 @@ import path from 'path'
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
    const { selectedCircuit, circuits } = req.body
-   const dirRelativeToPublicFolder = 'route-list.json'
-   const dir = path.resolve('./public', dirRelativeToPublicFolder)
-   const routes = JSON.parse(fs.readFileSync(dir))
+   const routeListFilename = 'route-list.json'
+   const routeListDir = path.resolve('./public', routeListFilename)
+
+   const extraScoreFilename = 'extra-score-list.json'
+   const extraScoreDir = path.resolve('./public', extraScoreFilename)
+
+   const routes = JSON.parse(fs.readFileSync(routeListDir))
+   let extraScores = JSON.parse(fs.readFileSync(extraScoreDir))
+
+   const createScoreMap = () => {
+      // map as in Map Object in Javascript
+      // not a google map
+      const map = new Map()
+      Object.entries(extraScores).forEach((extraScore: any) => {
+         extraScore = extraScore[1]
+         map.set(extraScore.circuit_number, extraScore)
+      })
+
+      return map
+   }
+
    const tripCount = 1 // gotta mirror the tripCount in the frontend; used for marking map
 
    const tripOrigin: Circuit = selectedCircuit
@@ -46,6 +64,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return swingDifference
    }
 
+   const getFavoriteStatus = (circuit: Circuit) => {
+      const scoreMap = createScoreMap()
+      const originNum = tripOrigin.circuit_number
+      const targetNumString = circuit.circuit_number.toString()
+
+      const favoriteTargets = scoreMap.get(originNum).favorite_targets.split(',')
+
+      if (favoriteTargets) {
+         if (favoriteTargets.includes(targetNumString)) {
+            console.log(circuit.city_name, 'is a favorite.')
+            return true
+         } else {
+            return false
+         }
+      }
+   }
+
    const getCircuitScore = (circuitToScoreAgainst: Circuit) => {
       const circuit = circuitToScoreAgainst
       if (circuit.city_id === 'łodz') {
@@ -55,11 +90,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       // negative swingDifference means you gain SF by voting at the circuit
       const swingDifference = tripOrigin.swing_factor - circuit.swing_factor
 
-      // user's goal is to maximize SF decrease, while staying within reasonable distance
+      // SCORING FORMULA
+      const distanceWeight = 1.5 // math weight of distance ie how much should distance impact the score;
 
-      const distanceWeight = 1.5 // math weight of distance ie how much should distance impact the score
+      // if target is a favorite, give it extra score
+      const extraScore = getFavoriteStatus(circuit) ? 20000 : 0
       let score =
-         Math.floor(swingDifference * 1000) - getDistanceFromOrigin(circuit) * distanceWeight
+         Math.floor(swingDifference * 1000) -
+         getDistanceFromOrigin(circuit) * distanceWeight +
+         extraScore
 
       return score
    }
@@ -79,6 +118,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
    })
 
+   // mark targets as favorite
    // mark the objects as isTripOrigin or isDestination, for use in map nodes
    sortedCircuits = sortedCircuits.map((sortedCircuit: ScoredCircuit, index: number) => {
       if (selectedCircuit.city_id === 'łodz') {
@@ -90,12 +130,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       if (sortedCircuit.city_id == selectedCircuit.city_id) {
-         console.log(sortedCircuit.city_id, selectedCircuit.city_id, 'OK')
+         //  console.log(sortedCircuit.city_id, selectedCircuit.city_id, 'OK')
          sortedCircuit.isTripOrigin = true
       }
 
       if (index < tripCount) {
          sortedCircuit.isDestination = true
+      }
+
+      if (getFavoriteStatus(sortedCircuit)) {
+         sortedCircuit.isFavorite = true
       }
 
       return sortedCircuit

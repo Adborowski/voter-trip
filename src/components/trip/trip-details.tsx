@@ -33,6 +33,7 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
          )}
          <section className={styles.closestDistricts}>
             <h3>Najbliższe powiaty</h3>
+            <div className={styles.favoriteMarker} />
 
             {closestDistricts &&
                closestDistricts.map((district: District, index) => {
