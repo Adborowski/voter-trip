@@ -4,8 +4,50 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   background-color: #212121;
-   background: linear-gradient(180deg, rgb(78 161 71) 0%, rgb(55 103 49) 70%);
+   position: relative;
+   overflow: hidden;
+   /* background-color: #212121; */
+   /* background: linear-gradient(180deg, #4ea147 0%, #376731 70%); */
+
+   /* background: linear-gradient(45deg, #4ea147, #376731, #3aa131);
+   background-size: 400% 400%;
+   animation: gradient 5s ease infinite; */
+
+   /* color: #4ea147; */
+}
+
+.tripPlanner::before {
+   content: '';
+   position: absolute;
+   top: -500%;
+   left: -500%;
+   width: 1000%;
+   height: 1000%;
+   z-index: -1;
+
+   /* light */
+   background: linear-gradient(45deg, #4ea147, #376731, #3aa131);
+
+   /* strong */
+   background: linear-gradient(45deg, #40af6e, #376731, #77ff89);
+
+   background-size: 100% 100%;
+   animation: gradient 120s ease infinite;
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+      transform: rotate(0deg);
+   }
+   50% {
+      background-position: 100% 50%;
+      transform: rotate(360deg);
+   }
+   100% {
+      background-position: 0% 50%;
+      transform: rotate(0deg);
+   }
 }
 
 .tripPlanner h2 {
@@ -14,7 +56,7 @@
    text-align: center;
    margin-bottom: 12px;
    margin-top: 6px;
-   font-weight: 600;
+   font-weight: 400;
    font-size: 1.8rem;
 }
 
@@ -37,7 +79,7 @@
 }
 
 .tripDetails .locations {
-   font-weight: 800;
+   font-weight: 600;
    font-size: 2.3rem;
    margin-bottom: 12px;
    text-align: center;
@@ -49,14 +91,14 @@
 
 .tripDetails .locations .arrow {
    font-size: 32px;
-   width: 30px;
+   width: 24px;
    height: 24px;
-   margin: 6px auto 4px auto;
+   margin: 12px auto 10px auto;
    line-height: 1rem;
    display: block;
    background-image: url('/arrow-down.svg');
    background-position: center;
-   background-size: 24px;
+   background-size: 20px;
    background-repeat: no-repeat;
 }
 
@@ -70,10 +112,10 @@
 }
 
 .tripDetails h3 {
-   font-size: 1.2rem;
+   font-size: 1.75rem;
    margin-bottom: 18px;
    text-align: center;
-   font-weight: 800;
+   font-weight: 600;
 }
 
 .closestDistricts .closestDistrict {
@@ -83,7 +125,6 @@
    text-align: left;
    margin-bottom: 6px;
    border-radius: 60px;
-   /* max-width: 340px; */
    margin: auto;
    margin-bottom: 6px;
    padding: 8px 0px;
@@ -99,6 +140,13 @@
    border-radius: 60px;
    background-color: var(--highlight-1);
    font-size: 1rem;
+}
+
+@media screen and (max-width: 320px) {
+   .closestDistrict button {
+      max-width: 50px;
+      border-radius: 6px;
+   }
 }
 
 .closestDistrict .name {
