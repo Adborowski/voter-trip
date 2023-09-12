@@ -1,8 +1,36 @@
 import styles from './trip.module.css'
 import { useState, useEffect } from 'react'
+import TripLocations from './trip-locations'
+import TripScore from './trip-score'
+import TripExplainer from './trip-explainer'
+import TripDistricts from './trip-districts'
 
 interface TripDetailsProps {
    scoredCircuits: ScoredCircuit[]
+}
+
+const TripDistrict = ({ district }: any) => {
+   const url = `https://www.google.com/maps/search/powiat+${district.district_id}/`
+   district.district_id = district.district_id.replace('powiat', '')
+
+   return (
+      <article className={styles.closestDistrict} key={district.district_id}>
+         <section className={styles.name}>
+            <span>{district.district_id}</span>
+         </section>
+
+         <section>
+            <span className={styles.distance}>{district.distanceFromOrigin?.toFixed(0)} km</span>
+         </section>
+         <button
+            onClick={() => {
+               window.open(url, '_blank')
+            }}
+         >
+            Zobacz powiat
+         </button>
+      </article>
+   )
 }
 
 const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
@@ -19,77 +47,10 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
       <article className={styles.tripDetails}>
          {isFavorite && <div className={styles.favoriteMarker} />}
 
-         <section className={styles.locations}>
-            <span>{originCity}</span>
-            <div className={styles.arrow}></div>
-            <span>{destinationCity}</span>
-         </section>
-         <section className={`${styles.score} ${score > 0 ? styles.good : styles.bad}`}>
-            {score}
-         </section>
-         {score < 0 && (
-            <section className={styles.scoreNote}>
-               <span>Brak korzystnych wycieczek wyborczych.</span>
-               <span>Głosuj u siebie.</span>
-            </section>
-         )}
-         <section className={styles.closestDistricts}>
-            <h3>Najbliższe powiaty</h3>
-
-            {closestDistricts &&
-               closestDistricts.map((district: District, index) => {
-                  district.district_id = district.district_id.replace('powiat', '')
-                  const lat = district.geometry.location.lat
-                  const lng = district.geometry.location.lng
-                  // const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
-                  const url = `https://www.google.com/maps/search/powiat+${district.district_id}/`
-
-                  if (index < 3) {
-                     return (
-                        <article className={styles.closestDistrict} key={district.district_id}>
-                           <section className={styles.name}>
-                              <span>{district.district_id}</span>
-                           </section>
-
-                           <section>
-                              <span className={styles.distance}>
-                                 {district.distanceFromOrigin?.toFixed(0)} km
-                              </span>
-                           </section>
-                           <button
-                              onClick={() => {
-                                 window.open(url, '_blank')
-                              }}
-                           >
-                              Zobacz powiat
-                           </button>
-                           {/* <button
-                              onClick={() => {
-                                 window.open(
-                                    `https://www.google.com/search?q=wykaz lokali wyborczych 2023 powiat${district.district_id}`
-                                 )
-                              }}
-                           >
-                              Znajdź lokale
-                           </button> */}
-                        </article>
-                     )
-                  }
-               })}
-         </section>
-         <div className={styles.explainerWrapper}>
-            <span>Odległości podane są w przybliżeniu.</span>
-
-            <span>
-               Kliknij 'zobacz powiat' aby wyświetlić granice i wytyczyć dokładną trasę ze swojej
-               lokalizacji.
-            </span>
-
-            <span>
-               Zanim wyruszysz w drogę, znajdź i zanotuj adres lokalu wyborczego. Tej informacji nie
-               znajdziesz w naszym systemie.
-            </span>
-         </div>
+         <TripLocations originCity={originCity} destinationCity={destinationCity} />
+         <TripScore score={score} />
+         <TripDistricts districts={closestDistricts} />
+         <TripExplainer />
       </article>
    )
 }

@@ -6,16 +6,9 @@
    justify-content: center;
    position: relative;
    overflow: hidden;
-   /* background-color: #212121; */
-   /* background: linear-gradient(180deg, #4ea147 0%, #376731 70%); */
-
-   /* background: linear-gradient(45deg, #4ea147, #376731, #3aa131);
-   background-size: 400% 400%;
-   animation: gradient 5s ease infinite; */
-
-   /* color: #4ea147; */
 }
 
+/* animated background - using ::before enables rotation */
 .tripPlanner::before {
    content: '';
    position: absolute;
@@ -227,4 +220,8 @@
    background-position: center;
    background-repeat: no-repeat;
    shape-rendering: auto;
+}
+
+.scoreWrapper {
+   /* border: 1px solid red; */
 }
