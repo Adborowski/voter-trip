@@ -6,7 +6,7 @@ const TripExplainer = () => {
          <span>Odległości podane są w przybliżeniu.</span>
 
          <span>
-            Kliknij 'zobacz powiat' aby wyświetlić granice i wytyczyć dokładną trasę ze swojej
+            Kliknij ZOBACZ POWIAT aby wyświetlić granice i wytyczyć dokładną trasę ze swojej
             lokalizacji.
          </span>
 
