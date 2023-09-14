@@ -5,22 +5,25 @@ const TripDistrict = ({ district }: any) => {
    district.district_id = district.district_id.replace('powiat', '')
 
    return (
-      <article className={styles.closestDistrict} key={district.district_id}>
-         <section className={styles.name}>
-            <span>{district.district_id}</span>
-         </section>
+      <>
+         <article className={styles.closestDistrict} key={district.district_id}>
+            <section className={styles.name}>
+               <span>{district.district_id}</span>
+            </section>
 
-         <section>
-            <span className={styles.distance}>{district.distanceFromOrigin?.toFixed(0)} km</span>
-         </section>
-         <button
-            onClick={() => {
-               window.open(url, '_blank')
-            }}
-         >
-            Zobacz powiat
-         </button>
-      </article>
+            <section>
+               <span className={styles.distance}>{district.distanceFromOrigin?.toFixed(0)} km</span>
+            </section>
+            <button
+               onClick={() => {
+                  window.open(url, '_blank')
+               }}
+            >
+               Zobacz powiat
+            </button>
+         </article>
+         <div className={styles.tourism}>{district.tourism}</div>
+      </>
    )
 }
 
@@ -31,7 +34,7 @@ const TripDistricts = ({ districts }: any) => {
             <h3>Najbliższe powiaty</h3>
 
             {districts.map((district: District, index: number) => {
-               if (index < 3) {
+               if (index < 1) {
                   return <TripDistrict key={district.district_id} district={district} />
                }
             })}

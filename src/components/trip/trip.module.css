@@ -1,6 +1,5 @@
 .tripPlanner {
    padding: 12px;
-   grid-gap: 12px;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -47,7 +46,6 @@
    color: white;
    border-radius: 60px;
    text-align: center;
-   margin-bottom: 24px;
    margin-top: 6px;
    font-weight: 400;
    font-size: 1.8rem;
@@ -247,4 +245,27 @@
 }
 
 .statItem.date {
+   color: white;
+   background-color: rgb(233, 0, 0);
+}
+
+.tourism {
+   margin-top: 18px;
+   font-size: 1rem;
+   font-weight: 400;
+   padding-left: 24px;
+   padding-right: 24px;
+   margin-bottom: 12px;
+   position: relative;
+}
+
+.tourism::before {
+   content: 'Rekomendacje turystyczne z ChatGPT';
+   position: absolute;
+   right: 0;
+   width: 100%;
+   text-align: center;
+   bottom: -22px;
+   color: black;
+   opacity: 0.12;
 }
