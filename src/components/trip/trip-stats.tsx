@@ -14,6 +14,7 @@ const TripStats = ({ circuit }: any) => {
       <section className={styles.tripStats}>
          <div className={styles.statItem}>{circuit.route.distance.text}</div>
          <div className={styles.statItem}>{time}</div>
+         <div className={`${styles.statItem} ${styles.date}`}>15.10.2023</div>
       </section>
    )
 }

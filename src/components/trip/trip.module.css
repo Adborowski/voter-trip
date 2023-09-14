@@ -74,13 +74,14 @@
 .tripDetails .locations {
    font-weight: 600;
    font-size: 2.3rem;
-   margin-bottom: 12px;
+   margin-bottom: 6px;
    text-align: center;
    /* border: 1px dashed black; */
    border-radius: 12px;
    padding: 12px;
    background-color: #fafafa;
    padding-bottom: 24px;
+   padding-top: 24px;
 }
 
 .tripDetails .locations .arrow {
@@ -100,7 +101,6 @@
    position: relative;
    background-color: white;
    border-radius: 12px;
-   margin-top: 12px;
    margin-bottom: 18px;
    padding: 18px;
 }
@@ -210,17 +210,17 @@
 }
 
 .favoriteMarker {
-   /* border: 1px solid red; */
-   width: 18px;
-   height: 18px;
-   position: absolute;
-   top: 12px;
-   right: 12px;
-   background-image: url('/star.svg');
-   background-size: 100%;
+   width: 36px;
+   height: 36px;
+   /* background-color: white; */
+   border-radius: 36px;
+   background-image: url('/star-white.svg');
+   background-size: 24px;
    background-position: center;
    background-repeat: no-repeat;
-   shape-rendering: auto;
+   margin: auto;
+   margin-top: 12px;
+   margin-bottom: 12px;
 }
 
 .scoreWrapper {
@@ -228,28 +228,23 @@
 }
 
 .tripStats {
+   /* position: absolute; */
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   /* grid-gap: 2px; */
-   position: absolute;
-   top: -15px;
-   width: 100%;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 6px;
+   margin-bottom: 6px;
 }
 
 .statItem {
-   font-size: 1.2rem;
-   margin-bottom: 3px;
+   /* border: 1px solid red; */
+   font-size: 1rem;
    font-weight: 600;
    text-align: center;
    background-color: #fafafa;
    padding-bottom: 6px;
    padding-top: 3px;
+   border-radius: 12px;
 }
 
-.statItem:first-of-type {
-   border-radius: 12px 0px 0px 0px;
-}
-
-.statItem:nth-of-type(2) {
-   border-radius: 0px 12px 0px 0px;
+.statItem.date {
 }

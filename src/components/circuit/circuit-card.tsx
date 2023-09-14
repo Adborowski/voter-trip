@@ -13,6 +13,9 @@ const CircuitCard = (circuit: any) => {
       swing_factor,
    } = circuit.circuit
 
+   const voteStrength = residentsPerMandate / 100
+   console.log(voteStrength)
+
    return (
       <div key={circuit_number + city_name} className={styles.circuitCard}>
          <section className={styles.circuitBasics}>
