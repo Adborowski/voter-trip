@@ -5,6 +5,7 @@ import TripScore from './trip-score'
 import TripExplainer from './trip-explainer'
 import TripDistricts from './trip-districts'
 import TripStats from './trip-stats'
+import CircuitList from '../circuit/circuit-list'
 
 interface TripDetailsProps {
    scoredCircuits: ScoredCircuit[]
@@ -19,14 +20,17 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
 
    const destination: ScoredCircuit = scoredCircuits[0]
    const { score, city_name: destinationCity, isFavorite } = destination
-   const originCity = scoredCircuits[scoredCircuits.length - 1].city_name
+
+   const origin: ScoredCircuit = scoredCircuits[scoredCircuits.length - 1]
+   const originCity = origin.city_name
 
    return (
       <article className={styles.tripDetails}>
          {isFavorite && <div className={styles.favoriteMarker} />}
          <TripStats circuit={destination} />
          <TripLocations originCity={originCity} destinationCity={destinationCity} />
-         <TripScore score={score} />
+         <CircuitList circuits={[origin, ...scoredCircuits]} length={2} />
+         {/* <TripScore score={score} /> */}
          <TripDistricts districts={closestDistricts} />
          <TripExplainer />
       </article>

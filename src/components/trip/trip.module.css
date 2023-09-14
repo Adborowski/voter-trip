@@ -80,6 +80,7 @@
    border-radius: 12px;
    padding: 12px;
    background-color: #fafafa;
+   padding-bottom: 24px;
 }
 
 .tripDetails .locations .arrow {
@@ -243,7 +244,6 @@
    background-color: #fafafa;
    padding-bottom: 6px;
    padding-top: 3px;
-   /* border-radius: 12px 12px 0px 0px; */
 }
 
 .statItem:first-of-type {

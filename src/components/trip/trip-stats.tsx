@@ -5,6 +5,7 @@ const TripStats = ({ circuit }: any) => {
 
    let time = circuit.route.duration.text
    time = time.replace('hours', 'h')
+   time = time.replace('hour', 'h')
    time = time.replace('mins', 'min')
    time = time.replaceAll(' ', '')
    time = time.replace('h', 'h ')

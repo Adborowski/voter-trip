@@ -22,8 +22,8 @@ const CircuitCard = (circuit: any) => {
 
          <SwingInfo circuit={circuit} />
          <section className={styles.circuitStats}>
-            <span className={styles.mandates}>Mandatów: {mandates}</span>
-            <span className={styles.population}>Mieszkańców: {residents}</span>
+            {/* <span className={styles.mandates}>Mandatów: {mandates}</span> */}
+            {/* <span className={styles.population}>Mieszkańców: {residents}</span> */}
             <span className={styles.residentsPerMandate}>
                Mieszkańców na mandat: {residentsPerMandate}
             </span>

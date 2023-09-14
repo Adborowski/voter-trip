@@ -11,17 +11,17 @@ const SwingInfo = (props: SwingInfoProps) => {
    let supportScale = 'Nieznana' // "mocna" , "umiarkowana" itd.
    let supportClass = ''
    if (swing_factor < 1.3) {
-      supportScale = 'Lekka'
+      supportScale = 'Mała'
       supportClass = styles.supportLight
    }
 
    if (swing_factor >= 1.3 && swing_factor < 2) {
-      supportScale = 'Mocna'
+      supportScale = 'Duża'
       supportClass = styles.supportStrong
    }
 
    if (swing_factor >= 2) {
-      supportScale = 'Bardzo mocna'
+      supportScale = 'Wielka'
       supportClass = styles.supportVeryStrong
    }
 

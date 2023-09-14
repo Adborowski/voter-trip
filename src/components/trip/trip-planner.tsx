@@ -26,7 +26,6 @@ const TripPlanner = (props: TripPlannerProps) => {
             Twoja wycieczka
          </h2>
          <TripDetails scoredCircuits={scoredCircuits} />
-         {/* <CircuitList circuits={scoredCircuits} length={tripCount} /> */}
       </section>
    )
 }
