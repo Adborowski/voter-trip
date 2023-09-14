@@ -246,12 +246,12 @@ const CircuitMap = ({
    useEffect(() => {
       if (selectedCircuit) {
          console.log('%cNew circuit:', 'color: yellow;', selectedCircuit.city_name)
-         //  window.setTimeout(() => {
-         //     window.scrollBy({
-         //        top: 650,
-         //        behavior: 'smooth',
-         //     })
-         //  }, 2000)
+         window.setTimeout(() => {
+            window.scrollBy({
+               top: 650,
+               behavior: 'smooth',
+            })
+         }, 2000)
       } else {
          console.log('No selectedCircuit')
       }

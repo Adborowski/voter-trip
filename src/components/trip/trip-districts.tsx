@@ -25,16 +25,19 @@ const TripDistrict = ({ district }: any) => {
 }
 
 const TripDistricts = ({ districts }: any) => {
-   return (
-      <section className={styles.closestDistricts}>
-         <h3>Najbliższe powiaty</h3>
-         {districts.map((district: District, index: number) => {
-            if (index < 3) {
-               return <TripDistrict key={district.district_id} district={district} />
-            }
-         })}
-      </section>
-   )
+   if (districts) {
+      return (
+         <section className={styles.closestDistricts}>
+            <h3>Najbliższe powiaty</h3>
+
+            {districts.map((district: District, index: number) => {
+               if (index < 3) {
+                  return <TripDistrict key={district.district_id} district={district} />
+               }
+            })}
+         </section>
+      )
+   }
 }
 
 export default TripDistricts
