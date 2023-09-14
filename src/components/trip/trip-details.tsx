@@ -26,10 +26,11 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
 
    return (
       <article className={styles.tripDetails}>
+         {isFavorite && <div className={styles.favoriteMarker} />}
+
          <TripStats circuit={destination} />
 
          <TripLocations originCity={originCity} destinationCity={destinationCity} />
-         {isFavorite && <div className={styles.favoriteMarker} />}
 
          <CircuitList circuits={[origin, ...scoredCircuits]} length={2} />
          {/* <TripScore score={score} /> */}
