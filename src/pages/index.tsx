@@ -36,7 +36,7 @@ export default function Home() {
          <section className={styles.quotesWrapper}>
             {quotes.map((quote) => {
                return (
-                  <article className={styles.quote}>
+                  <article key={quote.author} className={styles.quote}>
                      <div className={styles.content}>{quote.content}</div>
                      <Link className={styles.attribution} target={'_blank'} href={quote.link}>
                         {quote.author}
