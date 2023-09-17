@@ -264,7 +264,6 @@ const CircuitMap = ({
       if (scoredCircuits) {
          drawPolylines()
          drawDistrictPoints()
-         drawDistricts() // might not be possible
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
       } else {
@@ -413,14 +412,6 @@ const CircuitMap = ({
             point.setMap(null)
          })
       }
-   }
-
-   const drawDistricts = () => {
-      // console.log('%cDrawing districts...', 'color: red;')
-      // console.log(mapRef.current)
-      // console.log(mapsRef.current)
-      // const featureLayer = mapRef.current.getFeatureLayer(mapsRef.current.FeatureType.COUNTRY)
-      // console.log(featureLayer)
    }
 
    const onGoogleApiLoaded = ({ map, maps }: any) => {
