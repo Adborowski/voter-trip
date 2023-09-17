@@ -100,7 +100,7 @@
    background-color: white;
    border-radius: 12px;
    margin-bottom: 18px;
-   padding: 18px;
+   padding: 18px 30px;
 }
 
 .tripDetails h3 {
@@ -253,8 +253,6 @@
    margin-top: 18px;
    font-size: 1rem;
    font-weight: 400;
-   padding-left: 24px;
-   padding-right: 24px;
    margin-bottom: 12px;
    position: relative;
 }
