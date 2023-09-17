@@ -49,6 +49,7 @@
    margin-top: 6px;
    font-weight: 400;
    font-size: 1.8rem;
+   margin-bottom: 18px;
 }
 
 .tripDetails {
@@ -162,6 +163,7 @@
 }
 
 .explainerWrapper {
+   display: none;
    margin-bottom: 12px;
 }
 
