@@ -50,11 +50,12 @@ export const ShareFacebook = (props: any) => {
    return (
       <FacebookShareButton
          className={styles.shareButton}
-         children={<FacebookIcon />}
          url={'www.wycieczkawyborcza.pl'}
          quote={'Jedziemy na wycieczkę'}
          hashtag={'#wycieczkawyborcza'}
-      />
+      >
+         <FacebookIcon />
+      </FacebookShareButton>
    )
 }
 
@@ -66,7 +67,8 @@ export const ShareLinkedIn = (props: any) => {
          title={'Wycieczka Wyborcza'}
          summary={'Jedziemy na wycieczkę wyborczą'}
          source={'www.wycieczkawyborcza.pl'}
-         children={<LinkedinIcon />}
-      />
+      >
+         <LinkedinIcon />
+      </LinkedinShareButton>
    )
 }
