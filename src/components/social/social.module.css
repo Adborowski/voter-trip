@@ -1,0 +1,26 @@
+.socialPanel {
+   height: 42px;
+   margin-bottom: 12px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 12px;
+   /* background-color: lime; */
+}
+
+.shareButton {
+   overflow: hidden;
+   border-radius: 6px !important;
+   width: 42px;
+   height: 42px;
+   margin: 0 !important;
+   padding: 0 !important;
+}
+
+.shareButton > * {
+   display: block !important;
+   height: 100% !important;
+   width: 100% !important;
+   margin: 0 !important;
+   padding: 0 !important;
+}

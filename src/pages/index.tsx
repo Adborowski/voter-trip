@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from './index.module.scss'
+import { ShareFacebook, ShareLinkedIn } from '@/components/social/social'
 
 export default function Home() {
    const router = useRouter()
@@ -33,6 +34,8 @@ export default function Home() {
    return (
       <div className={styles.index}>
          <h1>Wycieczka Wyborcza</h1>
+         <ShareFacebook />
+         <ShareLinkedIn />
          <section className={styles.quotesWrapper}>
             {quotes.map((quote) => {
                return (
