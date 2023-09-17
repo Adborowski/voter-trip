@@ -1,0 +1,11 @@
+import styles from './loading.module.css'
+
+const Loading = () => {
+   return (
+      <div className={styles.loadingWrapper}>
+         <div className={styles.loading}>Loading...</div>
+      </div>
+   )
+}
+
+export default Loading

@@ -282,8 +282,7 @@ const CircuitMap = ({
          }
       })
 
-      const zoomPad = 20
-      mapRef.current.fitBounds(bounds, 100)
+      mapRef.current.fitBounds(bounds)
    }
 
    const clearPolylines = () => {

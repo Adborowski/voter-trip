@@ -53,6 +53,10 @@ export default function Home() {
 
       unselectCircuit()
       mapRef.current.fitBounds(bounds)
+
+      if (window.innerWidth < 500) {
+         mapRef.current.setZoom(6)
+      }
    }
 
    const getMapRef = (mapRef: any) => {
@@ -116,7 +120,7 @@ export default function Home() {
 
          <CircuitMap
             selectedCircuit={selectedCircuit}
-            selectCircuit={selectCircuit} // handler
+            selectCircuit={selectCircuit}
             circuitList={circuits}
             scoredCircuits={scoredCircuits}
             tripCount={tripCount}

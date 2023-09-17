@@ -1,8 +1,7 @@
-import { useEffect, useState, useRef } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from './index.module.scss'
-import { ShareFacebook, ShareLinkedIn } from '@/components/social/social'
+import SocialPanel from '@/components/social/social-panel'
 
 export default function Home() {
    const router = useRouter()
@@ -34,8 +33,7 @@ export default function Home() {
    return (
       <div className={styles.index}>
          <h1>Wycieczka Wyborcza</h1>
-         <ShareFacebook />
-         <ShareLinkedIn />
+         <SocialPanel />
          <section className={styles.quotesWrapper}>
             {quotes.map((quote) => {
                return (
@@ -44,7 +42,6 @@ export default function Home() {
                      <Link className={styles.attribution} target={'_blank'} href={quote.link}>
                         {quote.author}
                      </Link>
-                     {/* <div className={styles.attribution}>{quote.author}</div> */}
                   </article>
                )
             })}

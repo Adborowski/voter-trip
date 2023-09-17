@@ -31,10 +31,10 @@ const CircuitCard = (circuit: any) => {
                Mieszkańców na mandat: {residentsPerMandate}
             </span>
          </section>
-         <section className={styles.circuitVoteHistory}>
+         {/* <section className={styles.circuitVoteHistory}>
             <span className={styles.historicVotes}>[2019] głosy KO {votes_ko_2019}</span>
             <span className={styles.population}>[2019] głosy PIS {votes_pis_2019}</span>
-         </section>
+         </section> */}
       </div>
    )
 }
