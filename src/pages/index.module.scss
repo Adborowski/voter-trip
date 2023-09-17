@@ -1,0 +1,48 @@
+.index {
+   h1 {
+      text-align: center;
+      margin-top: 18px;
+   }
+
+   button {
+      margin: auto;
+      display: block;
+      padding: 12px 24px;
+      font-size: 1.5rem;
+      border-radius: 24px;
+      background-color: var(--highlight-1);
+      font-weight: 600;
+      margin-bottom: 36px;
+   }
+}
+
+.quotesWrapper {
+   padding: 18px;
+   max-width: 400px;
+   margin: auto;
+
+   .quote {
+      background-color: white;
+      padding: 18px;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      line-height: 18px;
+
+      .content {
+         //  font-style: italic;
+      }
+
+      .attribution {
+         margin-top: 12px;
+         text-align: right;
+         text-decoration: underline;
+         color: black !important;
+         display: block;
+
+         &:active,
+         &:visited {
+            color: black !important;
+         }
+      }
+   }
+}

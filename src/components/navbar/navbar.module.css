@@ -95,11 +95,11 @@
    color: white;
 }
 
-.btnUp {
-   background-image: url('/arrow-up.svg');
+.btnBack {
+   background-image: url('/arrow-left-back.svg');
    background-position: center;
    background-repeat: no-repeat;
-   background-size: 15px;
+   background-size: 18px;
    width: 25px;
    height: 30px;
 }

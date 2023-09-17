@@ -163,7 +163,6 @@
 }
 
 .explainerWrapper {
-   display: none;
    margin-bottom: 12px;
 }
 
@@ -260,12 +259,12 @@
 }
 
 .tourism::before {
-   content: 'Rekomendacje turystyczne z ChatGPT';
+   content: 'Opis turystyczny generowany automatycznie';
    position: absolute;
    right: 0;
    width: 100%;
    text-align: center;
-   bottom: -22px;
+   bottom: -20px;
    color: black;
    opacity: 0.12;
 }

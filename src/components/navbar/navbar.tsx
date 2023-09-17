@@ -1,6 +1,5 @@
 import styles from './navbar.module.css'
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
 
 interface NavbarProps {
    selectedCircuit: Circuit | undefined
@@ -12,6 +11,7 @@ interface NavbarProps {
 
 const Navbar = (props: NavbarProps) => {
    const { selectedCircuit, planTrip, mapRef, mapsRef, resetMap } = props
+   const router = useRouter()
 
    const scrollToTrips = () => {
       if (selectedCircuit) {
@@ -42,7 +42,12 @@ const Navbar = (props: NavbarProps) => {
 
          {selectedCircuit && (
             <section className={styles.controls}>
-               <button className={styles.btnUp} onClick={scrollToMap}></button>
+               <button
+                  className={styles.btnBack}
+                  onClick={() => {
+                     router.push('/')
+                  }}
+               ></button>
                <button
                   className={styles.btnReset}
                   onClick={() => {
@@ -50,7 +55,7 @@ const Navbar = (props: NavbarProps) => {
                   }}
                >
                   <aside className={styles.buttonIcon}></aside>
-                  <span> Zacznij od nowa</span>
+                  <span>Zacznij od nowa</span>
                </button>
             </section>
          )}

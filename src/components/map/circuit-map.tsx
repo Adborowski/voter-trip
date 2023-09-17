@@ -248,7 +248,7 @@ const CircuitMap = ({
          console.log('%cNew circuit:', 'color: yellow;', selectedCircuit.city_name)
          window.setTimeout(() => {
             window.scrollBy({
-               top: 650,
+               top: window.innerHeight,
                behavior: 'smooth',
             })
          }, 2000)

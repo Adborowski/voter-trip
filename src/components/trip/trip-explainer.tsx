@@ -3,16 +3,14 @@ import styles from './trip.module.css'
 const TripExplainer = () => {
    return (
       <div className={styles.explainerWrapper}>
-         <span>Odległości podane są w przybliżeniu.</span>
-
          <span>
-            Kliknij ZOBACZ POWIAT aby wyświetlić granice i wytyczyć dokładną trasę ze swojej
-            lokalizacji.
+            Możesz zagłosować w dowolnej miejscowości na terenie powiatu. Kliknij ZOBACZ POWIAT i
+            znajdź miejscowość najbliższą do twojego miejsca zamieszkania.
          </span>
 
          <span>
-            Zanim wyruszysz w drogę, znajdź i zanotuj adres lokalu wyborczego. Tej informacji nie
-            znajdziesz w naszym systemie.
+            Przed wyruszeniem w drogę wyszukaj adres konkretnego lokalu wyborczego w tej
+            miejscowości. Tej informacji nie znajdziesz na naszej platformie.
          </span>
       </div>
    )

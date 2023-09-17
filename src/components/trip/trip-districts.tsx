@@ -22,7 +22,7 @@ const TripDistrict = ({ district }: any) => {
                Zobacz powiat
             </button>
          </article>
-         <div className={styles.tourism}>{district.tourism}</div>
+         {district.tourism && <div className={styles.tourism}>{district.tourism}</div>}
       </>
    )
 }
@@ -31,7 +31,7 @@ const TripDistricts = ({ districts }: any) => {
    if (districts) {
       return (
          <section className={styles.closestDistricts}>
-            <h3>Najbliższe powiaty</h3>
+            <h3>Najbliższy powiat</h3>
 
             {districts.map((district: District, index: number) => {
                if (index < 1) {
