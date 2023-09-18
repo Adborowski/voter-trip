@@ -416,7 +416,11 @@ const CircuitMap = ({
    const onGoogleApiLoaded = ({ map, maps }: any) => {
       mapRef.current = map
       mapsRef.current = maps
-      resetMap(mapsRef, mapRef)
+
+      if (window.innerWidth > 500) {
+         resetMap(mapsRef, mapRef)
+      }
+
       setMapReady(true)
    }
 

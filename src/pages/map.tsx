@@ -47,16 +47,13 @@ export default function Home() {
       if (selectedCircuit) {
          bounds.extend({ lat: selectedCircuit?.latitude, lng: selectedCircuit?.longitude }) // add starter town
       }
-      extremePoints.forEach((point, index) => {
+      extremePoints.forEach((point) => {
          bounds.extend({ lat: point.lat, lng: point.lng })
       })
 
       unselectCircuit()
-      mapRef.current.fitBounds(bounds)
 
-      if (window.innerWidth < 500) {
-         mapRef.current.setZoom(6)
-      }
+      mapRef.current.fitBounds(bounds)
    }
 
    const getMapRef = (mapRef: any) => {
