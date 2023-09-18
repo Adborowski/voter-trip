@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Navbar from '@/components/navbar/navbar'
 import CircuitCard from '@/components/circuit/circuit-card'
 import TripPlanner from '@/components/trip/trip-planner'
+import Loading from '@/components/loading/loading'
 
 export default function Home() {
    const [circuits, setCircuits] = useState<Circuit[]>()
@@ -12,6 +13,7 @@ export default function Home() {
    const [mapResetId, setMapResetId] = useState<any>()
    const [mapRef, setMapRef] = useState<any>()
    const [mapsRef, setMapsRef] = useState<any>()
+   const [isLoading, setIsLoading] = useState<boolean>(false)
    const tripCount = 1 // how many top trips to show on List and Map (1)
 
    useEffect(() => {
@@ -74,7 +76,7 @@ export default function Home() {
       }
 
       console.log(payload)
-
+      setIsLoading(true)
       fetch('/api/get-scored-circuits', {
          method: 'POST',
          body: JSON.stringify(payload),
@@ -85,6 +87,7 @@ export default function Home() {
          .then((res) => res.json())
          .then((scoredCircuits) => {
             if (scoredCircuits) {
+               setIsLoading(false)
                console.log('[get-scored-circuits]', scoredCircuits)
                setScoredCircuits(scoredCircuits)
                setSelectedCircuit(
@@ -114,6 +117,8 @@ export default function Home() {
             planTrip={planTrip}
             resetMap={resetMap}
          />
+
+         {isLoading && <Loading />}
 
          <CircuitMap
             selectedCircuit={selectedCircuit}
