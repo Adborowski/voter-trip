@@ -2,11 +2,10 @@ import { useEffect, useState, useRef } from 'react'
 import CircuitMap from '@/components/map/circuit-map'
 import Head from 'next/head'
 import Navbar from '@/components/navbar/navbar'
-import CircuitCard from '@/components/circuit/circuit-card'
 import TripPlanner from '@/components/trip/trip-planner'
 import Loading from '@/components/loading/loading'
 
-export default function Home() {
+export default function Map(props: any) {
    const [circuits, setCircuits] = useState<Circuit[]>()
    const [selectedCircuit, setSelectedCircuit] = useState<Circuit | undefined>()
    const [scoredCircuits, setScoredCircuits] = useState<ScoredCircuit[] | undefined>()
@@ -24,9 +23,25 @@ export default function Home() {
                console.log(circuits)
                setCircuits(circuits)
             }
+
+            // if (props.originId) {
+            //    const urlTripOrigin = getCircuitByNumber(parseInt(props.originId))
+            //    if (urlTripOrigin) {
+            //       planTrip(urlTripOrigin)
+            //    }
+            // }
          })
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
+
+   useEffect(() => {
+      if (props.originId) {
+         //  const urlTripOrigin = getCircuitByNumber(parseInt(props.originId))
+         //  if (urlTripOrigin) {
+         //     planTrip(urlTripOrigin)
+         //  }
+      }
+   }, [props.originId])
 
    const selectCircuit = (circuit: Circuit) => {
       console.log('selectCircuit()')

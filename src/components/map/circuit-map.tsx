@@ -1,5 +1,6 @@
 import styles from './circuit-map.module.css'
 import { useEffect, useState, useRef } from 'react'
+import { useRouter } from 'next/router'
 import MapNode from './map-node'
 import GoogleMap from 'google-maps-react-markers'
 
@@ -33,6 +34,7 @@ const CircuitMap = ({
    const [activePoints, setActivePoints] = useState<[]>()
    const [mapCircuits, setMapCircuits] = useState<Circuit[] | undefined>(circuitList)
    const polandCenter = { lat: 51.9194, lng: 19.1451 }
+   const router = useRouter()
 
    const mapOptions = {
       center: {
@@ -413,12 +415,31 @@ const CircuitMap = ({
       }
    }
 
+   const getCircuitByNumber = (circuitNumber: number) => {
+      //
+      console.log('Getting circuit from number', circuitNumber)
+      const filteredCircuits: any = circuitList?.filter((circuit) => {
+         if (circuit.circuit_number === circuitNumber) {
+            console.log('Match', circuit.circuit_number, circuitNumber)
+            return true
+         }
+      })
+
+      return filteredCircuits[0]
+   }
+
    const onGoogleApiLoaded = ({ map, maps }: any) => {
       mapRef.current = map
       mapsRef.current = maps
 
       if (window.innerWidth > 500) {
          resetMap(mapsRef, mapRef)
+      }
+
+      if (router.query.originId) {
+         // @ts-ignore
+         const id = parseInt(router.query.originId)
+         selectCircuit(getCircuitByNumber(id))
       }
 
       setMapReady(true)
