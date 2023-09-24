@@ -6,10 +6,10 @@ export default function Document() {
          <Head>
             <title>Wycieczka Wyborcza 2023</title>
             <meta property="og:url" content={'aaaa'} key="ogurl" />
-            <meta property="og:image" content={'aaaa'} key="ogimage" />
+            <meta property="og:image" content={'bbbb'} key="ogimage" />
             <meta property="og:site_name" content="Calvin Torra" key="ogsitename" />
-            <meta property="og:title" content={'aaaa'} key="ogtitle" />
-            <meta property="og:description" content={'aaaa'} key="ogdesc" />
+            <meta property="og:title" content={'cccc'} key="ogtitle" />
+            <meta property="og:description" content={'dddd'} key="ogdesc" />
          </Head>
          <body>
             <Main />
