@@ -425,7 +425,9 @@ const CircuitMap = ({
          }
       })
 
-      return filteredCircuits[0]
+      if (filteredCircuits.length) {
+         return filteredCircuits[0]
+      }
    }
 
    const onGoogleApiLoaded = ({ map, maps }: any) => {
@@ -439,7 +441,10 @@ const CircuitMap = ({
       if (router.query.originId) {
          // @ts-ignore
          const id = parseInt(router.query.originId)
-         selectCircuit(getCircuitByNumber(id))
+
+         if (getCircuitByNumber(id)) {
+            selectCircuit(getCircuitByNumber(id))
+         }
       }
 
       setMapReady(true)
