@@ -47,7 +47,6 @@ import {
 } from 'react-share'
 
 export const ShareFacebook = (props: any) => {
-   console.log(location.href)
    return (
       <FacebookShareButton
          className={styles.shareButton}
