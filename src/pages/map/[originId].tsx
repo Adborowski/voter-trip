@@ -8,17 +8,16 @@ export async function generateMetadata(
    parent: ResolvingMetadata
 ): Promise<Metadata> {
    // read route params
-   const id = params.id
+   const originId = params.originId
 
    // fetch data
-   const router = useRouter()
-   console.log('GENERATOR', router.query)
+   //  console.log('GENERATOR', router.query)
 
    return {
-      title: 'I am title',
+      title: `Super title ${originId}`,
       description: 'I am description!',
       openGraph: {
-         title: 'I am OG Title',
+         title: `I am OG Title ${originId}`,
          description: 'I am OG Desc',
          url: 'https://adamborowski.com',
          siteName: 'OG Sitename',
