@@ -46,6 +46,8 @@ import {
    WorkplaceIcon,
 } from 'react-share'
 
+// og metatag testing needs to be done on a link
+
 export const ShareFacebook = (props: any) => {
    return (
       <FacebookShareButton
