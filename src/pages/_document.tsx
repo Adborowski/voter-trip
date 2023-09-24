@@ -5,11 +5,11 @@ export default function Document() {
       <Html lang="en">
          <Head>
             <title>Wycieczka Wyborcza 2023</title>
-
-            <meta
-               name="description"
-               content="15 października twój głos może być silniejszy gdzieś indziej"
-            />
+            <meta property="og:url" content={'aaaa'} key="ogurl" />
+            <meta property="og:image" content={'aaaa'} key="ogimage" />
+            <meta property="og:site_name" content="Calvin Torra" key="ogsitename" />
+            <meta property="og:title" content={'aaaa'} key="ogtitle" />
+            <meta property="og:description" content={'aaaa'} key="ogdesc" />
          </Head>
          <body>
             <Main />

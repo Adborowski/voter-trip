@@ -1,7 +1,8 @@
 import styles from './social.module.css'
 import { ShareFacebook, ShareLinkedIn } from './social'
 
-const SocialPanel = () => {
+const SocialPanel = (props: any) => {
+   const { originId } = props
    return (
       <div className={styles.socialPanel}>
          <ShareFacebook />

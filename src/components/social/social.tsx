@@ -47,10 +47,12 @@ import {
 } from 'react-share'
 
 export const ShareFacebook = (props: any) => {
+   console.log(location.href)
    return (
       <FacebookShareButton
          className={styles.shareButton}
-         url={'www.wycieczkawyborcza.pl'}
+         title={'hi'}
+         url={`https://voter-trip.vercel.app/map`}
          quote={'Jedziemy na wycieczkę'}
          hashtag={'#wycieczkawyborcza'}
       >
