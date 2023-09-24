@@ -1,5 +1,5 @@
 import styles from './social.module.css'
-import { ShareFacebook, ShareLinkedIn } from './social'
+import { ShareFacebook, ShareLinkedIn, ShareTwitter } from './social'
 
 const SocialPanel = (props: any) => {
    const { originId } = props
@@ -7,6 +7,7 @@ const SocialPanel = (props: any) => {
       <div className={styles.socialPanel}>
          <ShareFacebook />
          <ShareLinkedIn />
+         <ShareTwitter />
       </div>
    )
 }

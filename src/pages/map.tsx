@@ -23,25 +23,9 @@ export default function Map(props: any) {
                console.log(circuits)
                setCircuits(circuits)
             }
-
-            // if (props.originId) {
-            //    const urlTripOrigin = getCircuitByNumber(parseInt(props.originId))
-            //    if (urlTripOrigin) {
-            //       planTrip(urlTripOrigin)
-            //    }
-            // }
          })
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
-
-   useEffect(() => {
-      if (props.originId) {
-         //  const urlTripOrigin = getCircuitByNumber(parseInt(props.originId))
-         //  if (urlTripOrigin) {
-         //     planTrip(urlTripOrigin)
-         //  }
-      }
-   }, [props.originId])
 
    const selectCircuit = (circuit: Circuit) => {
       console.log('selectCircuit()')
@@ -124,6 +108,7 @@ export default function Map(props: any) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
             <meta property="og:title" content="The Rock" />
+            <meta property="og:description" content="The Rock description" />
             <meta property="og:type" content="video.movie" />
             <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
             <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
