@@ -20,9 +20,9 @@ const TripMap = () => {
             <link rel="icon" href="/favicon.ico" />
             <meta property="og:title" content={'Nice title'} />
             <meta property="og:description" content={'Nice desc'} />
-            <meta property="og:type" content="video.movie" />
-            <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
-            <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+            <meta property="og:type" content={"video.movie"} />
+            <meta property="og:url" content={"https://www.imdb.com/title/tt0117500/"} />
+            <meta property="og:image" content={"https://ia.media-imdb.com/images/rock.jpg"} />
          </Head>
          <Map originId={originId} />
       </>
