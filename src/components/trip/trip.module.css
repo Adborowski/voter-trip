@@ -241,8 +241,8 @@
    text-align: center;
    background-color: #fafafa;
    padding-bottom: 6px;
-   padding-top: 3px;
-   border-radius: 12px;
+   padding-top: 6px;
+   border-radius: 12px 12px 6px 6px;
 }
 
 .statItem.date {

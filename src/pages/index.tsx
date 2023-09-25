@@ -34,6 +34,14 @@ export default function Home() {
       <div className={styles.index}>
          <h1>Wycieczka Wyborcza</h1>
          <SocialPanel />
+
+         <button
+            onClick={() => {
+               router.push('/map')
+            }}
+         >
+            Zaplanuj wycieczkę
+         </button>
          <section className={styles.quotesWrapper}>
             {quotes.map((quote) => {
                return (
@@ -46,13 +54,6 @@ export default function Home() {
                )
             })}
          </section>
-         <button
-            onClick={() => {
-               router.push('/map')
-            }}
-         >
-            Zaplanuj wycieczkę
-         </button>
       </div>
    )
 }

@@ -22,7 +22,6 @@
 }
 
 .shareButton > * {
-   border: 2px solid white;
    border-radius: 6px;
    display: block !important;
    height: 100% !important;

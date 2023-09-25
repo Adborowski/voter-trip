@@ -78,7 +78,7 @@ export const ShareLinkedIn = (props: any) => {
 
 export const ShareTwitter = (props: any) => {
    return (
-      <TwitterShareButton url={`https://voter-trip.vercel.app/map`}>
+      <TwitterShareButton className={styles.shareButton} url={`https://voter-trip.vercel.app/map`}>
          <TwitterIcon />
       </TwitterShareButton>
    )
