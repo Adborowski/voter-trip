@@ -20,6 +20,7 @@ export default function Map(props: any) {
    const router = useRouter()
 
    useEffect(() => {
+      setIsLoading(true)
       fetch('/api/get-circuits')
          .then((res) => res.json())
          .then((circuits) => {
@@ -39,6 +40,12 @@ export default function Map(props: any) {
          planTrip(urlCircuit)
       }
    }, [circuits])
+
+   useEffect(() => {
+      if (mapRef) {
+         setIsLoading(false)
+      }
+   }, [mapRef])
 
    const selectCircuit = (circuit: Circuit) => {
       console.log('selectCircuit()')
