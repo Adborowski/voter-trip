@@ -127,18 +127,18 @@ export default function Map(props: any) {
             <title>Vote Tripper</title>
             <meta
                name="description"
-               content="Twój głos ma różną siłę w zależności od tego, gdzie głosujesz. Dowiedz się gdzie pojechać aby zagłosować najmocniej."
+               content="Twój głos ma różną siłę w zależności od tego, gdzie głosujesz. Dokąd jechać aby oddać mocniejszy głos?"
             />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
             <meta
                property="og:title"
-               content="Oddaj swój głos tam, gdzie zmieni najwięcej. Zobacz mapę."
+               content="Oddaj swój głos tam, gdzie zmieni najwięcej - ZOBACZ MAPĘ"
             />
             <meta property="title" content="Wycieczka wyborcza" />
             <meta
                property="og:description"
-               content="Twój głos ma różną siłę w zależności od tego, gdzie głosujesz. Dowiedz się gdzie pojechać aby zagłosować najmocniej."
+               content="Twój głos ma różną siłę w zależności od tego, gdzie głosujesz. Dokąd jechać aby oddać mocniejszy głos?"
             />
             <meta property="og:url" content="https://www.wycieczkawyborcza.pl" />
             <meta
@@ -151,7 +151,8 @@ export default function Map(props: any) {
                content="https://imageupload.io/ib/XiisnS3cCgsDs2s_1695757612.png"
             />
             <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:title" content="Oddaj swój głos tam, gdzie zmieni najwięcej." />
+            <meta property="twitter:title" content="Dokąd jechać aby oddać mocniejszy głos?" />
+            <meta property="twitter:url" content="https://www.wycieczkawyborcza.pl" />
          </Head>
 
          <Navbar
