@@ -140,7 +140,7 @@ export default function Map(props: any) {
             <meta property="og:url" content="https://www.wycieczkawyborcza.pl" />
             <meta
                property="og:image"
-               content="https://upload.wikimedia.org/wikipedia/commons/7/78/Landscape_of_Tarome%2C_2022_03.jpg"
+               content="https://imageupload.io/ib/XiisnS3cCgsDs2s_1695757612.png"
             />
          </Head>
 
