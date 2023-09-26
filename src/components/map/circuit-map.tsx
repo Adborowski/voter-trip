@@ -415,21 +415,6 @@ const CircuitMap = ({
       }
    }
 
-   const getCircuitByNumber = (circuitNumber: number) => {
-      //
-      console.log('Getting circuit from number', circuitNumber, circuitList)
-      const filteredCircuits: any = circuitList?.filter((circuit) => {
-         if (circuit.circuit_number === circuitNumber) {
-            console.log('Match', circuit.circuit_number, circuitNumber)
-            return true
-         }
-      })
-
-      if (filteredCircuits.length) {
-         return filteredCircuits[0]
-      }
-   }
-
    const onGoogleApiLoaded = ({ map, maps }: any) => {
       mapRef.current = map
       mapsRef.current = maps
@@ -438,14 +423,14 @@ const CircuitMap = ({
          resetMap(mapsRef, mapRef)
       }
 
-      if (router.query.originId) {
-         // @ts-ignore
-         const id = parseInt(router.query.originId)
+      // if (router.query.originId) {
+      //    // @ts-ignore
+      //    const id = parseInt(router.query.originId)
 
-         if (getCircuitByNumber(id)) {
-            selectCircuit(getCircuitByNumber(id))
-         }
-      }
+      //    if (getCircuitByNumber(id)) {
+      //       selectCircuit(getCircuitByNumber(id))
+      //    }
+      // }
 
       setMapReady(true)
    }

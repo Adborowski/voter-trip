@@ -1,9 +1,11 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import CircuitMap from '@/components/map/circuit-map'
 import Head from 'next/head'
 import Navbar from '@/components/navbar/navbar'
 import TripPlanner from '@/components/trip/trip-planner'
 import Loading from '@/components/loading/loading'
+import { useRouter } from 'next/router'
+import { getCircuitByNumber } from '@/components/util/util'
 
 export default function Map(props: any) {
    const [circuits, setCircuits] = useState<Circuit[]>()
@@ -14,6 +16,8 @@ export default function Map(props: any) {
    const [mapsRef, setMapsRef] = useState<any>()
    const [isLoading, setIsLoading] = useState<boolean>(false)
    const tripCount = 1 // how many top trips to show on List and Map (1)
+
+   const router = useRouter()
 
    useEffect(() => {
       fetch('/api/get-circuits')
@@ -26,6 +30,15 @@ export default function Map(props: any) {
          })
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
+
+   useEffect(() => {
+      if (circuits && router.query.originId) {
+         //  @ts-ignore
+         const originId = parseInt(router.query.originId)
+         const urlCircuit = getCircuitByNumber(circuits, originId)
+         planTrip(urlCircuit)
+      }
+   }, [circuits])
 
    const selectCircuit = (circuit: Circuit) => {
       console.log('selectCircuit()')
