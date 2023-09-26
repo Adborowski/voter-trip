@@ -124,7 +124,7 @@ export default function Map(props: any) {
    return (
       <>
          <Head>
-            <title>Vote Tripper</title>
+            <title>Wycieczka Wyborcza</title>
             <meta
                name="description"
                content="Twój głos ma różną siłę w zależności od tego, gdzie głosujesz. Dokąd jechać aby oddać mocniejszy głos?"
