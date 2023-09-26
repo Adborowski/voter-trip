@@ -133,7 +133,7 @@ export default function Map(props: any) {
             <link rel="icon" href="/favicon.ico" />
             <meta
                property="og:title"
-               content="15.10 głosuj tam, gdzie Twój głos może więcej. Dowiedz się, dokąd jechać."
+               content="Oddaj swój głos tam, gdzie zmieni najwięcej. Zobacz mapę."
             />
             <meta property="title" content="Wycieczka wyborcza" />
             <meta
@@ -145,6 +145,13 @@ export default function Map(props: any) {
                property="og:image"
                content="https://imageupload.io/ib/XiisnS3cCgsDs2s_1695757612.png"
             />
+
+            <meta
+               property="twitter:image"
+               content="https://imageupload.io/ib/XiisnS3cCgsDs2s_1695757612.png"
+            />
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:title" content="Oddaj swój głos tam, gdzie zmieni najwięcej." />
          </Head>
 
          <Navbar
