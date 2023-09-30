@@ -1,7 +1,15 @@
 .index {
+   background-color: var(--green-1);
+   padding-top: 24px;
+   min-height: 100vh;
+
+   //  --gradient-1: linear-gradient(45deg, #4ea147, #376731, #3aa131);
+   //  --gradient-2: linear-gradient(45deg, #40af6e, #376731, #77ff89);
    h1 {
       text-align: center;
-      margin-top: 18px;
+      font-weight: 800;
+      color: white;
+      font-family: 'Drogowskaz';
    }
 
    button {
@@ -44,5 +52,14 @@
             color: black !important;
          }
       }
+   }
+}
+
+.btnPlanTrip {
+   cursor: pointer;
+   transition: 0.1s linear all;
+
+   &:hover {
+      filter: brightness(1.05);
    }
 }

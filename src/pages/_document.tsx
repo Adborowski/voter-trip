@@ -6,16 +6,6 @@ export default function Document() {
       <Html lang="en">
          <Head>
             <title>Wycieczka Wyborcza 2023</title>
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-MB09TB5XC8" />
-            <Script id="google-analytics">
-               {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-        
-                  gtag('config', 'G-MB09TB5XC8');
-              `}
-            </Script>
          </Head>
 
          <body>

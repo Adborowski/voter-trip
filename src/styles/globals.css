@@ -1,12 +1,32 @@
 @import url('./includes/fonts.css');
 
+@font-face {
+   font-family: 'Drogowskaz';
+   src: url('/fonts/Drogowskaz.woff2') format('woff2');
+   /* font-weight: normal; */
+   /* font-display: swap; */
+}
+
+@font-face {
+   font-family: 'Bebas';
+   src: url('/fonts/Bebas.ttf') format('truetype');
+   /* font-weight: normal; */
+   /* font-display: swap; */
+}
+
+@font-face {
+   font-family: 'Tablica';
+   src: url('/fonts/Tablica.ttf') format('truetype');
+   /* font-weight: normal; */
+   /* font-display: swap; */
+}
+
 * {
    border: 0;
    box-sizing: border-box;
    padding: 0;
    margin: 0;
    font-family: 'Lato';
-   /* font-family: 'Drogowskaz'; */
 }
 
 html {
@@ -30,6 +50,8 @@ body * {
 }
 
 :root {
+   --green-1: #2c5c32;
+   --green-2: #438a4c;
    --light-1: rgb(221, 221, 221);
    --shadow-1: rgb(0, 75, 126);
    --highlight-1: rgb(255, 208, 0);
@@ -37,6 +59,8 @@ body * {
    --highlight-3: rgb(75, 252, 59);
    --highlight-4: rgb(98, 255, 247);
    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+   --gradient-1: linear-gradient(45deg, #4ea147, #376731, #3aa131);
+   --gradient-2: linear-gradient(45deg, #40af6e, #376731, #77ff89);
 }
 
 body::-webkit-scrollbar {

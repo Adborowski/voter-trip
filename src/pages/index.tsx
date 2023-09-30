@@ -36,6 +36,7 @@ export default function Home() {
          <SocialPanel />
 
          <button
+            className={styles.btnPlanTrip}
             onClick={() => {
                router.push('/map')
             }}
