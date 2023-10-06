@@ -69,27 +69,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const originNum = tripOrigin.circuit_number
       const targetNumString = circuit.circuit_number.toString()
       const originExtraScore = scoreMap.get(originNum)
+
+      console.log(originExtraScore)
       let favoriteTargets = originExtraScore.favorite_targets
 
-      if (favoriteTargets) {
-         // multiple favorite targets
-         if (typeof favoriteTargets == 'string') {
-            favoriteTargets = favoriteTargets.replace(/\s/g, '') // remove whitespace
-            favoriteTargets = favoriteTargets.split(',')
-         }
+      // if (favoriteTargets) {
+      //    // multiple favorite targets
+      //    if (typeof favoriteTargets == 'string') {
+      //       favoriteTargets = favoriteTargets.replace(/\s/g, '') // remove whitespace
+      //       favoriteTargets = favoriteTargets.split(',')
+      //    }
 
-         // single favorite target
-         if (typeof favoriteTargets == 'number') {
-            favoriteTargets = [favoriteTargets.toString()]
-         }
+      //    // single favorite target
+      //    if (typeof favoriteTargets == 'number') {
+      //       favoriteTargets = [favoriteTargets.toString()]
+      //    }
 
-         if (favoriteTargets.includes(targetNumString)) {
-            // console.log`🎔  ${originNum} ${tripOrigin.city_name} -> ${circuit.circuit_number} ${circuit.city_name} `()
-            return true
-         } else {
-            return false
-         }
-      }
+      //    if (favoriteTargets.includes(targetNumString)) {
+      //       // console.log`🎔  ${originNum} ${tripOrigin.city_name} -> ${circuit.circuit_number} ${circuit.city_name} `()
+      //       return true
+      //    } else {
+      //       return false
+      //    }
+      // }
    }
 
    const getCircuitScore = (circuitToScoreAgainst: Circuit) => {

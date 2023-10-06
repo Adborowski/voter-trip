@@ -1,43 +1,330 @@
 [
-   { "circuit_number": 1, "city_name": "Legnica", "favorite_targets": 4 },
-   { "circuit_number": 2, "city_name": "Wałbrzych", "favorite_targets": 36 },
-   { "circuit_number": 3, "city_name": "Wrocław", "favorite_targets": 9 },
-   { "circuit_number": 4, "city_name": "Bydgoszcz", "favorite_targets": 0 },
-   { "circuit_number": 5, "city_name": "Toruń", "favorite_targets": 0 },
-   { "circuit_number": 6, "city_name": "Lublin", "favorite_targets": 41 },
-   { "circuit_number": 7, "city_name": "Chełm", "favorite_targets": 40 },
-   { "circuit_number": 8, "city_name": "Zielona Góra", "favorite_targets": 39 },
-   { "circuit_number": 9, "city_name": "Łódź", "favorite_targets": 38 },
-   { "circuit_number": 10, "city_name": "Piotrków Trybunalski", "favorite_targets": 37 },
-   { "circuit_number": 11, "city_name": "Sieradz", "favorite_targets": 36 },
-   { "circuit_number": 12, "city_name": "Chrzanów", "favorite_targets": 35 },
-   { "circuit_number": 13, "city_name": "Kraków", "favorite_targets": 34 },
-   { "circuit_number": 14, "city_name": "Nowy Sącz", "favorite_targets": 33 },
-   { "circuit_number": 15, "city_name": "Tarnów", "favorite_targets": 32 },
-   { "circuit_number": 16, "city_name": "Płock", "favorite_targets": "31, 20" },
-   { "circuit_number": 17, "city_name": "Radom", "favorite_targets": 30 },
-   { "circuit_number": 18, "city_name": "Siedlce", "favorite_targets": 29 },
-   { "circuit_number": 19, "city_name": "Warszawa", "favorite_targets": 18 },
-   { "circuit_number": 20, "city_name": "Warszawa", "favorite_targets": 18 },
-   { "circuit_number": 21, "city_name": "Opole", "favorite_targets": 26 },
-   { "circuit_number": 22, "city_name": "Krosno", "favorite_targets": 25 },
-   { "circuit_number": 23, "city_name": "Rzeszów", "favorite_targets": 40 },
-   { "circuit_number": 24, "city_name": "Białystok", "favorite_targets": 23 },
-   { "circuit_number": 25, "city_name": "Gdańsk", "favorite_targets": 22 },
-   { "circuit_number": 26, "city_name": "Gdynia", "favorite_targets": 21 },
-   { "circuit_number": 27, "city_name": "Bielsko-Biała", "favorite_targets": 20 },
-   { "circuit_number": 28, "city_name": "Częstochowa", "favorite_targets": "19, 1, 2, 3" },
-   { "circuit_number": 29, "city_name": "Gliwice", "favorite_targets": 18 },
-   { "circuit_number": 30, "city_name": "Rybnik", "favorite_targets": 17 },
-   { "circuit_number": 31, "city_name": "Katowice", "favorite_targets": 16 },
-   { "circuit_number": 32, "city_name": "Sosnowiec", "favorite_targets": 15 },
-   { "circuit_number": 33, "city_name": "Kielce", "favorite_targets": 14 },
-   { "circuit_number": 34, "city_name": "Elbląg", "favorite_targets": 13 },
-   { "circuit_number": 35, "city_name": "Olsztyn", "favorite_targets": 12 },
-   { "circuit_number": 36, "city_name": "Kalisz", "favorite_targets": 11 },
-   { "circuit_number": 37, "city_name": "Konin", "favorite_targets": 10 },
-   { "circuit_number": 38, "city_name": "Piła", "favorite_targets": 9 },
-   { "circuit_number": 39, "city_name": "Poznań", "favorite_targets": 8 },
-   { "circuit_number": 40, "city_name": "Koszalin", "favorite_targets": 7 },
-   { "circuit_number": 41, "city_name": "Szczecin", "favorite_targets": 6 }
+   {
+      "circuit_number": 1,
+      "city_name": "Legnica",
+      "votes_to_gain_mandate": 63000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 63985,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 2,
+      "city_name": "Wałbrzych",
+      "votes_to_gain_mandate": 48000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 12597,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 3,
+      "city_name": "Wrocław",
+      "votes_to_gain_mandate": 64000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 64840,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 4,
+      "city_name": "Bydgoszcz",
+      "votes_to_gain_mandate": 70000,
+      "gaining_from": "party_konfederacja",
+      "votes_to_lose_mandate": 73170,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 5,
+      "city_name": "Toruń",
+      "votes_to_gain_mandate": 4000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 79208,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 6,
+      "city_name": "Lublin",
+      "votes_to_gain_mandate": 3200,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 55801,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 7,
+      "city_name": "Chełm",
+      "votes_to_gain_mandate": 24000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 15818,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 8,
+      "city_name": "Zielona Góra",
+      "votes_to_gain_mandate": 65500,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 53369,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 9,
+      "city_name": "Łódź",
+      "votes_to_gain_mandate": 59000,
+      "gaining_from": "party_trzeciadroga",
+      "votes_to_lose_mandate": 59050,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 10,
+      "city_name": "Piotrków Trybunalski",
+      "votes_to_gain_mandate": 43000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 89454,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 11,
+      "city_name": "Sieradz",
+      "votes_to_gain_mandate": 52000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 22501,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 12,
+      "city_name": "Chrzanów",
+      "votes_to_gain_mandate": 10000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 14947,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 13,
+      "city_name": "Kraków",
+      "votes_to_gain_mandate": 12000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 66807,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 14,
+      "city_name": "Nowy Sącz",
+      "votes_to_gain_mandate": 56000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 37135,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 15,
+      "city_name": "Tarnów",
+      "votes_to_gain_mandate": 1400,
+      "gaining_from": "party_konfederacja",
+      "votes_to_lose_mandate": 86586,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 16,
+      "city_name": "Płock",
+      "votes_to_gain_mandate": 31000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 98762,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 17,
+      "city_name": "Radom",
+      "votes_to_gain_mandate": 41000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 16741,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 18,
+      "city_name": "Siedlce",
+      "votes_to_gain_mandate": 38000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 2957,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 19,
+      "city_name": "Warszawa",
+      "votes_to_gain_mandate": 200000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 5352,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 20,
+      "city_name": "Warszawa",
+      "votes_to_gain_mandate": 50000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 50295,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 21,
+      "city_name": "Opole",
+      "votes_to_gain_mandate": 61500,
+      "gaining_from": "party_lewica",
+      "votes_to_lose_mandate": 61655,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 22,
+      "city_name": "Krosno",
+      "votes_to_gain_mandate": 21000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 67420,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 23,
+      "city_name": "Rzeszów",
+      "votes_to_gain_mandate": 4900,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 88750,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 24,
+      "city_name": "Białystok",
+      "votes_to_gain_mandate": 2000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 1983,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 25,
+      "city_name": "Gdańsk",
+      "votes_to_gain_mandate": 75000,
+      "gaining_from": "party_konfederacja",
+      "votes_to_lose_mandate": 30033,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 26,
+      "city_name": "Gdynia",
+      "votes_to_gain_mandate": 54000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 5100,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 27,
+      "city_name": "Bielsko-Biała",
+      "votes_to_gain_mandate": 45000,
+      "gaining_from": "party_trzeciadroga",
+      "votes_to_lose_mandate": 42795,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 28,
+      "city_name": "Częstochowa",
+      "votes_to_gain_mandate": 16000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 75845,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 29,
+      "city_name": "Gliwice",
+      "votes_to_gain_mandate": 2400,
+      "gaining_from": "party_lewica",
+      "votes_to_lose_mandate": 32302,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 30,
+      "city_name": "Rybnik",
+      "votes_to_gain_mandate": 28000,
+      "gaining_from": "party_trzeciadroga",
+      "votes_to_lose_mandate": 14116,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 31,
+      "city_name": "Katowice",
+      "votes_to_gain_mandate": 58500,
+      "gaining_from": "party_lewica",
+      "votes_to_lose_mandate": 93905,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 32,
+      "city_name": "Sosnowiec",
+      "votes_to_gain_mandate": 2800,
+      "gaining_from": "party_trzeciadroga",
+      "votes_to_lose_mandate": 63915,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 33,
+      "city_name": "Kielce",
+      "votes_to_gain_mandate": 7000,
+      "gaining_from": "party_konfederacja",
+      "votes_to_lose_mandate": 50267,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 34,
+      "city_name": "Elbląg",
+      "votes_to_gain_mandate": 14000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 36853,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 35,
+      "city_name": "Olsztyn",
+      "votes_to_gain_mandate": 33000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 6484,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 36,
+      "city_name": "Kalisz",
+      "votes_to_gain_mandate": 65000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 15404,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 37,
+      "city_name": "Konin",
+      "votes_to_gain_mandate": 8000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 90366,
+      "losing_to": "party_pis"
+   },
+   {
+      "circuit_number": 38,
+      "city_name": "Piła",
+      "votes_to_gain_mandate": 1200,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 5299,
+      "losing_to": "party_konfederacja"
+   },
+   {
+      "circuit_number": 39,
+      "city_name": "Poznań",
+      "votes_to_gain_mandate": 11000,
+      "gaining_from": "party_trzeciadroga",
+      "votes_to_lose_mandate": 74330,
+      "losing_to": "party_lewica"
+   },
+   {
+      "circuit_number": 40,
+      "city_name": "Koszalin",
+      "votes_to_gain_mandate": 19000,
+      "gaining_from": "party_trzeciadroga",
+      "votes_to_lose_mandate": 48783,
+      "losing_to": "party_trzeciadroga"
+   },
+   {
+      "circuit_number": 41,
+      "city_name": "Szczecin",
+      "votes_to_gain_mandate": 58000,
+      "gaining_from": "party_pis",
+      "votes_to_lose_mandate": 52712,
+      "losing_to": "party_pis"
+   }
 ]
