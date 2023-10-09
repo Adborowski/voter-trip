@@ -142,11 +142,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    }
 
    const scoredCircuits = circuits.map((circuit: Circuit) => {
+      const votesToGain = extraScoreMap.get(circuit.circuit_number).votes_to_gain_mandate
+      const votesToLose = extraScoreMap.get(circuit.circuit_number).votes_to_lose_mandate
       return {
          ...circuit,
          score: getCircuitScore(circuit),
          distance_from_origin: getDistanceFromOrigin(circuit),
          route: getRouteFromOrigin(circuit),
+         votesToGain: votesToGain,
+         votesToLose: votesToLose,
       }
    })
 
