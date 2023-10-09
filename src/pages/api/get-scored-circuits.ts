@@ -144,6 +144,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    const scoredCircuits = circuits.map((circuit: Circuit) => {
       const votesToGain = extraScoreMap.get(circuit.circuit_number).votes_to_gain_mandate
       const votesToLose = extraScoreMap.get(circuit.circuit_number).votes_to_lose_mandate
+      const gainingFrom = extraScoreMap.get(circuit.circuit_number).gaining_from
+      const losingTo = extraScoreMap.get(circuit.circuit_number).losing_to
       return {
          ...circuit,
          score: getCircuitScore(circuit),
@@ -151,6 +153,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
          route: getRouteFromOrigin(circuit),
          votesToGain: votesToGain,
          votesToLose: votesToLose,
+         gainingFrom: gainingFrom,
+         losingTo: losingTo,
       }
    })
 
@@ -163,6 +167,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    // mark targets as favorite
    // mark the objects as isTripOrigin or isDestination, for use in map nodes
    sortedCircuits = sortedCircuits.map((sortedCircuit: ScoredCircuit, index: number) => {
+      console.log(sortedCircuit.score)
+
       if (selectedCircuit.city_id === 'łodz') {
          selectedCircuit.city_id = 'lodz'
       }
@@ -171,8 +177,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
          selectedCircuit.city_id = 'pila'
       }
 
+      if (index == 0 && sortedCircuit.score < 0) {
+         sortedCircuit.isNegative = true
+      }
+
       if (sortedCircuit.city_id == selectedCircuit.city_id) {
-         //  console.log(sortedCircuit.city_id, selectedCircuit.city_id, 'OK')
          sortedCircuit.isTripOrigin = true
       }
 

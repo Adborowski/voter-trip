@@ -54,7 +54,8 @@ section:has(.mapNode) {
 
 /* put node on top when clicked */
 div:has(.origin),
-div:has(.destination) {
+div:has(.destination),
+div:has(.negative) {
    z-index: 1 !important;
 }
 
@@ -89,6 +90,15 @@ div:has(.irrelevant) {
 .irrelevant .numberWrapper {
    background-color: #3b3b3b;
    color: #7d7d7d;
+}
+
+.negative {
+   background-color: #6b0000;
+}
+
+.negative .numberWrapper {
+   background-color: #a10000;
+   color: #ffffff;
 }
 
 .btnViewTrips {

@@ -14,6 +14,8 @@ const CircuitCard = (circuit: any) => {
       swing_factor,
       votesToGain,
       votesToLose,
+      gainingFrom,
+      losingTo,
    } = circuit.circuit
 
    const voteStrength = residentsPerMandate / 100
@@ -25,7 +27,12 @@ const CircuitCard = (circuit: any) => {
             <span className={styles.circuitCity}>{city_name}</span>
          </section>
          <section className={styles.circuitStats}>
-            <VotesToChange votesToGain={votesToGain} votesToLose={votesToLose} />
+            <VotesToChange
+               votesToGain={votesToGain}
+               votesToLose={votesToLose}
+               gainingFrom={gainingFrom}
+               losingTo={losingTo}
+            />
          </section>
       </div>
    )

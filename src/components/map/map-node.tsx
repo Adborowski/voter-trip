@@ -8,10 +8,11 @@ interface MapNodeProps {
    circuits: Circuit[] | undefined
    selectCircuit: (circuit: Circuit) => void
    selectedCircuit: Circuit | undefined
+   scoredCircuits: any
 }
 
 const MapNode = (props: MapNodeProps) => {
-   const { selectedCircuit, selectCircuit, circuit, circuits } = props
+   const { selectedCircuit, selectCircuit, circuit, circuits, scoredCircuits } = props
    const { city_name, circuit_number } = circuit
 
    const [specialClass, setSpecialClass] = useState<any>('')
@@ -21,7 +22,7 @@ const MapNode = (props: MapNodeProps) => {
          setSpecialClass(undefined) // redraw nodes into normal nodes to prevent residual highlighting
       }
       if (circuits && selectedCircuit) {
-         circuits.forEach((listCircuit) => {
+         scoredCircuits.forEach((listCircuit: any, index: any) => {
             if (listCircuit.city_id == circuit.city_id) {
                if (listCircuit.isDestination) {
                   setSpecialClass(styles.destination)
@@ -35,9 +36,26 @@ const MapNode = (props: MapNodeProps) => {
                   setSpecialClass(styles.irrelevant)
                }
             }
+
+            // all-negative trips: mark red only the origin, mark irrelevant to everything else
+            if (
+               listCircuit.city_id == circuit.city_id &&
+               listCircuit.score < 0 &&
+               listCircuit.isTripOrigin
+            ) {
+               setSpecialClass(styles.negative)
+            }
+
+            if (
+               listCircuit.city_id == circuit.city_id &&
+               listCircuit.score < 0 &&
+               !listCircuit.isTripOrigin
+            ) {
+               setSpecialClass(styles.irrelevant)
+            }
          })
       }
-   }, [selectedCircuit, circuits])
+   }, [selectedCircuit, circuits, scoredCircuits])
 
    return (
       <section>

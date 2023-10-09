@@ -19,6 +19,7 @@ declare global {
       route?: Route
       isDestination?: boolean
       isTripOrigin?: boolean
+      isNegative?: boolean
       districts: []
    }
 

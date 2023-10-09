@@ -29,12 +29,17 @@ const TripDetails = ({ scoredCircuits }: TripDetailsProps) => {
       <article className={styles.tripDetails}>
          {isFavorite && <div className={styles.favoriteMarker} />}
          <SocialPanel />
-         <TripStats circuit={destination} />
-         <TripLocations originCity={originCity} destinationCity={destinationCity} />
-         <CircuitList circuits={[origin, ...scoredCircuits]} length={2} />
-         {/* <TripScore score={score} /> */}
-         <TripDistricts districts={closestDistricts} />
-         <TripExplainer />
+         <TripScore score={score} />
+         {score > 0 && (
+            <>
+               <TripStats circuit={destination} />
+               <TripLocations originCity={originCity} destinationCity={destinationCity} />
+               <CircuitList circuits={[origin, ...scoredCircuits]} length={2} />
+
+               <TripDistricts districts={closestDistricts} />
+               <TripExplainer />
+            </>
+         )}
       </article>
    )
 }

@@ -33,6 +33,7 @@ const CircuitMap = ({
    const [activePolylines, setActivePolylines] = useState<[]>()
    const [activePoints, setActivePoints] = useState<[]>()
    const [mapCircuits, setMapCircuits] = useState<Circuit[] | undefined>(circuitList)
+   const [isEveryTripNegative, setIsEveryTripNegative] = useState(false)
    const polandCenter = { lat: 51.9194, lng: 19.1451 }
    const router = useRouter()
 
@@ -263,7 +264,13 @@ const CircuitMap = ({
       console.log('%cScored circuits', 'color: lightgreen', scoredCircuits)
       getMapRef(mapRef)
       getMapsRef(mapsRef)
-      if (scoredCircuits) {
+
+      if (scoredCircuits && scoredCircuits[0].score < 0) {
+         setMapCircuits(scoredCircuits)
+         setIsEveryTripNegative(true)
+      }
+
+      if (scoredCircuits && scoredCircuits[0].score > 1) {
          drawPolylines()
          drawDistrictPoints()
          zoomToCircuits(scoredCircuits, tripCount)
@@ -275,6 +282,12 @@ const CircuitMap = ({
       }
    }, [scoredCircuits])
 
+   useEffect(() => {
+      if (isEveryTripNegative && selectedCircuit) {
+         zoomToCircuits([selectedCircuit], 0)
+      }
+   }, [isEveryTripNegative])
+
    const zoomToCircuits = (circuits: Circuit[], tripCount: number) => {
       const bounds = new mapsRef.current.LatLngBounds()
       bounds.extend({ lat: selectedCircuit?.latitude, lng: selectedCircuit?.longitude }) // add starter town
@@ -285,6 +298,10 @@ const CircuitMap = ({
       })
 
       mapRef.current.fitBounds(bounds)
+      if (tripCount === 0) {
+         console.log('tripCount', tripCount)
+         mapRef.current.setZoom(9)
+      }
    }
 
    const clearPolylines = () => {
@@ -423,15 +440,6 @@ const CircuitMap = ({
          resetMap(mapsRef, mapRef)
       }
 
-      // if (router.query.originId) {
-      //    // @ts-ignore
-      //    const id = parseInt(router.query.originId)
-
-      //    if (getCircuitByNumber(id)) {
-      //       selectCircuit(getCircuitByNumber(id))
-      //    }
-      // }
-
       setMapReady(true)
    }
 
@@ -456,6 +464,7 @@ const CircuitMap = ({
                   circuits={mapCircuits}
                   selectCircuit={selectCircuit}
                   selectedCircuit={selectedCircuit}
+                  scoredCircuits={scoredCircuits}
                />
             ))}
          </GoogleMap>
