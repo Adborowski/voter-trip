@@ -21,7 +21,7 @@ const MapNode = (props: MapNodeProps) => {
       if (!selectedCircuit) {
          setSpecialClass(undefined) // redraw nodes into normal nodes to prevent residual highlighting
       }
-      if (circuits && selectedCircuit) {
+      if (circuits && selectedCircuit && scoredCircuits[0].score > 0) {
          scoredCircuits.forEach((listCircuit: any, index: any) => {
             if (listCircuit.city_id == circuit.city_id) {
                if (listCircuit.isDestination) {
@@ -35,23 +35,6 @@ const MapNode = (props: MapNodeProps) => {
                if (!listCircuit.isDestination && !listCircuit.isTripOrigin) {
                   setSpecialClass(styles.irrelevant)
                }
-            }
-
-            // all-negative trips: mark red only the origin, mark irrelevant to everything else
-            if (
-               listCircuit.city_id == circuit.city_id &&
-               listCircuit.score < 0 &&
-               listCircuit.isTripOrigin
-            ) {
-               setSpecialClass(styles.negative)
-            }
-
-            if (
-               listCircuit.city_id == circuit.city_id &&
-               listCircuit.score < 0 &&
-               !listCircuit.isTripOrigin
-            ) {
-               setSpecialClass(styles.irrelevant)
             }
          })
       }
