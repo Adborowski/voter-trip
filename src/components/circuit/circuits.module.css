@@ -85,3 +85,22 @@
 .swingInfo.supportVeryStrong span {
    color: rgb(216, 0, 0);
 }
+
+.voteInfoHeader {
+   margin-bottom: 12px;
+}
+
+.safe {
+   color: green;
+   font-weight: 600;
+}
+
+.danger {
+   color: red;
+   font-weight: 600;
+}
+
+.voteInfoBlock {
+   font-size: 0.7rem;
+   opacity: 0.4;
+}
