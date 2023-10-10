@@ -2,16 +2,10 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from './index.module.scss'
 import SocialPanel from '@/components/social/social-panel'
-import Quotes from '@/components/landing/quotes'
 import Guide from '@/components/landing/guide'
-import { hotjar } from 'react-hotjar'
-import { useEffect } from 'react'
+import Script from 'next/script'
 
 export default function Home() {
-   useEffect(() => {
-      hotjar.initialize(3688864, 6)
-   }, [])
-
    const router = useRouter()
 
    const quotes = [
@@ -40,6 +34,16 @@ export default function Home() {
 
    return (
       <div className={styles.index}>
+         <Script>
+            {`(function(h,o,t,j,a,r){
+                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                  h._hjSettings={hjid:3688864,hjsv:6};
+                  a=o.getElementsByTagName('head')[0];
+                  r=o.createElement('script');r.async=1;
+                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                  a.appendChild(r);
+               })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+         </Script>
          <section className={styles.textWrapper}>
             <h1>Wycieczka Wyborcza</h1>
             <h2>
