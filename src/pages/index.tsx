@@ -4,8 +4,14 @@ import styles from './index.module.scss'
 import SocialPanel from '@/components/social/social-panel'
 import Quotes from '@/components/landing/quotes'
 import Guide from '@/components/landing/guide'
+import { hotjar } from 'react-hotjar'
+import { useEffect } from 'react'
 
 export default function Home() {
+   useEffect(() => {
+      hotjar.initialize(3688864, 6)
+   }, [])
+
    const router = useRouter()
 
    const quotes = [
@@ -37,8 +43,8 @@ export default function Home() {
          <section className={styles.textWrapper}>
             <h1>Wycieczka Wyborcza</h1>
             <h2>
-               Twój głos może mieć większą moc! Wyjedź na wycieczkę wyborczą i pomóż wygrać
-               opozycji.
+               <span>Twój głos może mieć większą moc!</span>
+               <span>Wyjedź na wycieczkę wyborczą i pomóż wygrać opozycji.</span>
             </h2>
             <div className={styles.description}>
                <span>

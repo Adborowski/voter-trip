@@ -25,16 +25,21 @@
       h2 {
          color: white;
          // border: 1px solid red;
-         font-size: 1.25rem;
+         font-size: 1.1rem;
          margin: auto;
          margin-top: 18px;
+
+         span {
+            display: block;
+            font-weight: 600;
+         }
       }
 
       .description {
          color: white;
          margin: auto;
          margin-top: 18px;
-         font-size: 1.1rem;
+         font-size: 1rem;
          //  border: 1px solid lime;
       }
    }
