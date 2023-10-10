@@ -1,17 +1,12 @@
-import { useRouter } from 'next/router'
 import Link from 'next/link'
-import styles from './index.module.scss'
-import SocialPanel from '@/components/social/social-panel'
-import Quotes from '@/components/landing/quotes'
+import styles from './landing.module.scss'
 
-export default function Home() {
-   const router = useRouter()
-
+const Quotes = () => {
    const quotes = [
       {
          content: `Różnice siły głosu między 41 okręgami wyborczymi są dziś w Polsce dramatyczne.
-         Oprócz tego, na jaką partię oddamy nasz głos, bardzo ważne jest to, gdzie
-         zagłosujemy.`,
+       Oprócz tego, na jaką partię oddamy nasz głos, bardzo ważne jest to, gdzie
+       zagłosujemy.`,
 
          author: `Michał Majewski, obywatele.news`,
          link: `https://obywatele.news/gdzie-nasz-glos-bedzie-mial-najwiekszy-wplyw-na-wynik-praktyczny-poradnik-wyborczy-czesc-2/`,
@@ -32,19 +27,19 @@ export default function Home() {
    ]
 
    return (
-      <div className={styles.index}>
-         <h1>Wycieczka Wyborcza</h1>
-         <SocialPanel />
-
-         <button
-            className={styles.btnPlanTrip}
-            onClick={() => {
-               router.push('/map')
-            }}
-         >
-            Zaplanuj wycieczkę
-         </button>
-         <Quotes />
-      </div>
+      <section className={styles.quotesWrapper}>
+         {quotes.map((quote: any) => {
+            return (
+               <article key={quote.author} className={styles.quote}>
+                  <div className={styles.content}>{quote.content}</div>
+                  <Link className={styles.attribution} target={'_blank'} href={quote.link}>
+                     {quote.author}
+                  </Link>
+               </article>
+            )
+         })}
+      </section>
    )
 }
+
+export default Quotes

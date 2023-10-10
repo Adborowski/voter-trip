@@ -24,37 +24,6 @@
    }
 }
 
-.quotesWrapper {
-   padding: 18px;
-   max-width: 400px;
-   margin: auto;
-
-   .quote {
-      background-color: white;
-      padding: 18px;
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-      line-height: 18px;
-
-      .content {
-         //  font-style: italic;
-      }
-
-      .attribution {
-         margin-top: 12px;
-         text-align: right;
-         text-decoration: underline;
-         color: black !important;
-         display: block;
-
-         &:active,
-         &:visited {
-            color: black !important;
-         }
-      }
-   }
-}
-
 .btnPlanTrip {
    cursor: pointer;
    transition: 0.1s linear all;

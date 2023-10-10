@@ -23,8 +23,7 @@ const VotesToChange = (props: any) => {
             {partyNames[gainingFrom]}
          </div>
          <div className={styles.voteInfoBlock}>
-            Do straty mandatu brakuje {votesToLose} głosów. Opozycja straciłaby go na rzecz:{' '}
-            {partyNames[losingTo]}
+            Do straty mandatu brakuje {votesToLose} głosów. Strata na rzecz: {partyNames[losingTo]}
          </div>
       </div>
    )
