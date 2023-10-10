@@ -34,7 +34,7 @@ export default function Home() {
 
    return (
       <div className={styles.index}>
-         <Script>
+         <Script id={'initHotjar'}>
             {`(function(h,o,t,j,a,r){
                   h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                   h._hjSettings={hjid:3688864,hjsv:6};
