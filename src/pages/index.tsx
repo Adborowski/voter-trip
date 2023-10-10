@@ -33,17 +33,34 @@ export default function Home() {
 
    return (
       <div className={styles.index}>
-         <h1>Wycieczka Wyborcza</h1>
+         <section className={styles.textWrapper}>
+            <h1>Wycieczka Wyborcza</h1>
+            <h2>
+               Twój głos może mieć większą moc! Wyjedź na wycieczkę wyborczą i pomóż wygrać
+               opozycji.
+            </h2>
+            <div className={styles.description}>
+               <span>
+                  Analizujemy dostępne dane sondażowe, żeby zmaksymalizować wynik wyborczy opozycji
+                  demokratycznej. W wielu okręgach wystarczy tylko kilka tysięcy głosów, aby
+                  opozycja uzyskała dodatkowy mandat.
+               </span>
+            </div>
+         </section>
          <SocialPanel />
 
-         <button
-            className={styles.btnPlanTrip}
-            onClick={() => {
-               router.push('/map')
-            }}
-         >
-            Zaplanuj wycieczkę
-         </button>
+         <div className={styles.polandWrapper}>
+            <div className={styles.imgPoland} />
+            <button
+               className={styles.btnPlanTrip}
+               onClick={() => {
+                  router.push('/map')
+               }}
+            >
+               Zaplanuj wycieczkę
+            </button>
+         </div>
+
          <Quotes />
       </div>
    )
