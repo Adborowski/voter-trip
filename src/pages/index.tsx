@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from './index.module.scss'
 import SocialPanel from '@/components/social/social-panel'
 import Quotes from '@/components/landing/quotes'
+import Guide from '@/components/landing/guide'
 
 export default function Home() {
    const router = useRouter()
@@ -61,7 +62,7 @@ export default function Home() {
             </button>
          </div>
 
-         <Quotes />
+         <Guide />
       </div>
    )
 }

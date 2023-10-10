@@ -31,6 +31,10 @@
 
 html {
    font-size: 14px;
+   background-color: var(--green-1);
+}
+
+body {
 }
 
 @media screen and (max-width: 768px) {
