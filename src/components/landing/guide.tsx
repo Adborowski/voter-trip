@@ -6,24 +6,22 @@ const Guide = () => {
          <h1>Jak głosować poza miejscem zameldowania?</h1>
          <section>
             <h2>1. Zmiana miejsca głosowania (przez internet) </h2>
-            <p>
-               <ul>
-                  <li>
-                     Wejdź na stronę{' '}
-                     <Link
-                        target={'_blank'}
-                        href={'https://www.gov.pl/web/gov/zmien-miejsce-glosowania'}
-                     >
-                        gov.pl
-                     </Link>{' '}
-                     i kliknij złóż wniosek. Masz czas do 12 października.
-                  </li>
-                  <li>Zaloguj się profilem zaufanym</li>
-                  <li>Podaj nazwę miejscowości, w której chcesz głosować i dokładny adres</li>
-                  <li>Potwierdzenie zmiany miejsca głosowania otrzymasz na skrzynce ePUAP</li>
-                  <li>W dniu wyborów udaj się z dowodem osobistym do komisji wyborczej</li>
-               </ul>
-            </p>
+            <ul>
+               <li>
+                  Wejdź na stronę{' '}
+                  <Link
+                     target={'_blank'}
+                     href={'https://www.gov.pl/web/gov/zmien-miejsce-glosowania'}
+                  >
+                     gov.pl
+                  </Link>{' '}
+                  i kliknij złóż wniosek. Masz czas do 12 października.
+               </li>
+               <li>Zaloguj się profilem zaufanym</li>
+               <li>Podaj nazwę miejscowości, w której chcesz głosować i dokładny adres</li>
+               <li>Potwierdzenie zmiany miejsca głosowania otrzymasz na skrzynce ePUAP</li>
+               <li>W dniu wyborów udaj się z dowodem osobistym do komisji wyborczej</li>
+            </ul>
          </section>
          <section>
             <h2>2. Pobranie zaświadczenia o prawie do głosowania (w urzędzie)</h2>
