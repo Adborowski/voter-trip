@@ -1,0 +1,73 @@
+.quotesWrapper {
+   padding: 18px;
+   max-width: 400px;
+   margin: auto;
+
+   .quote {
+      background-color: white;
+      padding: 18px;
+      margin: auto;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      line-height: 18px;
+
+      .content {
+         //  font-style: italic;
+      }
+
+      .attribution {
+         margin-top: 12px;
+         text-align: right;
+         text-decoration: underline;
+         color: black !important;
+         display: block;
+
+         &:active,
+         &:visited {
+            color: black !important;
+         }
+      }
+   }
+}
+
+.guide {
+   max-width: 500px;
+   margin: auto;
+   margin-top: 12px;
+   color: white;
+   margin-bottom: 60px;
+
+   @media (max-width: 500px) {
+      max-width: 400px;
+      padding: 0px 18px;
+   }
+
+   a {
+      color: white;
+   }
+
+   h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+   }
+
+   h2 {
+      margin-bottom: 18px;
+   }
+
+   ul {
+      padding-left: 36px;
+      padding-right: 36px;
+      margin-bottom: 18px;
+      font-size: 1.1rem;
+
+      @media (max-width: 500px) {
+         padding: 0px 18px;
+      }
+
+      li {
+         margin-bottom: 3px;
+      }
+   }
+}

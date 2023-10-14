@@ -2,5 +2,44 @@
    height: 100vh;
    width: 100%;
    display: block;
-   margin: auto;
+   margin: 0;
+   transition: 1s ease all;
+}
+
+div:has(.markerLabel) {
+   z-index: 50;
+}
+
+.markerLabel {
+   position: relative;
+   background-color: darkgreen;
+   padding: 6px;
+   border-radius: 6px;
+   font-size: 10px;
+}
+
+.markerLabel::before {
+   content: ' ';
+   transform: rotate(45deg);
+   width: 10px;
+   height: 10px;
+   background-color: darkgreen;
+   position: absolute;
+   bottom: -5px;
+   left: 45%;
+   z-index: -1;
+}
+
+.markerLabel::after {
+   width: 100%;
+   position: absolute;
+   top: -18px;
+   left: 0;
+   padding: 3px 0px;
+   border-radius: 6px;
+   background-color: rgb(27, 214, 67);
+   color: black;
+   content: 'najbliższy';
+   font-size: 0.7rem;
+   font-weight: 800;
 }

@@ -8,10 +8,11 @@ interface MapNodeProps {
    circuits: Circuit[] | undefined
    selectCircuit: (circuit: Circuit) => void
    selectedCircuit: Circuit | undefined
+   scoredCircuits: any
 }
 
 const MapNode = (props: MapNodeProps) => {
-   const { selectedCircuit, selectCircuit, circuit, circuits } = props
+   const { selectedCircuit, selectCircuit, circuit, circuits, scoredCircuits } = props
    const { city_name, circuit_number } = circuit
 
    const [specialClass, setSpecialClass] = useState<any>('')
@@ -20,8 +21,8 @@ const MapNode = (props: MapNodeProps) => {
       if (!selectedCircuit) {
          setSpecialClass(undefined) // redraw nodes into normal nodes to prevent residual highlighting
       }
-      if (circuits && selectedCircuit) {
-         circuits.forEach((listCircuit) => {
+      if (circuits && selectedCircuit && scoredCircuits[0].score > 0) {
+         scoredCircuits.forEach((listCircuit: any, index: any) => {
             if (listCircuit.city_id == circuit.city_id) {
                if (listCircuit.isDestination) {
                   setSpecialClass(styles.destination)
@@ -32,13 +33,12 @@ const MapNode = (props: MapNodeProps) => {
                }
 
                if (!listCircuit.isDestination && !listCircuit.isTripOrigin) {
-                  console.log('IRRELEVANT!')
                   setSpecialClass(styles.irrelevant)
                }
             }
          })
       }
-   }, [selectedCircuit, circuits])
+   }, [selectedCircuit, circuits, scoredCircuits])
 
    return (
       <section>
@@ -56,7 +56,7 @@ const MapNode = (props: MapNodeProps) => {
             </div>
          </article>
          <article>
-            {specialClass == styles.origin && (
+            {false && (
                <div
                   onClick={() => {
                      window.scrollBy({
@@ -66,7 +66,7 @@ const MapNode = (props: MapNodeProps) => {
                   }}
                   className={styles.btnViewTrips}
                >
-                  <span>Zobacz wycieczki</span>
+                  <span>Zobacz wycieczkę</span>
                </div>
             )}
          </article>

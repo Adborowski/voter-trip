@@ -1,0 +1,111 @@
+.index {
+   background-color: var(--green-1);
+   padding-top: 24px;
+   min-height: 100vh;
+
+   //  --gradient-1: linear-gradient(45deg, #4ea147, #376731, #3aa131);
+   //  --gradient-2: linear-gradient(45deg, #40af6e, #376731, #77ff89);
+   section.textWrapper {
+      max-width: 500px;
+      margin: auto;
+      padding: 0px 18px;
+
+      @media (max-width: 500px) {
+         max-width: 350px;
+      }
+
+      h1 {
+         font-weight: 800;
+         color: white;
+         font-family: 'Drogowskaz';
+         font-size: 2.3rem;
+         text-align: center;
+      }
+
+      h2 {
+         color: var(--highlight-1);
+         // border: 1px solid red;
+         font-size: 1.5rem;
+         margin: auto;
+         margin-top: 18px;
+
+         span {
+            display: block;
+            font-weight: 600;
+         }
+      }
+
+      .description {
+         color: white;
+         margin: auto;
+         margin-top: 18px;
+         font-size: 1.2rem;
+         //  border: 1px solid lime;
+      }
+   }
+
+   button {
+      // margin: auto;
+      display: block;
+      padding: 12px 24px;
+      font-size: 1.5rem;
+      border-radius: 24px;
+      background-color: var(--highlight-1);
+      font-weight: 600;
+   }
+}
+
+.btnPlanTrip {
+   cursor: pointer;
+   transition: 0.1s linear all;
+   max-width: 350px;
+   margin: auto;
+
+   &:hover {
+      filter: brightness(1.05);
+   }
+}
+
+.polandWrapper {
+   width: 430px;
+   height: 430px;
+   margin: auto;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+   @media (max-width: 500px) {
+      width: 300px;
+      height: 300px;
+   }
+
+   .imgPoland {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url('/poland-2.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: auto;
+      animation: opalize 20s forwards ease-in-out infinite;
+   }
+
+   button {
+      position: relative;
+      z-index: 5;
+   }
+}
+
+@keyframes opalize {
+   0% {
+      filter: hue-rotate(0deg) brightness(0.7);
+   }
+
+   100% {
+      filter: hue-rotate(360deg) brightness(0.7);
+   }
+}

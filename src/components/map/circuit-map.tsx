@@ -1,5 +1,6 @@
 import styles from './circuit-map.module.css'
 import { useEffect, useState, useRef } from 'react'
+import { useRouter } from 'next/router'
 import MapNode from './map-node'
 import GoogleMap from 'google-maps-react-markers'
 
@@ -30,8 +31,11 @@ const CircuitMap = ({
    const mapsRef: any = useRef(null)
    const [mapReady, setMapReady] = useState(false)
    const [activePolylines, setActivePolylines] = useState<[]>()
+   const [activePoints, setActivePoints] = useState<[]>()
    const [mapCircuits, setMapCircuits] = useState<Circuit[] | undefined>(circuitList)
+   const [isEveryTripNegative, setIsEveryTripNegative] = useState(false)
    const polandCenter = { lat: 51.9194, lng: 19.1451 }
+   const router = useRouter()
 
    const mapOptions = {
       center: {
@@ -236,32 +240,53 @@ const CircuitMap = ({
       ],
    }
 
+   const districtCount = 1
+
    useEffect(() => {
       setMapCircuits(circuitList)
-      console.log('map render', mapResetId)
    }, [])
 
    useEffect(() => {
       if (selectedCircuit) {
-         console.log('New selected circuit', selectedCircuit.city_name)
+         console.log('%cNew circuit:', 'color: yellow;', selectedCircuit.city_name)
+         window.setTimeout(() => {
+            window.scrollBy({
+               top: window.innerHeight,
+               behavior: 'smooth',
+            })
+         }, 2000)
       } else {
          console.log('No selectedCircuit')
       }
    }, [selectedCircuit])
 
    useEffect(() => {
-      console.log('Change in scoredCircuits.', scoredCircuits)
+      console.log('%cScored circuits', 'color: lightgreen', scoredCircuits)
       getMapRef(mapRef)
       getMapsRef(mapsRef)
-      if (scoredCircuits) {
+
+      if (scoredCircuits && scoredCircuits[0].score < 0) {
+         setMapCircuits(scoredCircuits)
+         setIsEveryTripNegative(true)
+      }
+
+      if (scoredCircuits && scoredCircuits[0].score > 1) {
          drawPolylines()
+         drawDistrictPoints()
          zoomToCircuits(scoredCircuits, tripCount)
          setMapCircuits(scoredCircuits)
       } else {
          clearPolylines()
+         clearDistrictPoints()
          setMapCircuits(circuitList)
       }
    }, [scoredCircuits])
+
+   useEffect(() => {
+      if (isEveryTripNegative && selectedCircuit) {
+         zoomToCircuits([selectedCircuit], 0)
+      }
+   }, [isEveryTripNegative])
 
    const zoomToCircuits = (circuits: Circuit[], tripCount: number) => {
       const bounds = new mapsRef.current.LatLngBounds()
@@ -272,13 +297,11 @@ const CircuitMap = ({
          }
       })
 
-      const zoomPad = 50
-      mapRef.current.fitBounds(bounds, {
-         top: zoomPad,
-         right: zoomPad,
-         left: zoomPad,
-         bottom: zoomPad,
-      })
+      mapRef.current.fitBounds(bounds)
+      if (tripCount === 0) {
+         console.log('tripCount', tripCount)
+         mapRef.current.setZoom(9)
+      }
    }
 
    const clearPolylines = () => {
@@ -289,12 +312,32 @@ const CircuitMap = ({
       }
    }
 
+   // haversine straight-line formula
+   // https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates
+   const getDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+      var R = 6371 // Radius of the earth in km
+      var dLat = deg2rad(lat2 - lat1) // deg2rad below
+      var dLon = deg2rad(lon2 - lon1)
+      var a =
+         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+         Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2)
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+      var d = R * c // Distance in km
+      return d
+   }
+
+   // helper for getDistance
+   function deg2rad(deg: any) {
+      return deg * (Math.PI / 180)
+   }
+
+   //  polyline routes
    const drawPolylines = () => {
       //
       const polylines: any = []
       const maps = mapsRef.current
       const map = mapRef.current
-      const polylineColors = ['#ffbb00', '#ffcf4a', '#d1b66b']
+      const polylineColors = ['lime', '#ffcf4a', '#d1b66b']
       clearPolylines()
 
       scoredCircuits?.forEach((circuit, index) => {
@@ -318,20 +361,95 @@ const CircuitMap = ({
       setActivePolylines(polylines)
    }
 
+   const drawDistrictPoints = () => {
+      clearDistrictPoints()
+      console.log('%cDrawing closest district.', 'color: lightblue')
+      const maps = mapsRef.current
+      const map = mapRef.current
+      let drawnMarkers: any = []
+
+      scoredCircuits?.forEach((circuit, index) => {
+         //@ts-ignore
+         //add distance from origin to each district so they can be sorted
+         circuit.districts = circuit.districts.map((district: District) => {
+            const distance = getDistance(
+               //@ts-ignore
+               selectedCircuit?.latitude,
+               selectedCircuit?.longitude,
+               district.geometry.location.lat,
+               district.geometry.location.lng
+            )
+            return { ...district, distanceFromOrigin: distance }
+         })
+
+         //@ts-ignore
+         // sort the districts array
+         circuit.districts = circuit.districts.sort((a: any, b: any) => {
+            if (a.distanceFromOrigin && b.distanceFromOrigin) {
+               return a.distanceFromOrigin - b.distanceFromOrigin
+            }
+         })
+
+         // only draw district points for tripCount of circuits
+         if (index < tripCount && circuit.districts) {
+            console.log('%cSorted districts', 'color: pink', circuit.districts)
+
+            circuit.districts.forEach((district: District, index) => {
+               if (index < districtCount) {
+                  const markerIcon = {
+                     url: '/arrow-up.svg',
+                     scaledSize: new maps.Size(0, 0),
+                  }
+
+                  const markerLabel = {
+                     text: district.name,
+                     className: styles.markerLabel,
+                     fontSize: '11px',
+                     color: 'white',
+                  }
+
+                  const newMarker = new maps.Marker({
+                     position: district.geometry.location,
+                     label: markerLabel,
+                     icon: markerIcon,
+                     clickable: true,
+                     map,
+                  })
+
+                  drawnMarkers.push(newMarker)
+               }
+            }) // end of foreach district
+            setActivePoints(drawnMarkers)
+         } // end of if index
+      }) // end of foreach circuit
+   }
+
+   const clearDistrictPoints = () => {
+      if (activePoints) {
+         activePoints.forEach((point: any) => {
+            point.setMap(null)
+         })
+      }
+   }
+
    const onGoogleApiLoaded = ({ map, maps }: any) => {
       mapRef.current = map
       mapsRef.current = maps
-      resetMap(mapsRef, mapRef)
+
+      if (window.innerWidth > 500) {
+         resetMap(mapsRef, mapRef)
+      }
+
       setMapReady(true)
    }
 
    const key: any = process.env.NEXT_PUBLIC_MAP_KEY
 
    return (
-      <div className={styles.mapWrapper}>
+      <div className={`${styles.mapWrapper} ${selectedCircuit ? styles.trip : ''}`}>
          <GoogleMap
-            className={styles.map}
             apiKey={key}
+            mapId={'IDb44fccfb0dc0c438'}
             defaultCenter={{ lat: 45.4046987, lng: 12.2472504 }}
             defaultZoom={5}
             options={mapOptions}
@@ -346,6 +464,7 @@ const CircuitMap = ({
                   circuits={mapCircuits}
                   selectCircuit={selectCircuit}
                   selectedCircuit={selectedCircuit}
+                  scoredCircuits={scoredCircuits}
                />
             ))}
          </GoogleMap>

@@ -77,3 +77,10 @@
    font-style: normal;
    font-display: swap;
 }
+
+@font-face {
+   font-family: 'Drogowskaz';
+   src: url('/fonts/Drogowskaz.otf') format('opentype');
+   font-weight: 300;
+   font-style: normal;
+}
