@@ -80,7 +80,6 @@ const CircuitMap = ({
 
    useEffect(() => {
       if (selectedCircuit) {
-         console.log('%cNew circuit:', 'color: yellow;', selectedCircuit.city_name)
          // on phones the trip details sit below the map, so bring them into view
          // (on desktop they're a side panel and there's nothing to scroll)
          window.setTimeout(() => {
@@ -89,13 +88,10 @@ const CircuitMap = ({
                behavior: 'smooth',
             })
          }, 2000)
-      } else {
-         console.log('No selectedCircuit')
       }
    }, [selectedCircuit])
 
    useEffect(() => {
-      console.log('%cScored circuits', 'color: lightgreen', scoredCircuits)
       getMapRef(mapRef)
       getMapsRef(mapsRef)
 
@@ -133,7 +129,6 @@ const CircuitMap = ({
 
       mapRef.current.fitBounds(bounds)
       if (tripCount === 0) {
-         console.log('tripCount', tripCount)
          mapRef.current.setZoom(9)
       }
    }
@@ -197,7 +192,6 @@ const CircuitMap = ({
 
    const drawDistrictPoints = () => {
       clearDistrictPoints()
-      console.log('%cDrawing closest district.', 'color: lightblue')
       const maps = mapsRef.current
       const map = mapRef.current
       let drawnMarkers: any = []
@@ -226,8 +220,6 @@ const CircuitMap = ({
 
          // only draw district points for tripCount of circuits
          if (index < tripCount && circuit.districts) {
-            console.log('%cSorted districts', 'color: pink', circuit.districts)
-
             circuit.districts.forEach((district: District, index) => {
                if (index < districtCount) {
                   const markerIcon = {

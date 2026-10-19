@@ -10,7 +10,6 @@ const ListaOkregow = (props: any) => {
          .then((res) => res.json())
          .then((circuits) => {
             if (circuits) {
-               console.log(circuits)
                setCircuits(circuits)
             }
          })

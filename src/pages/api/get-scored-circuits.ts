@@ -31,8 +31,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    const tripCount = 1 // gotta mirror the tripCount in the frontend; used for marking map
 
    const tripOrigin: Circuit = selectedCircuit
-   console.log('FROM', tripOrigin.city_id)
-   console.log('SWING FACTOR', tripOrigin.swing_factor.toFixed(3))
 
    const getDistanceFromOrigin = (circuit: Circuit) => {
       if (tripOrigin.city_id === 'lodz') {
@@ -45,9 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       // console.log(`[${tripOrigin.city_id}][${circuit.city_id}]`)
       const route = routes[tripOrigin.city_id][circuit.city_id]
-      if (!route) {
-         console.log('No route from', tripOrigin.city_id, 'to', circuit.city_id)
-      }
 
       // in case of a route from X to itself, make distance massive
       if (route.distance.value < 5) {
@@ -72,7 +67,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const targetNumString = circuit.circuit_number.toString()
       const originExtraScoreData = scoreMap.get(originNum)
 
-      console.log(originExtraScoreData)
       // let favoriteTargets = originExtraScore.favorite_targets
 
       // if (favoriteTargets) {
@@ -110,24 +104,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       // if less than 5000 votes to loss in origin, give a huge penalty
       if (originExtras.votes_to_lose_mandate < 5000) {
-         console.log('FREEZE ORIGIN')
          extraScore = extraScore - 100000
       }
-
-      console.log(
-         tripOrigin.circuit_number,
-         tripOrigin.city_name,
-         '->',
-         circuit.circuit_number,
-         circuit.city_name
-      )
 
       // negative gDiff should devalue target
       const gainDifference = originExtras.votes_to_gain_mandate - targetExtras.votes_to_gain_mandate
       extraScore = extraScore + gainDifference
-
-      console.log('-------')
-      console.log('Gain diff', gainDifference)
 
       // negative swingDifference means you gain SF by voting at the circuit
       const swingDifference = tripOrigin.swing_factor - circuit.swing_factor
@@ -167,8 +149,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
    // mark targets as favorite
    // mark the objects as isTripOrigin or isDestination, for use in map nodes
    sortedCircuits = sortedCircuits.map((sortedCircuit: ScoredCircuit, index: number) => {
-      console.log(sortedCircuit.score)
-
       if (selectedCircuit.city_id === 'łodz') {
          selectedCircuit.city_id = 'lodz'
       }
@@ -196,13 +176,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return sortedCircuit
    })
 
-   sortedCircuits.forEach((circuit: Circuit, index: number) => {
-      if (index < 3) {
-         console.log(
-            `${circuit.city_name}: score: ${circuit.score} / distance: ${circuit.distance_from_origin} km`,
-            `/ swing difference: ${getSwingDifference(tripOrigin, circuit)}`
-         )
-      }
-   })
    res.status(200).json(sortedCircuits)
 }

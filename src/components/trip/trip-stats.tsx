@@ -1,8 +1,6 @@
 import styles from './trip.module.css'
 
 const TripStats = ({ circuit }: any) => {
-   console.log('Trip stats for', circuit)
-
    let time = circuit.route.duration.text
    time = time.replace('hours', 'h')
    time = time.replace('hour', 'h')

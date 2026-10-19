@@ -15,8 +15,6 @@ const TripMap = () => {
    const shareTitle = `Jedziemy na wycieczkę!`
    const shareDesc = `Z okręgu ${originId}`
 
-   console.log('XX', originId)
-
    return (
       <>
          <Head>

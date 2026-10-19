@@ -27,7 +27,6 @@ export default function Map(props: any) {
          .then((res) => res.json())
          .then((circuits) => {
             if (circuits) {
-               console.log(circuits)
                setCircuits(circuits)
             }
          })
@@ -50,7 +49,6 @@ export default function Map(props: any) {
    }, [mapRef])
 
    const selectCircuit = (circuit: Circuit) => {
-      console.log('selectCircuit()')
       planTrip(circuit)
    }
 
@@ -88,15 +86,11 @@ export default function Map(props: any) {
    }
 
    const planTrip = (circuit: Circuit) => {
-      const { city_name } = circuit
-      console.log('Planning a trip from', city_name)
-
       const payload = {
          selectedCircuit: circuit,
          circuits: circuits,
       }
 
-      console.log(payload)
       setIsLoading(true)
       fetch('/api/get-scored-circuits', {
          method: 'POST',
@@ -109,7 +103,6 @@ export default function Map(props: any) {
          .then((scoredCircuits) => {
             if (scoredCircuits) {
                setIsLoading(false)
-               console.log('[get-scored-circuits]', scoredCircuits)
                setScoredCircuits(scoredCircuits)
                setSelectedCircuit(
                   scoredCircuits.find((scoredCircuit: ScoredCircuit) => {
