@@ -1,49 +1,12 @@
 import styles from './social.module.css'
 
 import {
-   EmailShareButton,
    FacebookShareButton,
-   HatenaShareButton,
-   InstapaperShareButton,
-   LineShareButton,
    LinkedinShareButton,
-   LivejournalShareButton,
-   MailruShareButton,
-   OKShareButton,
-   PinterestShareButton,
-   PocketShareButton,
-   RedditShareButton,
-   TelegramShareButton,
-   TumblrShareButton,
-   TwitterShareButton,
-   ViberShareButton,
-   VKShareButton,
-   WhatsappShareButton,
-   WorkplaceShareButton,
-} from 'react-share'
-
-import {
-   EmailIcon,
+   XShareButton,
    FacebookIcon,
-   FacebookMessengerIcon,
-   HatenaIcon,
-   InstapaperIcon,
-   LineIcon,
    LinkedinIcon,
-   LivejournalIcon,
-   MailruIcon,
-   OKIcon,
-   PinterestIcon,
-   PocketIcon,
-   RedditIcon,
-   TelegramIcon,
-   TumblrIcon,
-   TwitterIcon,
-   ViberIcon,
-   VKIcon,
-   WeiboIcon,
-   WhatsappIcon,
-   WorkplaceIcon,
+   XIcon,
 } from 'react-share'
 
 // og metatag testing needs to be done on a link
@@ -54,7 +17,6 @@ export const ShareFacebook = (props: any) => {
          className={styles.shareButton}
          title={'hi'}
          url={`https://voter-trip.vercel.app/map`}
-         quote={'Jedziemy na wycieczkę'}
          hashtag={'#wycieczkawyborcza'}
       >
          <FacebookIcon />
@@ -64,13 +26,7 @@ export const ShareFacebook = (props: any) => {
 
 export const ShareLinkedIn = (props: any) => {
    return (
-      <LinkedinShareButton
-         url={'www.wycieczkawyborcza.pl'}
-         className={styles.shareButton}
-         title={'Wycieczka Wyborcza'}
-         summary={'Jedziemy na wycieczkę wyborczą'}
-         source={'www.wycieczkawyborcza.pl'}
-      >
+      <LinkedinShareButton url={'www.wycieczkawyborcza.pl'} className={styles.shareButton}>
          <LinkedinIcon />
       </LinkedinShareButton>
    )
@@ -78,8 +34,8 @@ export const ShareLinkedIn = (props: any) => {
 
 export const ShareTwitter = (props: any) => {
    return (
-      <TwitterShareButton className={styles.shareButton} url={`https://voter-trip.vercel.app/map`}>
-         <TwitterIcon />
-      </TwitterShareButton>
+      <XShareButton className={styles.shareButton} url={`https://voter-trip.vercel.app/map`}>
+         <XIcon />
+      </XShareButton>
    )
 }

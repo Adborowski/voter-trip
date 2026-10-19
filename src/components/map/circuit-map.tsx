@@ -449,7 +449,6 @@ const CircuitMap = ({
       <div className={`${styles.mapWrapper} ${selectedCircuit ? styles.trip : ''}`}>
          <GoogleMap
             apiKey={key}
-            mapId={'IDb44fccfb0dc0c438'}
             defaultCenter={{ lat: 45.4046987, lng: 12.2472504 }}
             defaultZoom={5}
             options={mapOptions}
