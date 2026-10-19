@@ -1,73 +1,101 @@
 .quotesWrapper {
-   padding: 18px;
-   max-width: 400px;
-   margin: auto;
+   max-width: 1120px;
+   margin: 0 auto;
+   padding: 0 var(--gutter);
 
    .quote {
-      background-color: white;
-      padding: 18px;
-      margin: auto;
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-      line-height: 18px;
-
-      .content {
-         //  font-style: italic;
-      }
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
 
       .attribution {
-         margin-top: 12px;
-         text-align: right;
-         text-decoration: underline;
-         color: black !important;
          display: block;
-
-         &:active,
-         &:visited {
-            color: black !important;
-         }
+         margin-top: 12px;
+         color: var(--ink-3);
+         font-size: 0.875rem;
       }
    }
 }
 
 .guide {
-   max-width: 500px;
-   margin: auto;
-   margin-top: 12px;
-   color: white;
-   margin-bottom: 60px;
+   max-width: 1120px;
+   margin: 0 auto;
+   padding: 56px var(--gutter) 80px;
 
-   @media (max-width: 500px) {
-      max-width: 400px;
-      padding: 0px 18px;
+   @media (min-width: 900px) {
+      padding: 80px 32px 120px;
    }
 
-   a {
-      color: white;
+   > h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      max-width: 24ch;
+      margin-bottom: 40px;
    }
 
-   h1 {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 30px;
+   section {
+      padding-top: 24px;
+      border-top: 2px solid var(--ink);
+      margin-bottom: 40px;
+   }
+
+   @media (min-width: 900px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 64px;
+
+      > h1 {
+         grid-column: 1 / -1;
+      }
+
+      section {
+         margin-bottom: 0;
+      }
    }
 
    h2 {
-      margin-bottom: 18px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 16px;
    }
 
    ul {
-      padding-left: 36px;
-      padding-right: 36px;
-      margin-bottom: 18px;
-      font-size: 1.1rem;
-
-      @media (max-width: 500px) {
-         padding: 0px 18px;
-      }
+      list-style: none;
+      counter-reset: step;
+      color: var(--ink-2);
 
       li {
-         margin-bottom: 3px;
+         counter-increment: step;
+         position: relative;
+         padding: 10px 0 10px 36px;
+         border-bottom: 1px solid var(--line);
+
+         &::before {
+            content: counter(step, decimal-leading-zero);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--ink-3);
+            line-height: 1.85;
+         }
+
+         &:last-child {
+            border-bottom: 0;
+         }
+      }
+   }
+
+   a {
+      color: var(--ink);
+      font-weight: 500;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+
+      &:hover {
+         color: var(--ink-2);
       }
    }
 }

@@ -7,6 +7,7 @@ import Loading from '@/components/loading/loading'
 import { useRouter } from 'next/router'
 import { getCircuitByNumber } from '@/components/util/util'
 import type { Metadata } from 'next'
+import styles from '@/styles/map-page.module.css'
 
 export default function Map(props: any) {
    const [circuits, setCircuits] = useState<Circuit[]>()
@@ -165,24 +166,32 @@ export default function Map(props: any) {
 
          {isLoading && <Loading />}
 
-         <CircuitMap
-            selectedCircuit={selectedCircuit}
-            selectCircuit={selectCircuit}
-            circuitList={circuits}
-            scoredCircuits={scoredCircuits}
-            tripCount={tripCount}
-            mapResetId={mapResetId}
-            getMapRef={getMapRef}
-            getMapsRef={getMapsRef}
-            resetMap={resetMap}
-         />
-         {selectedCircuit && scoredCircuits && (
-            <TripPlanner
-               tripCount={tripCount}
-               scoredCircuits={scoredCircuits}
-               startCircuit={selectedCircuit}
-            />
-         )}
+         <main
+            className={`${styles.layout} ${selectedCircuit && scoredCircuits ? styles.withPanel : ''}`}
+         >
+            <div className={styles.mapPane}>
+               <CircuitMap
+                  selectedCircuit={selectedCircuit}
+                  selectCircuit={selectCircuit}
+                  circuitList={circuits}
+                  scoredCircuits={scoredCircuits}
+                  tripCount={tripCount}
+                  mapResetId={mapResetId}
+                  getMapRef={getMapRef}
+                  getMapsRef={getMapsRef}
+                  resetMap={resetMap}
+               />
+            </div>
+            {selectedCircuit && scoredCircuits && (
+               <aside className={styles.panel}>
+                  <TripPlanner
+                     tripCount={tripCount}
+                     scoredCircuits={scoredCircuits}
+                     startCircuit={selectedCircuit}
+                  />
+               </aside>
+            )}
+         </main>
       </>
    )
 }

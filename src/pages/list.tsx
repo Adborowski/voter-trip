@@ -1,6 +1,7 @@
 import CircuitList from '@/components/circuit/circuit-list'
 import HomeButton from '@/components/navbar/home-button'
 import { useEffect, useState } from 'react'
+import styles from '@/components/circuit/circuits.module.css'
 
 const ListaOkregow = (props: any) => {
    const [circuits, setCircuits] = useState<Circuit[]>()
@@ -20,7 +21,10 @@ const ListaOkregow = (props: any) => {
       return (
          <>
             <HomeButton />
-            <CircuitList circuits={circuits} length={41} />
+            <main className={styles.listPage}>
+               <h1>Okręgi wyborcze</h1>
+               <CircuitList circuits={circuits} length={41} />
+            </main>
          </>
       )
    }

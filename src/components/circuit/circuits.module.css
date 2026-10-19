@@ -1,105 +1,81 @@
 .circuitList {
-   width: 100%;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   gap: 6px;
-   flex-wrap: wrap;
-   margin-bottom: 6px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+   gap: 12px;
+   margin-bottom: 12px;
+}
 
-   @media screen and (min-width: 400px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-   }
+/* full list page */
+.listPage {
+   max-width: 1120px;
+   margin: 0 auto;
+   padding: 24px var(--gutter) 64px;
+}
+
+.listPage h1 {
+   font-family: var(--font-display);
+   font-weight: 400;
+   font-size: 2.25rem;
+   margin-bottom: 24px;
 }
 
 .circuitCard {
-   display: inline-block;
-   padding: 12px;
-   background-color: white;
-   border-radius: 12px;
-   /* max-width: 240px; */
-
-   @media screen and (max-width: 768px) {
-      max-width: unset;
-      width: 100%;
-      border-radius: 12px;
-      text-align: center;
-   }
-}
-
-.circuitCity {
-   font-weight: 800;
-   font-size: 1.5em;
+   padding: 16px;
+   border: 1px solid var(--line);
+   border-radius: var(--radius);
+   background-color: var(--bg);
 }
 
 .circuitNumber {
    display: block;
-   margin-bottom: 6px;
-   margin-right: 6px;
-   font-size: 1.5em;
+   font-size: 0.75rem;
+   font-weight: 600;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   color: var(--ink-3);
+}
+
+.circuitCity {
+   display: block;
+   font-size: 1.125rem;
+   font-weight: 600;
+   margin-top: 2px;
 }
 
 .circuitStats {
    margin-top: 12px;
+   font-size: 0.8125rem;
+   color: var(--ink-2);
 }
 
-.circuitStats span,
-.circuitVoteHistory span {
-   display: block;
-   font-size: 0.8rem;
-   margin-bottom: 3px;
-}
-
-.circuitVoteHistory {
-   margin-top: 12px;
-}
-
-.swingFactor {
-   font-weight: 800;
+.voteInfoBlock + .voteInfoBlock {
+   margin-top: 6px;
 }
 
 .swingInfo {
    margin-top: 6px;
 }
 
-.swingFactor {
-   display: block;
-   font-size: 0.8rem;
-   margin-top: 3px;
-}
-
 .swingInfo span {
-   font-weight: 800;
-   color: var(--shadow-1);
+   display: block;
+   font-weight: 600;
 }
 
-.swingInfo.supportLight span {
-   color: green;
+.swingFactor {
+   font-size: 0.8125rem;
+   font-weight: 400 !important;
+   color: var(--ink-3);
 }
 
-.swingInfo.supportStrong span {
-   color: rgb(209, 160, 0);
-}
-
-.swingInfo.supportVeryStrong span {
-   color: rgb(216, 0, 0);
-}
-
-.voteInfoHeader {
-   margin-bottom: 12px;
+.swingInfo.supportVeryStrong span:first-child {
+   color: var(--bad);
 }
 
 .safe {
-   color: green;
    font-weight: 600;
 }
 
 .danger {
-   color: red;
+   color: var(--bad);
    font-weight: 600;
-}
-
-.voteInfoBlock {
-   margin-bottom: 6px;
 }

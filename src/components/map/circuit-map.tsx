@@ -43,200 +43,32 @@ const CircuitMap = ({
          lng: polandCenter.lng,
       },
       zoom: 6,
+      disableDefaultUI: true,
+      zoomControl: true,
       styles: [
-         {
-            elementType: 'geometry',
-            stylers: [
-               {
-                  color: '#212121',
-               },
-            ],
-         },
-         {
-            elementType: 'labels.icon',
-            stylers: [
-               {
-                  visibility: 'off',
-               },
-            ],
-         },
-         {
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#757575',
-               },
-            ],
-         },
-         {
-            elementType: 'labels.text.stroke',
-            stylers: [
-               {
-                  color: '#212121',
-               },
-            ],
-         },
-         {
-            featureType: 'administrative',
-            elementType: 'geometry',
-            stylers: [
-               {
-                  color: '#757575',
-               },
-            ],
-         },
+         { elementType: 'geometry', stylers: [{ color: '#f6f6f4' }] },
+         { elementType: 'labels.icon', stylers: [{ visibility: 'off' }] },
+         { elementType: 'labels.text.fill', stylers: [{ color: '#8a8a8a' }] },
+         { elementType: 'labels.text.stroke', stylers: [{ color: '#ffffff' }] },
          {
             featureType: 'administrative.country',
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#dadada',
-               },
-            ],
+            elementType: 'geometry.stroke',
+            stylers: [{ color: '#9a9a96' }, { weight: 1.2 }],
          },
          {
-            featureType: 'administrative.country',
-            elementType: 'geometry',
-            stylers: [
-               {
-                  color: '#ffffff',
-               },
-            ],
+            featureType: 'administrative.province',
+            elementType: 'geometry.stroke',
+            stylers: [{ color: '#d6d6d2' }],
          },
-         {
-            featureType: 'administrative.land_parcel',
-            stylers: [
-               {
-                  visibility: 'off',
-               },
-            ],
-         },
-         {
-            featureType: 'administrative.locality',
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#bdbdbd',
-               },
-            ],
-         },
-         {
-            featureType: 'poi',
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#757575',
-               },
-            ],
-         },
-         {
-            featureType: 'poi.park',
-            elementType: 'geometry',
-            stylers: [
-               {
-                  color: '#181818',
-               },
-            ],
-         },
-         {
-            featureType: 'poi.park',
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#616161',
-               },
-            ],
-         },
-         {
-            featureType: 'poi.park',
-            elementType: 'labels.text.stroke',
-            stylers: [
-               {
-                  color: '#1b1b1b',
-               },
-            ],
-         },
-         {
-            featureType: 'road',
-            elementType: 'geometry.fill',
-            stylers: [
-               {
-                  color: '#2c2c2c',
-               },
-            ],
-         },
-         {
-            featureType: 'road',
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#8a8a8a',
-               },
-            ],
-         },
-         {
-            featureType: 'road.arterial',
-            elementType: 'geometry',
-            stylers: [
-               {
-                  color: '#373737',
-               },
-            ],
-         },
-         {
-            featureType: 'road.highway',
-            elementType: 'geometry',
-            stylers: [
-               {
-                  color: '#3c3c3c',
-               },
-            ],
-         },
-         {
-            featureType: 'road.highway.controlled_access',
-            elementType: 'geometry',
-            stylers: [
-               {
-                  color: '#4e4e4e',
-               },
-            ],
-         },
-         {
-            featureType: 'road.local',
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#616161',
-               },
-            ],
-         },
-         {
-            featureType: 'transit',
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#757575',
-               },
-            ],
-         },
-         {
-            featureType: 'water',
-            elementType: 'geometry',
-            stylers: [
-               {
-                  color: '#000000',
-               },
-            ],
-         },
-         {
-            featureType: 'water',
-            elementType: 'labels.text.fill',
-            stylers: [
-               {
-                  color: '#3d3d3d',
-               },
-            ],
-         },
+         { featureType: 'administrative.land_parcel', stylers: [{ visibility: 'off' }] },
+         { featureType: 'administrative.neighborhood', stylers: [{ visibility: 'off' }] },
+         { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+         { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+         { featureType: 'road', elementType: 'labels', stylers: [{ visibility: 'off' }] },
+         { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#ffffff' }] },
+         { featureType: 'road.local', stylers: [{ visibility: 'off' }] },
+         { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#e1e4e6' }] },
+         { featureType: 'water', elementType: 'labels.text.fill', stylers: [{ color: '#a5abb0' }] },
       ],
    }
 
@@ -249,9 +81,11 @@ const CircuitMap = ({
    useEffect(() => {
       if (selectedCircuit) {
          console.log('%cNew circuit:', 'color: yellow;', selectedCircuit.city_name)
+         // on phones the trip details sit below the map, so bring them into view
+         // (on desktop they're a side panel and there's nothing to scroll)
          window.setTimeout(() => {
             window.scrollBy({
-               top: window.innerHeight,
+               top: window.innerHeight * 0.72,
                behavior: 'smooth',
             })
          }, 2000)
@@ -337,7 +171,7 @@ const CircuitMap = ({
       const polylines: any = []
       const maps = mapsRef.current
       const map = mapRef.current
-      const polylineColors = ['lime', '#ffcf4a', '#d1b66b']
+      const polylineColors = ['#1a7f4b', '#111111', '#8a8a8a']
       clearPolylines()
 
       scoredCircuits?.forEach((circuit, index) => {
@@ -350,7 +184,7 @@ const CircuitMap = ({
                geodesic: true,
                strokeColor: polylineColors[index],
                strokeOpacity: 1,
-               strokeWeight: 2,
+               strokeWeight: 3,
             }
             const newPolyline = new maps.Polyline(polylineSettings)
             polylines.push(newPolyline)

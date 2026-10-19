@@ -15,16 +15,7 @@ const TripPlanner = (props: TripPlannerProps) => {
 
    return (
       <section className={styles.tripPlanner}>
-         <h2
-            onClick={() => {
-               window.scrollBy({
-                  top: 650,
-                  behavior: 'smooth',
-               })
-            }}
-         >
-            Twoja wycieczka
-         </h2>
+         <h2 className="eyebrow">Twoja wycieczka</h2>
          <TripDetails scoredCircuits={scoredCircuits} />
       </section>
    )

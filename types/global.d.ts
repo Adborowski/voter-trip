@@ -1,3 +1,4 @@
+/// <reference types="styled-jsx/global" />
 export {}
 
 declare global {

@@ -1,55 +1,43 @@
 section:has(.mapNode) {
-   transform: translate(-10px, -10px);
+   transform: translate(-10px, -12px);
 }
 
 .mapNode {
-   display: block;
    position: relative;
-   display: grid;
-   grid-template-columns: 2em 1fr;
-   background-color: rgb(32 43 47);
-   border-radius: 60px;
-   transition: 0.3s all ease;
-   opacity: 0.9;
-}
-
-.mapNode span {
-   color: white;
+   display: flex;
+   align-items: center;
+   background-color: var(--bg);
+   border: 1px solid var(--line-strong);
+   border-radius: var(--radius);
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+   white-space: nowrap;
+   cursor: pointer;
+   transition: border-color 0.15s ease, opacity 0.2s ease;
 }
 
 .mapNode:hover {
-   cursor: pointer;
-}
-
-.mapNode .numberWrapper {
-   background-color: rgb(44 59 65);
-   text-align: center;
-   width: 2em;
-   height: 2em;
-   font-size: 13px;
-   font-weight: 600;
-   padding: 3px;
-   border-radius: 100px;
-   opacity: 1;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   transition: 0.3s all ease;
-}
-
-.textWrapper {
-   padding: 0px 6px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
-
-.textWrapper span {
-   display: block;
+   border-color: var(--ink);
 }
 
 .mapNode span {
    display: block;
+}
+
+.mapNode .numberWrapper {
+   min-width: 24px;
+   padding: 3px 5px;
+   text-align: center;
+   font-size: 11px;
+   font-weight: 600;
+   color: var(--ink-3);
+   border-right: 1px solid var(--line);
+}
+
+.textWrapper {
+   padding: 3px 7px;
+   font-size: 12px;
+   font-weight: 500;
+   color: var(--ink);
 }
 
 /* put node on top when clicked */
@@ -63,51 +51,46 @@ div:has(.irrelevant) {
    z-index: 0;
 }
 
-.destination {
-   background-color: rgb(21, 124, 0);
-   color: white;
-}
-
-.destination .numberWrapper {
-   background-color: rgb(18, 185, 54);
-}
-
 .origin {
-   background-color: rgb(146, 78, 1);
-   color: white;
+   background-color: var(--ink);
+   border-color: var(--ink);
 }
 
-.origin .numberWrapper {
-   background-color: rgb(202, 113, 11);
+.destination {
+   background-color: var(--good);
+   border-color: var(--good);
+}
+
+.origin .numberWrapper,
+.destination .numberWrapper,
+.negative .numberWrapper {
+   color: rgba(255, 255, 255, 0.7);
+   border-right-color: rgba(255, 255, 255, 0.25);
+}
+
+.origin .textWrapper,
+.destination .textWrapper,
+.negative .textWrapper {
+   color: white;
 }
 
 .irrelevant {
-   opacity: 0.5;
-   background-color: #1c1c1c;
-   color: #515151;
+   opacity: 0.4;
 }
 
-.irrelevant .numberWrapper {
-   background-color: #3b3b3b;
-   color: #7d7d7d;
-}
-
+/* no better district nearby: stay home */
 .negative {
-   background-color: #6b0000;
-}
-
-.negative .numberWrapper {
-   background-color: #a10000;
-   color: #ffffff;
+   background-color: var(--bad);
+   border-color: var(--bad);
 }
 
 .btnViewTrips {
+   display: block;
    width: 100%;
    margin-top: 3px;
-   display: block;
-   text-align: center;
-   border-radius: 60px;
-   background-color: var(--highlight-3);
    padding: 6px;
-   color: black;
+   text-align: center;
+   border-radius: var(--radius);
+   background-color: var(--ink);
+   color: white;
 }

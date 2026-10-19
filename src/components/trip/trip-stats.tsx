@@ -12,9 +12,18 @@ const TripStats = ({ circuit }: any) => {
 
    return (
       <section className={styles.tripStats}>
-         <div className={styles.statItem}>{circuit.route.distance.text}</div>
-         <div className={styles.statItem}>{time}</div>
-         <div className={`${styles.statItem} ${styles.date}`}>15.10.2023</div>
+         <div className={styles.statItem}>
+            <span className={styles.statLabel}>Dystans</span>
+            <span className={styles.statValue}>{circuit.route.distance.text}</span>
+         </div>
+         <div className={styles.statItem}>
+            <span className={styles.statLabel}>Czas jazdy</span>
+            <span className={styles.statValue}>{time}</span>
+         </div>
+         <div className={`${styles.statItem} ${styles.date}`}>
+            <span className={styles.statLabel}>Wybory</span>
+            <span className={styles.statValue}>15.10.2023</span>
+         </div>
       </section>
    )
 }

@@ -1,0 +1,42 @@
+/* phone: map on top, trip details stacked below (page scrolls) */
+.layout {
+   background-color: var(--bg);
+}
+
+.mapPane {
+   height: 100svh;
+}
+
+.withPanel .mapPane {
+   height: 72svh;
+}
+
+.panel {
+   border-top: 1px solid var(--line);
+}
+
+/* desktop: full-height map with the trip as a scrollable side panel */
+@media (min-width: 900px) {
+   .layout {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      overflow: hidden;
+   }
+
+   .layout.withPanel {
+      grid-template-columns: minmax(0, 1fr) var(--panel-width);
+   }
+
+   .mapPane,
+   .withPanel .mapPane {
+      height: 100vh;
+   }
+
+   .panel {
+      height: 100vh;
+      overflow-y: auto;
+      border-top: 0;
+      border-left: 1px solid var(--line);
+   }
+}

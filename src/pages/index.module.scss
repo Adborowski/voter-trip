@@ -1,111 +1,131 @@
 .index {
-   background-color: var(--green-1);
-   padding-top: 24px;
    min-height: 100vh;
+   background-color: var(--bg);
+}
 
-   //  --gradient-1: linear-gradient(45deg, #4ea147, #376731, #3aa131);
-   //  --gradient-2: linear-gradient(45deg, #40af6e, #376731, #77ff89);
-   section.textWrapper {
-      max-width: 500px;
-      margin: auto;
-      padding: 0px 18px;
+.hero {
+   max-width: 1120px;
+   margin: 0 auto;
+   padding: 48px var(--gutter) 56px;
+   display: grid;
+   gap: 40px;
+   border-bottom: 1px solid var(--line);
 
-      @media (max-width: 500px) {
-         max-width: 350px;
-      }
+   @media (min-width: 900px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 64px;
+      padding: 96px 32px;
+   }
+}
 
-      h1 {
-         font-weight: 800;
-         color: white;
-         font-family: 'Drogowskaz';
-         font-size: 2.3rem;
-         text-align: center;
-      }
+.heroText {
+   h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.5rem, 7vw, 4.25rem);
+      line-height: 1;
+      letter-spacing: 0.01em;
+      margin: 16px 0 24px;
+   }
+}
 
-      h2 {
-         color: var(--highlight-1);
-         // border: 1px solid red;
-         font-size: 1.5rem;
-         margin: auto;
-         margin-top: 18px;
+.lead {
+   font-size: 1.375rem;
+   line-height: 1.35;
+   font-weight: 500;
+   max-width: 30ch;
+}
 
-         span {
-            display: block;
-            font-weight: 600;
-         }
-      }
+.description {
+   margin-top: 16px;
+   color: var(--ink-2);
+   max-width: 52ch;
+}
 
-      .description {
-         color: white;
-         margin: auto;
-         margin-top: 18px;
-         font-size: 1.2rem;
-         //  border: 1px solid lime;
-      }
+.actions {
+   margin-top: 32px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 16px 24px;
+
+   > button {
+      padding: 14px 24px;
+      font-size: 1rem;
+   }
+}
+
+.heroMap {
+   aspect-ratio: 1500 / 1429;
+   width: 100%;
+   max-width: 360px;
+   margin: 0 auto;
+
+   @media (min-width: 900px) {
+      max-width: 520px;
+   }
+}
+
+.why {
+   max-width: 1120px;
+   margin: 0 auto;
+   padding: 56px var(--gutter);
+   border-bottom: 1px solid var(--line);
+
+   @media (min-width: 900px) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 64px;
+      padding: 80px 32px;
    }
 
-   button {
-      // margin: auto;
-      display: block;
-      padding: 12px 24px;
-      font-size: 1.5rem;
-      border-radius: 24px;
-      background-color: var(--highlight-1);
+   h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+   }
+
+   p {
+      font-size: 1.0625rem;
+      color: var(--ink-2);
+      max-width: 60ch;
+   }
+
+   sup {
+      line-height: 0;
+      font-size: 0.7em;
+      font-weight: 600;
+      color: var(--ink-3);
+      margin-left: 1px;
+   }
+}
+
+.sources {
+   margin-top: 24px;
+   padding-top: 16px;
+   border-top: 1px solid var(--line);
+   padding-left: 20px;
+   font-size: 0.8125rem;
+   color: var(--ink-3);
+
+   li + li {
+      margin-top: 4px;
+   }
+
+   li::marker {
       font-weight: 600;
    }
-}
 
-.btnPlanTrip {
-   cursor: pointer;
-   transition: 0.1s linear all;
-   max-width: 350px;
-   margin: auto;
+   a {
+      color: var(--ink-2);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
 
-   &:hover {
-      filter: brightness(1.05);
-   }
-}
-
-.polandWrapper {
-   width: 430px;
-   height: 430px;
-   margin: auto;
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-
-   @media (max-width: 500px) {
-      width: 300px;
-      height: 300px;
-   }
-
-   .imgPoland {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-image: url('/poland-2.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      margin: auto;
-      animation: opalize 20s forwards ease-in-out infinite;
-   }
-
-   button {
-      position: relative;
-      z-index: 5;
-   }
-}
-
-@keyframes opalize {
-   0% {
-      filter: hue-rotate(0deg) brightness(0.7);
-   }
-
-   100% {
-      filter: hue-rotate(360deg) brightness(0.7);
+      &:hover {
+         color: var(--ink);
+      }
    }
 }

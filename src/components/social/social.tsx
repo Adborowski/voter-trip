@@ -11,6 +11,9 @@ import {
 
 // og metatag testing needs to be done on a link
 
+// monochrome glyphs
+const iconProps = { size: 18, fill: '#111111' }
+
 export const ShareFacebook = (props: any) => {
    return (
       <FacebookShareButton
@@ -19,7 +22,7 @@ export const ShareFacebook = (props: any) => {
          url={`https://voter-trip.vercel.app/map`}
          hashtag={'#wycieczkawyborcza'}
       >
-         <FacebookIcon />
+         <FacebookIcon {...iconProps} />
       </FacebookShareButton>
    )
 }
@@ -27,7 +30,7 @@ export const ShareFacebook = (props: any) => {
 export const ShareLinkedIn = (props: any) => {
    return (
       <LinkedinShareButton url={'www.wycieczkawyborcza.pl'} className={styles.shareButton}>
-         <LinkedinIcon />
+         <LinkedinIcon {...iconProps} />
       </LinkedinShareButton>
    )
 }
@@ -35,7 +38,7 @@ export const ShareLinkedIn = (props: any) => {
 export const ShareTwitter = (props: any) => {
    return (
       <XShareButton className={styles.shareButton} url={`https://voter-trip.vercel.app/map`}>
-         <XIcon />
+         <XIcon {...iconProps} />
       </XShareButton>
    )
 }

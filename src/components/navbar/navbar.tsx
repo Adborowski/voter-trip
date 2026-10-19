@@ -33,7 +33,14 @@ const Navbar = (props: NavbarProps) => {
 
    return (
       <div className={styles.navbar}>
-         {/* prettier-ignore */}
+         <button
+            className={styles.btnBack}
+            aria-label="Strona główna"
+            onClick={() => {
+               router.push('/')
+            }}
+         ></button>
+
          {!selectedCircuit && (
             <section className={styles.instructionWrapper}>
                <span>Kliknij na mapie swój lokalny okręg wyborczy</span>
@@ -42,12 +49,6 @@ const Navbar = (props: NavbarProps) => {
 
          {selectedCircuit && (
             <section className={styles.controls}>
-               <button
-                  className={styles.btnBack}
-                  onClick={() => {
-                     router.push('/')
-                  }}
-               ></button>
                <button
                   className={styles.btnReset}
                   onClick={() => {

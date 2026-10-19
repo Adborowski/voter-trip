@@ -38,6 +38,12 @@ const MapNode = (props: MapNodeProps) => {
             }
          })
       }
+      // no better district nearby: mark the user's own district as a "stay home" result
+      if (circuits && selectedCircuit && scoredCircuits[0].score <= 0) {
+         setSpecialClass(
+            circuit.circuit_number === selectedCircuit.circuit_number ? styles.negative : undefined
+         )
+      }
    }, [selectedCircuit, circuits, scoredCircuits])
 
    return (
