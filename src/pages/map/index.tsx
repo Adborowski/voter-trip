@@ -124,7 +124,6 @@ export default function Map(props: any) {
                content="Twój głos ma różną siłę w zależności od tego, gdzie głosujesz. Dokąd jechać aby oddać mocniejszy głos?"
             />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
             <meta
                property="og:title"
                content="Oddaj swój głos tam, gdzie zmieni najwięcej - ZOBACZ MAPĘ"
